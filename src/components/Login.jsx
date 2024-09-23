@@ -26,15 +26,16 @@ export default function Login() {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
   }
 
-  function handleLogin() {
+  async function handleLogin() {
     if (!loginData.email || !loginData.password) {
       setError(true);
       return;
     }
     try {
-      login(loginData).then(() => {
-        navigate(-1);
-      });
+      console.log("Trying to log in with data: ", loginData); // Debugging
+      await login(loginData);
+      console.log("Navigating after login...");
+      navigate(-1); // Navigiere zurück nach erfolgreichem Login
     } catch (error) {
       setError(true);
       console.error("Login failed:", error);

@@ -1,13 +1,5 @@
-import { useContext, useState } from "react";
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-  Outlet,
-  Navigate,
-} from "react-router-dom";
-
+import { useContext } from "react";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Navigate, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Ratings from "./components/Ratings";
@@ -16,7 +8,6 @@ import User from "./components/User";
 import Footer from "./components/Footer";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
-import { AuthProvider, AuthContext } from "./components/AuthContext";
 import Signup from "./components/Signup";
 import MainLayout from "./components/MainLayout";
 import Map from "./components/Map";
@@ -25,10 +16,16 @@ import Dataprotection from "./components/Dataprotection";
 import Aboutus from "./components/Aboutus";
 import DetailReview from "./components/DetailReview";
 import ReviewEdit from "./components/ReviewEdit";
+import { AuthContext } from "./components/AuthContext"; 
 
-const Protected = () => {
-  const { userInfo, loading } = useContext(AuthContext);
-  return <>{userInfo ? <Outlet /> : <Navigate to="/login" />}</>;
+// Protected Route Wrapper
+const ProtectedRoute = ({ children }) => {
+  const { userInfo } = useContext(AuthContext);
+  console.log("ProtectedRoute userInfo: ", userInfo); // Debugging in Protected Route
+  if (!userInfo) {
+    return <Navigate to="/login" replace />;
+  }
+  return children ? children : <Outlet />;
 };
 
 const router = createBrowserRouter(
@@ -44,7 +41,8 @@ const router = createBrowserRouter(
       <Route path="map" element={<Map />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
-      <Route path="/" element={<Protected />}>
+      {/* Geschützte Routen */}
+      <Route element={<ProtectedRoute />}>
         <Route path="create" element={<CreateRating />} />
         <Route path="user" element={<User />} />
       </Route>
@@ -54,7 +52,9 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router} />
+  );
 }
 
 export default App;
