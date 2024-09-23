@@ -1,0 +1,20 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-\[rgba\(59\2c 130\2c 246\2c 0\.5\)\] {
+    background-color: rgba(172, 166, 168, 0.5) !important;
+}
+
+.leaflet-div-icon {
+    @apply bg-transparent border-none p-0 m-0;
+    width: auto !important;
+    height: auto !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
