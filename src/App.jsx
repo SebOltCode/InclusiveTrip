@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Navigate, Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Ratings from "./components/Ratings";
 import CreateRating from "./components/CreateRating";
 import User from "./components/User";
-import Footer from "./components/Footer";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import Signup from "./components/Signup";
@@ -18,10 +16,9 @@ import DetailReview from "./components/DetailReview";
 import ReviewEdit from "./components/ReviewEdit";
 import { AuthContext } from "./components/AuthContext"; 
 
-// Protected Route Wrapper
+
 const ProtectedRoute = ({ children }) => {
   const { userInfo } = useContext(AuthContext);
-  console.log("ProtectedRoute userInfo: ", userInfo); // Debugging in Protected Route
   if (!userInfo) {
     return <Navigate to="/login" replace />;
   }
@@ -41,7 +38,6 @@ const router = createBrowserRouter(
       <Route path="map" element={<Map />} />
       <Route path="signup" element={<Signup />} />
       <Route path="login" element={<Login />} />
-      {/* Geschützte Routen */}
       <Route element={<ProtectedRoute />}>
         <Route path="create" element={<CreateRating />} />
         <Route path="user" element={<User />} />

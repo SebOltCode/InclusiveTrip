@@ -3,6 +3,8 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer, } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const AuthContext = createContext();
 
@@ -26,7 +28,6 @@ export const AuthProvider = ({ children }) => {
         withCredentials: true,
       });
       setUserInfo(response.data);
-      console.log("userInfo set in AuthContext: ", response.data); // Debugging
       localStorage.setItem("userInfo", JSON.stringify(response.data));
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -36,9 +37,9 @@ export const AuthProvider = ({ children }) => {
   };
   
   useEffect(() => {
-    console.log("Initial userInfo: ", userInfo); // Debugging
+    console.log("Initial userInfo: ", userInfo); 
     if (Cookies.get("token") && (shouldFetch || !userInfo)) {
-      fetchUserInfo(); // Direkter Aufruf statt Bedingung zu verschachteln
+      fetchUserInfo(); 
     }
   }, [shouldFetch]);
   
@@ -48,10 +49,13 @@ export const AuthProvider = ({ children }) => {
         withCredentials: true,
       });
       console.log("Login successful:", response);
-      setShouldFetch((prev) => !prev); // Sollte weiter bestehen
-      await fetchUserInfo(); // Benutzerinfo direkt abrufen
-      console.log("shouldFetch changed");
-      navigate("/"); // Navigiere zur Home-Seite nach erfolgreichem Einloggen
+      setShouldFetch((prev) => !prev); 
+      await fetchUserInfo();
+      
+      toast.success("Willkommen zurück!");
+      navigate("/map");
+      
+      
     } catch (err) {
       if (err.response) {
         const { status, data } = err.response;
@@ -85,9 +89,12 @@ export const AuthProvider = ({ children }) => {
 
 
   function logout() {
-    Cookies.remove("token", { path: "/" });
+    Cookies.remove("token", { path: "/", domain: window.location.hostname });
+    localStorage.removeItem("userInfo"); // Entferne explizit userInfo aus localStorage
     setUserInfo(null);
-    navigate("/login");
+    setShouldFetch(false); // Setze shouldFetch zurück, um doppeltes Laden zu vermeiden
+    console.log("Logout successful, userInfo and token removed."); // Debugging
+    navigate("/login"); // Navigiere zur Login-Seite nach dem Logout
   }
 
   function signup(userData) {
@@ -103,7 +110,9 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
+    
     <AuthContext.Provider
+    
       value={{
         userInfo,
         setUserInfo,
@@ -112,6 +121,7 @@ export const AuthProvider = ({ children }) => {
         signup,
       }}
     >
+      <ToastContainer />
       {children}
     </AuthContext.Provider>
   );
