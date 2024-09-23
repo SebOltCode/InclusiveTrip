@@ -1,3 +1,4 @@
+// AuthContext.jsx
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -16,35 +17,41 @@ export const AuthProvider = ({ children }) => {
   const [shouldFetch, setShouldFetch] = useState(false);
   const navigate = useNavigate();
 
+  const fetchUserInfo = async () => {
+    try {
+      const response = await axios.get(authMeUrl, {
+        headers: {
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+        withCredentials: true,
+      });
+      setUserInfo(response.data);
+      console.log("userInfo set in AuthContext: ", response.data); // Debugging
+      localStorage.setItem("userInfo", JSON.stringify(response.data));
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      Cookies.remove("token");
+      setUserInfo(null);
+    }
+  };
+  
   useEffect(() => {
-    const token = Cookies.get("token");
-    if (token) {
-      axios
-        .get(authMeUrl, {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          withCredentials: true,
-        })
-        .then((res) => {
-          setUserInfo(res.data);
-          navigate("/");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+    console.log("Initial userInfo: ", userInfo); // Debugging
+    if (Cookies.get("token") && (shouldFetch || !userInfo)) {
+      fetchUserInfo(); // Direkter Aufruf statt Bedingung zu verschachteln
     }
   }, [shouldFetch]);
-
+  
   async function login(loginData) {
     try {
       const response = await axios.post(loginUrl, loginData, {
         withCredentials: true,
       });
-
       console.log("Login successful:", response);
-      setShouldFetch((prev) => !prev);
+      setShouldFetch((prev) => !prev); // Sollte weiter bestehen
+      await fetchUserInfo(); // Benutzerinfo direkt abrufen
+      console.log("shouldFetch changed");
+      navigate("/"); // Navigiere zur Home-Seite nach erfolgreichem Einloggen
     } catch (err) {
       if (err.response) {
         const { status, data } = err.response;
@@ -56,7 +63,7 @@ export const AuthProvider = ({ children }) => {
             field: error.field,
             message: error.message,
           }));
-
+  
           console.error("Validation errors:", validationErrors);
         } else {
           console.error(
@@ -66,15 +73,19 @@ export const AuthProvider = ({ children }) => {
       } else {
         console.error("Login error:", err.message);
       }
-
+  
       Cookies.remove("token");
       setUserInfo(null);
     }
   }
+  
+  
+  
+
+
 
   function logout() {
     Cookies.remove("token", { path: "/" });
-    Cookies.remove("userData");
     setUserInfo(null);
     navigate("/login");
   }
