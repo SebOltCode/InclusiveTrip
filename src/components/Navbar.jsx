@@ -7,20 +7,20 @@ import React from "react";
 export default function Navbar() {
   const { userInfo, logout, setUserInfo } = useContext(AuthContext);
 
-  console.log("Navbar userInfo: ", userInfo);
+  ;
 
   useEffect(() => {
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo && !userInfo) {
       setUserInfo(JSON.parse(storedUserInfo));
     }
-    console.log("Navbar userInfo after effect: ", userInfo); // Debugging
+    
   }, [userInfo, setUserInfo]);
   
-  // Füge diesen zusätzlichen Effekt hinzu, um userInfo-Änderungen direkt zu überwachen
+  
   useEffect(() => {
     if (userInfo) {
-      console.log("User Info Updated in Navbar: ", userInfo); // Debugging
+      console.log("User Info Updated in Navbar: ", userInfo);
     }
   }, [userInfo]);
   
@@ -55,12 +55,12 @@ export default function Navbar() {
                 <NavLink to="/login" className="text-black">
                   <UserIcon className="w-6 h-6 mr-2" />
                 </NavLink>
-                <NavLink to="/signup" className="text-black">Signup</NavLink>
+                
               </>
             )}
           </div>
           <ul className="flex space-x-6">
-            {/* Weitere Navigationselemente können hier hinzugefügt werden */}
+            
           </ul>
         </nav>
       </div>

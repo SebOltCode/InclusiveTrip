@@ -32,10 +32,9 @@ export default function Login() {
       return;
     }
     try {
-      console.log("Trying to log in with data: ", loginData); // Debugging
       await login(loginData);
-      console.log("Navigating after login...");
-      navigate(-1); // Navigiere zurück nach erfolgreichem Login
+     
+   
     } catch (error) {
       setError(true);
       console.error("Login failed:", error);
