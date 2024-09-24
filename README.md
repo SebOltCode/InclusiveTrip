@@ -1,6 +1,6 @@
 # InclusiveTrip
 
-## https://inclusivetripfe.onrender.com/
+## https://inclusivetrip.onrender.com/
 
 (An English translation can be found at the end of this text.)
 
@@ -35,26 +35,6 @@ Lassen Sie uns gemeinsam Städte zugänglicher und inklusiver gestalten – für
 - **Personalisierte Benutzererfahrung:** Anzeigen von relevanten Bewertungen und Kommentaren basierend auf den persönlichen Bedürfnissen.
 - **Community-Plattform:** Teilen, Bewerten und Entdecken von neuen Orten durch die Nutzer.
 - **Benutzerfreundliches Design:** Intuitive Benutzeroberfläche, die leicht zugänglich ist.
-
-## Installation
-
-So können Sie das Projekt lokal auf Ihrem Rechner einrichten:
-
-1. Klonen Sie das Repository:
-
-   git clone https://github.com/benutzername/inclusivetrip.git
-
-2. cd inclusivetrip
-
-3. Installieren Sie die Abhängigkeiten:
-   npm install
-
-4. Starten Sie den Entwicklungsserver:
-   npm run dev
-
-## Nutzung
-
-Nach der Installation können Sie die Anwendung lokal über http://localhost:3000 im Browser aufrufen.
 
 ## Danksagungen
 
@@ -98,27 +78,6 @@ Let’s work together to make cities more accessible and inclusive—for everyon
 - **Personalized User Experience:** Display relevant reviews and comments based on personal needs.
 - **Community Platform:** Share, rate, and discover new places through the community.
 - **User-Friendly Design:** Intuitive user interface that is easy to navigate.
-
-## Installation
-
-To set up the project locally on your machine:
-
-1. Clone the repository:
-
-   git clone https://github.com/username/inclusivetrip.git
-
-2. Navigate to the project directory:
-   cd inclusivetrip
-
-3. Install the dependencies:
-   npm install
-
-4. Start the development server:
-   npm run dev
-
-## Usage
-
-After installation, you can access the application locally via http://localhost:3000 in your browser.
 
 ## Acknowledgments
 
