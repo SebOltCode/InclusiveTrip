@@ -8,8 +8,11 @@ export default function ReviewsCount() {
   const reviewsCountUrl = `${API_URL}/reviews/count`;
   useEffect(() => {
     async function fetchReviews() {
+
       try {
+        console.log('Fetching reviews', reviewsCountUrl);
         const response = await axios.get(reviewsCountUrl);
+        console.log("response", response);
         setReviews(response.data.count);
       } catch (error) {
         console.error('Fehler beim Abrufen der Bewertungen:', error);

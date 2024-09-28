@@ -7,8 +7,7 @@ import React from "react";
 export default function Navbar() {
   const { userInfo, logout, setUserInfo } = useContext(AuthContext);
 
-  ;
-
+  
   useEffect(() => {
     const storedUserInfo = localStorage.getItem("userInfo");
     if (storedUserInfo && !userInfo) {
@@ -20,7 +19,6 @@ export default function Navbar() {
   
   useEffect(() => {
     if (userInfo) {
-      console.log("User Info Updated in Navbar: ", userInfo);
     }
   }, [userInfo]);
   

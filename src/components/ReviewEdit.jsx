@@ -16,7 +16,7 @@ const DetailReview = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [stars] = useState([1, 2, 3, 4, 5]);
   const [comment, setComment] = useState(rating.comment);
-  const [showDeleteModal, setShowDeleteModal] = useState(false); // State für das Modal
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
     const fetchBarrierRatings = async () => {
@@ -62,7 +62,6 @@ const DetailReview = () => {
       return;
     }
 
-    // Update the rating
     try {
       await axios.put(
         `${API_URL}/reviews/${rating.id}`,
