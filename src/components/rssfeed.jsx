@@ -6,9 +6,10 @@ export default function RssFeed() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
         const fetchFeed = async () => {
             try {
-                const response = await fetch('https://www.barrierefrei-aufgerollt.at/feed/');
+                const response = await fetch(`${API_URL}/rss/rss-feed`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
