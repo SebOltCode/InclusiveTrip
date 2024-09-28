@@ -3,37 +3,39 @@ import React, { useState, useEffect } from 'react';
 export default function RssFeed() {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null); // Add error state
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch('/api/feed/')
-            .then(response => {
+        const fetchFeed = async () => {
+            try {
+                const response = await fetch('https://www.barrierefrei-aufgerollt.at/feed/');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
-                return response.text();
-            })
-            .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-            .then(data => {
+                const str = await response.text();
+                const data = new window.DOMParser().parseFromString(str, "text/xml");
                 const items = Array.from(data.querySelectorAll("item")).map(item => ({
                     title: item.querySelector("title").textContent,
                     link: item.querySelector("link").textContent,
                     description: item.querySelector("description").textContent,
                 }));
                 setItems(items);
-            })
-            .catch(error => {
+            } catch (error) {
                 console.error('Error fetching RSS feed:', error);
-                setError(error.message); // Set error state
-            })
-            .finally(() => setLoading(false));
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchFeed();
     }, []);
 
     return (
         <div className="p-4 mx-auto">
             {loading ? (
                 <p>Loading...</p>
-            ) : error ? ( // Check for error state
+            ) : error ? (
                 <p>Error fetching RSS feed: {error}</p>
             ) : items.length === 0 ? (
                 <p>No items found.</p>
