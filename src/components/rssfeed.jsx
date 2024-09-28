@@ -9,8 +9,8 @@ const RssFeed = () => {
     useEffect(() => {
         const fetchFeed = async () => {
             try {
-                const response = await axios.get('/rss/rss-feed'); // Backend-Route für den RSS-Feed
-                setFeed(response.data.feed); // Feed aus dem Backend speichern
+                const response = await axios.get('/rss/rss-feed');
+                setFeed(response.data.feed); 
             } catch (error) {
                 console.error('Fehler beim Laden des RSS-Feeds:', error);
                 setError('Fehler beim Laden des RSS-Feeds');
