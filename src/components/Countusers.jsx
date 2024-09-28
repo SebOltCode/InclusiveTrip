@@ -10,10 +10,9 @@ export default function Countusers() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        // API-Anfrage zum Abrufen aller Users
-        const response = await axios.get(usersCountUrl); // URL anpassen, falls erforderlich
+        const response = await axios.get(usersCountUrl);
 
-        setUsers(response.data); // Setze alle Users in den State
+        setUsers(response.data);
       } catch (error) {
         console.error("Fehler beim Abrufen der User-Daten:", error);
         setError("Fehler beim Abrufen der User-Daten");
