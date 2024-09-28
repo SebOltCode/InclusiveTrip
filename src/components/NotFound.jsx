@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 export default function PageNotFound() {
-  const navigate = useNavigate();
-  //  Funktion um auf die vorherige Seite zu kommen 
+  const navigate = useNavigate(); 
   const handleBackClick = () => {
     navigate(-1);
   };
@@ -23,7 +22,6 @@ export default function PageNotFound() {
 
               </div>
             </div>
-            {/* Bild Container */}
             <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images//Icon_404.png"
@@ -40,15 +38,5 @@ export default function PageNotFound() {
         Zurück
       </button>
     </div>
-
-
-
-
-    // <div className="bg-[#16181e] h-[100vh]">
-    //   <section className="mx-auto max-w-[1120px] container py-12 ">
-    //     <h1 className="font-bold text-5xl text-center mt-36 text-white">404 : Page Not Found </h1>
-    //     <div id="cards-container" className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"></div>
-    //   </section>
-    // </div>
   );
 }

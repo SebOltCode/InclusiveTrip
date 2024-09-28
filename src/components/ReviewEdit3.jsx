@@ -17,7 +17,7 @@ export default function ReviewEdit() {
   const [barrierRatings, setBarrierRatings] = useState([]);
   const [photos, setPhotos] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [showDeleteModal, setShowDeleteModal] = useState(false); // State für das Modal
+  const [showDeleteModal, setShowDeleteModal] = useState(false); 
   const navigate = useNavigate();
   const stars = [1, 2, 3, 4, 5];
   const { place, category, rating } = location.state || {};
@@ -41,7 +41,6 @@ export default function ReviewEdit() {
         const response = await axios.get(
           `${API_URL}/barriersReviews/review/${id}`
         );
-        console.log("Barrier ratings fetched:", response.data); // Debugging
         setBarrierRatings(response.data || []);
       } catch (error) {
         console.error("Error fetching barrier ratings:", error);
@@ -52,7 +51,6 @@ export default function ReviewEdit() {
     const fetchPhotos = async () => {
       try {
         const response = await axios.get(`${API_URL}/reviews/${id}/photos`);
-        console.log("Photos fetched:", response.data); // Debugging
         setPhotos(response.data || []);
       } catch (error) {
         console.error("Error fetching photos:", error);

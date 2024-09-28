@@ -1,4 +1,3 @@
-// AuthContext.jsx
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -36,8 +35,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
   
-  useEffect(() => {
-    console.log("Initial userInfo: ", userInfo); 
+  useEffect(() => { 
     if (Cookies.get("token") && (shouldFetch || !userInfo)) {
       fetchUserInfo(); 
     }
@@ -60,7 +58,7 @@ export const AuthProvider = ({ children }) => {
       if (err.response) {
         const { status, data } = err.response;
         console.error(
-          `Error ${status}: ${data.message || "An unknown error occurred."}`
+          `Error ${status}: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
         );
         if (data.errors) {
           const validationErrors = data.errors.map((error) => ({
@@ -71,7 +69,7 @@ export const AuthProvider = ({ children }) => {
           console.error("Validation errors:", validationErrors);
         } else {
           console.error(
-            `Error message: ${data.message || "An unknown error occurred."}`
+            `Error message: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
           );
         }
       } else {
@@ -83,18 +81,13 @@ export const AuthProvider = ({ children }) => {
     }
   }
   
-  
-  
-
-
-
   function logout() {
     Cookies.remove("token", { path: "/", domain: window.location.hostname });
-    localStorage.removeItem("userInfo"); // Entferne explizit userInfo aus localStorage
+    localStorage.removeItem("userInfo");
     setUserInfo(null);
-    setShouldFetch(false); // Setze shouldFetch zurück, um doppeltes Laden zu vermeiden
-    console.log("Logout successful, userInfo and token removed."); // Debugging
-    navigate("/login"); // Navigiere zur Login-Seite nach dem Logout
+    setShouldFetch(false);
+    console.log("Logout successful, userInfo and token removed.");
+    navigate("/login");
   }
 
   function signup(userData) {

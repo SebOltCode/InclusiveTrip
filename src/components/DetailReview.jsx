@@ -58,9 +58,6 @@ const DetailReview = () => {
             </div>
 
             <div className="flex flex-col items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
-              {/* <h1 className="font-poppins text-left font-bold text-[18px] text-[#000000]">
-                {new Date(rating.createdAt).toLocaleDateString()}
-              </h1> */}
               <img
                 src="/images/Icon_Bewertung.png"
                 alt="Icon Karte"
