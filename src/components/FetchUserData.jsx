@@ -12,6 +12,10 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
+        if (!userInfo) {
+          return;
+        }
+
         const token = Cookies.get("token");
         if (!token) {
           throw new Error("No token found");
@@ -32,7 +36,7 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
     };
 
     fetchUserData();
-  }, []);
+  }, [userInfo]);
 
   return null;
 }

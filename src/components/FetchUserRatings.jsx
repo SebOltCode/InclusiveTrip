@@ -12,6 +12,10 @@ export function FetchUserRatings({ setUserRatings }) {
   useEffect(() => {
     const fetchUserRatings = async () => {
       try {
+        if (!userInfo) {
+          return;
+        }
+
         const token = Cookies.get("token");
         if (!token) {
           throw new Error("No token found");
@@ -31,7 +35,7 @@ export function FetchUserRatings({ setUserRatings }) {
     };
 
     fetchUserRatings();
-  }, [setUserRatings]);
+  }, [userInfo, setUserRatings]);
 
   return null;
 }
