@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FetchUserData } from "./FetchUserData";
@@ -6,6 +6,7 @@ import { ProfilePhotoUpload } from "./ProfilePhotoUpload";
 import { UserProfileForm } from "./UserProfileForm";
 import { FetchUserRatings } from "./FetchUserRatings";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner"; // Ladeanzeige-Komponente importieren
 
 function User() {
   const [userData, setUserData] = useState({
@@ -17,11 +18,24 @@ function User() {
   });
   const [profilePhoto, setProfilePhoto] = useState("");
   const [userRatings, setUserRatings] = useState([]);
+  const [loading, setLoading] = useState(true); // Ladezustand hinzufügen
   const navigate = useNavigate();
 
   const handleRateClick = (rating) => {
     navigate(`/review-edit/${rating.id}`, { state: { rating: rating } });
   };
+
+  // Ladezustand überwachen: Sobald alle Daten geladen sind, Ladezustand auf false setzen
+  useEffect(() => {
+    if (userData.firstName && userRatings.length > 0) {
+      setLoading(false);
+    }
+  }, [userData, userRatings]);
+
+  // Wenn Daten geladen werden, zeige Ladespinner
+  if (loading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <>
@@ -76,7 +90,6 @@ function User() {
               </h1>
 
               <div className="font-poppins font-bold text-[18px] text-[#000000]">
-                {" "}
                 {new Date(rating.createdAt).toLocaleDateString()}
               </div>
             </div>
