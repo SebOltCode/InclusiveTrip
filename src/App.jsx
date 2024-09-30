@@ -15,13 +15,19 @@ import Aboutus from "./components/Aboutus";
 import DetailReview from "./components/DetailReview";
 import ReviewEdit from "./components/ReviewEdit";
 import { AuthContext } from "./components/AuthContext"; 
-
+import LoadingSpinner from './components/LoadingSpinner';
 
 const ProtectedRoute = ({ children }) => {
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, loading } = useContext(AuthContext);
+
+  if (loading) {
+    return <LoadingSpinner />;
+  }
+
   if (!userInfo) {
     return <Navigate to="/login" replace />;
   }
+
   return children ? children : <Outlet />;
 };
 
