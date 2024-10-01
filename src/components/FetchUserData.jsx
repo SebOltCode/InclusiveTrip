@@ -2,6 +2,7 @@ import { useEffect, useContext, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { AuthContext } from "./AuthContext";
+import Cookies from "js-cookie";
 
 const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 
@@ -16,12 +17,23 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
 
         console.log("Initial userInfo:", storedUserInfo);
 
-        if (!storedUserInfo) {
+       
+        if (!storedUserInfo?.token) {
+          console.log("No token found in userInfo. Trying localStorage or cookies.");
+          
+        
           const localStorageUserInfo = localStorage.getItem("userInfo");
-          console.log("LocalStorage userInfo:", localStorageUserInfo);
+          const tokenFromCookie = Cookies.get("token");
+          console.log("Token from Cookie:", tokenFromCookie);
+          
           if (localStorageUserInfo) {
             storedUserInfo = JSON.parse(localStorageUserInfo);
             setUserInfo(storedUserInfo);
+          } else if (tokenFromCookie) {
+            storedUserInfo = { ...storedUserInfo, token: tokenFromCookie };
+            console.log("Using token from Cookie:", tokenFromCookie);
+          } else {
+            throw new Error("No token found in userInfo, localStorage, or cookies.");
           }
         }
 
@@ -31,10 +43,6 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
 
         console.log("Using token:", storedUserInfo.token);
 
-        // Detaillierte Ausgabe der Anfrage-Daten und Headers
-        console.log("Sending request to API:", `${API_URL}/auth/me`);
-        console.log("Authorization Header:", `Bearer ${storedUserInfo.token}`);
-
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${storedUserInfo.token}`,
@@ -42,29 +50,29 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
           withCredentials: true,
         });
 
-        console.log("API response:", response); // Ausgabe der API-Antwort
+        console.log("API response:", response);
 
         setUserData(response.data);
         setProfilePhoto(response.data.profilePhoto);
-        setLoading(false); // Daten erfolgreich abgerufen
+        setLoading(false); 
       } catch (error) {
-        console.error("Error fetching user data:", error.response || error); // Ausgabe der vollständigen Fehlermeldung
+        console.error("Error fetching user data:", error.response || error);
         toast.error("Fehler beim Laden der Benutzerdaten.");
         setLoading(false);
       }
     };
 
-    // Abrufen der Daten nur ausführen, wenn der AuthContext oder localStorage verfügbar ist
+    
     if (userInfo || localStorage.getItem("userInfo")) {
       fetchUserData();
     } else {
-      setLoading(false); // Stoppe das Laden, wenn keine Daten vorhanden sind
+      setLoading(false);
     }
   }, [userInfo, setUserInfo, setUserData, setProfilePhoto]);
 
   if (loading) {
-    return <p>Loading user data...</p>; // Ladeanzeige, während auf Daten gewartet wird
+    return <p>Loading user data...</p>;
   }
 
-  return null; // Keine Anzeige, wenn das Laden abgeschlossen ist
+  return null;
 }
