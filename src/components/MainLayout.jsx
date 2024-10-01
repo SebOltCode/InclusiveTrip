@@ -5,7 +5,7 @@ import { AuthProvider } from "./AuthContext";
 
 const MainLayout = () => {
   return (
-    
+    <AuthProvider>
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-grow container mx-auto py-4">
@@ -13,7 +13,7 @@ const MainLayout = () => {
         </div>
         <Footer />
       </div>
-    
+    </AuthProvider>
   );
 };
 

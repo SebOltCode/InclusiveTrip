@@ -15,9 +15,6 @@ import Aboutus from "./components/Aboutus";
 import DetailReview from "./components/DetailReview";
 import ReviewEdit from "./components/ReviewEdit";
 import { AuthContext } from "./components/AuthContext"; 
-import { AuthProvider } from "./components/AuthContext"; 
-
-
 
 
 const ProtectedRoute = ({ children }) => {
@@ -52,9 +49,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <AuthProvider>
     <RouterProvider router={router} />
-    </AuthProvider>
   );
 }
 
