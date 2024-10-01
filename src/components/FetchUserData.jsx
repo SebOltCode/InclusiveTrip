@@ -11,11 +11,11 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        
         let storedUserInfo = userInfo;
 
         if (!storedUserInfo) {
           const localStorageUserInfo = localStorage.getItem("userInfo");
+          console.log("LocalStorage userInfo:", localStorageUserInfo);
           if (localStorageUserInfo) {
             storedUserInfo = JSON.parse(localStorageUserInfo);
             setUserInfo(storedUserInfo);
@@ -25,6 +25,8 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
         if (!storedUserInfo || !storedUserInfo.token) {
           throw new Error("No user information or token found");
         }
+
+        console.log("Using token:", storedUserInfo.token);
 
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
