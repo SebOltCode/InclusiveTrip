@@ -46,21 +46,21 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post(loginUrl, loginData, {
         withCredentials: true,
       });
-
+  
       console.log("Login successful:", response);
-
-      
-      const token = response.data.token || Cookies.get("token"); 
-
+  
+     
+      const token = response.data.token || Cookies.get("token");
+  
       if (token) {
-       
+        
         setUserInfo({ ...response.data.user, token });
         localStorage.setItem("userInfo", JSON.stringify({ ...response.data.user, token }));
         Cookies.set("token", token, { path: "/", domain: window.location.hostname });
       } else {
         throw new Error("No token found in login response.");
       }
-
+  
       navigate("/map");
     } catch (err) {
       console.error("Login error:", err.message);
@@ -68,6 +68,7 @@ export const AuthProvider = ({ children }) => {
       Cookies.remove("token");
     }
   }
+  
   
   function logout() {
     Cookies.remove("token", { path: "/", domain: window.location.hostname });
