@@ -1,6 +1,5 @@
 import { useEffect, useContext } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { AuthContext } from "./AuthContext";
 
@@ -12,18 +11,13 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        if (!userInfo) {
-          return;
-        }
-
-        const token = Cookies.get("token");
-        if (!token) {
-          throw new Error("No token found");
+        if (!userInfo || !userInfo.token) {
+          throw new Error("No user info or token found");
         }
 
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${userInfo.token}`,
           },
           withCredentials: true,
         });
@@ -36,7 +30,7 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
     };
 
     fetchUserData();
-  }, [userInfo]);
+  }, [userInfo, setUserData, setProfilePhoto]);
 
   return null;
 }
