@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { AuthContext } from "./AuthContext";
@@ -6,21 +6,33 @@ import { AuthContext } from "./AuthContext";
 const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 
 export function FetchUserData({ setUserData, setProfilePhoto }) {
-  const { userInfo } = useContext(AuthContext);
+  const { userInfo, setUserInfo } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        if (!userInfo || !userInfo.token) {
-          throw new Error("No user info or token found");
+        
+        let storedUserInfo = userInfo;
+
+        if (!storedUserInfo) {
+          const localStorageUserInfo = localStorage.getItem("userInfo");
+          if (localStorageUserInfo) {
+            storedUserInfo = JSON.parse(localStorageUserInfo);
+            setUserInfo(storedUserInfo);
+          }
+        }
+
+        if (!storedUserInfo || !storedUserInfo.token) {
+          throw new Error("No user information or token found");
         }
 
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
-            Authorization: `Bearer ${userInfo.token}`,
+            Authorization: `Bearer ${storedUserInfo.token}`,
           },
           withCredentials: true,
         });
+
         setUserData(response.data);
         setProfilePhoto(response.data.profilePhoto);
       } catch (error) {
@@ -30,7 +42,7 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
     };
 
     fetchUserData();
-  }, [userInfo, setUserData, setProfilePhoto]);
+  }, [userInfo, setUserInfo, setUserData, setProfilePhoto]);
 
   return null;
 }
