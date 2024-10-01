@@ -3,7 +3,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer, } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+
 
 export const AuthContext = createContext();
 
@@ -114,7 +114,7 @@ export const AuthProvider = ({ children }) => {
         signup,
       }}
     >
-      <ToastContainer />
+     
       {children}
     </AuthContext.Provider>
   );
