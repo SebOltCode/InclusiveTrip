@@ -7,11 +7,14 @@ const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 
 export function FetchUserData({ setUserData, setProfilePhoto }) {
   const { userInfo, setUserInfo } = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         let storedUserInfo = userInfo;
+
+        console.log("Initial userInfo:", storedUserInfo);
 
         if (!storedUserInfo) {
           const localStorageUserInfo = localStorage.getItem("userInfo");
@@ -37,14 +40,25 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
 
         setUserData(response.data);
         setProfilePhoto(response.data.profilePhoto);
+        setLoading(false); // Daten erfolgreich abgerufen
       } catch (error) {
         console.error("Error fetching user data:", error);
         toast.error("Fehler beim Laden der Benutzerdaten.");
+        setLoading(false);
       }
     };
 
-    fetchUserData();
+    // Abrufen der Daten nur ausführen, wenn der AuthContext initialisiert ist
+    if (userInfo || localStorage.getItem("userInfo")) {
+      fetchUserData();
+    } else {
+      setLoading(false); // Stoppe das Laden, wenn keine Daten vorhanden sind
+    }
   }, [userInfo, setUserInfo, setUserData, setProfilePhoto]);
 
-  return null;
+  if (loading) {
+    return <p>Loading user data...</p>; // Ladeanzeige, während auf Daten gewartet wird
+  }
+
+  return null; // Keine Anzeige, wenn das Laden abgeschlossen ist
 }
