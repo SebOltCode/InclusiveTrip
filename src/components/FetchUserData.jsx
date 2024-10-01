@@ -31,6 +31,10 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
 
         console.log("Using token:", storedUserInfo.token);
 
+        // Detaillierte Ausgabe der Anfrage-Daten und Headers
+        console.log("Sending request to API:", `${API_URL}/auth/me`);
+        console.log("Authorization Header:", `Bearer ${storedUserInfo.token}`);
+
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${storedUserInfo.token}`,
@@ -38,17 +42,19 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
           withCredentials: true,
         });
 
+        console.log("API response:", response); // Ausgabe der API-Antwort
+
         setUserData(response.data);
         setProfilePhoto(response.data.profilePhoto);
         setLoading(false); // Daten erfolgreich abgerufen
       } catch (error) {
-        console.error("Error fetching user data:", error);
+        console.error("Error fetching user data:", error.response || error); // Ausgabe der vollständigen Fehlermeldung
         toast.error("Fehler beim Laden der Benutzerdaten.");
         setLoading(false);
       }
     };
 
-    // Abrufen der Daten nur ausführen, wenn der AuthContext initialisiert ist
+    // Abrufen der Daten nur ausführen, wenn der AuthContext oder localStorage verfügbar ist
     if (userInfo || localStorage.getItem("userInfo")) {
       fetchUserData();
     } else {
