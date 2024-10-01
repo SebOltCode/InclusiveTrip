@@ -17,7 +17,7 @@ import ReviewEdit from "./components/ReviewEdit";
 import { AuthContext } from "./components/AuthContext"; 
 import { AuthProvider } from "./components/AuthContext"; 
 import { RouterProvider } from "react-router-dom";
-import router from "./router";
+
 
 
 const ProtectedRoute = ({ children }) => {
