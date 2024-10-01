@@ -2,7 +2,6 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer, } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const AuthContext = createContext();
@@ -20,14 +19,15 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUserInfo = async () => {
     try {
+      const token = Cookies.get("token");
       const response = await axios.get(authMeUrl, {
         headers: {
-          Authorization: `Bearer ${Cookies.get("token")}`,
+          Authorization: `Bearer ${token}`,
         },
         withCredentials: true,
       });
       setUserInfo(response.data);
-      localStorage.setItem("userInfo", JSON.stringify(response.data));
+      localStorage.setItem("userInfo", JSON.stringify({...response.data, token }));
     } catch (error) {
       console.error("Error fetching user data:", error);
       Cookies.remove("token");
@@ -46,37 +46,26 @@ export const AuthProvider = ({ children }) => {
       const response = await axios.post(loginUrl, loginData, {
         withCredentials: true,
       });
+
       console.log("Login successful:", response);
-      setShouldFetch((prev) => !prev); 
-      toast.success("Willkommen zurück!");
-      await fetchUserInfo();
-      navigate("/map");
+
       
-      
-    } catch (err) {
-      if (err.response) {
-        const { status, data } = err.response;
-        console.error(
-          `Error ${status}: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
-        );
-        if (data.errors) {
-          const validationErrors = data.errors.map((error) => ({
-            field: error.field,
-            message: error.message,
-          }));
-  
-          console.error("Validation errors:", validationErrors);
-        } else {
-          console.error(
-            `Error message: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
-          );
-        }
+      const token = response.data.token || Cookies.get("token"); 
+
+      if (token) {
+       
+        setUserInfo({ ...response.data.user, token });
+        localStorage.setItem("userInfo", JSON.stringify({ ...response.data.user, token }));
+        Cookies.set("token", token, { path: "/", domain: window.location.hostname });
       } else {
-        console.error("Login error:", err.message);
+        throw new Error("No token found in login response.");
       }
-  
-      Cookies.remove("token");
+
+      navigate("/map");
+    } catch (err) {
+      console.error("Login error:", err.message);
       setUserInfo(null);
+      Cookies.remove("token");
     }
   }
   
@@ -113,7 +102,7 @@ export const AuthProvider = ({ children }) => {
         signup,
       }}
     >
-      <ToastContainer />
+     
       {children}
     </AuthContext.Provider>
   );
