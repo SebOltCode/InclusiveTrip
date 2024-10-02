@@ -57,10 +57,21 @@ const DetailReview = () => {
 
   const handleUpdate = async () => {
     const token = Cookies.get("token");
-    if (!token) {
-      toast.error("Keine Berechtigung. Bitte einloggen.");
-      return;
-    }
+   
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+  }
+  if (!token) {
+      const tokenFromCookies = getCookie('token');
+      if (!tokenFromCookies) {
+        toast.error("Keine Berechtigung. Bitte einloggen.");
+        return;
+      }
+
+  }
 
     try {
       await axios.put(
@@ -96,10 +107,22 @@ const DetailReview = () => {
 
   const handleDelete = async () => {
     const token = Cookies.get("token");
-    if (!token) {
-      toast.error("Keine Berechtigung. Bitte einloggen.");
-      return;
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
     }
+  if (!token) {
+      const tokenFromCookies = getCookie('token');
+      if (!tokenFromCookies) {
+        toast.error("Keine Berechtigung. Bitte einloggen.");
+      return;
+      }
+
+    }
+
     try {
       await axios.delete(`${API_URL}/reviews/${rating.id}`, {
         headers: {
