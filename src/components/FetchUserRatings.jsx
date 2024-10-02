@@ -16,7 +16,7 @@ export function FetchUserRatings({ setUserRatings }) {
           return;
         }
 
-        const token = Cookies.get("token");
+        let token = Cookies.get("token");
         function getCookie(name) {
           const value = `; ${document.cookie}`;
           const parts = value.split(`; ${name}=`);
@@ -24,8 +24,8 @@ export function FetchUserRatings({ setUserRatings }) {
           return null;
       }
       if (!token) {
-          const tokenFromCookies = getCookie('token');
-          if (!tokenFromCookies) {
+          token = getCookie('token');
+          if (!token) {
               throw new Error("No token found in create review from get cookie");
           }
   

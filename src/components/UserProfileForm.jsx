@@ -10,32 +10,26 @@ export function UserProfileForm({ userData, setUserData }) {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const token = Cookies.get("token");
-    if (!token) {
-      console.error("No token found");
-      return;
-
-    }
-
-    function getCookie(name) {
+  function getCookie(name) {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
       if (parts.length === 2) return parts.pop().split(';').shift();
       return null;
     }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    let token = Cookies.get("token");
+    
   if (!token) {
-      const tokenFromCookies = getCookie('token');
-      if (!tokenFromCookies) {
+      token = getCookie('token');
+      if (!token) {
         console.error("No token found");
       return;
       }
 
     }
 
-    // Erstellen eines neuen Objekts mit den gewünschten Feldern
+  
     const {
       firstName,
       lastName,

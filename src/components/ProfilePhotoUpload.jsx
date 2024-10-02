@@ -13,7 +13,7 @@ export function ProfilePhotoUpload({
   const [isDeleting, setIsDeleting] = useState(false);
 
   const onDrop = async (acceptedFiles) => {
-    const token = Cookies.get("token");
+    let token = Cookies.get("token");
    
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -22,9 +22,9 @@ export function ProfilePhotoUpload({
       return null;
     }
   if (!token) {
-      const tokenFromCookies = getCookie('token');
-      if (!tokenFromCookies) {
-        console.error("No token found");
+      token = getCookie('token');
+      if (!token) {
+        console.log("No token found");
         return;
       }
 
@@ -54,7 +54,7 @@ export function ProfilePhotoUpload({
   };
 
   const deleteProfilePhoto = async () => {
-    const token = Cookies.get("token");
+    let token = Cookies.get("token");
     function getCookie(name) {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
@@ -62,8 +62,8 @@ export function ProfilePhotoUpload({
       return null;
     }
   if (!token) {
-      const tokenFromCookies = getCookie('token');
-      if (!tokenFromCookies) {
+     token = getCookie('token');
+      if (!token) {
         console.error("No token found");
         return;
       }
