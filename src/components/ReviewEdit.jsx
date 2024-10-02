@@ -56,7 +56,7 @@ const DetailReview = () => {
 
 
   const handleUpdate = async () => {
-    const token = Cookies.get("token");
+    let token = Cookies.get("token");
    
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -65,8 +65,8 @@ const DetailReview = () => {
       return null;
   }
   if (!token) {
-      const tokenFromCookies = getCookie('token');
-      if (!tokenFromCookies) {
+     token = getCookie('token');
+      if (!token) {
         toast.error("Keine Berechtigung. Bitte einloggen.");
         return;
       }
@@ -106,7 +106,7 @@ const DetailReview = () => {
 
 
   const handleDelete = async () => {
-    const token = Cookies.get("token");
+    let token = Cookies.get("token");
 
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -115,8 +115,8 @@ const DetailReview = () => {
       return null;
     }
   if (!token) {
-      const tokenFromCookies = getCookie('token');
-      if (!tokenFromCookies) {
+      token = getCookie('token');
+      if (!token) {
         toast.error("Keine Berechtigung. Bitte einloggen.");
       return;
       }

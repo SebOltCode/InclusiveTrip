@@ -2,32 +2,29 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const token = Cookies.get("token");
+
 
 
 const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 const reviewsUrl = `${API_URL}/reviews`;
 const barriersReviewsUrl = `${API_URL}/barriersReviews`;
 
-
-
-export async function createReview(ratingData) {
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
+const token = Cookies.get("token");
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+    return null;
+}
+if (!token) {
+    const token = getCookie('token');
     if (!token) {
-
-
-        const tokenFromCookies = getCookie('token');
-        console.log(tokenFromCookies);
-        if (!tokenFromCookies) {
-            throw new Error("No token found in create review from get cookie");
-        }
-
+        throw new Error("No token found in create review from get cookie");
     }
+}
+export async function createReview(ratingData) {
+
+
     let reviewId = 0;
     await axios
         .post(reviewsUrl, ratingData, {

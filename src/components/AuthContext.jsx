@@ -18,11 +18,25 @@ export const AuthProvider = ({ children }) => {
   const [shouldFetch, setShouldFetch] = useState(false);
   const navigate = useNavigate();
 
+let token = Cookies.get("token");
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+  if (!token) {
+      token = getCookie('token');
+      if (!token) {
+        console.log('Could not find token from cookies');
+      }
+    }
+
   const fetchUserInfo = async () => {
     try {
       const response = await axios.get(authMeUrl, {
         headers: {
-          Authorization: `Bearer ${Cookies.get("token")}`,
+          Authorization: `Bearer ${token}`,
         },
         withCredentials: true,
       });
@@ -36,7 +50,7 @@ export const AuthProvider = ({ children }) => {
   };
   
   useEffect(() => { 
-    if (Cookies.get("token") && (shouldFetch || !userInfo)) {
+    if (token && (shouldFetch || !userInfo)) {
       fetchUserInfo(); 
     }
   }, [shouldFetch]);
