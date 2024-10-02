@@ -17,6 +17,22 @@ export function UserProfileForm({ userData, setUserData }) {
     if (!token) {
       console.error("No token found");
       return;
+
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+  if (!token) {
+      const tokenFromCookies = getCookie('token');
+      if (!tokenFromCookies) {
+        console.error("No token found");
+      return;
+      }
+
     }
 
     // Erstellen eines neuen Objekts mit den gewünschten Feldern
