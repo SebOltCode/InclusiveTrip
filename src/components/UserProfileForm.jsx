@@ -20,14 +20,14 @@ export function UserProfileForm({ userData, setUserData }) {
     e.preventDefault();
     let token = Cookies.get("token");
     
-  if (!token) {
-      token = getCookie('token');
-      if (!token) {
-        console.error("No token found");
-      return;
-      }
+  // if (!token) {
+  //     token = getCookie('token');
+  //     if (!token) {
+  //       console.error("No token found");
+  //     return;
+  //     }
 
-    }
+  //   }
 
   
     const {

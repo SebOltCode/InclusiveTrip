@@ -21,14 +21,14 @@ export function ProfilePhotoUpload({
     //   if (parts.length === 2) return parts.pop().split(';').shift();
     //   return null;
     // }
-  if (!token) {
-      token = getCookie('token');
-      if (!token) {
-        console.log("No token found");
-        return;
-      }
+  // if (!token) {
+  //     token = getCookie('token');
+  //     if (!token) {
+  //       console.log("No token found");
+  //       return;
+  //     }
 
-    }
+  //   }
 
 
     const formData = new FormData();
@@ -61,14 +61,14 @@ export function ProfilePhotoUpload({
     //   if (parts.length === 2) return parts.pop().split(';').shift();
     //   return null;
     // }
-  if (!token) {
-     token = getCookie('token');
-      if (!token) {
-        console.error("No token found");
-        return;
-      }
+  // if (!token) {
+  //    token = getCookie('token');
+  //     if (!token) {
+  //       console.error("No token found");
+  //       return;
+  //     }
 
-    }
+  //   }
 
     setIsDeleting(true);
 

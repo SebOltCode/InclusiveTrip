@@ -18,13 +18,13 @@ export function FetchUserData({ setUserData, setProfilePhoto }) {
 
         let token = Cookies.get("token");
      
-    if (!token) {
-        const tokenFromCookies = getCookie('token');
-        console.log(tokenFromCookies);
-        if (!tokenFromCookies) {
-            throw new Error("No token found in create review from get cookie");
-        }
-    }
+    // if (!token) {
+    //     const tokenFromCookies = getCookie('token');
+    //     console.log(tokenFromCookies);
+    //     if (!tokenFromCookies) {
+    //         throw new Error("No token found in create review from get cookie");
+    //     }
+    // }
         const response = await axios.get(`${API_URL}/auth/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
