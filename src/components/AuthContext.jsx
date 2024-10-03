@@ -19,17 +19,13 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
 let token = Cookies.get("token");
-    // function getCookie(name) {
-    //   const value = `; ${document.cookie}`;
-    //   const parts = value.split(`; ${name}=`);
-    //   if (parts.length === 2) return parts.pop().split(';').shift();
-    //   return null;
-    // }
-  if (!token) {
-      token = getCookie('token');
-      if (!token) {
-        console.log('Could not find token from cookies');
-      }
+    if (!token) {
+        const tokenFromCookies = getCookie('token');
+        console.log(tokenFromCookies);
+        if (!tokenFromCookies) {
+            throw new Error("No token found in create review from get cookie");
+        }
+
     }
 
   const fetchUserInfo = async () => {
