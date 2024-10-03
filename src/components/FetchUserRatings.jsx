@@ -23,13 +23,13 @@ export function FetchUserRatings({ setUserRatings }) {
       //     if (parts.length === 2) return parts.pop().split(';').shift();
       //     return null;
       // }
-      if (!token) {
-          token = getCookie('token');
-          if (!token) {
-              throw new Error("No token found in create review from get cookie");
-          }
+      // if (!token) {
+      //     token = getCookie('token');
+      //     if (!token) {
+      //         throw new Error("No token found in create review from get cookie");
+      //     }
   
-      }
+      // }
 
         const response = await axios.get(`${API_URL}/reviews/user`, {
           headers: {

@@ -64,14 +64,14 @@ const DetailReview = () => {
   //     if (parts.length === 2) return parts.pop().split(';').shift();
   //     return null;
   // }
-  if (!token) {
-     token = getCookie('token');
-      if (!token) {
-        toast.error("Keine Berechtigung. Bitte einloggen.");
-        return;
-      }
+  // if (!token) {
+  //    token = getCookie('token');
+  //     if (!token) {
+  //       toast.error("Keine Berechtigung. Bitte einloggen.");
+  //       return;
+  //     }
 
-  }
+  // }
 
     try {
       await axios.put(
@@ -114,14 +114,14 @@ const DetailReview = () => {
     //   if (parts.length === 2) return parts.pop().split(';').shift();
     //   return null;
     // }
-  if (!token) {
-      token = getCookie('token');
-      if (!token) {
-        toast.error("Keine Berechtigung. Bitte einloggen.");
-      return;
-      }
+  // if (!token) {
+  //     token = getCookie('token');
+  //     if (!token) {
+  //       toast.error("Keine Berechtigung. Bitte einloggen.");
+  //     return;
+  //     }
 
-    }
+  //   }
 
     try {
       await axios.delete(`${API_URL}/reviews/${rating.id}`, {
