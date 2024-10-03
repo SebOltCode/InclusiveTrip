@@ -10,12 +10,12 @@ export function UserProfileForm({ userData, setUserData }) {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
-  function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    }
+  // function getCookie(name) {
+  //     const value = `; ${document.cookie}`;
+  //     const parts = value.split(`; ${name}=`);
+  //     if (parts.length === 2) return parts.pop().split(';').shift();
+  //     return null;
+  //   }
   const handleSubmit = async (e) => {
     e.preventDefault();
     let token = Cookies.get("token");

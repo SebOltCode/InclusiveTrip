@@ -17,10 +17,10 @@ export default function Navbar() {
   }, [userInfo, setUserInfo]);
   
   
-  useEffect(() => {
-    if (userInfo) {
-    }
-  }, [userInfo]);
+  // useEffect(() => {
+  //   if (userInfo) {
+  //   }
+  // }, [userInfo]);
   
 
   return (

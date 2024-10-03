@@ -15,12 +15,12 @@ export function ProfilePhotoUpload({
   const onDrop = async (acceptedFiles) => {
     let token = Cookies.get("token");
    
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    }
+    // function getCookie(name) {
+    //   const value = `; ${document.cookie}`;
+    //   const parts = value.split(`; ${name}=`);
+    //   if (parts.length === 2) return parts.pop().split(';').shift();
+    //   return null;
+    // }
   if (!token) {
       token = getCookie('token');
       if (!token) {
@@ -55,12 +55,12 @@ export function ProfilePhotoUpload({
 
   const deleteProfilePhoto = async () => {
     let token = Cookies.get("token");
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    }
+    // function getCookie(name) {
+    //   const value = `; ${document.cookie}`;
+    //   const parts = value.split(`; ${name}=`);
+    //   if (parts.length === 2) return parts.pop().split(';').shift();
+    //   return null;
+    // }
   if (!token) {
      token = getCookie('token');
       if (!token) {
