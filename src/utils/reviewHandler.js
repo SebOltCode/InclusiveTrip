@@ -9,7 +9,7 @@ const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 const reviewsUrl = `${API_URL}/reviews`;
 const barriersReviewsUrl = `${API_URL}/barriersReviews`;
 
-let token = Cookies.get("token");
+
 // function getCookie(name) {
 //     const value = `; ${document.cookie}`;
 //     const parts = value.split(`; ${name}=`);
@@ -18,10 +18,11 @@ let token = Cookies.get("token");
 // }
 export async function createReview(ratingData) {
 
+    let token = Cookies.get("token");
     if (!token) {
         // let token = getCookie('token');
         // if (!token) {
-        throw new Error("No token found in create review from get cookie");
+        throw new Error("No token found in create review");
     }
 }
 
