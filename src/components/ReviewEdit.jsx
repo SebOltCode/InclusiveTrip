@@ -58,12 +58,12 @@ const DetailReview = () => {
   const handleUpdate = async () => {
     let token = Cookies.get("token");
    
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-  }
+  //   function getCookie(name) {
+  //     const value = `; ${document.cookie}`;
+  //     const parts = value.split(`; ${name}=`);
+  //     if (parts.length === 2) return parts.pop().split(';').shift();
+  //     return null;
+  // }
   if (!token) {
      token = getCookie('token');
       if (!token) {
@@ -108,12 +108,12 @@ const DetailReview = () => {
   const handleDelete = async () => {
     let token = Cookies.get("token");
 
-    function getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    }
+    // function getCookie(name) {
+    //   const value = `; ${document.cookie}`;
+    //   const parts = value.split(`; ${name}=`);
+    //   if (parts.length === 2) return parts.pop().split(';').shift();
+    //   return null;
+    // }
   if (!token) {
       token = getCookie('token');
       if (!token) {
