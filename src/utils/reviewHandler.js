@@ -10,56 +10,56 @@ const reviewsUrl = `${API_URL}/reviews`;
 const barriersReviewsUrl = `${API_URL}/barriersReviews`;
 
 let token = Cookies.get("token");
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-    return null;
-}
+// function getCookie(name) {
+//     const value = `; ${document.cookie}`;
+//     const parts = value.split(`; ${name}=`);
+//     if (parts.length === 2) return parts.pop().split(';').shift();
+//     return null;
+// }
 export async function createReview(ratingData) {
 
     if (!token) {
-        let token = getCookie('token');
-        if (!token) {
-            throw new Error("No token found in create review from get cookie");
-        }
+        // let token = getCookie('token');
+        // if (!token) {
+        throw new Error("No token found in create review from get cookie");
     }
+}
 
-    let reviewId = 0;
-    await axios
-        .post(reviewsUrl, ratingData, {
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-            },
-            withCredentials: true,
-        })
-        .then((res) => {
-            reviewId = res.data.id;
-        })
-        .catch((err) => {
-            if (err.response) {
-                const { status, data } = err.response;
-                console.error(
-                    `Error ${status}: ${data.message || "An unknown error occurred."}`
-                );
-                if (data.errors) {
-                    const validationErrors = data.errors.map((error) => ({
-                        field: error.field,
-                        message: error.message,
-                    }));
+let reviewId = 0;
+await axios
+    .post(reviewsUrl, ratingData, {
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        withCredentials: true,
+    })
+    .then((res) => {
+        reviewId = res.data.id;
+    })
+    .catch((err) => {
+        if (err.response) {
+            const { status, data } = err.response;
+            console.error(
+                `Error ${status}: ${data.message || "An unknown error occurred."}`
+            );
+            if (data.errors) {
+                const validationErrors = data.errors.map((error) => ({
+                    field: error.field,
+                    message: error.message,
+                }));
 
-                    console.error("Validation errors:", validationErrors);
-                } else {
-                    console.error(
-                        `Error message: ${data.message || "An unknown error occurred."}`
-                    );
-                }
+                console.error("Validation errors:", validationErrors);
             } else {
-                console.error("Login error:", err.message);
+                console.error(
+                    `Error message: ${data.message || "An unknown error occurred."}`
+                );
             }
-        });
-    return reviewId;
+        } else {
+            console.error("Login error:", err.message);
+        }
+    });
+return reviewId;
 }
 
 export async function createBarrierReviews(barriersReviews, reviewId) {
