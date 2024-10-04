@@ -6,16 +6,9 @@ const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 const reviewsUrl = `${API_URL}/reviews`;
 const barriersReviewsUrl = `${API_URL}/barriersReviews`;
 
-const getToken = () => {
-    const token = Cookies.get("token");
-    if (!token) {
-        throw new Error("No token found");
-    }
-    return token;
-};
 
 export const createReview = async (ratingData) => {
-    const token = getToken();
+    let token = Cookies.get("token");
     let reviewId = 0;
     await axios
         .post(reviewsUrl, ratingData, {
@@ -35,7 +28,7 @@ export const createReview = async (ratingData) => {
 };
 
 export const createBarrierReviews = async (barriersReviews, reviewId) => {
-    const token = getToken();
+    let token = Cookies.get("token");
     for (const barriersReview of barriersReviews) {
         const barrierRatingData = {
             barrierId: barriersReview.barrierId,
@@ -51,7 +44,7 @@ export const createBarrierReviews = async (barriersReviews, reviewId) => {
 };
 
 export const updateBarrierReview = async (barriersReviews, reviewId) => {
-    const token = getToken();
+   let token = Cookies.get("token");
     await deleteBarrierReviewsByReviewId(reviewId);
     for (const barriersReview of barriersReviews) {
         const barrierRatingData = {
@@ -68,7 +61,7 @@ export const updateBarrierReview = async (barriersReviews, reviewId) => {
 };
 
 export const fetchReviewById = async (reviewId) => {
-    const token = getToken();
+    let token = Cookies.get("token");
     try {
         const response = await axios.get(`${API_URL}/reviews/reviewid/${reviewId}`, {
             headers: {
@@ -84,7 +77,7 @@ export const fetchReviewById = async (reviewId) => {
 };
 
 export const createBarrierReview = async (barrierRatingData) => {
-    const token = getToken();
+    let token = Cookies.get("token");
     try {
         const response = await axios.post(barriersReviewsUrl, barrierRatingData, {
             headers: {
@@ -101,7 +94,7 @@ export const createBarrierReview = async (barrierRatingData) => {
 };
 
 export const deleteBarrierReviewsByReviewId = async (reviewId) => {
-    const token = getToken();
+    let token = Cookies.get("token");
     try {
         const response = await axios.delete(`${barriersReviewsUrl}/review/${reviewId}`, {
             headers: {
