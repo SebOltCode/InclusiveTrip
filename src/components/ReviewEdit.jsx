@@ -6,7 +6,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { updateBarrierReview } from "../utils/reviewHandler";
 
-
 const DetailReview = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
   const location = useLocation();
@@ -35,10 +34,9 @@ const DetailReview = () => {
     fetchBarrierRatings();
   }, []);
 
-
   const handleBarrierReviewChange = (e) => {
     const rating = Number(e.target.value);
-    const barrierId = Number(e.target.getAttribute('data-barrier-id'));
+    const barrierId = Number(e.target.getAttribute("data-barrier-id"));
     setBarrierRatings((prev) =>
       prev.map((item) =>
         item.barrierId === barrierId ? { ...item, reviews: rating } : item
@@ -54,24 +52,8 @@ const DetailReview = () => {
     setSelectedImage(null);
   };
 
-
   const handleUpdate = async () => {
     let token = Cookies.get("token");
-   
-  //   function getCookie(name) {
-  //     const value = `; ${document.cookie}`;
-  //     const parts = value.split(`; ${name}=`);
-  //     if (parts.length === 2) return parts.pop().split(';').shift();
-  //     return null;
-  // }
-  // if (!token) {
-  //    token = getCookie('token');
-  //     if (!token) {
-  //       toast.error("Keine Berechtigung. Bitte einloggen.");
-  //       return;
-  //     }
-
-  // }
 
     try {
       await axios.put(
@@ -96,7 +78,6 @@ const DetailReview = () => {
     }
 
     await updateBarrierReview(barrierRatings, rating.id);
-
   };
 
   const handleCommentChange = (e) => {
@@ -104,24 +85,8 @@ const DetailReview = () => {
     setComment(value);
   };
 
-
   const handleDelete = async () => {
     let token = Cookies.get("token");
-
-    // function getCookie(name) {
-    //   const value = `; ${document.cookie}`;
-    //   const parts = value.split(`; ${name}=`);
-    //   if (parts.length === 2) return parts.pop().split(';').shift();
-    //   return null;
-    // }
-  // if (!token) {
-  //     token = getCookie('token');
-  //     if (!token) {
-  //       toast.error("Keine Berechtigung. Bitte einloggen.");
-  //     return;
-  //     }
-
-  //   }
 
     try {
       await axios.delete(`${API_URL}/reviews/${rating.id}`, {
@@ -134,7 +99,6 @@ const DetailReview = () => {
       setTimeout(() => {
         navigate(`/user`);
       }, 2000);
-
     } catch (error) {
       toast.error("Fehler beim Löschen der Bewertung.");
       console.log(error);
@@ -153,8 +117,6 @@ const DetailReview = () => {
     setShowDeleteModal(false);
   };
 
-
-
   return (
     <div>
       <div className="flex flex-col md:flex-row items-top p-4">
@@ -163,7 +125,8 @@ const DetailReview = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col items-left  w-full md:w-2/3 text-left">
               <h1 className="mt-4 font-poppins font-extrabold text-3xl md:text-5xl lg:text-5xl leading-[4] text-black">
-                {rating.User.firstName} hat {rating.placeName} am {new Date(rating.createdAt).toLocaleDateString()} bewertet
+                {rating.User.firstName} hat {rating.placeName} am{" "}
+                {new Date(rating.createdAt).toLocaleDateString()} bewertet
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
                 Erfahre folgend mehr über diese Bewertung.
@@ -215,8 +178,7 @@ const DetailReview = () => {
               <button
                 className="absolute top-4 right-4 text-white text-3xl font-bold"
                 onClick={closeModal}
-              >
-              </button>
+              ></button>
             </div>
           </div>
         )}
@@ -263,10 +225,8 @@ const DetailReview = () => {
             className="w-full p-4 border border-gray-300 rounded-lg"
             rows="4"
             placeholder="Beschreibung hier eingeben"
-          >
-          </textarea>
+          ></textarea>
         </div>
-
 
         <div className="flex items-center justify-left space-x-4">
           <button
