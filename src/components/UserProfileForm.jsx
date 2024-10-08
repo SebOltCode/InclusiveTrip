@@ -10,26 +10,11 @@ export function UserProfileForm({ userData, setUserData }) {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
-  // function getCookie(name) {
-  //     const value = `; ${document.cookie}`;
-  //     const parts = value.split(`; ${name}=`);
-  //     if (parts.length === 2) return parts.pop().split(';').shift();
-  //     return null;
-  //   }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     let token = Cookies.get("token");
-    
-  // if (!token) {
-  //     token = getCookie('token');
-  //     if (!token) {
-  //       console.error("No token found");
-  //     return;
-  //     }
 
-  //   }
-
-  
     const {
       firstName,
       lastName,
@@ -78,7 +63,7 @@ export function UserProfileForm({ userData, setUserData }) {
             >
               Persönliche Daten
             </label>
-                      </div>
+          </div>
 
           <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
             <label
@@ -112,7 +97,7 @@ export function UserProfileForm({ userData, setUserData }) {
             />
           </div>
 
-                    <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
+          <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
             <label
               htmlFor="email"
               className="mt-12 w-full h-[22px] text-[16px] font-normal leading-[140%] text-[#1E1E1E]"

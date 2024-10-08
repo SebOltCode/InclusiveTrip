@@ -2,8 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer, } from "react-toastify";
-
+import { toast, ToastContainer } from "react-toastify";
 
 export const AuthContext = createContext();
 
@@ -18,15 +17,7 @@ export const AuthProvider = ({ children }) => {
   const [shouldFetch, setShouldFetch] = useState(false);
   const navigate = useNavigate();
 
-let token = Cookies.get("token");
-    // if (!token) {
-    //     const tokenFromCookies = getCookie('token');
-    //     console.log(tokenFromCookies);
-    //     if (!tokenFromCookies) {
-    //         throw new Error("No token found in create review from get cookie");
-    //     }
-
-    // }
+  let token = Cookies.get("token");
 
   const fetchUserInfo = async () => {
     try {
@@ -44,26 +35,24 @@ let token = Cookies.get("token");
       setUserInfo(null);
     }
   };
-  
-  useEffect(() => { 
+
+  useEffect(() => {
     if (token && (shouldFetch || !userInfo)) {
-      fetchUserInfo(); 
+      fetchUserInfo();
     }
   }, [shouldFetch]);
-  
+
   async function login(loginData) {
     try {
       const response = await axios.post(loginUrl, loginData, {
         withCredentials: true,
       });
       console.log("Login successful:", response);
-      setShouldFetch((prev) => !prev); 
+      setShouldFetch((prev) => !prev);
       await fetchUserInfo();
-      
+
       toast.success("Willkommen zurück!");
       navigate("/map");
-      
-      
     } catch (err) {
       if (err.response) {
         const { status, data } = err.response;
@@ -75,7 +64,7 @@ let token = Cookies.get("token");
             field: error.field,
             message: error.message,
           }));
-  
+
           console.error("Validation errors:", validationErrors);
         } else {
           console.error(
@@ -85,12 +74,12 @@ let token = Cookies.get("token");
       } else {
         console.error("Login error:", err.message);
       }
-  
+
       Cookies.remove("token");
       setUserInfo(null);
     }
   }
-  
+
   function logout() {
     Cookies.remove("token", { path: "/", domain: window.location.hostname });
     localStorage.removeItem("userInfo");
@@ -113,9 +102,7 @@ let token = Cookies.get("token");
   }
 
   return (
-    
     <AuthContext.Provider
-    
       value={{
         userInfo,
         setUserInfo,
@@ -124,7 +111,6 @@ let token = Cookies.get("token");
         signup,
       }}
     >
-     
       {children}
     </AuthContext.Provider>
   );

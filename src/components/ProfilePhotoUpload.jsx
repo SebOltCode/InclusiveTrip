@@ -14,22 +14,6 @@ export function ProfilePhotoUpload({
 
   const onDrop = async (acceptedFiles) => {
     let token = Cookies.get("token");
-   
-    // function getCookie(name) {
-    //   const value = `; ${document.cookie}`;
-    //   const parts = value.split(`; ${name}=`);
-    //   if (parts.length === 2) return parts.pop().split(';').shift();
-    //   return null;
-    // }
-  // if (!token) {
-  //     token = getCookie('token');
-  //     if (!token) {
-  //       console.log("No token found");
-  //       return;
-  //     }
-
-  //   }
-
 
     const formData = new FormData();
     formData.append("file", acceptedFiles[0]);
@@ -55,20 +39,6 @@ export function ProfilePhotoUpload({
 
   const deleteProfilePhoto = async () => {
     let token = Cookies.get("token");
-    // function getCookie(name) {
-    //   const value = `; ${document.cookie}`;
-    //   const parts = value.split(`; ${name}=`);
-    //   if (parts.length === 2) return parts.pop().split(';').shift();
-    //   return null;
-    // }
-  // if (!token) {
-  //    token = getCookie('token');
-  //     if (!token) {
-  //       console.error("No token found");
-  //       return;
-  //     }
-
-  //   }
 
     setIsDeleting(true);
 
