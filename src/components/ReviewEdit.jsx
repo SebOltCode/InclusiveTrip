@@ -6,7 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { updateBarrierReview } from "../utils/reviewHandler";
 
-const DetailReview = () => {
+const ReviewEdit = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
   const location = useLocation();
   const { rating } = location.state || {};
@@ -71,13 +71,12 @@ const DetailReview = () => {
           withCredentials: true,
         }
       );
-      toast.success("Bewertung erfolgreich aktualisiert!");
+      await updateBarrierReview(barrierRatings, rating.id);
+      toast.success("Bewertung erfolgreich aktualisiert.");
     } catch (error) {
+      console.error("Error updating review:", error);
       toast.error("Fehler beim Aktualisieren der Bewertung.");
-      console.log(error);
     }
-
-    await updateBarrierReview(barrierRatings, rating.id);
   };
 
   const handleCommentChange = (e) => {
@@ -95,13 +94,11 @@ const DetailReview = () => {
         },
         withCredentials: true,
       });
-      toast.success("Bewertung erfolgreich gelöscht!");
-      setTimeout(() => {
-        navigate(`/user`);
-      }, 2000);
+      toast.success("Bewertung erfolgreich gelöscht.");
+      navigate(-1);
     } catch (error) {
+      console.error("Error deleting review:", error);
       toast.error("Fehler beim Löschen der Bewertung.");
-      console.log(error);
     }
   };
 
@@ -157,7 +154,7 @@ const DetailReview = () => {
                 key={index}
                 src={image.filePath}
                 alt={`Bild ${index + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-48 h-48 object-cover rounded-lg"
               />
             </div>
           ))}
@@ -168,17 +165,19 @@ const DetailReview = () => {
             className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
             onClick={closeModal}
           >
-            <div className="relative">
+            <div className="relative w-1/4 h-1/4">
               <img
                 src={selectedImage.filePath}
                 alt="Selected"
-                className="max-w-full max-h-full object-contain"
+                className="w-full h-full object-cover rounded-lg"
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="absolute top-4 right-4 text-white text-3xl font-bold"
+                className="absolute top-2 right-2 text-white text-2xl font-bold"
                 onClick={closeModal}
-              ></button>
+              >
+                &times;
+              </button>
             </div>
           </div>
         )}
@@ -289,4 +288,4 @@ const DetailReview = () => {
   );
 };
 
-export default DetailReview;
+export default ReviewEdit;

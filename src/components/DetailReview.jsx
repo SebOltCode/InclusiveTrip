@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
-
 const DetailReview = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
   const location = useLocation();
@@ -42,6 +41,7 @@ const DetailReview = () => {
   const handleBackClick = () => {
     navigate(-1);
   };
+
   return (
     <div>
       <div className="flex flex-col md:flex-row items-top p-4">
@@ -50,7 +50,8 @@ const DetailReview = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col items-left  w-full md:w-2/3 text-left">
               <h1 className="mt-4 font-poppins font-extrabold text-3xl md:text-5xl lg:text-5xl leading-[4] text-black">
-                {rating.User.firstName} hat {place.name} {category.name} am {new Date(rating.createdAt).toLocaleDateString()} bewertet
+                {rating.User.firstName} hat {place.name} {category.name} am{" "}
+                {new Date(rating.createdAt).toLocaleDateString()} bewertet
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
                 Erfahre folgend mehr über diese Bewertung.
@@ -74,14 +75,13 @@ const DetailReview = () => {
           {rating.FileUploads.map((image, index) => (
             <div
               key={index}
-              className="w-1/4 p-2 cursor-pointer"
+              className="w-48 h-48 p-2 cursor-pointer"
               onClick={() => openModal(image)}
             >
               <img
-                key={index}
                 src={image.filePath}
                 alt={`Bild ${index + 1}`}
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-lg"
               />
             </div>
           ))}
@@ -92,17 +92,18 @@ const DetailReview = () => {
             className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
             onClick={closeModal}
           >
-            <div className="relative">
+            <div className="relative w-1/4 h-1/4">
               <img
                 src={selectedImage.filePath}
                 alt="Selected"
-                className="max-w-full max-h-full object-contain"
+                className="w-full h-full object-cover rounded-lg"
                 onClick={(e) => e.stopPropagation()}
               />
               <button
-                className="absolute top-4 right-4 text-white text-3xl font-bold"
+                className="absolute top-2 right-2 text-white text-2xl font-bold"
                 onClick={closeModal}
               >
+                &times;
               </button>
             </div>
           </div>

@@ -20,7 +20,6 @@ const CategorySelector = ({ selectedCategory, setSelectedCategory }) => {
       } catch (error) {
         console.log(error);
       } finally {
-        // setLoading(false);
       }
     };
 
