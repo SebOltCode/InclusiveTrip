@@ -26,10 +26,9 @@ const Home = () => {
       <div>
         <div className="flex flex-col items-center justify-center"></div>
         <div className="pb-1 container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
-          <div className="w-full text-left p-8 relative">
-            <h1 className="font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-              Willkommen auf <br />
-              InclusiveTRIP
+          <div className="w-full text-left p-4 sm:p-8 relative">
+            <h1 className="font-poppins font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black mb-4 sm:mb-8">
+              Willkommen auf InclusiveTRIP
             </h1>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-left ml-8 mt-[-24]">
@@ -52,24 +51,24 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center mt-8 p-4 gap-6">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-left space-y-4 sm:space-y-0 sm:space-x-4 w-full">
-              <div className="p-4 w-full sm:w-auto">
+          <div className="flex flex-col items-center justify-center mt-4 sm:mt-8 p-2 sm:p-4 gap-4 sm:gap-6 md:mt-0">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-left space-y-2 sm:space-y-0 sm:space-x-4 w-full">
+              <div className="p-2 sm:p-4 w-full sm:w-auto">
                 <CitySelector
                   selectedCity={selectedCity}
                   setSelectedCity={setSelectedCity}
                 />
               </div>
-              <div className="p-4 w-full sm:w-auto">
+              <div className="p-2 sm:p-4 w-full sm:w-auto">
                 <CategorySelector
                   selectedCategory={selectedCategory}
                   setSelectedCategory={setSelectedCategory}
                 />
               </div>
 
-              <div className="p-4 w-full sm:w-auto">
+              <div className="p-2 sm:p-4 w-full sm:w-auto">
                 <button
-                  className="btn btn-outline bg-yellow-400 mt-7 w-auto"
+                  className="btn btn-outline bg-yellow-400 mt-4 sm:mt-7 w-auto"
                   onClick={handleSearch}
                 >
                   Suchen
@@ -78,25 +77,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        {/* Beschreibungstext */}
-        <p className="mt-20 p-4 font-medium font-poppins text-[rgba(30,30,30,0.5)]">
-          InclusiveTRIP hilft Ihnen, öffentliche Orte wie Restaurants, Kinos,
-          Museen und vieles mehr hinsichtlich ihrer Barrierefreiheit oder
-          anderer Kriterien zu bewerten und passende Locations zu finden. Unsere
-          App ermöglicht es Ihnen, Orte zu entdecken und zu bewerten, um anderen
-          Menschen mit ähnlichen Bedürfnissen zu helfen, die besten Orte für
-          Ihren nächsten Städtetrip zu finden.
-          <br />
-          <br />
-          Egal, ob Sie Rollstuhlfahrer sind, eine Hörbehinderung haben, mit
-          einem Kinderwagen unterwegs sind oder auch Tiere dabei haben –
-          InclusiveTRIP ist das Werkzeuge, um sicherzustellen, dass Ihre
-          Umgebung zugänglich und inklusiv ist. Ihre Bewertungen und Erfahrungen
-          tragen dazu bei, eine Gemeinschaft zu schaffen, die Barrierefreiheit
-          zur Priorität macht. Entdecken, bewerten und teilen Sie Ihre
-          Erfahrungen mit Orten mit InclusiveTRIP!
-        </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center mt-8 p-4 gap-6">
           <div className="flex flex-col items-center p-4 gap-3 w-full md:w-[400px] h-auto bg-white rounded-lg shadow-md">
@@ -124,8 +104,7 @@ const Home = () => {
               Umkreissuche
             </p>
             <p className="font-poppins font-medium text-[rgba(30,30,30,0.5)] text-center">
-              Egal in welcher Stadt in Deutschland du unterwegs bist, finde
-              Bewertungen.
+              In welche Stadt möchtest du reisen?
             </p>
           </div>
 
@@ -139,10 +118,27 @@ const Home = () => {
               Locationsfilter
             </p>
             <p className="font-poppins font-medium text-[rgba(30,30,30,0.5)] text-center">
-              Finde Locations die genau deinen Bedürfnissen entsprechen.
+              Welche Orte möchtest du besuchen?
             </p>
           </div>
         </div>
+        <p className="mt-20 p-4 font-medium font-poppins text-[rgba(30,30,30,0.5)]">
+          InclusiveTRIP hilft dir, öffentliche Orte wie Restaurants, Kinos,
+          Museen und vieles mehr hinsichtlich ihrer Barrierefreiheit oder
+          anderer Kriterien zu bewerten und passende Locations zu finden. Unsere
+          App ermöglicht es dir, Orte zu entdecken und zu bewerten, um anderen
+          Menschen mit ähnlichen Bedürfnissen zu helfen, die besten Orte für
+          ihren nächsten Städtetrip zu finden.
+          <br />
+          <br />
+          Egal, ob du Rollstuhlfahrer, gehörlos, sehbeeinträchtigt oder auch mit
+          einem Kinderwagen unterwegs bist oder ein Haustier dabei hast –
+          InclusiveTRIP ist das Werkzeuge, um sicherzustellen, dass deine
+          Umgebung zugänglich und inklusiv ist. Deine Bewertungen und
+          Erfahrungen tragen dazu bei, eine Gemeinschaft zu schaffen, die
+          Barrierefreiheit zur Priorität macht. Entdecke, bewerte und teile
+          deine Erfahrungen mit Orten mit InclusiveTRIP!
+        </p>
         <h1 className="font-poppins font-bold text-[18px] text-center pt-12 text-[#000000]">
           Blog Einträge
         </h1>
