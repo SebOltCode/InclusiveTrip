@@ -27,39 +27,47 @@ export default function Navbar() {
           </NavLink>
         </div>
         {userInfo && (
-          <div>
-            <p className="text-2xl font-semibold p-2">
+          <div className="flex-1 lg:flex-none lg:ml-8 mr-10 lg:mr-0 text-left lg:text-left">
+            <p className="text-xl lg:text-2xl font-semibold p-2">
               Willkommen {userInfo.firstName}
             </p>
           </div>
         )}
-        <nav className="flex space-x-4 items-center">
-          <div className="flex space-x-4 sm:space-x-8 ml-8 mr-4">
-            <NavLink to="/" className="text-black">
+        <nav className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 items-center lg:ml-auto">
+          <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 ml-0 sm:ml-8 mr-4">
+            <NavLink to="/" className="text-black underline mt-2 sm:mt-0">
               Home
             </NavLink>
-            <NavLink to="/map" className="text-black">
+            <NavLink to="/map" className="text-black underline mt-2 sm:mt-0">
               Karte
             </NavLink>
             {userInfo && (
               <>
-                <NavLink to="/user" className="text-black">
+                <NavLink
+                  to="/user"
+                  className="text-black underline mt-2 sm:mt-0"
+                >
                   User
                 </NavLink>
-                <NavLink onClick={logout} className="text-black">
+                <NavLink
+                  onClick={logout}
+                  className="text-black underline mt-2 sm:mt-0"
+                >
                   Logout
                 </NavLink>
               </>
             )}
             {!userInfo && (
               <>
-                <NavLink to="/login" className="text-black">
-                  <UserIcon className="w-6 h-6 mr-2" />
+                <NavLink
+                  to="/login"
+                  className="text-black underline mt-2 sm:mt-0"
+                >
+                  <UserIcon className="w-6 h-6 mr-1 sm:mr-2" />
                 </NavLink>
               </>
             )}
           </div>
-          <ul className="flex space-x-6"></ul>
         </nav>
       </div>
     </header>

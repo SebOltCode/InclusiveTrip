@@ -40,5 +40,7 @@ export default {
       "sunset",
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require("daisyui")],
 };
