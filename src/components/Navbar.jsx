@@ -15,12 +15,12 @@ export default function Navbar() {
   }, [userInfo, setUserInfo]);
 
   return (
-    <header className="h-[126px] bg-white z-10">
+    <header className="h-auto bg-white z-10">
       <div className="container mx-auto flex items-center justify-between h-full px-4 lg:px-8">
         <div className="flex items-center">
           <NavLink to="/" href="index.html">
             <img
-              className="w-[206px] h-[44px]"
+              className="w-3/5 sm:w-2/5 h-auto"
               src="./images/Logo.png"
               alt="Logo"
             />
@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
         )}
         <nav className="flex space-x-4 items-center">
-          <div className="flex space-x-8 ml-8">
+          <div className="flex space-x-4 sm:space-x-8 ml-8 mr-4">
             <NavLink to="/" className="text-black">
               Home
             </NavLink>
