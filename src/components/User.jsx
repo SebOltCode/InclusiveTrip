@@ -35,17 +35,17 @@ function User() {
 
         <div className="flex flex-col md:flex-row items-top justify-center p-4">
           <div className="container mx-auto w-full min-h bg-[#C1DCDC] rounded-[24px] relative">
-            <div className="flex flex-col md:flex-row justify-between p-8">
+            <div className="flex flex-col md:flex-row justify-between p-4 sm:p-8">
               <div className="flex flex-col w-full md:w-2/3 text-left">
-                <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
+                <h1 className="font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
                   Profil von {userData.firstName}
                 </h1>
-                <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
+                <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight">
                   Ändere deine Benutzerdaten und bearbeite deine bereits
                   abgegebenen Bewertungen.
                 </div>
               </div>
-              <div className="flex items-center justify-end w-full md:w-2/3 mt-4 md:mt-0">
+              <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                 <ProfilePhotoUpload
                   userData={userData}
                   profilePhoto={profilePhoto}
@@ -60,23 +60,21 @@ function User() {
         </div>
       </div>
 
-      <h1 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
+      <h1 className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center pt-12 mt-12 text-[#000000]">
         Deine Bewertungen
       </h1>
 
       {userRatings.map((rating, index) => (
         <div
           key={index}
-          className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] mt-16"
+          className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] mt-8 sm:mt-16 p-4 sm:p-8"
         >
-          <div className="w-full text-left p-8">
-            <div className="flex items-center justify-between">
-              <h1 className="font-poppins font-bold text-[18px] text-[#000000]">
+          <div className="w-full text-left">
+            <div className="flex flex-col sm:flex-row items-center justify-between">
+              <h1 className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#000000]">
                 So hast du {rating.placeName} bewertet:
               </h1>
-
-              <div className="font-poppins font-bold text-[18px] text-[#000000]">
-                {" "}
+              <div className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#000000]">
                 {new Date(rating.createdAt).toLocaleDateString()}
               </div>
             </div>
@@ -85,7 +83,7 @@ function User() {
             </p>
 
             <button
-              className="btn bg-[#FFD700] border-black w-36 p-2 h-12 min-h-2 m-2 justify-center float-right"
+              className="btn bg-[#FFD700] border-black w-full sm:w-36 p-2 h-12 min-h-2 mt-4 sm:mt-2 justify-center"
               onClick={() => handleRateClick(rating)}
             >
               mehr lesen

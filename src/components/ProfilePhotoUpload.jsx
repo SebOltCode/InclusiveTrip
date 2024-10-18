@@ -70,7 +70,7 @@ export function ProfilePhotoUpload({
           />
           <button
             onClick={deleteProfilePhoto}
-            className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-2 btn bg-red-500 text-white ${isDeleting ? "opacity-50 cursor-not-allowed" : ""}`}
+            className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-2 btn bg-transparent hover:bg-red-800 text-white ${isDeleting ? "opacity-50 cursor-not-allowed" : ""}`}
             disabled={isDeleting}
           >
             {isDeleting ? "Löschen..." : "Profilfoto löschen"}

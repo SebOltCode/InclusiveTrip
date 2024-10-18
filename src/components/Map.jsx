@@ -1,35 +1,30 @@
-import React from "react";
-import { useState, useEffect } from "react";
-
-import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
+import React, { useState, useEffect } from "react";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
 import "leaflet-geosearch/dist/geosearch.css";
-
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import CitySelector from "./MapComponents/CitySelector";
 import PlacesLayer from "./MapComponents/PlacesLayer";
-import LocationMarker from "./MapComponents/LocationMarker";
 import NavigateMap from "./MapComponents/NavigateMap";
 import CategorySelector from "./MapComponents/CategorySelector";
 import { useLocation } from "react-router-dom";
 
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'marker-icon-2x.png',
-  iconUrl: 'marker-icon.png',
-  shadowUrl: 'marker-shadow.png',
+  iconRetinaUrl: "marker-icon-2x.png",
+  iconUrl: "marker-icon.png",
+  shadowUrl: "marker-shadow.png",
 });
-
 
 const SearchField = () => {
   const map = useMap();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const provider = new OpenStreetMapProvider();
 
     const searchControl = new GeoSearchControl({
       provider: provider,
-      style: 'bar',
+      style: "bar",
       showMarker: true,
       autoClose: true,
       retainZoomLevel: false,
@@ -48,10 +43,14 @@ const SearchField = () => {
 };
 
 const Map = () => {
-  const [defaultCenter, setDefaultCenter] = useState([52.51085635037089, 13.399439386103111]);
-  const [selectedCity, setSelectedCity] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [defaultCenter, setDefaultCenter] = useState([
+    52.51085635037089, 13.399439386103111,
+  ]);
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const location = useLocation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   useEffect(() => {
     if (location.state) {
       setSelectedCity(location.state.city);
@@ -59,40 +58,61 @@ const Map = () => {
     }
   }, [location.state]);
 
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <>
-      <div>
-        <div className="flex flex-col md:flex-row items-top p-4">
-          <div className="flex flex-col md:flex-row"></div>
-          <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
-            <div className="flex flex-col md:flex-row w-full p-8">
-              <div className="flex flex-col w-full md:w-2/3 text-left">
-                <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-5xl leading-tight text-black">
-                  Wähle den gewünschten Standort <br /> auf der Karte aus 
-                </h1>
-                <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
-                  Benutze die Filter, um Städte und Kategorien zu finden und klicke auf das Icon in der Karte, um dir Bewertungen anzusehen.
-                </div>
-              </div>
-              <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
-                <img
-                  src="/images//Icon_Karte.png"
-                  alt="Icon Karte"
-                  className="max-w-full max-h-[300px] object-cover rounded-lg"
-                  style={{ width: '200px', height: '200px' }}
-                />
+      <div className="flex flex-col items-center p-4">
+        <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
+          <div className="flex flex-col md:flex-row w-full p-4 sm:p-8">
+            <div className="flex flex-col w-full text-left">
+              <h1 className="mb-2 font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
+                Wohin möchtest du reisen?
+              </h1>
+              <div className="flex flex-col md:flex-row items-center mt-4 sm:mt-4">
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleModal();
+                  }}
+                  className="text-blue-800 hover:underline md:ml-4"
+                >
+                  ..so funktioniert die Suche
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleModal();
+                  }}
+                  className="md:ml-4"
+                >
+                  <img
+                    src="/images/Icon_Karte.png"
+                    alt="Icon Karte"
+                    className="max-w-full max-h-[200px] sm:max-h-[300px] object-cover rounded-lg"
+                  />
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-
-        <div className="flex space-x-4 items-center mt-8">
-          <div className="p-4 mr-9 ">
-            <CitySelector selectedCity={selectedCity} setSelectedCity={setSelectedCity} />
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mt-4 sm:mt-8">
+          <div className="p-2 sm:p-4 w-full sm:w-auto">
+            <CitySelector
+              selectedCity={selectedCity}
+              setSelectedCity={setSelectedCity}
+            />
           </div>
-          <div className="p-4 mx-9">
-            <CategorySelector selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+          <div className="p-2 sm:p-4 w-full sm:w-auto">
+            <CategorySelector
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+            />
           </div>
         </div>
 
@@ -100,24 +120,56 @@ const Map = () => {
           center={defaultCenter}
           zoom={15}
           minZoom={14}
-          style={{ zIndex: 9, height: "70vh", width: "100%" }}
+          style={{ zIndex: 9, height: "60vh", width: "100%" }}
         >
           <SearchField />
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          {/* <Marker position={[52.51444539703697, 13.400659561157228]}>
-          <Popup>A pretty CSS3 popup. <br /> Easily customizable.</Popup>
-        </Marker> */}
-          {/* <SearchField /> */}
-          {/* <LocationMarker /> */}
           <NavigateMap selectedCity={selectedCity} />
           <PlacesLayer selectedCategory={selectedCategory} />
-        </MapContainer >
+        </MapContainer>
       </div>
-    </>
 
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white p-6 rounded-lg max-w-lg w-full mx-4 sm:mx-0">
+            <h2 className="text-xl font-bold mb-4">
+              So funktioniert die Suche:
+            </h2>
+            <div className="text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-xl leading-tight">
+              <div className="flex items-start mb-4">
+                <span className="mr-2">1.</span>
+                <p className="pl-2">
+                  Wähle eine Stadt aus der Liste oder suche direkt nach einer
+                  bestimmten Adresse mit Hilfe des Suchfeldes auf der Karte.
+                </p>
+              </div>
+              <div className="flex items-start mb-4">
+                <span className="mr-2">2.</span>
+                <p className="pl-2">
+                  Gebe die Art der Location ein, die du besuchen möchtest.
+                </p>
+              </div>
+              <div className="flex items-start mb-4">
+                <span className="mr-2">3.</span>
+                <p className="pl-2">
+                  Klicke auf das Icon in der Karte, um dir Bewertungen für diese
+                  Location anzusehen oder eine Bewertung zu schreiben.
+                </p>
+              </div>
+            </div>
+            <button
+              onClick={toggleModal}
+              className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            >
+              Schließen
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
