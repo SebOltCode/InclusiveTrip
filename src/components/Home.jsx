@@ -139,12 +139,12 @@ const Home = () => {
           Barrierefreiheit zur Priorität macht. Entdecke, bewerte und teile
           deine Erfahrungen mit Orten mit InclusiveTRIP!
         </p>
-        <h1 className="font-poppins font-bold text-[18px] text-center pt-12 text-[#000000]">
+        {/* <h1 className="font-poppins font-bold text-[18px] text-center pt-12 text-[#000000]">
           Blog Einträge
-        </h1>
-        <p className="font-poppins font-medium text-[rgba(30,30,30,0.5)] text-center pt-2">
+        </h1> */}
+        <p className="font-poppins font-semibold text-[rgba(0,0,0,0.5)] text-center pt-2">
           {" "}
-          Informiere dich über aktuelle Themen rund um das Thema Inklusion.
+          Informiere dich hier über aktuelle Themen rund um das Thema Inklusion.
         </p>
         <div className="container mx-auto w-full mt-8">
           <div className="bg-[#C1DCDC] rounded-[24px] p-4">

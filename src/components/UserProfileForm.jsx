@@ -52,70 +52,74 @@ export function UserProfileForm({ userData, setUserData }) {
       console.error("Error updating user data:", error);
     }
   };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="flex flex-row gap-4">
-        <div className="flex-1 p-4">
-          <div className="flex flex-col items-start gap-2 w-[487px] h-[50px]">
-            <label
-              htmlFor="username"
-              className="text-center w-full h-[22px] text-[20px] font-bold leading-[140%] text-[#1E1E1E]"
-            >
-              Persönliche Daten
-            </label>
-          </div>
+    <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto p-4">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-start gap-2 w-full">
+          <label
+            htmlFor="username"
+            className="text-center w-full text-lg sm:text-xl font-bold leading-[140%] text-[#1E1E1E]"
+          >
+            Persönliche Daten
+          </label>
+        </div>
 
-          <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
-            <label
-              htmlFor="firstName"
-              className="w-full h-[22px] text-[16px] font-normal leading-[140%] text-[#1E1E1E]"
-            >
-              Vorname
-            </label>
-            <input
-              className="flex items-center px-4 py-3 w-[487px] min-w-[240px] h-[40px] bg-white border border-[#D9D9D9] rounded-lg"
-              type="text"
-              name="firstName"
-              value={userData.firstName}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="flex flex-col items-start gap-2 w-full">
+          <label
+            htmlFor="firstName"
+            className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
+          >
+            Vorname
+          </label>
+          <input
+            className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
+            type="text"
+            name="firstName"
+            value={userData.firstName}
+            onChange={handleChange}
+          />
+        </div>
 
-          <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
-            <label
-              htmlFor="lastName"
-              className="mt-6 w-full h-[22px] text-[16px] font-normal leading-[140%] text-[#1E1E1E]"
-            >
-              Nachname
-            </label>
-            <input
-              className="flex items-center px-4 py-3 w-[487px] min-w-[240px] h-[40px] bg-white border border-[#D9D9D9] rounded-lg"
-              type="text"
-              name="lastName"
-              value={userData.lastName}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="flex flex-col items-start gap-2 w-full">
+          <label
+            htmlFor="lastName"
+            className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
+          >
+            Nachname
+          </label>
+          <input
+            className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
+            type="text"
+            name="lastName"
+            value={userData.lastName}
+            onChange={handleChange}
+          />
+        </div>
 
-          <div className="flex flex-col items-start gap-2 w-[487px] h-[70px]">
-            <label
-              htmlFor="email"
-              className="mt-12 w-full h-[22px] text-[16px] font-normal leading-[140%] text-[#1E1E1E]"
-            >
-              Email
-            </label>
-            <input
-              className="flex items-center px-4 py-3 w-[487px] min-w-[240px] h-[40px] bg-white border border-[#D9D9D9] rounded-lg"
-              type="email"
-              name="email"
-              value={userData.email}
-              onChange={handleChange}
-            />
-          </div>
+        <div className="flex flex-col items-start gap-2 w-full">
+          <label
+            htmlFor="email"
+            className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
+          >
+            Email
+          </label>
+          <input
+            className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
+            type="email"
+            name="email"
+            value={userData.email}
+            onChange={handleChange}
+          />
         </div>
       </div>
-      <div className="ml-4 mt-16 flex justify-center items-center px-4 py-3 w-[487px] h-[40px] bg-[#FFD700] border border-[#2C2C2C] rounded-lg">
-        <button type="submit">Änderungen speichern</button>
+      <div className="mt-8 flex justify-center items-center">
+        <button
+          type="submit"
+          className="px-8 py-3 bg-[#FFD700] border border-[#2C2C2C] rounded-lg"
+        >
+          Änderungen speichern
+        </button>
       </div>
     </form>
   );

@@ -33,8 +33,6 @@ export default function Login() {
     }
     try {
       await login(loginData);
-     
-   
     } catch (error) {
       setError(true);
       console.error("Login failed:", error);
@@ -68,20 +66,17 @@ export default function Login() {
       ) : (
         <div className="flex flex-col items-top p-4">
           <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
-            {/* Flex Container für Text und Bild */}
-            <div className="flex flex-col md:flex-row w-full p-8">
-              {/* Text Container */}
+            <div className="flex flex-col md:flex-row w-full p-4 sm:p-8">
               <div className="flex flex-col w-full md:w-2/3 text-left">
-                <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
+                <h1 className="font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
                   Login
                 </h1>
-                <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
+                <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight">
                   Logge dich ein, um Bewertungen abgeben zu können und dein
                   Profil zu verwalten.
                 </div>
               </div>
-              {/* Bild Container */}
-              <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
+              <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                 <img
                   src="/images//Icon_Login.png"
                   alt="Icon Karte"
