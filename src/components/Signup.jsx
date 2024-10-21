@@ -62,37 +62,34 @@ export default function SignupForm() {
       ) : (
         <div>
           <div className="flex flex-col md:flex-row items-top p-4">
-            <div className="flex flex-col md:flex-row"></div>
-            <div className="container mx-auto w-full  bg-[#C1DCDC] rounded-[24px] relative">
+            <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
               <div className="flex flex-col md:flex-row w-full p-8">
                 <div className="flex flex-col w-full md:w-2/3 text-left">
-                  <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
+                  <h1 className="font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight text-black">
                     Registrierung
                   </h1>
-                  <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
+                  <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
                     Lege dir ein Profil an, um <br />
                     Bewertungen abgeben zu können
                   </div>
                 </div>
                 {/* Bild Container */}
-                <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
+                <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                   <img
-                    src="/images//Icon_Signup.png"
+                    src="/images/Icon_Signup.png"
                     alt="Icon Karte"
                     className="max-w-full max-h-[300px] object-cover rounded-lg"
-                    style={{ width: '200px', height: '200px' }}
+                    style={{ width: "200px", height: "200px" }}
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="text-3xl">
+          <div className="text-lg md:text-xl">
             <form action="submit" onSubmit={handleSubmit}>
-
-              <div className="flex flex-col py-12  gap-3 max-w-[20rem]  m-auto">
-                <label className="input input-bordered flex items-center gap-2 w-full"
-                >
+              <div className="flex flex-col py-12 gap-3 max-w-[20rem] m-auto">
+                <label className="input input-bordered flex items-center gap-2 w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
@@ -103,16 +100,17 @@ export default function SignupForm() {
                     <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                   </svg>
 
-                  <input onChange={handleChange} value={signupData.email} type="text" name="email"
-                    className="grow" placeholder="Email" />
-
-
-
-
+                  <input
+                    onChange={handleChange}
+                    value={signupData.email}
+                    type="text"
+                    name="email"
+                    className="grow"
+                    placeholder="Email"
+                  />
                 </label>
 
                 <label className="input input-bordered flex items-center gap-2 w-full">
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
@@ -125,24 +123,35 @@ export default function SignupForm() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <input onChange={handleChange} value={signupData.firstName} type="text" name="firstName"
-                    className="grow" placeholder="Vorname" />
+                  <input
+                    onChange={handleChange}
+                    value={signupData.firstName}
+                    type="text"
+                    name="firstName"
+                    className="grow"
+                    placeholder="Vorname"
+                  />
                 </label>
 
-                <label onChange={handleChange} value={signupData.lastName}
-                  className="input input-bordered flex items-center gap-2 w-full">
+                <label className="input input-bordered flex items-center gap-2 w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
                     className="h-4 w-4 opacity-70"
                   >
-                    <path
-                      d="M8 0a4 4 0 0 1 4 4 4 4 0 0 1-4 4A4 4 0 0 1 4 4 4 4 0 0 1 8 0zm0 1.5A2.5 2.5 0 0 0 5.5 4 2.5 2.5 0 0 0 8 6.5 2.5 2.5 0 0 0 10.5 4 2.5 2.5 0 0 0 8 1.5zM1 14a6 6 0 0 1 12 0H1z"
-                    />
+                    <path d="M8 0a4 4 0 0 1 4 4 4 4 0 0 1-4 4A4 4 0 0 1 4 4 4 4 0 0 1 8 0zm0 1.5A2.5 2.5 0 0 0 5.5 4 2.5 2.5 0 0 0 8 6.5 2.5 2.5 0 0 0 10.5 4 2.5 2.5 0 0 0 8 1.5zM1 14a6 6 0 0 1 12 0H1z" />
                   </svg>
-                  <input type="text" name="lastName" className="grow" placeholder="Nachname" />
+                  <input
+                    onChange={handleChange}
+                    value={signupData.lastName}
+                    type="text"
+                    name="lastName"
+                    className="grow"
+                    placeholder="Nachname"
+                  />
                 </label>
+
                 <label className="input input-bordered flex items-center gap-2 w-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -156,16 +165,17 @@ export default function SignupForm() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <input onChange={handleChange} value={signupData.password}
-                    type="password" name="password" className="grow" placeholder="Passwort"
-
-
+                  <input
+                    onChange={handleChange}
+                    value={signupData.password}
+                    type="password"
+                    name="password"
+                    className="grow"
+                    placeholder="Passwort"
                   />
-
                 </label>
 
                 <label className="input input-bordered flex items-center gap-2 w-full">
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
@@ -178,21 +188,27 @@ export default function SignupForm() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <input onChange={handleChange} value={signupData.confirmPassword}
-                    type="password" name="confirmPassword" className="grow" placeholder="Passwort bestätigen"
+                  <input
+                    onChange={handleChange}
+                    value={signupData.confirmPassword}
+                    type="password"
+                    name="confirmPassword"
+                    className="grow"
+                    placeholder="Passwort bestätigen"
                   />
                 </label>
 
-
-
-                <button type="submit" className="btn bg-yellow-400 border-black px-8 font-normal ">
-                  speichern
+                <button
+                  type="submit"
+                  className="btn bg-yellow-400 border-black px-8 font-normal"
+                >
+                  Registrieren
                 </button>
                 {error && (
-                  <div role="alert" className="alert alert-warning text-base ">
+                  <div role="alert" className="alert alert-warning text-base">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 shrink-0 stroke-current "
+                      className="h-6 w-6 shrink-0 stroke-current"
                       fill="none"
                       viewBox="0 0 24 24"
                     >

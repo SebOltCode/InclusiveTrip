@@ -49,7 +49,7 @@ const Ratings = () => {
   };
 
   return (
-    <div>
+    <div className="p-4 md:p-8">
       <div className="flex flex-col md:flex-row items-top p-4">
         <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
           <div className="flex flex-col md:flex-row w-full p-8">
@@ -68,19 +68,22 @@ const Ratings = () => {
       )}
 
       <div className="p-4">
-        <button
-          type="button"
-          className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
-          onClick={handleBackClick}
-        >
-          Zurück
-        </button>
-        <button
-          className="btn bg-[#FFD700] p-2 mt-4 h-12 min-h-2 m-2 justify-end float-right"
-          onClick={() => handleCreateRate(place)}
-        >
-          Bewertung hinzufügen
-        </button>
+        <div className="flex flex-col md:flex-row justify-between">
+          <button
+            type="button"
+            className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
+            onClick={() => handleCreateRate(place)}
+          >
+            Bewertung hinzufügen
+          </button>
+          <button
+            type="button"
+            className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
+            onClick={handleBackClick}
+          >
+            Zurück
+          </button>
+        </div>
 
         <h1 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
           Bewertungen
@@ -92,15 +95,15 @@ const Ratings = () => {
             className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] mt-16 pr-8"
           >
             <div className="w-full text-left p-8">
-              <div className="flex items-center justify-between">
-                <h1 className="font-poppins font-bold text-[18px] text-[#000000]">
+              <div className="flex flex-col md:flex-row items-center justify-between">
+                <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
                   Bewertung von {rating.User.firstName}
                 </h1>
-                <h1 className="font-poppins font-bold text-[18px] text-[#000000]">
+                <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
                   vom {new Date(rating.createdAt).toLocaleDateString()}
                 </h1>
               </div>
-              <p className="mt-4 font-poppins font-medium text-[rgba(30,30,30,0.5)] text-left">
+              <p className="mt-4 font-poppins font-medium text-sm md:text-[rgba(30,30,30,0.5)] text-left">
                 {rating.comment}
               </p>
 
