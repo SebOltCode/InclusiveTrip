@@ -5,14 +5,7 @@ import { UserIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 export default function Navbar() {
-  const { userInfo, logout, setUserInfo } = useContext(AuthContext);
-
-  useEffect(() => {
-    const storedUserInfo = localStorage.getItem("userInfo");
-    if (storedUserInfo && !userInfo) {
-      setUserInfo(JSON.parse(storedUserInfo));
-    }
-  }, [userInfo, setUserInfo]);
+  const { userInfo, logout } = useContext(AuthContext);
 
   return (
     <header className="h-auto bg-white z-10">
