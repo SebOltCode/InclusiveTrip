@@ -1,8 +1,8 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Carousel from "../utils/Carousel";
 
 const Ratings = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -10,25 +10,21 @@ const Ratings = () => {
   const location = useLocation();
   const { place, category } = location.state || {};
   const [placeRatings, setPlaceRatings] = useState([]);
+  const [carouselImages, setCarouselImages] = useState([]);
   const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const openModal = (image) => {
-    setSelectedImage(image);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
 
   useEffect(() => {
     const fetchPlaceRatings = async () => {
       try {
         const response = await axios.get(
-          `${API_URL}/reviews/place/${place.id}`,
-          {}
+          `${API_URL}/reviews/place/${place.id}`
         );
         setPlaceRatings(response.data);
+
+        const images = response.data.flatMap((rating) =>
+          rating.FileUploads.map((file) => file.filePath)
+        );
+        setCarouselImages(images);
       } catch (error) {
         console.error("Error fetching Place ratings:", error);
         toast.error("Fehler beim Laden der Bewertungen.");
@@ -36,7 +32,7 @@ const Ratings = () => {
     };
 
     fetchPlaceRatings();
-  }, []);
+  }, [place.id]);
 
   const handleMoreDetails = (rating) => {
     navigate(`/detailreview`, {
@@ -55,70 +51,19 @@ const Ratings = () => {
   return (
     <div>
       <div className="flex flex-col md:flex-row items-top p-4">
-        <div className="flex flex-col md:flex-row"></div>
         <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
                 {place.name} {category.name}
               </h1>
-
-              <div className=" text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px] ml-16 mt-6">
-                {placeRatings.length}
-              </div>
-              <div className="text-[18px] leading-[27px] mt-2 ml-8">
-                Bewertungen
-              </div>
-            </div>
-            <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
-              <img
-                src="/images/Icon_Location.png"
-                alt="Icon Karte"
-                className="max-w-full max-h-[300px] object-cover rounded-lg"
-                style={{ width: "200px", height: "200px" }}
-              />
             </div>
           </div>
         </div>
       </div>
-
-      <div className="flex flex-wrap justify-center items-center gap-4 p-4">
-        {placeRatings.map((rating, index) =>
-          rating.FileUploads.map((file, index) => (
-            <div
-              key={index}
-              className="w-1/4 p-2 cursor-pointer"
-              onClick={() => openModal(file)}
-            >
-              <img
-                src={file.filePath}
-                alt="Photo"
-                className="w-48 h-48 object-cover rounded-lg"
-              />
-            </div>
-          ))
-        )}
-      </div>
-
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-          onClick={closeModal}
-        >
-          <div className="relative w-1/4 h-1/4">
-            <img
-              src={selectedImage.filePath}
-              alt="Selected"
-              className="w-full h-full object-cover rounded-lg"
-              onClick={(e) => e.stopPropagation()}
-            />
-            <button
-              className="absolute top-2 right-2 text-white text-2xl font-bold"
-              onClick={closeModal}
-            >
-              &times;
-            </button>
-          </div>
+      {carouselImages.length > 0 && (
+        <div className="my-8">
+          <Carousel images={carouselImages} />
         </div>
       )}
 
