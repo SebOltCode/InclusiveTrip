@@ -3,6 +3,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import Carousel from "../utils/Carousel";
 
 const DetailReview = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -28,37 +29,27 @@ const DetailReview = () => {
     };
 
     fetchBarrierRatings();
-  }, []);
-
-  const openModal = (image) => {
-    setSelectedImage(image);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
+  }, [rating.id]);
 
   const handleBackClick = () => {
     navigate(-1);
   };
 
   return (
-    <div>
+    <div className="p-4 md:p-8">
       <div className="flex flex-col md:flex-row items-top p-4">
-        <div className="flex flex-col md:flex-row"></div>
         <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
           <div className="flex flex-col md:flex-row w-full p-8">
-            <div className="flex flex-col items-left  w-full md:w-2/3 text-left">
-              <h1 className="mt-4 font-poppins font-extrabold text-3xl md:text-5xl lg:text-5xl leading-[4] text-black">
-                {rating.User.firstName} hat {place.name} {category.name} am{" "}
-                {new Date(rating.createdAt).toLocaleDateString()} bewertet
+            <div className="flex flex-col w-full md:w-2/3 text-left">
+              <h1 className="font-poppins font-extrabold text-lg md:text-3xl lg:text-4xl leading-tight text-black">
+                Bewertung von {place.name} vom{" "}
+                {new Date(rating.createdAt).toLocaleDateString()}
               </h1>
-              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
-                Erfahre folgend mehr über diese Bewertung.
+              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
+                So wurde {place.name} durch {rating.User.firstName} bewertet:
               </div>
             </div>
-
-            <div className="flex flex-col items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
+            <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images/Icon_Bewertung.png"
                 alt="Icon Karte"
@@ -70,45 +61,13 @@ const DetailReview = () => {
         </div>
       </div>
 
-      <div>
-        <div className="flex flex-wrap justify-center items-center gap-4 p-4">
-          {rating.FileUploads.map((image, index) => (
-            <div
-              key={index}
-              className="w-48 h-48 p-2 cursor-pointer"
-              onClick={() => openModal(image)}
-            >
-              <img
-                src={image.filePath}
-                alt={`Bild ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          ))}
+      {rating.FileUploads.length > 0 && (
+        <div className="my-8">
+          <Carousel
+            images={rating.FileUploads.map((image) => image.filePath)}
+          />
         </div>
-
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-            onClick={closeModal}
-          >
-            <div className="relative w-1/4 h-1/4">
-              <img
-                src={selectedImage.filePath}
-                alt="Selected"
-                className="w-full h-full object-cover rounded-lg"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <button
-                className="absolute top-2 right-2 text-white text-2xl font-bold"
-                onClick={closeModal}
-              >
-                &times;
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+      )}
 
       <div className="flex items-center justify-center">
         <div className="p-6">

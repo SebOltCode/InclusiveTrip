@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { updateBarrierReview } from "../utils/reviewHandler";
+import Carousel from "../utils/Carousel";
 
 const ReviewEdit = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -32,7 +33,7 @@ const ReviewEdit = () => {
     };
 
     fetchBarrierRatings();
-  }, []);
+  }, [rating.id]);
 
   const handleBarrierReviewChange = (e) => {
     const rating = Number(e.target.value);
@@ -115,22 +116,20 @@ const ReviewEdit = () => {
   };
 
   return (
-    <div>
+    <div className="p-4 md:p-8 w-full overflow-x-hidden">
       <div className="flex flex-col md:flex-row items-top p-4">
-        <div className="flex flex-col md:flex-row"></div>
         <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
           <div className="flex flex-col md:flex-row w-full p-8">
-            <div className="flex flex-col items-left  w-full md:w-2/3 text-left">
-              <h1 className="mt-4 font-poppins font-extrabold text-3xl md:text-5xl lg:text-5xl leading-[4] text-black">
+            <div className="flex flex-col w-full md:w-2/3 text-left">
+              <h1 className="font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight text-black">
                 {rating.User.firstName} hat {rating.placeName} am{" "}
                 {new Date(rating.createdAt).toLocaleDateString()} bewertet
               </h1>
-              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
+              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
                 Erfahre folgend mehr über diese Bewertung.
               </div>
             </div>
-
-            <div className="flex flex-col items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
+            <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images/Icon_Bewertung.png"
                 alt="Icon Karte"
@@ -142,50 +141,17 @@ const ReviewEdit = () => {
         </div>
       </div>
 
-      <div>
-        <div className="flex flex-wrap justify-center items-center gap-4 p-4">
-          {rating.FileUploads.map((image, index) => (
-            <div
-              key={index}
-              className="w-1/4 p-2 cursor-pointer"
-              onClick={() => openModal(image)}
-            >
-              <img
-                key={index}
-                src={image.filePath}
-                alt={`Bild ${index + 1}`}
-                className="w-48 h-48 object-cover rounded-lg"
-              />
-            </div>
-          ))}
+      {rating.FileUploads.length > 0 && (
+        <div className="my-8">
+          <Carousel
+            images={rating.FileUploads.map((image) => image.filePath)}
+          />
         </div>
+      )}
 
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-            onClick={closeModal}
-          >
-            <div className="relative w-1/4 h-1/4">
-              <img
-                src={selectedImage.filePath}
-                alt="Selected"
-                className="w-full h-full object-cover rounded-lg"
-                onClick={(e) => e.stopPropagation()}
-              />
-              <button
-                className="absolute top-2 right-2 text-white text-2xl font-bold"
-                onClick={closeModal}
-              >
-                &times;
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      <form onSubmit={(e) => e.preventDefault()}>
+      <form onSubmit={(e) => e.preventDefault()} className="w-full">
         <div className="flex items-center justify-center">
-          <div className="p-6">
+          <div className="p-6 w-full">
             <ul className="list-none space-y-4">
               {barrierRatings.map((barrierRating) => (
                 <li
@@ -217,7 +183,7 @@ const ReviewEdit = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center justify-center mb-4 w-full">
           <textarea
             value={comment}
             onChange={handleCommentChange}
@@ -227,24 +193,24 @@ const ReviewEdit = () => {
           ></textarea>
         </div>
 
-        <div className="flex items-center justify-left space-x-4">
+        <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 w-full">
           <button
             type="button"
-            className="btn bg-yellow-400 border-black px-8 font-normal"
+            className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={handleUpdate}
           >
             Aktualisieren
           </button>
           <button
             type="button"
-            className="btn bg-yellow-400 border-black px-8 font-normal"
+            className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={openDeleteModal}
           >
             Löschen
           </button>
           <button
             type="button"
-            className="btn bg-yellow-400 border-black px-8 font-normal"
+            className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={handleBackClick}
           >
             Zurück
