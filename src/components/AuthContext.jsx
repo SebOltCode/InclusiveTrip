@@ -28,7 +28,6 @@ export const AuthProvider = ({ children }) => {
         withCredentials: true,
       });
       setUserInfo(response.data);
-      localStorage.setItem("userInfo", JSON.stringify(response.data));
     } catch (error) {
       console.error("Error fetching user data:", error);
       Cookies.remove("token");
@@ -56,6 +55,9 @@ export const AuthProvider = ({ children }) => {
     } catch (err) {
       if (err.response) {
         const { status, data } = err.response;
+        toast.error(
+          "Upps, das hätte nicht passieren sollen. Bitte versuche es später nochmal."
+        );
         console.error(
           `Error ${status}: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
         );
@@ -64,9 +66,14 @@ export const AuthProvider = ({ children }) => {
             field: error.field,
             message: error.message,
           }));
-
+          toast.error(
+            `Validation error: ${validationErrors.map((e) => e.message).join(", ")}`
+          );
           console.error("Validation errors:", validationErrors);
         } else {
+          toast.error(
+            "Upps, das hätte nicht passieren sollen. Bitte versuche es später nochmal."
+          );
           console.error(
             `Error message: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
           );
@@ -81,12 +88,12 @@ export const AuthProvider = ({ children }) => {
   }
 
   function logout() {
-    Cookies.remove("token", { path: "/", domain: window.location.hostname });
-    localStorage.removeItem("userInfo");
+    Cookies.remove("token");
     setUserInfo(null);
     setShouldFetch(false);
     console.log("Logout successful, userInfo and token removed.");
-    navigate("/login");
+    navigate("/home");
+    toast.info("Auf Wiedersehen!");
   }
 
   function signup(userData) {
@@ -102,15 +109,8 @@ export const AuthProvider = ({ children }) => {
   }
 
   return (
-    <AuthContext.Provider
-      value={{
-        userInfo,
-        setUserInfo,
-        login,
-        logout,
-        signup,
-      }}
-    >
+    <AuthContext.Provider value={{ userInfo, login, logout }}>
+      <ToastContainer />
       {children}
     </AuthContext.Provider>
   );
