@@ -1,5 +1,12 @@
 import { useContext } from "react";
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Navigate, Outlet } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+  Navigate,
+  Outlet,
+} from "react-router-dom";
 import Home from "./components/Home";
 import Ratings from "./components/Ratings";
 import CreateRating from "./components/CreateRating";
@@ -14,8 +21,7 @@ import Dataprotection from "./components/Dataprotection";
 import Aboutus from "./components/Aboutus";
 import DetailReview from "./components/DetailReview";
 import ReviewEdit from "./components/ReviewEdit";
-import { AuthContext } from "./components/AuthContext"; 
-
+import { AuthContext } from "./components/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
   const { userInfo } = useContext(AuthContext);
@@ -48,9 +54,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

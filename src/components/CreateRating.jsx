@@ -23,10 +23,11 @@ function CreateRating() {
     }
   }, [place, category, navigate]);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   const [files, setFiles] = useState([]);
   const [message, setMessage] = useState("");
   const [barriers, setBarriers] = useState([]);
+  const [selectedBarriers, setSelectedBarriers] = useState([]);
   const [barriersReviews, setBarriersReviews] = useState([]);
   const [comment, setComment] = useState("");
 
@@ -36,13 +37,6 @@ function CreateRating() {
         const response = await axios.get(`${API_URL}/barriers/selected`);
         if (response.data && response.data.length) {
           setBarriers(response.data);
-          setBarriersReviews(
-            response.data.map((barrier) => ({
-              barrierName: barrier.name,
-              barrierId: barrier.id,
-              rating: 2,
-            }))
-          );
         }
       } catch (error) {
         console.log(error);
@@ -53,7 +47,7 @@ function CreateRating() {
 
   const handleBarrierReviewChange = (e) => {
     const rating = Number(e.target.value);
-    const barrierId = Number(e.target.id);
+    const barrierId = Number(e.target.name.split("-")[1]);
     setBarriersReviews((prev) =>
       prev.map((item) =>
         item.barrierId === barrierId ? { ...item, rating: rating } : item
@@ -137,6 +131,24 @@ function CreateRating() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setBarriersReviews(
+      barriers
+        .filter((barrier) => selectedBarriers.includes(barrier.id))
+        .map((barrier) => ({
+          barrierName: barrier.name,
+          barrierId: barrier.id,
+          rating: 2,
+        }))
+    );
+  };
+
+  const handleCheckboxChange = (e) => {
+    const barrierId = Number(e.target.value);
+    setSelectedBarriers((prev) =>
+      e.target.checked
+        ? [...prev, barrierId]
+        : prev.filter((id) => id !== barrierId)
+    );
   };
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -147,7 +159,7 @@ function CreateRating() {
   });
 
   return (
-    <div>
+    <div className="p-4 md:p-8 w-full overflow-x-hidden">
       <ToastContainer />
       <div className="flex flex-col md:flex-row items-top p-4">
         <div className="flex flex-col md:flex-row"></div>
@@ -157,15 +169,14 @@ function CreateRating() {
               <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
                 Bewertung schreiben
               </h1>
-              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-[32px] leading-[48px]">
+              <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
                 Bewerte {category?.name} <b>{place?.name}</b> mit deinen
                 Erfahrungen.
               </div>
             </div>
-            {/* Bild Container */}
-            <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
+            <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
-                src="/images//Icon_Create.png"
+                src="/images/Icon_Create.png"
                 alt="Icon Create"
                 className="max-w-full max-h-[300px] object-cover rounded-lg"
                 style={{ width: "200px", height: "200px" }}
@@ -175,27 +186,30 @@ function CreateRating() {
         </div>
       </div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="w-full">
         <div className="flex items-center justify-center">
-          <div className="p-6">
+          <div className="p-6 w-full">
             <ul className="list-none space-y-4">
-              {barriers.map((barrier) => (
-                <li key={barrier.id} className="flex items-center space-x-4">
+              {barriersReviews.map((barrierReview) => (
+                <li
+                  key={barrierReview.barrierId}
+                  className="flex items-center space-x-4"
+                >
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                   <span className="flex-1 text-lg">
-                    Für {barrier.name} geeignet
+                    Für {barrierReview.barrierName} geeignet
                   </span>
                   <div className="flex space-x-1 rating ml-auto">
                     {stars.map((star) => (
                       <input
                         key={star}
                         type="radio"
-                        name={`barrier-${barrier.id}`}
+                        name={`barrier-${barrierReview.barrierId}`}
                         id={star}
                         value={star}
                         onChange={handleBarrierReviewChange}
                         className="mask mask-star"
-                        defaultChecked={star === 2}
+                        checked={star === barrierReview.rating}
                       />
                     ))}
                   </div>
@@ -230,80 +244,44 @@ function CreateRating() {
           </div>
 
           {isModalOpen && (
-            <div className="fixed inset-0 flex items-center justify-center z-50">
-              <div className="bg-white p-6 rounded-lg shadow-lg w-1/2 relative">
-                <button
-                  className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-                  onClick={closeModal}
-                >
-                  &times;
-                </button>
-
+            <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+              <div className="bg-white p-6 rounded-lg shadow-lg w-3/4 md:w-1/2 relative">
                 <h2 className="text-xl font-bold mb-4">
-                  Anregungen zum Schreiben
+                  Was möchtest du bewerten?
                 </h2>
-                <p className="mb-4">
-                  Du weißt nicht, was du schreiben sollst? Kein Problem! Hier
-                  sind ein paar Anregungen, worüber du berichten kannst:
-                  <br />
-                  <br />
-                  <strong>Eingang und Zugang:</strong> Gibt es einen stufenlosen
-                  Zugang? Sind Rampen oder ein ebenerdiger Zugang vorhanden?
-                  Falls es Treppen gibt, existieren alternative Wege wie Aufzüge
-                  oder Treppenlifte?
-                  <br />
-                  <br />
-                  <strong>Türbreiten:</strong> Sind die Türen breit genug für
-                  Rollstühle oder Kinderwagen?
-                  <br />
-                  <br />
-                  <strong>Sanitäreinrichtungen:</strong> Gibt es speziell
-                  gekennzeichnete Rollstuhltoiletten? Sind sie gut zugänglich
-                  und mit notwendigen Haltegriffen ausgestattet?
-                  <br />
-                  <br />
-                  <strong>Parkmöglichkeiten:</strong> Gibt es ausgewiesene
-                  Behindertenparkplätze in der Nähe des Eingangs? Sind sie
-                  ausreichend breit und gut ausgeschildert?
-                  <br />
-                  <br />
-                  <strong>Öffentliche Verkehrsmittel:</strong> Ist der Ort gut
-                  mit barrierefreien öffentlichen Verkehrsmitteln erreichbar?
-                  Gibt es in der Nähe Haltestellen, die für Menschen mit
-                  Behinderungen zugänglich sind?
-                  <br />
-                  <br />
-                  <strong>Service und Unterstützung:</strong> Ist das Personal
-                  geschult und bereit, bei Bedarf Hilfe zu leisten?
-                  <br />
-                  <br />
-                  <strong>Informationen und Beschilderung:</strong> Sind die
-                  Schilder gut sichtbar, verständlich und in einer angemessenen
-                  Höhe angebracht? Gibt es Informationen in Brailleschrift oder
-                  taktile Karten?
-                  <br />
-                  <br />
-                  <strong>Akustische und visuelle Aspekte:</strong> Ist der Ort
-                  gut beleuchtet, um Menschen mit Sehbehinderungen zu
-                  unterstützen? Ist der Geräuschpegel für Menschen mit
-                  Hörbehinderungen oder kognitiven Beeinträchtigungen
-                  akzeptabel?
-                  <br />
-                  <br />
-                  <strong>Zusätzliche Einrichtungen:</strong> Gibt es Bereiche,
-                  in denen Menschen mit sensorischen Überempfindlichkeiten eine
-                  Pause einlegen können?
-                  <br />
-                  <br />
-                  Diese und weitere Aspekte können dir helfen, eine detaillierte
-                  und hilfreiche Bewertung zu verfassen.
-                </p>
-                <button
-                  className="px-4 py-2 bg-[#FFD700] border border-[#2C2C2C] rounded-lg"
-                  onClick={closeModal}
-                >
-                  Schließen
-                </button>
+                <h3 className="text-lg font-semibold mb-2">
+                  Ich möchte die Zugänglichkeit für:
+                </h3>
+                <div className="mb-4">
+                  {barriers.map((barrier) => (
+                    <div key={barrier.id} className="flex items-center mb-2">
+                      <input
+                        type="checkbox"
+                        id={`barrier-${barrier.id}`}
+                        value={barrier.id}
+                        onChange={handleCheckboxChange}
+                        className="mr-2"
+                      />
+                      <label htmlFor={`barrier-${barrier.id}`}>
+                        {`${barrier.name} bewerten.`}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-end space-x-4">
+                  <button
+                    className="btn bg-gray-300 px-4 py-2 rounded"
+                    onClick={closeModal}
+                  >
+                    Abbrechen
+                  </button>
+                  <button
+                    className="btn bg-yellow-400 px-4 py-2 rounded"
+                    onClick={closeModal}
+                  >
+                    OK
+                  </button>
+                </div>
               </div>
             </div>
           )}
