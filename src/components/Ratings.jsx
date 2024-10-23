@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import fetchPlaceRatings from "../utils/fetchPlaceRatings";
 import { toast } from "react-toastify";
 import Carousel from "../utils/Carousel";
 
@@ -11,27 +11,23 @@ const Ratings = () => {
   const { place, category } = location.state || {};
   const [placeRatings, setPlaceRatings] = useState([]);
   const [carouselImages, setCarouselImages] = useState([]);
+  const [averageRatings, setAverageRatings] = useState({});
+  const [barrierNames, setBarrierNames] = useState({});
+  const [overallAverageRating, setOverallAverageRating] = useState(0);
+  const [totalReviewsCount, setTotalReviewsCount] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchPlaceRatings = async () => {
-      try {
-        const response = await axios.get(
-          `${API_URL}/reviews/place/${place.id}`
-        );
-        setPlaceRatings(response.data);
-
-        const images = response.data.flatMap((rating) =>
-          rating.FileUploads.map((file) => file.filePath)
-        );
-        setCarouselImages(images);
-      } catch (error) {
-        console.error("Error fetching Place ratings:", error);
-        toast.error("Fehler beim Laden der Bewertungen.");
-      }
-    };
-
-    fetchPlaceRatings();
+    fetchPlaceRatings(
+      API_URL,
+      place.id,
+      setPlaceRatings,
+      setCarouselImages,
+      setBarrierNames,
+      setAverageRatings,
+      setTotalReviewsCount,
+      setOverallAverageRating
+    );
   }, [place.id]);
 
   const handleMoreDetails = (rating) => {
@@ -49,18 +45,45 @@ const Ratings = () => {
   };
 
   return (
-    <div className="p-4 md:p-8">
+    <div className="p-4 md:p-8 w-full overflow-x-hidden">
       <div className="flex flex-col md:flex-row items-top p-4">
         <div className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] relative">
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
-              <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                {place.name} {category.name}
+              <h1 className=" text-center font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
+                {place.name}
               </h1>
             </div>
           </div>
         </div>
       </div>
+
+      {totalReviewsCount > 0 ? (
+        <div className="flex items-center justify-center my-4">
+          <div className="flex space-x-1 rating">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <input
+                key={star}
+                type="radio"
+                name="overall-rating"
+                id={`overall-${star}`}
+                value={star}
+                className="mask mask-star"
+                checked={star <= overallAverageRating}
+                readOnly
+              />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="text-center my-4">
+          <p>
+            Es liegen noch keine Bewertungen für diesen Ort vor. Schreibe eine
+            Bewertung und teile deine Erfahrungen!
+          </p>
+        </div>
+      )}
+
       {carouselImages.length > 0 && (
         <div className="my-8">
           <Carousel images={carouselImages} />
@@ -88,6 +111,35 @@ const Ratings = () => {
         <h1 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
           Bewertungen
         </h1>
+
+        <div className="flex items-center justify-center">
+          <div className="p-6">
+            <ul className="list-none space-y-4">
+              {Object.keys(averageRatings).map((barrierId) => (
+                <li key={barrierId} className="flex items-center space-x-4">
+                  <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
+                  <span className="flex-1 text-lg">
+                    Durchschnittliche Bewertung für {barrierNames[barrierId]}
+                  </span>
+                  <div className="flex space-x-1 rating ml-auto">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <input
+                        key={star}
+                        type="radio"
+                        name={`barrier-${barrierId}`}
+                        id={`barrier-${barrierId}-${star}`}
+                        value={star}
+                        className="mask mask-star"
+                        checked={star <= (averageRatings[barrierId] || 0)}
+                        readOnly
+                      />
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         {placeRatings.map((rating, index) => (
           <div

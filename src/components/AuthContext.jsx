@@ -49,7 +49,6 @@ export const AuthProvider = ({ children }) => {
       console.log("Login successful:", response);
       setShouldFetch((prev) => !prev);
       await fetchUserInfo();
-
       toast.success("Willkommen zurück!");
       navigate("/map");
     } catch (err) {
