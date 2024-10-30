@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const FilterableSelect = ({ items, selectedValue, onSelect }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState("");
 
@@ -20,7 +22,7 @@ const FilterableSelect = ({ items, selectedValue, onSelect }) => {
         className="btn w-full px-4 py-2 bg-yellow-400  border-black rounded-lg shadow-sm focus:outline-none focus:ring-2"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {selectedValue ? selectedValue.name : "Auswählen"}
+        {selectedValue ? selectedValue.name : t("FilterableSelect.select")}
       </button>
 
       {isOpen && (

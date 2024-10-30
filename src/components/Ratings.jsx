@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import fetchPlaceRatings from "../utils/fetchPlaceRatings";
 import { toast } from "react-toastify";
 import Carousel from "../utils/Carousel";
+import { useTranslation } from "react-i18next";
 
 const Ratings = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -16,6 +17,7 @@ const Ratings = () => {
   const [overallAverageRating, setOverallAverageRating] = useState(0);
   const [totalReviewsCount, setTotalReviewsCount] = useState(0);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     fetchPlaceRatings(
@@ -77,10 +79,7 @@ const Ratings = () => {
         </div>
       ) : (
         <div className="text-center my-4">
-          <p>
-            Es liegen noch keine Bewertungen für diesen Ort vor. Schreibe eine
-            Bewertung und teile deine Erfahrungen!
-          </p>
+          <p>{t("ratingspage.no_reviews")}</p>
         </div>
       )}
 
@@ -97,19 +96,19 @@ const Ratings = () => {
             className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
             onClick={() => handleCreateRate(place)}
           >
-            Bewertung hinzufügen
+            {t("ratingspage.add_review")}
           </button>
           <button
             type="button"
             className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
             onClick={handleBackClick}
           >
-            Zurück
+            {t("ratingspage.back")}
           </button>
         </div>
 
         <h1 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
-          Bewertungen
+          {t("ratingspage.reviews")}
         </h1>
 
         <div className="flex items-center justify-center">
@@ -119,7 +118,8 @@ const Ratings = () => {
                 <li key={barrierId} className="flex items-center space-x-4">
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                   <span className="flex-1 text-lg">
-                    Durchschnittliche Bewertung für {barrierNames[barrierId]}
+                    {t("ratingspage.average_rating_for")}{" "}
+                    {t(`barriers.barrier${barrierId}`)}
                   </span>
                   <div className="flex space-x-1 rating ml-auto">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -149,10 +149,11 @@ const Ratings = () => {
             <div className="w-full text-left p-8">
               <div className="flex flex-col md:flex-row items-center justify-between">
                 <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
-                  Bewertung von {rating.User.firstName}
+                  {t("ratingspage.review_by")} {rating.User.firstName}
                 </h1>
                 <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
-                  vom {new Date(rating.createdAt).toLocaleDateString()}
+                  {t("ratingspage.on")}{" "}
+                  {new Date(rating.createdAt).toLocaleDateString()}
                 </h1>
               </div>
               <p className="mt-4 font-poppins font-medium text-sm md:text-[rgba(30,30,30,0.5)] text-left">
@@ -163,7 +164,7 @@ const Ratings = () => {
                 className="btn bg-[#FFD700] border-black w-36 p-2 h-12 min-h-2 m-2 justify-center float-right"
                 onClick={() => handleMoreDetails(rating)}
               >
-                Mehr lesen
+                {t("ratingspage.read_more")}
               </button>
             </div>
           </div>

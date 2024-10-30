@@ -2,10 +2,13 @@ import React from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
 
 export function UserProfileForm({ userData, setUserData }) {
+  const { t } = useTranslation();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
@@ -47,7 +50,7 @@ export function UserProfileForm({ userData, setUserData }) {
       );
       setUserData(response.data);
       console.log("User data updated successfully:", response.data);
-      toast.success("Benutzerdaten erfolgreich aktualisiert.");
+      toast.success(t("userProfileForm.update_success"));
     } catch (error) {
       console.error("Error updating user data:", error);
     }
@@ -61,7 +64,7 @@ export function UserProfileForm({ userData, setUserData }) {
             htmlFor="username"
             className="text-center w-full text-lg sm:text-xl font-bold leading-[140%] text-[#1E1E1E]"
           >
-            Persönliche Daten
+            {t("userProfileForm.personal_data")}
           </label>
         </div>
 
@@ -70,7 +73,7 @@ export function UserProfileForm({ userData, setUserData }) {
             htmlFor="firstName"
             className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
           >
-            Vorname
+            {t("userProfileForm.first_name")}
           </label>
           <input
             className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
@@ -86,7 +89,7 @@ export function UserProfileForm({ userData, setUserData }) {
             htmlFor="lastName"
             className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
           >
-            Nachname
+            {t("userProfileForm.last_name")}
           </label>
           <input
             className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
@@ -102,7 +105,7 @@ export function UserProfileForm({ userData, setUserData }) {
             htmlFor="email"
             className="w-full text-sm sm:text-base font-normal leading-[140%] text-[#1E1E1E]"
           >
-            Email
+            {t("userProfileForm.email")}
           </label>
           <input
             className="flex items-center px-4 py-3 w-full bg-white border border-[#D9D9D9] rounded-lg"
@@ -118,7 +121,7 @@ export function UserProfileForm({ userData, setUserData }) {
           type="submit"
           className="px-8 py-3 bg-[#FFD700] border border-[#2C2C2C] rounded-lg"
         >
-          Änderungen speichern
+          {t("userProfileForm.save_changes")}
         </button>
       </div>
     </form>

@@ -9,6 +9,7 @@ import PlacesLayer from "./MapComponents/PlacesLayer";
 import NavigateMap from "./MapComponents/NavigateMap";
 import CategorySelector from "./MapComponents/CategorySelector";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "marker-icon-2x.png",
@@ -43,6 +44,7 @@ const SearchField = () => {
 };
 
 const Map = () => {
+  const { t } = useTranslation();
   const [defaultCenter, setDefaultCenter] = useState([
     52.51085635037089, 13.399439386103111,
   ]);
@@ -69,7 +71,7 @@ const Map = () => {
           <div className="flex flex-col md:flex-row w-full p-4 sm:p-8">
             <div className="flex flex-col w-full text-left">
               <h1 className="mb-2 font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                Wohin möchtest du reisen?
+                {t("map.where_to_travel")}
               </h1>
               <div className="flex flex-col md:flex-row items-center mt-4 sm:mt-4">
                 <a
@@ -80,7 +82,7 @@ const Map = () => {
                   }}
                   className="text-blue-800 hover:underline md:ml-4"
                 >
-                  ..so funktioniert die Suche
+                  {t("map.how_search_works")}
                 </a>
                 <a
                   href="#"
@@ -92,7 +94,7 @@ const Map = () => {
                 >
                   <img
                     src="/images/Icon_Karte.png"
-                    alt="Icon Karte"
+                    alt={t("map.icon_map")}
                     className="max-w-full max-h-[200px] sm:max-h-[300px] object-cover rounded-lg"
                   />
                 </a>
@@ -136,35 +138,27 @@ const Map = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-lg w-full mx-4 sm:mx-0">
             <h2 className="text-xl font-bold mb-4">
-              So funktioniert die Suche:
+              {t("map.how_search_works_title")}
             </h2>
             <div className="text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-xl leading-tight">
               <div className="flex items-start mb-4">
                 <span className="mr-2">1.</span>
-                <p className="pl-2">
-                  Wähle eine Stadt aus der Liste oder suche direkt nach einer
-                  bestimmten Adresse mit Hilfe des Suchfeldes auf der Karte.
-                </p>
+                <p className="pl-2">{t("map.step1")}</p>
               </div>
               <div className="flex items-start mb-4">
                 <span className="mr-2">2.</span>
-                <p className="pl-2">
-                  Gebe die Art der Location ein, die du besuchen möchtest.
-                </p>
+                <p className="pl-2">{t("map.step2")}</p>
               </div>
               <div className="flex items-start mb-4">
                 <span className="mr-2">3.</span>
-                <p className="pl-2">
-                  Klicke auf das Icon in der Karte, um dir Bewertungen für diese
-                  Location anzusehen oder eine Bewertung zu schreiben.
-                </p>
+                <p className="pl-2">{t("map.step3")}</p>
               </div>
             </div>
             <button
               onClick={toggleModal}
               className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
             >
-              Schließen
+              {t("map.close")}
             </button>
           </div>
         </div>

@@ -1,0 +1,310 @@
+{
+  "welcome": "Selamat datang di InclusiveTRIP",
+  "search": "Cari",
+  "home": "Beranda",
+  "maplink": "Peta",
+  "user": "Pengguna",
+  "logout": "Keluar",
+  "login": "Masuk",
+
+  "why_we_developed": "Mengapa kami mengembangkan aplikasi ini",
+
+  "ratings": "Peringkat",
+  "users": "Pengguna",
+  "barrier_filter": "Filter penghalang",
+  "barrier_filter_description": "Temukan tempat yang ideal untuk perjalanan Anda dengan menyaring sesuai dengan kebutuhan pribadi Anda.",
+  "radius_search": "Pencarian radius",
+  "radius_search_description": "Kota mana yang ingin Anda kunjungi?",
+  "location_filter": "Filter lokasi",
+  "location_filter_description": "Temukan tempat yang ideal untuk perjalanan Anda dengan menyaring sesuai dengan kebutuhan pribadi Anda.",
+  "inclusive_trip_description": "InclusiveTRIP adalah platform yang memungkinkan orang dengan kebutuhan berbeda untuk menemukan tempat yang dapat diakses.",
+  "inclusive-trip-description_home_1": "InclusiveTRIP membantu Anda menilai tempat-tempat umum seperti restoran, bioskop, museum, dan banyak lagi berdasarkan aksesibilitas atau kriteria lainnya, dan menemukan lokasi yang sesuai. Aplikasi kami memungkinkan Anda untuk menemukan dan menilai tempat untuk membantu orang lain dengan kebutuhan serupa menemukan tempat terbaik untuk perjalanan kota mereka berikutnya.",
+  "inclusive-trip-description_home_2": "Baik Anda menggunakan kursi roda, tuli, mengalami gangguan penglihatan, bepergian dengan kereta dorong, atau membawa hewan peliharaan – InclusiveTRIP adalah alat untuk memastikan lingkungan Anda dapat diakses dan inklusif. Peringkat dan pengalaman Anda membantu membangun komunitas yang mengutamakan aksesibilitas. Temukan, beri peringkat, dan bagikan pengalaman Anda dengan InclusiveTRIP!",
+  "introduce_blog_entries": "Temukan informasi di sini tentang topik saat ini terkait inklusi.",
+  "current_topics": "Topik terkini",
+
+  "about_us": "Tentang kami",
+  "about_us_1": "Selamat datang di situs kami! Kami adalah sekelompok kecil pengembang yang bersemangat – Sebastian, Adnan, Ahmed, dan Julia – yang bergabung selama bootcamp WBS Coding School untuk mengembangkan aplikasi yang benar-benar berdampak.",
+  "our_vision": "Visi kami",
+  "about_us_2": "Perjalanan kami dimulai dengan pemikiran sederhana namun kuat: Bagaimana kita dapat membuat hidup lebih mudah bagi orang dengan hambatan? Bagi kami semua, sejak awal kami ingin menciptakan sesuatu yang berdampak positif pada kehidupan sehari-hari banyak orang. Kami bertanya pada diri sendiri bagaimana kami bisa menemukan cara untuk membuat dunia sedikit lebih mudah diakses.",
+  "our_mission": "Misi kami",
+  "about_us_3": "Misi kami adalah untuk membantu orang dengan berbagai hambatan – apakah itu cacat fisik seperti gangguan penglihatan, ketulian, atau penggunaan kursi roda – menavigasi lingkungan mereka dan memastikan bahwa tempat yang mereka kunjungi memenuhi kebutuhan mereka. Aplikasi kami memungkinkan pengguna untuk menilai lokasi seperti restoran, bioskop, rumah sakit, tempat parkir, dan banyak lagi, menciptakan komunitas yang saling mendukung.",
+  "about_us_4": "Mengapa kami mengembangkan aplikasi ini",
+  "about_us_5": "Ide untuk aplikasi kami berasal dari keinginan mendalam untuk menjadi bagian dari masyarakat yang lebih inklusif. Kami semua memiliki pengalaman dengan orang-orang dalam hidup kami yang menghadapi hambatan sehari-hari yang sering kali tidak terlihat oleh orang lain. Pengalaman ini memotivasi kami untuk menciptakan sesuatu yang tidak hanya mendukung aksesibilitas fisik tetapi juga sosial.",
+  "about_us_6": "Kami ingin membuat platform yang tidak hanya menilai tetapi juga menunjukkan betapa mudahnya mengatasi hambatan ketika Anda memiliki informasi yang benar. Aplikasi ini adalah kontribusi kami untuk memberi orang-orang dengan kebutuhan khusus lebih banyak kebebasan dan kemandirian.",
+  "our_team": "Tim kami",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "Kami, tim di balik aplikasi ini, bangga dengan apa yang telah kami capai dalam waktu singkat. Kami semua memiliki motivasi dan cerita pribadi yang membawa kami ke proyek ini:",
+  "about_us_8": "Bersama-sama, kami tidak hanya mengembangkan aplikasi tetapi juga mewujudkan visi yang ingin kami bagikan dengan dunia. Kami berharap aplikasi kami menjadi alat yang memecah hambatan dan membangun jembatan – untuk masyarakat yang lebih inklusif.",
+  "about_us_9": "Terima kasih telah menjadi bagian dari perjalanan ini dan membantu kami membuat dunia sedikit lebih baik.",
+
+  "impressum": {
+    "title": "Imprint",
+    "section1": {
+      "title": "Informasi sesuai dengan § 5 TMG:",
+      "content": "Jerman"
+    },
+    "section2": {
+      "title": "Diwakili oleh:",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "Bertanggung jawab atas konten sesuai dengan § 55 Abs. 2 RStV:",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "Penafian:",
+      "content1": {
+        "title": "Kewajiban konten:",
+        "content": "Sebagai penyedia layanan, kami bertanggung jawab atas konten kami sendiri di halaman ini sesuai dengan undang-undang umum sesuai dengan § 7 Abs.1 TMG. Menurut §§ 8 hingga 10 TMG, kami tidak diwajibkan sebagai penyedia layanan untuk memantau informasi eksternal yang ditransmisikan atau disimpan atau untuk menyelidiki keadaan yang menunjukkan aktivitas ilegal."
+      },
+      "content2": "Kewajiban untuk menghapus atau memblokir penggunaan informasi sesuai dengan undang-undang umum tidak terpengaruh oleh ini. Namun, kewajiban dalam hal ini hanya dimungkinkan sejak saat mengetahui adanya pelanggaran tertentu. Jika kami mengetahui pelanggaran seperti itu, kami akan segera menghapus konten ini.",
+      "content3": {
+        "title": "Tanggung jawab untuk tautan:",
+        "content": "Penawaran kami mengandung tautan ke situs web eksternal pihak ketiga, yang kontennya tidak kami kontrol. Oleh karena itu, kami tidak dapat mengasumsikan tanggung jawab untuk konten eksternal ini. Penyedia atau operator halaman yang terkait selalu bertanggung jawab atas konten halaman terkait. Halaman yang terkait telah diperiksa untuk kemungkinan pelanggaran hukum pada saat penghubungan. Konten ilegal tidak dapat dikenali pada saat penghubungan."
+      },
+      "content4": "Namun, kontrol konten permanen dari halaman yang terhubung tidak masuk akal tanpa indikasi pelanggaran konkret. Jika kami mengetahui adanya pelanggaran hukum, kami akan segera menghapus tautan tersebut.",
+      "content5": {
+        "title": "Hak cipta:",
+        "content": "Konten dan karya di halaman ini yang dibuat oleh operator situs tunduk pada undang-undang hak cipta Jerman. Penggandaan, pemrosesan, distribusi, dan segala jenis eksploitasi di luar batas-batas hukum hak cipta memerlukan persetujuan tertulis dari penulis atau pencipta yang bersangkutan. Unduhan dan salinan situs ini hanya diizinkan untuk penggunaan pribadi, non-komersial."
+      },
+      "content6": "Sejauh konten di situs ini tidak dibuat oleh operator, hak cipta pihak ketiga dihormati. Konten pihak ketiga ditandai secara khusus. Jika Anda tetap menyadari adanya pelanggaran hak cipta, harap beri tahu kami. Jika kami mengetahui adanya pelanggaran hukum, kami akan segera menghapus konten tersebut.",
+      "content7": {
+        "title": "Penyelesaian sengketa:",
+        "content": "Komisi Eropa menyediakan platform untuk penyelesaian sengketa online. Anda dapat menemukan alamat email kami di atas dalam cap."
+      },
+      "content8": "Kami tidak bersedia atau diwajibkan untuk berpartisipasi dalam prosedur penyelesaian sengketa di depan dewan arbitrase konsumen."
+    }
+  },
+
+  "footer": {
+    "copyright": "Hak Cipta © {{year}} - Semua hak dilindungi",
+    "impressum": "Cap",
+    "datenschutz": "Kebijakan Privasi",
+    "ueberuns": "Tentang kami"
+  },
+
+  "createRating": {
+    "title": "Tulis ulasan",
+    "subtitle": "Beri peringkat {{place}} dengan pengalaman Anda.",
+    "barrierSuitable": "Cocok untuk {{barrierName}}",
+    "commentLabel": "Bagikan pengalaman Anda",
+    "commentPlaceholder": "Laporan pengalaman",
+    "whatToWrite": "Apa yang harus saya tulis?",
+    "modalTitle": "Apa yang ingin Anda nilai?",
+    "modalSubtitle": "Saya ingin menilai aksesibilitas untuk:",
+    "modalCancel": "Batal",
+    "modalOk": "OK",
+    "addImagesTitle": "Tambahkan gambar ke ulasan Anda!",
+    "dropzoneText": "Seret gambar ke sini atau klik untuk memilih gambar",
+    "submitButton": "Kirim ulasan",
+    "errorMessage": {
+      "emptyComment": "Kolom laporan pengalaman tidak boleh kosong.",
+      "maxFiles": "Anda dapat mengunggah maksimal 5 gambar",
+      "uploadError": "Kesalahan mengunggah file, silakan coba lagi"
+    },
+    "successMessage": "Terima kasih, ulasan Anda telah ditambahkan!"
+  },
+
+  "barriers": {
+    "barrier1": "Pengguna kursi roda",
+    "barrier2": "Anak-anak",
+    "barrier3": "Orang buta",
+    "barrier4": "Orang tuli",
+    "barrier5": "Penutur non-pribumi",
+    "barrier6": "Orang dengan kecemasan",
+    "barrier7": "Orang dengan gangguan kognitif",
+    "barrier8": "Orang dengan klaustrofobia",
+    "barrier9": "Pemilik hewan peliharaan"
+  },
+
+  "common": {
+    "bewerten": "nilai"
+  },
+
+  "usersection": {
+    "profile_of": "Profil dari",
+    "change_user_data": "Ubah data pengguna Anda dan edit ulasan Anda.",
+    "your_ratings": "Ulasan Anda",
+    "you_rated": "Anda menilai",
+    "read_more": "baca lebih lanjut"
+  },
+
+  "userProfileForm": {
+    "personal_data": "Data pribadi",
+    "first_name": "Nama depan",
+    "last_name": "Nama belakang",
+    "email": "Email",
+    "save_changes": "Simpan perubahan",
+    "update_success": "Data pengguna berhasil diperbarui."
+  },
+
+  "map": {
+    "where_to_travel": "Kemana Anda ingin bepergian?",
+    "how_search_works": "..cara kerja pencarian",
+    "icon_map": "Peta ikon",
+    "how_search_works_title": "Cara kerja pencarian:",
+    "step1": "Pilih kota dari daftar atau cari langsung alamat tertentu menggunakan kolom pencarian di peta.",
+    "step2": "Masukkan jenis lokasi yang ingin Anda kunjungi.",
+    "step3": "Klik ikon di peta untuk melihat ulasan untuk lokasi ini atau untuk menulis ulasan.",
+    "close": "Tutup"
+  },
+
+  "categorySelector": {
+    "select_category": "Pilih kategori:"
+  },
+
+  "citySelector": {
+    "select_city": "Pilih kota:"
+  },
+
+  "placeMarker": {
+    "ratings": "Peringkat",
+    "create_rating": "Kirim ulasan"
+  },
+
+  "ratingspage": {
+    "no_reviews": "Belum ada ulasan untuk lokasi ini. Tulis ulasan dan bagikan pengalaman Anda!",
+    "add_review": "Tambahkan ulasan",
+    "back": "Kembali",
+    "reviews": "Ulasan",
+    "average_rating_for": "Peringkat rata-rata untuk",
+    "review_by": "Ulasan oleh",
+    "on": "pada",
+    "read_more": "Baca selengkapnya"
+  },
+
+  "detailReview": {
+    "review_of": "Ulasan dari",
+    "on": "pada",
+    "reviewed_by": "Ini adalah cara {{placeName}} dinilai oleh {{userName}}:",
+    "suitable_for": "Cocok untuk",
+    "icon_map": "Peta ikon",
+    "error_loading_reviews": "Kesalahan memuat ulasan.",
+    "back": "Kembali"
+  },
+
+  "reviewEdit": {
+    "had": "memiliki",
+    "on": "pada",
+    "rated": "dinilai",
+    "learn_more": "Pelajari lebih lanjut tentang ulasan ini.",
+    "suitable_for": "Cocok untuk",
+    "icon_map": "Peta ikon",
+    "error_loading_reviews": "Kesalahan memuat ulasan.",
+    "update_success": "Ulasan berhasil diperbarui.",
+    "error_updating_review": "Kesalahan memperbarui ulasan.",
+    "delete_success": "Ulasan berhasil dihapus.",
+    "error_deleting_review": "Kesalahan menghapus ulasan.",
+    "update": "Perbarui",
+    "delete": "Hapus",
+    "back": "Kembali",
+    "confirm_delete": "Yakin ingin menghapus ulasan?",
+    "cancel": "Batal",
+    "comment_placeholder": "Masukkan deskripsi di sini"
+  },
+
+  "dataprotection": {
+    "title": "Perlindungan Data",
+    "section1": {
+      "title": "1. Perlindungan data sekilas",
+      "content": "Kami senang atas minat Anda di situs web kami. Perlindungan data pribadi Anda sangat penting bagi kami. Kami memperlakukan data pribadi Anda dengan rahasia dan sesuai dengan peraturan perlindungan data yang berlaku serta pernyataan perlindungan data ini."
+    },
+    "section2": {
+      "title": "2. Entitas yang bertanggung jawab",
+      "content": "Bertanggung jawab atas pemrosesan data di situs web ini adalah:"
+    },
+    "section3": {
+      "title": "3. Pengumpulan dan penyimpanan data pribadi serta jenis dan tujuan penggunaannya",
+      "subtitle1": "a) Saat mengunjungi situs web",
+      "content1": "Ketika Anda mengakses situs web kami, informasi secara otomatis dikirim ke server situs web kami oleh browser yang digunakan pada perangkat Anda. Informasi ini sementara disimpan dalam apa yang disebut log file. Informasi berikut dikumpulkan tanpa intervensi Anda dan disimpan sampai penghapusan otomatis:",
+      "list1": [
+        "Alamat IP komputer peminta,",
+        "Tanggal dan waktu akses,",
+        "Nama dan URL file yang diambil,",
+        "Situs web dari mana akses dilakukan (URL perujuk),",
+        "Browser yang digunakan dan, jika berlaku, sistem operasi komputer Anda serta nama penyedia akses Anda."
+      ],
+      "content2": "Data tersebut diproses oleh kami untuk tujuan sebagai berikut:",
+      "list2": [
+        "Memastikan koneksi yang lancar ke situs web,",
+        "Memastikan penggunaan situs web kami yang nyaman,",
+        "Evaluasi keamanan dan stabilitas sistem serta",
+        "untuk tujuan administrasi lebih lanjut."
+      ],
+      "content3": "Dasar hukum untuk pemrosesan data adalah Art. 6 paragraf 1 p. 1 lit. f DSGVO. Kepentingan sah kami berasal dari tujuan pengumpulan data yang tercantum di atas. Dalam hal apapun kami tidak menggunakan data yang dikumpulkan untuk tujuan menarik kesimpulan tentang Anda secara pribadi.",
+      "subtitle2": "b) Kontak",
+      "content4": "Jika Anda menghubungi kami melalui email atau formulir kontak, informasi Anda, termasuk detail kontak yang Anda berikan, akan disimpan oleh kami untuk tujuan memproses permintaan dan untuk pertanyaan lebih lanjut. Kami tidak akan membagikan data ini tanpa persetujuan Anda.",
+      "content5": "Pemrosesan data yang dimasukkan dalam formulir kontak didasarkan secara eksklusif pada persetujuan Anda (Pasal 6 ayat 1 huruf a DSGVO). Anda dapat mencabut persetujuan ini kapan saja. Pesan informal melalui email kepada kami sudah cukup. Legalitas pemrosesan data yang dilakukan hingga pencabutan tetap tidak terpengaruh oleh pencabutan."
+    },
+    "section4": {
+      "title": "4. Transfer data",
+      "content": "Data pribadi Anda tidak akan dialihkan ke pihak ketiga kecuali jika Anda telah memberikan persetujuan secara eksplisit atau ada kewajiban hukum untuk melakukannya."
+    },
+    "section5": {
+      "title": "5. Hak subjek data",
+      "content": "Anda memiliki hak:",
+      "list": [
+        "untuk meminta informasi tentang data pribadi Anda yang kami proses sesuai dengan Art. 15 DSGVO,",
+        "untuk meminta koreksi data pribadi yang salah atau tidak lengkap yang kami simpan sesuai dengan Art. 16 DSGVO,",
+        "untuk meminta penghapusan data pribadi Anda yang kami simpan sesuai dengan Art. 17 DSGVO,",
+        "untuk meminta pembatasan pemrosesan data pribadi Anda sesuai dengan Art. 18 DSGVO,",
+        "untuk menerima data pribadi Anda yang telah Anda berikan kepada kami dalam format terstruktur, umum, dan dapat dibaca mesin atau meminta transfer ke pihak yang bertanggung jawab lainnya sesuai dengan Art. 20 DSGVO,",
+        "untuk mencabut persetujuan yang telah Anda berikan kepada kami kapan saja sesuai dengan Art. 7 paragraf 3 DSGVO,",
+        "untuk mengajukan keluhan ke otoritas pengawas sesuai dengan Art. 77 DSGVO."
+      ]
+    },
+    "section6": {
+      "title": "6. Hak untuk menolak",
+      "content": "Jika data pribadi Anda diproses berdasarkan kepentingan sah sesuai dengan Art. 6 paragraf 1 p. 1 lit. f DSGVO, Anda memiliki hak untuk menolak pemrosesan data pribadi Anda sesuai dengan Art. 21 DSGVO."
+    },
+    "section7": {
+      "title": "7. Keamanan data",
+      "content": "Kami menggunakan prosedur SSL (Secure Socket Layer) dalam kunjungan situs web yang dikombinasikan dengan tingkat enkripsi tertinggi yang didukung oleh browser Anda."
+    },
+    "section8": {
+      "title": "8. Mata uang dan perubahan pada kebijakan privasi ini",
+      "content": "Kebijakan privasi ini saat ini berlaku dan memiliki status [tanggal]. Karena pengembangan lebih lanjut dari situs web kami atau karena persyaratan hukum atau peraturan yang diubah, mungkin perlu mengubah kebijakan privasi ini."
+    }
+  },
+
+  "loginpage": {
+    "title": "Masuk",
+    "subtitle": "Silakan masuk untuk melanjutkan.",
+    "icon_alt": "Ikon Masuk",
+    "email_placeholder": "Alamat email",
+    "password_placeholder": "Kata sandi",
+    "login_button": "Masuk",
+    "forgot_password": "Lupa kata sandi?",
+    "no_account": "Belum punya akun?",
+    "all_fields_required": "Semua kolom wajib diisi.",
+    "password_reset_email_sent": "Email untuk pengaturan ulang kata sandi telah dikirim. Silakan periksa kotak masuk Anda.",
+    "reset_password_button": "Atur ulang kata sandi"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "Kesalahan mengirim email pengaturan ulang kata sandi. Silakan coba lagi."
+  },
+
+  "registerpage": {
+    "password_match_toast": "Kata sandi tidak cocok!",
+    "password_length_toast": "Kata sandi harus setidaknya 8 karakter!",
+    "register_success_toast": "Pendaftaran berhasil! Selamat datang!",
+    "register_error_toast": "Terjadi kesalahan selama pendaftaran. Silakan coba lagi nanti.",
+    "all_fields_required": "Silakan isi semua kolom untuk mendaftar.",
+    "headline": "Pendaftaran",
+    "description": "Buat profil untuk mengirimkan ulasan",
+    "emailPlaceholder": "Alamat email",
+    "firstNamePlaceholder": "Nama depan",
+    "lastNamePlaceholder": "Nama belakang",
+    "passwordPlaceholder": "Kata sandi",
+    "confirmPasswordPlaceholder": "Konfirmasi kata sandi",
+    "submitButton": "Daftar"
+  },
+  "FilterableSelect": {
+    "select": "Philih"
+  }
+}

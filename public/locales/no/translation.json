@@ -1,0 +1,310 @@
+{
+  "welcome": "Velkommen til InclusiveTRIP",
+  "search": "Søk",
+  "home": "Hjem",
+  "maplink": "Kart",
+  "user": "Bruker",
+  "logout": "Logg ut",
+  "login": "Logg inn",
+
+  "why_we_developed": "Hvorfor vi utviklet denne appen",
+
+  "ratings": "Vurderinger",
+  "users": "Brukere",
+  "barrier_filter": "Barrierefilter",
+  "barrier_filter_description": "Finn det ideelle stedet for turen din ved å filtrere etter dine individuelle behov.",
+  "radius_search": "Radiesøk",
+  "radius_search_description": "Hvilken by vil du reise til?",
+  "location_filter": "Stedfilter",
+  "location_filter_description": "Finn det ideelle stedet for turen din ved å filtrere etter dine individuelle behov.",
+  "inclusive_trip_description": "InclusiveTRIP er en plattform som gjør det mulig for personer med ulike behov å finne tilgjengelige steder.",
+  "inclusive-trip-description_home_1": "InclusiveTRIP hjelper deg med å evaluere offentlige steder som restauranter, kinoer, museer og mye mer når det gjelder tilgjengelighet og andre kriterier, og finner passende steder. Appen vår lar deg oppdage og vurdere steder for å hjelpe andre med lignende behov med å finne de beste stedene for deres neste byturer.",
+  "inclusive-trip-description_home_2": "Enten du bruker rullestol, er døv, har nedsatt syn, reiser med barnevogn, eller har med deg et kjæledyr – InclusiveTRIP er verktøyet for å sikre at omgivelsene dine er tilgjengelige og inkluderende. Dine vurderinger og erfaringer bidrar til å bygge et fellesskap som prioriterer tilgjengelighet. Oppdag, vurder og del dine erfaringer med InclusiveTRIP!",
+  "introduce_blog_entries": "Finn informasjon her om aktuelle emner knyttet til inkludering.",
+  "current_topics": "Aktuelle emner",
+
+  "about_us": "Om oss",
+  "about_us_1": "Velkommen til nettstedet vårt! Vi er en liten, men lidenskapelig gruppe utviklere – Sebastian, Adnan, Ahmed og Julia – som kom sammen under WBS Coding School bootcamp for å utvikle en app som virkelig gjør en forskjell.",
+  "our_vision": "Vår visjon",
+  "about_us_2": "Vår reise begynte med en enkel, men kraftig tanke: Hvordan kan vi gjøre livet enklere for folk med en barriere? For oss alle var det klart fra starten at vi ønsket å skape noe som ville ha en positiv innvirkning på mange menneskers daglige liv. Vi spurte oss selv hvordan vi kunne finne en måte å gjøre verden litt mer tilgjengelig.",
+  "our_mission": "Vårt oppdrag",
+  "about_us_3": "Vårt oppdrag er å hjelpe mennesker med forskjellige barrierer – enten det er en fysisk funksjonshemning som synshemming, døvhet eller rullestolbruk – med å navigere omgivelsene og sørge for at stedene de besøker, oppfyller deres behov. Appen vår lar brukere vurdere steder som restauranter, kinoer, sykehus, parkeringsplasser og mer, og skape et fellesskap som støtter hverandre.",
+  "about_us_4": "Hvorfor vi utviklet denne appen",
+  "about_us_5": "Ideen til appen vår kom fra et dypt ønske om å være en del av et mer inkluderende samfunn. Hver av oss har opplevd mennesker i livene våre som møter daglige barrierer som ofte forblir usynlige for andre. Disse erfaringene motiverte oss til å skape noe som fremmer ikke bare fysisk, men også sosial tilgjengelighet.",
+  "about_us_6": "Vi ønsket å skape en plattform som ikke bare vurderer, men også viser hvor enkelt det kan være å overvinne barrierer når du har riktig informasjon. Appen er vårt bidrag til å gi mennesker med spesielle behov mer frihet og uavhengighet.",
+  "our_team": "Vårt team",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "Vi, teamet bak appen, er stolte av det vi har oppnådd på kort tid. Hver av oss har vår egen motivasjon og historie som førte oss til dette prosjektet:",
+  "about_us_8": "Sammen har vi ikke bare utviklet en app, men også brakt en visjon til liv som vi ønsker å dele med verden. Vi håper appen vår blir et verktøy som bryter ned barrierer og bygger broer – for et mer inkluderende samfunn.",
+  "about_us_9": "Takk for at du er en del av denne reisen og hjelper oss med å gjøre verden litt bedre.",
+
+  "impressum": {
+    "title": "Impressum",
+    "section1": {
+      "title": "Informasjon i henhold til § 5 TMG:",
+      "content": "Tyskland"
+    },
+    "section2": {
+      "title": "Representert av:",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "Ansvarlig for innhold i henhold til § 55 Abs. 2 RStV:",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "Ansvarsfraskrivelse:",
+      "content1": {
+        "title": "Innholdsansvar:",
+        "content": "Som tjenesteleverandør er vi ansvarlige for eget innhold på disse sidene i henhold til generelle lover i henhold til § 7 Abs.1 TMG. I henhold til §§ 8 til 10 TMG er vi imidlertid ikke forpliktet som tjenesteleverandør til å overvåke overført eller lagret ekstern informasjon eller undersøke omstendigheter som indikerer ulovlig aktivitet."
+      },
+      "content2": "Forpliktelser til å fjerne eller blokkere bruken av informasjon i henhold til generelle lover forblir upåvirket av dette. Ansvar i denne sammenheng er imidlertid bare mulig fra det tidspunktet vi blir oppmerksomme på en spesifikk krenkelse. Hvis vi blir oppmerksomme på slike brudd, vil vi fjerne dette innholdet umiddelbart.",
+      "content3": {
+        "title": "Ansvar for lenker:",
+        "content": "Tilbudet vårt inneholder lenker til eksterne tredjeparts nettsteder, hvis innhold vi ikke har kontroll over. Derfor kan vi ikke påta oss noe ansvar for dette eksterne innholdet. Den respektive leverandøren eller operatøren av sidene er alltid ansvarlig for innholdet på de lenkede sidene. De lenkede sidene ble sjekket for mulige juridiske brudd på tidspunktet for koblingen. Ulovlig innhold var ikke gjenkjennbart på tidspunktet for lenking."
+      },
+      "content4": "En permanent innholdskontroll av de lenkede sidene er imidlertid ikke rimelig uten konkrete indikasjoner på et brudd. Hvis vi blir oppmerksomme på juridiske brudd, vil vi fjerne slike lenker umiddelbart.",
+      "content5": {
+        "title": "Opphavsrett:",
+        "content": "Innholdet og verkene på disse sidene opprettet av nettstedoperatørene er underlagt tysk opphavsrett. Duplisering, behandling, distribusjon og enhver form for utnyttelse utenfor grensene for opphavsretten krever skriftlig samtykke fra den respektive forfatteren eller skaperen. Nedlastinger og kopier av dette nettstedet er kun tillatt for privat, ikke-kommersiell bruk."
+      },
+      "content6": "For så vidt innholdet på dette nettstedet ikke ble opprettet av operatøren, respekteres tredjeparts opphavsrett. Tredjepartsinnhold er spesielt merket som sådan. Skulle du likevel bli oppmerksom på en opphavsrettsovertredelse, ber vi deg informere oss deretter. Hvis vi blir oppmerksomme på lovbrudd, vil vi fjerne slikt innhold umiddelbart.",
+      "content7": {
+        "title": "Tvisteløsning:",
+        "content": "Europakommisjonen gir en plattform for online tvisteløsning. Vår e-postadresse finner du øverst i imprintet."
+      },
+      "content8": "Vi er verken villige eller forpliktet til å delta i tvisteløsningsprosesser for en forbrukervoldgiftsnemnd."
+    }
+  },
+
+  "footer": {
+    "copyright": "Copyright © {{year}} - Alle rettigheter reservert",
+    "impressum": "Impressum",
+    "datenschutz": "Personvern",
+    "ueberuns": "Om oss"
+  },
+
+  "createRating": {
+    "title": "Skriv vurdering",
+    "subtitle": "Vurder {{place}} basert på dine erfaringer.",
+    "barrierSuitable": "Egnet for {{barrierName}}",
+    "commentLabel": "Del dine erfaringer",
+    "commentPlaceholder": "Erfaringsrapport",
+    "whatToWrite": "Hva skal jeg skrive?",
+    "modalTitle": "Hva vil du vurdere?",
+    "modalSubtitle": "Jeg vil vurdere tilgjengeligheten for:",
+    "modalCancel": "Avbryt",
+    "modalOk": "OK",
+    "addImagesTitle": "Legg til bilder til vurderingen din!",
+    "dropzoneText": "Dra bilder hit eller klikk for å velge bilder",
+    "submitButton": "Send vurdering",
+    "errorMessage": {
+      "emptyComment": "Erfaringsrapportfeltet må ikke være tomt.",
+      "maxFiles": "Du kan laste opp maksimalt 5 bilder",
+      "uploadError": "Feil ved opplasting av filer, vennligst prøv igjen"
+    },
+    "successMessage": "Takk, vurderingen din er lagt til!"
+  },
+
+  "barriers": {
+    "barrier1": "Rullestolbrukere",
+    "barrier2": "Barn",
+    "barrier3": "Blinde personer",
+    "barrier4": "Døve personer",
+    "barrier5": "Personer med annet morsmål",
+    "barrier6": "Personer med angst",
+    "barrier7": "Personer med kognitive utfordringer",
+    "barrier8": "Personer med klaustrofobi",
+    "barrier9": "Dyreeiere"
+  },
+
+  "common": {
+    "bewerten": "vurdere"
+  },
+
+  "usersection": {
+    "profile_of": "Profil av",
+    "change_user_data": "Endre brukerdataene dine og rediger dine vurderinger.",
+    "your_ratings": "Dine vurderinger",
+    "you_rated": "Du vurderte",
+    "read_more": "les mer"
+  },
+
+  "userProfileForm": {
+    "personal_data": "Personlig informasjon",
+    "first_name": "Fornavn",
+    "last_name": "Etternavn",
+    "email": "E-post",
+    "save_changes": "Lagre endringer",
+    "update_success": "Brukerdataene er oppdatert."
+  },
+
+  "map": {
+    "where_to_travel": "Hvor vil du reise?",
+    "how_search_works": "..slik fungerer søket",
+    "icon_map": "Ikonkart",
+    "how_search_works_title": "Slik fungerer søket:",
+    "step1": "Velg en by fra listen eller søk direkte etter en bestemt adresse med søkefeltet på kartet.",
+    "step2": "Angi hvilken type sted du ønsker å besøke.",
+    "step3": "Klikk på ikonet på kartet for å se vurderinger for dette stedet eller skrive en vurdering.",
+    "close": "Lukk"
+  },
+
+  "categorySelector": {
+    "select_category": "Velg en kategori:"
+  },
+
+  "citySelector": {
+    "select_city": "Velg en by:"
+  },
+
+  "placeMarker": {
+    "ratings": "Vurderinger",
+    "create_rating": "Send vurdering"
+  },
+
+  "ratingspage": {
+    "no_reviews": "Det er ennå ingen vurderinger for dette stedet. Skriv en vurdering og del dine erfaringer!",
+    "add_review": "Legg til vurdering",
+    "back": "Tilbake",
+    "reviews": "Vurderinger",
+    "average_rating_for": "Gjennomsnittlig vurdering for",
+    "review_by": "Vurdering av",
+    "on": "den",
+    "read_more": "Les mer"
+  },
+
+  "detailReview": {
+    "review_of": "Vurdering av",
+    "on": "den",
+    "reviewed_by": "Slik vurderte {{placeName}} av {{userName}}:",
+    "suitable_for": "Egnet for",
+    "icon_map": "Ikonkart",
+    "error_loading_reviews": "Feil ved lasting av vurderinger.",
+    "back": "Tilbake"
+  },
+
+  "reviewEdit": {
+    "had": "hadde",
+    "on": "den",
+    "rated": "vurdert",
+    "learn_more": "Les mer om denne vurderingen.",
+    "suitable_for": "Egnet for",
+    "icon_map": "Ikonkart",
+    "error_loading_reviews": "Feil ved lasting av vurderinger.",
+    "update_success": "Vurderingen ble oppdatert.",
+    "error_updating_review": "Feil ved oppdatering av vurderingen.",
+    "delete_success": "Vurderingen ble slettet.",
+    "error_deleting_review": "Feil ved sletting av vurderingen.",
+    "update": "Oppdater",
+    "delete": "Slett",
+    "back": "Tilbake",
+    "confirm_delete": "Vil du virkelig slette vurderingen?",
+    "cancel": "Avbryt",
+    "comment_placeholder": "Skriv beskrivelsen her"
+  },
+
+  "dataprotection": {
+    "title": "Databeskyttelse",
+    "section1": {
+      "title": "1. Oversikt over databeskyttelse",
+      "content": "Vi er glade for din interesse for nettstedet vårt. Beskyttelse av dine personlige data er spesielt viktig for oss. Vi behandler dine personlige data konfidensielt og i samsvar med de juridiske databeskyttelsesforskriftene og denne databeskyttelseserklæringen."
+    },
+    "section2": {
+      "title": "2. Ansvarlig enhet",
+      "content": "Ansvarlig for databehandlingen på dette nettstedet er:"
+    },
+    "section3": {
+      "title": "3. Innsamling og lagring av personopplysninger samt type og formål med bruk",
+      "subtitle1": "a) Ved besøk på nettstedet",
+      "content1": "Når du går inn på nettstedet vårt, sendes informasjon automatisk til serveren vår fra nettleseren som brukes på enheten din. Denne informasjonen lagres midlertidig i en såkalt loggfil. Følgende informasjon samles inn uten din innblanding og lagres til automatisk sletting:",
+      "list1": [
+        "IP-adresse til den forespørselende datamaskinen,",
+        "Dato og klokkeslett for tilgang,",
+        "Navn og URL til den hentede filen,",
+        "Nettstedet som tilgang ble gjort fra (henvisnings-URL),",
+        "Brukte nettleser og, hvis aktuelt, operativsystemet på datamaskinen din samt navnet på tilgangsleverandøren."
+      ],
+      "content2": "De nevnte dataene behandles av oss for følgende formål:",
+      "list2": [
+        "Sikring av en jevn forbindelse til nettstedet,",
+        "Sikring av komfortabel bruk av nettstedet vårt,",
+        "Evaluering av systemets sikkerhet og stabilitet samt",
+        "for ytterligere administrative formål."
+      ],
+      "content3": "Det juridiske grunnlaget for databehandlingen er Art. 6 para. 1 p. 1 lit. f DSGVO. Vår legitime interesse følger av formålene for datainnsamlingen oppført ovenfor. Vi bruker under ingen omstendigheter de innsamlede dataene for å trekke konklusjoner om din person.",
+      "subtitle2": "b) Kontakt",
+      "content4": "Hvis du kontakter oss via e-post eller et kontaktskjema, vil informasjonen din, inkludert kontaktinformasjonen du oppgir, bli lagret av oss for å behandle forespørselen og for eventuelle oppfølgingsspørsmål. Vi vil ikke dele disse dataene uten ditt samtykke.",
+      "content5": "Behandlingen av dataene som er angitt i kontaktskjemaet, er derfor utelukkende basert på ditt samtykke (Art. 6 para. 1 lit. a DSGVO). Du kan når som helst trekke tilbake dette samtykket. En uformell melding via e-post til oss er tilstrekkelig. Lovligheten av databehandlingsoperasjoner utført før tilbakekallingen forblir upåvirket av tilbakekallingen."
+    },
+    "section4": {
+      "title": "4. Dataoverføring",
+      "content": "Dine personlige data vil ikke bli overført til tredjepart med mindre du uttrykkelig har samtykket til det eller det er en juridisk forpliktelse til å gjøre det."
+    },
+    "section5": {
+      "title": "5. Rettigheter til registrerte personer",
+      "content": "Du har rett til:",
+      "list": [
+        "å be om informasjon om dine personopplysninger som behandles av oss i samsvar med Art. 15 DSGVO,",
+        "å be om korrigering av feilaktige eller ufullstendige personopplysninger lagret av oss i samsvar med Art. 16 DSGVO,",
+        "å be om sletting av dine personopplysninger lagret av oss i samsvar med Art. 17 DSGVO,",
+        "å be om begrensning av behandlingen av dine personopplysninger i samsvar med Art. 18 DSGVO,",
+        "å motta dine personopplysninger som du har gitt oss i et strukturert, vanlig og maskinlesbart format eller å be om overføring til en annen ansvarlig part i samsvar med Art. 20 DSGVO,",
+        "å når som helst trekke tilbake ditt samtykke gitt til oss i samsvar med Art. 7 para. 3 DSGVO,",
+        "å klage til en tilsynsmyndighet i samsvar med Art. 77 DSGVO."
+      ]
+    },
+    "section6": {
+      "title": "6. Rett til å motsette seg",
+      "content": "Hvis dine personopplysninger behandles på grunnlag av legitime interesser i samsvar med Art. 6 para. 1 p. 1 lit. f DSGVO, har du rett til å motsette deg behandlingen av dine personopplysninger i samsvar med Art. 21 DSGVO."
+    },
+    "section7": {
+      "title": "7. Datasikkerhet",
+      "content": "Vi bruker SSL-prosedyren (Secure Socket Layer) innenfor besøket på nettstedet, sammen med den høyeste krypteringsnivået støttet av nettleseren din."
+    },
+    "section8": {
+      "title": "8. Valuta og endringer i denne personvernerklæringen",
+      "content": "Denne personvernerklæringen er for tiden gyldig og har status [dato]. På grunn av videreutvikling av nettstedet vårt eller endrede lovbestemte krav, kan det bli nødvendig å endre denne personvernerklæringen."
+    }
+  },
+
+  "loginpage": {
+    "title": "Logg inn",
+    "subtitle": "Vennligst logg inn for å fortsette.",
+    "icon_alt": "Logg inn-ikon",
+    "email_placeholder": "E-postadresse",
+    "password_placeholder": "Passord",
+    "login_button": "Logg inn",
+    "forgot_password": "Glemt passord?",
+    "no_account": "Ingen konto ennå?",
+    "all_fields_required": "Alle felt er obligatoriske.",
+    "password_reset_email_sent": "En e-post for tilbakestilling av passord er sendt. Vennligst sjekk innboksen din.",
+    "reset_password_button": "Tilbakestill passord"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "Feil ved sending av e-post for tilbakestilling av passord. Vennligst prøv igjen."
+  },
+
+  "registerpage": {
+    "password_match_toast": "Passordene stemmer ikke overens!",
+    "password_length_toast": "Passordet må være minst 8 tegn langt!",
+    "register_success_toast": "Registreringen var vellykket! Velkommen!",
+    "register_error_toast": "Det oppstod en feil under registreringen. Vennligst prøv igjen senere.",
+    "all_fields_required": "Vennligst fyll ut alle feltene for å registrere deg.",
+    "headline": "Registrering",
+    "description": "Lag en profil for å sende inn vurderinger",
+    "emailPlaceholder": "E-postadresse",
+    "firstNamePlaceholder": "Fornavn",
+    "lastNamePlaceholder": "Etternavn",
+    "passwordPlaceholder": "Passord",
+    "confirmPasswordPlaceholder": "Bekreft passord",
+    "submitButton": "Registrer"
+  },
+  "FilterableSelect": {
+    "select": "Velg"
+  }
+}

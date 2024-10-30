@@ -1,70 +1,67 @@
-import React from 'react';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Aboutus = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h1 className="text-3xl font-bold mb-6 text-left">Über uns</h1>
+      <h1 className="text-3xl font-bold mb-6 text-left">{t("about_us")}</h1>
 
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Willkommen auf unserer Webseite! Wir sind eine kleine, aber leidenschaftliche Gruppe von Entwicklern – Sebastian, Adnan, Ahmed und Julia – die im Rahmen des Bootcamps der WBS Coding School zusammengefunden haben, um eine App zu entwickeln, die wirklich einen Unterschied macht.
-      </p>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_1")}</p>
 
-      <h2 className="text-2xl font-semibold mb-4">Unsere Vision</h2>
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Unsere Reise begann mit einem einfachen, aber kraftvollen Gedanken: Wie können wir Menschen mit einer Barriere das Leben leichter machen? Für uns alle war es von Anfang an klar, dass wir etwas schaffen wollen, das einen echten positiven Einfluss auf das tägliche Leben vieler Menschen hat. Wir haben uns gefragt, wie es wäre, wenn wir einen Weg finden könnten, die Welt ein Stück barrierefreier zu machen.
-      </p>
+      <h2 className="text-2xl font-semibold mb-4">{t("our_vision")}</h2>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_2")}</p>
 
-      <h2 className="text-2xl font-semibold mb-4">Unsere Mission</h2>
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Unsere Mission ist es, Menschen mit unterschiedlichen Barrieren – sei es eine körperliche Einschränkung wie eine Sehbehinderung, eine Gehörlosigkeit oder die Nutzung eines Rollstuhls – dabei zu unterstützen, ihre Umgebung besser zu navigieren und sicherzustellen, dass die Orte, die sie besuchen, ihren Bedürfnissen gerecht werden. Unsere App ermöglicht es, Lokationen wie Restaurants, Kinos, Krankenhäuser, Parkplätze und vieles mehr zu bewerten und so eine Gemeinschaft zu schaffen, die sich gegenseitig hilft.
-      </p>
+      <h2 className="text-2xl font-semibold mb-4">{t("our_mission")}</h2>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_3")}</p>
 
-      <h2 className="text-2xl font-semibold mb-4">Warum wir diese App entwickelt haben</h2>
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Die Idee für unsere App entstand aus dem tiefen Wunsch heraus, Teil einer inklusiveren Gesellschaft zu sein. Jeder von uns hat in seinem Umfeld Menschen erlebt, die täglich mit Barrieren konfrontiert sind, die für andere oft unsichtbar bleiben. Diese Erfahrungen haben uns motiviert, etwas zu schaffen, das nicht nur die physische, sondern auch die soziale Zugänglichkeit fördert.
-      </p>
+      <h2 className="text-2xl font-semibold mb-4">{t("about_us_4")}</h2>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_5")}</p>
 
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Wir wollten eine Plattform schaffen, die nicht nur bewertet, sondern auch aufzeigt, wie einfach es sein kann, Barrieren zu überwinden, wenn man nur die richtigen Informationen hat. Die App ist unser Beitrag, um Menschen mit besonderen Bedürfnissen mehr Freiheit und Unabhängigkeit zu ermöglichen.
-      </p>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_6")}</p>
 
-      <h2 className="text-2xl font-semibold mb-4">Unser Team</h2>
-      <p className="text-gray-700 leading-relaxed mb-6">
-        Wir, das Team hinter der App, sind stolz auf das, was wir in kurzer Zeit erreicht haben. Jeder von uns hat seine eigene Motivation und Geschichte, die ihn zu diesem Projekt geführt hat:
-      </p>
+      <h2 className="text-2xl font-semibold mb-4">{t("our_team")}</h2>
+      <p className="text-gray-700 leading-relaxed mb-6">{t("about_us_7")}</p>
 
       <div className="flex flex-wrap justify-center space-x-6">
         <div className="text-center mb-6">
-          <img src="/images//Photosebastian.jpeg" alt="Sebastian" className="w-32 h-32 rounded-full mb-4 object-cover" />
-          <p className="text-gray-700 font-semibold">Sebastian</p>
+          <img
+            src="/images//Photosebastian.jpeg"
+            alt="Sebastian"
+            className="w-32 h-32 rounded-full mb-4 object-cover"
+          />
+          <p className="text-gray-700 font-semibold">{t("sebastian")}</p>
         </div>
         <div className="text-center mb-6">
-          <img src="/images//Photoadnan.jpeg" alt="Sebastian" className="w-32 h-32 rounded-full mb-4 object-cover" />
-          <p className="text-gray-700 font-semibold">Adnan</p>
+          <img
+            src="/images//Photoadnan.jpeg"
+            alt="Adnan"
+            className="w-32 h-32 rounded-full mb-4 object-cover"
+          />
+          <p className="text-gray-700 font-semibold">{t("adnan")}</p>
         </div>
         <div className="text-center mb-6">
-          <img src="/images//Photoahmed.jpeg" alt="Sebastian" className="w-32 h-32 rounded-full mb-4 object-cover" />
-          <p className="text-gray-700 font-semibold">Ahmed</p>
+          <img
+            src="/images//Photoahmed.jpeg"
+            alt="Ahmed"
+            className="w-32 h-32 rounded-full mb-4 object-cover"
+          />
+          <p className="text-gray-700 font-semibold">{t("ahmed")}</p>
         </div>
         <div className="text-center mb-6">
-          <img src="/images//Photojulia.jpeg" alt="Sebastian" className="w-32 h-32 rounded-full mb-4 object-cover" />
-          <p className="text-gray-700 font-semibold">Julia</p>
+          <img
+            src="/images//Photojulia.jpeg"
+            alt="Julia"
+            className="w-32 h-32 rounded-full mb-4 object-cover"
+          />
+          <p className="text-gray-700 font-semibold">{t("julia")}</p>
         </div>
-
-
-
-
-
-
       </div>
 
-      <p className="text-gray-700 leading-relaxed">
-        Zusammen haben wir nicht nur eine App entwickelt, sondern auch eine Vision zum Leben erweckt, die wir mit der Welt teilen möchten. Wir hoffen, dass unsere App zu einem Werkzeug wird, das Barrieren abbaut und Brücken baut – für ein inklusiveres Miteinander.
-      </p>
+      <p className="text-gray-700 leading-relaxed">{t("about_us_8")}</p>
 
-      <p className="text-gray-700 leading-relaxed mt-6">
-        Vielen Dank, dass Sie Teil dieser Reise sind und mit uns die Welt ein wenig besser machen möchten.
-      </p>
+      <p className="text-gray-700 leading-relaxed mt-6">{t("about_us_9")}</p>
     </div>
   );
 };

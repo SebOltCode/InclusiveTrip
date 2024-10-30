@@ -6,8 +6,10 @@ import { ProfilePhotoUpload } from "./ProfilePhotoUpload";
 import { UserProfileForm } from "./UserProfileForm";
 import { FetchUserRatings } from "./FetchUserRatings";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function User() {
+  const { t } = useTranslation();
   const [userData, setUserData] = useState({
     id: "",
     firstName: "",
@@ -38,11 +40,10 @@ function User() {
             <div className="flex flex-col md:flex-row justify-between p-4 sm:p-8">
               <div className="flex flex-col w-full md:w-2/3 text-left">
                 <h1 className="font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                  Profil von {userData.firstName}
+                  {t("usersection.profile_of")} {userData.firstName}
                 </h1>
                 <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight">
-                  Ändere deine Benutzerdaten und bearbeite deine bereits
-                  abgegebenen Bewertungen.
+                  {t("usersection.change_user_data")}
                 </div>
               </div>
               <div className="flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
@@ -61,7 +62,7 @@ function User() {
       </div>
 
       <h1 className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center pt-12 mt-12 text-[#000000]">
-        Deine Bewertungen
+        {t("usersection.your_ratings")}
       </h1>
 
       {userRatings.map((rating, index) => (
@@ -72,7 +73,7 @@ function User() {
           <div className="w-full text-left">
             <div className="flex flex-col sm:flex-row items-center justify-between">
               <h1 className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#000000]">
-                So hast du {rating.placeName} bewertet:
+                {t("usersection.you_rated")} {rating.placeName}:
               </h1>
               <div className="font-poppins font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#000000]">
                 {new Date(rating.createdAt).toLocaleDateString()}
@@ -86,7 +87,7 @@ function User() {
               className="btn bg-[#FFD700] border-black w-full sm:w-36 p-2 h-12 min-h-2 mt-4 sm:mt-2 justify-center"
               onClick={() => handleRateClick(rating)}
             >
-              mehr lesen
+              {t("usersection.read_more")}
             </button>
           </div>
         </div>
