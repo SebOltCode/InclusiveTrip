@@ -6,6 +6,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import Cookies from "js-cookie";
 import { updateBarrierReview } from "../utils/reviewHandler";
 import Carousel from "../utils/Carousel";
+import { useTranslation } from "react-i18next";
 
 const ReviewEdit = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -17,6 +18,7 @@ const ReviewEdit = () => {
   const [stars] = useState([1, 2, 3, 4, 5]);
   const [comment, setComment] = useState(rating.comment);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchBarrierRatings = async () => {
@@ -28,12 +30,12 @@ const ReviewEdit = () => {
         setBarrierRatings(response.data);
       } catch (error) {
         console.error("Error fetching Place ratings:", error);
-        toast.error("Fehler beim Laden der Bewertungen.");
+        toast.error(t("reviewEdit.error_loading_reviews"));
       }
     };
 
     fetchBarrierRatings();
-  }, [rating.id]);
+  }, [rating.id, API_URL, t]);
 
   const handleBarrierReviewChange = (e) => {
     const rating = Number(e.target.value);
@@ -73,10 +75,10 @@ const ReviewEdit = () => {
         }
       );
       await updateBarrierReview(barrierRatings, rating.id);
-      toast.success("Bewertung erfolgreich aktualisiert.");
+      toast.success(t("reviewEdit.update_success"));
     } catch (error) {
       console.error("Error updating review:", error);
-      toast.error("Fehler beim Aktualisieren der Bewertung.");
+      toast.error(t("reviewEdit.error_updating_review"));
     }
   };
 
@@ -95,11 +97,11 @@ const ReviewEdit = () => {
         },
         withCredentials: true,
       });
-      toast.success("Bewertung erfolgreich gelöscht.");
+      toast.success(t("reviewEdit.delete_success"));
       navigate(-1);
     } catch (error) {
       console.error("Error deleting review:", error);
-      toast.error("Fehler beim Löschen der Bewertung.");
+      toast.error(t("reviewEdit.error_deleting_review"));
     }
   };
 
@@ -122,17 +124,19 @@ const ReviewEdit = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className="font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight text-black">
-                {rating.User.firstName} hat {rating.placeName} am{" "}
-                {new Date(rating.createdAt).toLocaleDateString()} bewertet
+                {rating.User.firstName} {t("reviewEdit.had")} {rating.placeName}{" "}
+                {t("reviewEdit.on")}{" "}
+                {new Date(rating.createdAt).toLocaleDateString()}{" "}
+                {t("reviewEdit.rated")}
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
-                Erfahre folgend mehr über diese Bewertung.
+                {t("reviewEdit.learn_more")}
               </div>
             </div>
             <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images/Icon_Bewertung.png"
-                alt="Icon Karte"
+                alt={t("reviewEdit.icon_map")}
                 className="max-w-full max-h-[300px] object-cover rounded-lg"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -160,7 +164,8 @@ const ReviewEdit = () => {
                 >
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                   <span className="flex-1 text-lg">
-                    Für {barrierRating.Barrier.name} geeignet
+                    {t("reviewEdit.suitable_for")}{" "}
+                    {t(`barriers.barrier${barrierRating.Barrier.id}`)}
                   </span>
                   <div className="flex space-x-1 rating ml-auto">
                     {stars.map((star) => (
@@ -189,7 +194,7 @@ const ReviewEdit = () => {
             onChange={handleCommentChange}
             className="w-full p-4 border border-gray-300 rounded-lg"
             rows="4"
-            placeholder="Beschreibung hier eingeben"
+            placeholder={t("reviewEdit.comment_placeholder")}
           ></textarea>
         </div>
 
@@ -199,21 +204,21 @@ const ReviewEdit = () => {
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={handleUpdate}
           >
-            Aktualisieren
+            {t("reviewEdit.update")}
           </button>
           <button
             type="button"
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={openDeleteModal}
           >
-            Löschen
+            {t("reviewEdit.delete")}
           </button>
           <button
             type="button"
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={handleBackClick}
           >
-            Zurück
+            {t("reviewEdit.back")}
           </button>
         </div>
       </form>
@@ -228,7 +233,7 @@ const ReviewEdit = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-semibold mb-4">
-              Bewertung wirklich löschen?
+              {t("reviewEdit.confirm_delete")}
             </h2>
             <div className="flex justify-end space-x-4">
               <button
@@ -236,14 +241,14 @@ const ReviewEdit = () => {
                 className="btn bg-gray-300 px-4 py-2 rounded"
                 onClick={closeDeleteModal}
               >
-                Abbrechen
+                {t("reviewEdit.cancel")}
               </button>
               <button
                 type="button"
                 className="btn bg-red-500 text-white px-4 py-2 rounded"
                 onClick={handleDelete}
               >
-                Löschen
+                {t("reviewEdit.delete")}
               </button>
             </div>
           </div>

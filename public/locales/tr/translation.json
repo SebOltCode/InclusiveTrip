@@ -1,0 +1,306 @@
+{
+  "welcome": "InclusiveTRIP'e Hoş Geldiniz",
+  "search": "Ara",
+  "home": "Anasayfa",
+  "maplink": "Harita",
+  "user": "Kullanıcı",
+  "logout": "Çıkış Yap",
+  "login": "Giriş Yap",
+
+  "why_we_developed": "Bu uygulamayı neden geliştirdik",
+
+  "ratings": "Değerlendirmeler",
+  "users": "Kullanıcılar",
+  "barrier_filter": "Engel Filtresi",
+  "barrier_filter_description": "Seyahatiniz için ideal yeri ihtiyaçlarınıza göre filtreleyerek bulun.",
+  "radius_search": "Yarıçap Araması",
+  "radius_search_description": "Hangi şehre seyahat etmek istersiniz?",
+  "location_filter": "Konum Filtresi",
+  "location_filter_description": "Seyahatiniz için ideal yeri ihtiyaçlarınıza göre filtreleyerek bulun.",
+  "inclusive_trip_description": "InclusiveTRIP, farklı ihtiyaçlara sahip kişilerin erişilebilir yerler bulmasına olanak tanıyan bir platformdur.",
+  "inclusive-trip-description_home_1": "InclusiveTRIP, restoranlar, sinemalar, müzeler ve daha fazlasını erişilebilirlik veya diğer kriterlere göre değerlendirmenize ve uygun konumları bulmanıza yardımcı olur. Uygulamamız, benzer ihtiyaçlara sahip diğer kişilerin bir sonraki şehir gezileri için en iyi yerleri bulmalarına yardımcı olmanızı sağlar.",
+  "inclusive-trip-description_home_2": "Tekerlekli sandalye kullanıyor, işitme engelli, görme engelli, bebek arabasıyla seyahat ediyor veya evcil hayvanınızla seyahat ediyor olsanız da – InclusiveTRIP, çevrenizin erişilebilir ve kapsayıcı olduğundan emin olmanızı sağlar. Değerlendirmeleriniz ve deneyimleriniz, erişilebilirliği öncelik haline getiren bir topluluk oluşturmaya yardımcı olur. InclusiveTRIP ile keşfedin, değerlendirin ve deneyimlerinizi paylaşın!",
+  "introduce_blog_entries": "Dahil olma konusundaki güncel konular hakkında buradan bilgi edinin.",
+  "current_topics": "Güncel Konular",
+
+  "about_us": "Hakkımızda",
+  "about_us_1": "Web sitemize hoş geldiniz! Biz, WBS Coding School eğitim kampında bir araya gelen ve gerçekten bir fark yaratan bir uygulama geliştirmek için çalışan küçük ama tutkulu bir geliştirici grubuyuz: Sebastian, Adnan, Ahmed ve Julia.",
+  "our_vision": "Vizyonumuz",
+  "about_us_2": "Yolculuğumuz, basit ama güçlü bir düşünceyle başladı: Engelli kişilerin yaşamını nasıl kolaylaştırabiliriz? Hepimiz için baştan beri, birçok insanın günlük yaşamına olumlu bir etki yapacak bir şey yaratmak istediğimiz açıktı. Dünyayı biraz daha erişilebilir hale getirmek için bir yol bulup bulamayacağımızı sorduk kendimize.",
+  "our_mission": "Misyonumuz",
+  "about_us_3": "Misyonumuz, görme engeli, işitme engeli veya tekerlekli sandalye kullanımı gibi fiziksel engellere sahip bireylerin çevrelerini daha iyi yönlendirmelerine ve ziyaret ettikleri yerlerin ihtiyaçlarına uygun olduğundan emin olmalarına yardımcı olmaktır. Uygulamamız, restoranlar, sinemalar, hastaneler, park yerleri ve daha fazlasını değerlendirerek birbirini destekleyen bir topluluk yaratır.",
+  "about_us_4": "Bu uygulamayı neden geliştirdik",
+  "about_us_5": "Uygulamamızın fikri, daha kapsayıcı bir toplumun parçası olma arzusundan doğdu. Hepimizin hayatında, çoğu insan için görünmez kalan günlük engellerle karşılaşan insanlar var. Bu deneyimler, sadece fiziksel değil, aynı zamanda sosyal erişilebilirliği teşvik eden bir şey yaratmamız için bizi motive etti.",
+  "about_us_6": "Değerlendirmelerle sınırlı olmayan, aynı zamanda doğru bilgilere sahip olduğunuzda engellerin nasıl kolayca aşılabileceğini gösteren bir platform yaratmak istedik. Uygulama, özel ihtiyaçlara sahip kişilere daha fazla özgürlük ve bağımsızlık sağlamaya katkımızdır.",
+  "our_team": "Ekibimiz",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "Uygulamanın arkasındaki ekip olarak kısa sürede başardıklarımızdan gurur duyuyoruz. Hepimizin bu projeye yönlendiren kendi motivasyonu ve hikayesi var:",
+  "about_us_8": "Birlikte sadece bir uygulama geliştirmekle kalmadık, dünyayla paylaşmak istediğimiz bir vizyonu da hayata geçirdik. Uygulamamızın engelleri aşan ve köprüler kuran bir araç haline gelmesini umuyoruz – daha kapsayıcı bir toplum için.",
+  "about_us_9": "Bu yolculuğun bir parçası olduğunuz ve dünyayı biraz daha iyi bir yer haline getirmemize yardımcı olduğunuz için teşekkür ederiz.",
+
+  "impressum": {
+    "title": "Künye",
+    "section1": {
+      "title": "§ 5 TMG'ye göre bilgi:",
+      "content": "Almanya"
+    },
+    "section2": {
+      "title": "Temsil Edenler:",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "§ 55 Abs. 2 RStV'ye göre içerikten sorumlu:",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "Feragatname:",
+      "content1": {
+        "title": "İçerik Sorumluluğu:",
+        "content": "Bir hizmet sağlayıcı olarak, § 7 Abs.1 TMG uyarınca, bu sayfalardaki kendi içeriklerimizden genel yasalara göre sorumluyuz. § 8 ila 10 TMG'ye göre, hizmet sağlayıcıları olarak iletilen veya saklanan harici bilgileri izlemek veya yasa dışı faaliyete işaret eden durumları araştırmakla yükümlü değiliz."
+      },
+      "content2": "Genel yasalara göre bilgilerin kaldırılması veya kullanılmasının engellenmesine ilişkin yükümlülükler bundan etkilenmez. Ancak, bu konudaki sorumluluk, belirli bir ihlalin bilinmesinden sonraki süreyle sınırlıdır. Böyle bir ihlalden haberdar olursak, bu içeriği derhal kaldıracağız.",
+      "content3": {
+        "title": "Bağlantılar için Sorumluluk:",
+        "content": "Teklifimiz, içeriği üzerinde kontrolümüz olmayan üçüncü tarafların harici web sitelerine bağlantılar içermektedir. Bu nedenle, bu harici içerikten sorumluluk kabul edemeyiz. Bağlantılı sayfaların içeriğinden her zaman sayfaların ilgili sağlayıcısı veya işletmecisi sorumludur. Bağlantı verilen sayfalar, bağlantı yapıldığı anda olası yasal ihlaller açısından kontrol edildi. Bağlantı yapıldığı anda yasa dışı içerik tanınabilir değildi."
+      },
+      "content4": "Ancak, somut bir ihlalin olmadığı sürece bağlantılı sayfaların içeriğinin sürekli olarak kontrol edilmesi makul değildir. Yasal bir ihlalden haberdar olursak, bu tür bağlantıları derhal kaldıracağız.",
+      "content5": {
+        "title": "Telif Hakkı:",
+        "content": "Bu sayfalarda site işletmecileri tarafından oluşturulan içerikler ve çalışmalar Almanya telif hakkı yasasına tabidir. Telif hakkı sınırları dışında çoğaltma, işleme, dağıtma ve her türlü kullanma, ilgili yazar veya yaratıcının yazılı onayını gerektirir. Bu sitenin indirilmesi ve kopyalanması yalnızca özel, ticari olmayan kullanım için izin verilir."
+      },
+      "content6": "Bu sitedeki içerik işletmeci tarafından oluşturulmadığı sürece, üçüncü tarafların telif haklarına saygı gösterilir. Üçüncü taraf içeriği özellikle bu şekilde işaretlenmiştir. Yine de bir telif hakkı ihlali fark ederseniz, lütfen bize bildirin. Yasal bir ihlalden haberdar olursak, bu tür içerikleri derhal kaldıracağız.",
+      "content7": {
+        "title": "Uyuşmazlık Çözümü:",
+        "content": "Avrupa Komisyonu çevrimiçi uyuşmazlık çözümü için bir platform sunmaktadır. E-posta adresimizi yukarıdaki künyede bulabilirsiniz."
+      },
+      "content8": "Bir tüketici tahkim kurulunda anlaşmazlık çözüm işlemlerine katılmaya ne istekliyiz ne de zorunluyuz."
+    }
+  },
+
+  "footer": {
+    "copyright": "Telif Hakkı © {{year}} - Tüm hakları saklıdır",
+    "impressum": "Künye",
+    "datenschutz": "Gizlilik Politikası",
+    "ueberuns": "Hakkımızda"
+  },
+
+  "createRating": {
+    "title": "Değerlendirme Yaz",
+    "subtitle": "Deneyimlerinize göre {{place}} değerlendirin.",
+    "barrierSuitable": "{{barrierName}} için uygun",
+    "commentLabel": "Deneyimlerinizi paylaşın",
+    "commentPlaceholder": "Deneyim raporu",
+    "whatToWrite": "Ne yazmalıyım?",
+    "modalTitle": "Neyi değerlendirmek istersiniz?",
+    "modalSubtitle": "Erişilebilirliği değerlendirmek istiyorum:",
+    "modalCancel": "İptal",
+    "modalOk": "Tamam",
+    "addImagesTitle": "Değerlendirmenize resim ekleyin!",
+    "dropzoneText": "Resimleri buraya sürükleyin veya resim seçmek için tıklayın",
+    "submitButton": "Değerlendirmeyi Gönder",
+    "errorMessage": {
+      "emptyComment": "Deneyim raporu alanı boş bırakılamaz.",
+      "maxFiles": "En fazla 5 resim yükleyebilirsiniz",
+      "uploadError": "Dosya yüklenirken hata oluştu, lütfen tekrar deneyin"
+    },
+    "successMessage": "Teşekkürler, değerlendirmeniz eklendi!"
+  },
+
+  "barriers": {
+    "barrier1": "Tekerlekli sandalye kullanıcıları",
+    "barrier2": "Çocuklar",
+    "barrier3": "Görme engelli bireyler",
+    "barrier4": "İşitme engelli bireyler",
+    "barrier5": "Ana dili olmayanlar",
+    "barrier6": "Anksiyetesi olan kişiler",
+    "barrier7": "Bilişsel engelleri olan kişiler",
+    "barrier8": "Klostrofobisi olan kişiler",
+    "barrier9": "Evcil hayvan sahipleri"
+  },
+
+  "common": {
+    "bewerten": "değerlendir"
+  },
+
+  "usersection": {
+    "profile_of": "Profil:",
+    "change_user_data": "Kullanıcı verilerinizi değiştirin ve değerlendirmelerinizi düzenleyin.",
+    "your_ratings": "Değerlendirmeleriniz",
+    "you_rated": "Değerlendirdiniz",
+    "read_more": "devamını oku"
+  },
+
+  "userProfileForm": {
+    "personal_data": "Kişisel veriler",
+    "first_name": "İsim",
+    "last_name": "Soyisim",
+    "email": "E-posta",
+    "save_changes": "Değişiklikleri Kaydet",
+    "update_success": "Kullanıcı verileri başarıyla güncellendi."
+  },
+
+  "map": {
+    "where_to_travel": "Nereye seyahat etmek istersiniz?",
+    "how_search_works": "..arama nasıl çalışır",
+    "icon_map": "Simge haritası",
+    "how_search_works_title": "Arama nasıl çalışır:",
+    "step1": "Listeden bir şehir seçin veya haritada arama alanını kullanarak belirli bir adresi doğrudan arayın.",
+    "step2": "Ziyaret etmek istediğiniz yerin türünü girin.",
+    "step3": "Bu konumla ilgili değerlendirmeleri görmek veya bir değerlendirme yazmak için haritadaki simgeye tıklayın.",
+    "close": "Kapat"
+  },
+
+  "categorySelector": {
+    "select_category": "Bir kategori seçin:"
+  },
+
+  "citySelector": {
+    "select_city": "Bir şehir seçin:"
+  },
+
+  "placeMarker": {
+    "ratings": "Değerlendirmeler",
+    "create_rating": "Değerlendirme Gönder"
+  },
+
+  "ratingspage": {
+    "no_reviews": "Bu konum için henüz bir değerlendirme yok. Bir değerlendirme yazın ve deneyimlerinizi paylaşın!",
+    "add_review": "Değerlendirme ekle",
+    "back": "Geri",
+    "reviews": "Değerlendirmeler",
+    "average_rating_for": "Ortalama değerlendirme",
+    "review_by": "Değerlendiren",
+    "on": "tarihinde",
+    "read_more": "Devamını oku"
+  },
+
+  "detailReview": {
+    "review_of": "Değerlendirme:",
+    "on": "tarihinde",
+    "reviewed_by": "{{userName}} tarafından {{placeName}} şu şekilde değerlendirildi:",
+    "suitable_for": "Uygun",
+    "icon_map": "Simge haritası",
+    "error_loading_reviews": "Değerlendirmeler yüklenirken hata oluştu.",
+    "back": "Geri"
+  },
+
+  "reviewEdit": {
+    "had": "değerlendirdi",
+    "on": "tarihinde",
+    "rated": "değerlendirildi",
+    "learn_more": "Bu değerlendirme hakkında daha fazla bilgi edinin.",
+    "suitable_for": "Uygun",
+    "icon_map": "Simge haritası",
+    "error_loading_reviews": "Değerlendirmeler yüklenirken hata oluştu.",
+    "update_success": "Değerlendirme başarıyla güncellendi.",
+    "error_updating_review": "Değerlendirme güncellenirken hata oluştu.",
+    "delete_success": "Değerlendirme başarıyla silindi.",
+    "error_deleting_review": "Değerlendirme silinirken hata oluştu.",
+    "update": "Güncelle",
+    "delete": "Sil",
+    "back": "Geri",
+    "confirm_delete": "Değerlendirme gerçekten silinsin mi?",
+    "cancel": "İptal",
+    "comment_placeholder": "Açıklamayı buraya girin"
+  },
+
+  "dataprotection": {
+    "title": "Veri Koruma",
+    "section1": {
+      "title": "1. Genel Bakışta Veri Koruma",
+      "content": "Web sitemize olan ilginizden dolayı memnuniyet duymaktayız. Kişisel verilerinizin korunması bizim için özellikle önemlidir. Kişisel verilerinizi gizli ve yasal veri koruma düzenlemeleri ve bu veri koruma beyanına uygun şekilde ele alıyoruz."
+    },
+    "section2": {
+      "title": "2. Sorumlu varlık",
+      "content": "Bu web sitesinde veri işlemeden sorumlu olan kişi:"
+    },
+    "section3": {
+      "title": "3. Kişisel verilerin toplanması ve saklanması, türü ve kullanım amacı",
+      "subtitle1": "a) Web sitesini ziyaret ederken",
+      "content1": "Web sitemize eriştiğinizde, tarayıcınız tarafından kullanılan cihaz tarafından web sitemizin sunucusuna otomatik olarak bilgi gönderilir. Bu bilgi geçici olarak günlük dosyasında saklanır. Aşağıdaki bilgiler sizin müdahaleniz olmadan toplanır ve otomatik silinene kadar saklanır:",
+      "list1": [
+        "Talep eden bilgisayarın IP adresi,",
+        "Erişim tarihi ve saati,",
+        "Erişilen dosyanın adı ve URL'si,",
+        "Erişimin yapıldığı web sitesi (referrer URL),",
+        "Kullanılan tarayıcı ve geçerli olduğunda bilgisayarınızın işletim sistemi ve erişim sağlayıcınızın adı."
+      ],
+      "content2": "Yukarıda belirtilen veriler, aşağıdaki amaçlarla tarafımızdan işlenmektedir:",
+      "list2": [
+        "Web sitesine sorunsuz bir bağlantı sağlama,",
+        "Web sitemizin rahat kullanımı sağlama,",
+        "Sistem güvenliği ve istikrarının değerlendirilmesi ve",
+        "daha fazla idari amaçlar için."
+      ],
+      "content3": "Veri işleme için yasal dayanak, DSGVO'nun 6. Maddesi, 1. Fıkrası, 1. Cümlesi, f bendidir. Meşru menfaatimiz, yukarıda listelenen veri toplama amaçlarından kaynaklanmaktadır. Hiçbir durumda toplanan verileri, kişiliğiniz hakkında sonuç çıkarmak amacıyla kullanmayız."
+    },
+    "section4": {
+      "title": "4. Veri aktarımı",
+      "content": "Kişisel verileriniz, açıkça onay vermediğiniz veya yasal bir zorunluluk olmadıkça üçüncü şahıslara aktarılmayacaktır."
+    },
+    "section5": {
+      "title": "5. Veri sahiplerinin hakları",
+      "content": "Haklarınız vardır:",
+      "list": [
+        "DSGVO'nun 15. Maddesine göre işlediğimiz kişisel verileriniz hakkında bilgi talep etmek,",
+        "DSGVO'nun 16. Maddesine göre tarafımızda saklanan yanlış veya eksik kişisel verilerin düzeltilmesini talep etmek,",
+        "DSGVO'nun 17. Maddesine göre tarafımızda saklanan kişisel verilerinizin silinmesini talep etmek,",
+        "DSGVO'nun 18. Maddesine göre kişisel verilerinizin işlenmesinin kısıtlanmasını talep etmek,",
+        "Bize sağladığınız kişisel verilerinizi yapılandırılmış, yaygın olarak kullanılan ve makine tarafından okunabilir bir formatta almak veya başka bir sorumlu tarafa aktarılmasını talep etmek için DSGVO'nun 20. Maddesi uyarınca,",
+        "DSGVO'nun 7. Maddesi, 3. Fıkrası uyarınca, bize vermiş olduğunuz izni istediğiniz zaman geri almak,",
+        "DSGVO'nun 77. Maddesi uyarınca bir denetim otoritesine şikayette bulunmak."
+      ]
+    },
+    "section6": {
+      "title": "6. İtiraz hakkı",
+      "content": "Kişisel verileriniz, DSGVO'nun 6. Maddesi, 1. Fıkrası, 1. Cümlesi, f bendine göre meşru çıkarlar temelinde işleniyorsa, DSGVO'nun 21. Maddesi uyarınca kişisel verilerinizin işlenmesine itiraz etme hakkınız vardır."
+    },
+    "section7": {
+      "title": "7. Veri güvenliği",
+      "content": "Web sitesi ziyaretinde SSL (Güvenli Soket Katmanı) prosedürünü, tarayıcınız tarafından desteklenen en yüksek şifreleme seviyesine bağlı olarak kullanıyoruz."
+    },
+    "section8": {
+      "title": "8. Bu gizlilik politikasının geçerliliği ve değişiklikleri",
+      "content": "Bu gizlilik politikası şu anda geçerlidir ve [tarih] durumundadır. Web sitemizin daha da geliştirilmesi veya değişen yasal veya düzenleyici gereklilikler nedeniyle, bu gizlilik politikasını değiştirmek gerekebilir."
+    }
+  },
+  "loginpage": {
+    "title": "Giriş",
+    "subtitle": "Devam etmek için lütfen giriş yapın.",
+    "icon_alt": "Giriş İkonu",
+    "email_placeholder": "E-posta adresi",
+    "password_placeholder": "Şifre",
+    "login_button": "Giriş Yap",
+    "forgot_password": "Şifrenizi mi unuttunuz?",
+    "no_account": "Henüz bir hesabınız yok mu?",
+    "all_fields_required": "Tüm alanların doldurulması zorunludur.",
+    "password_reset_email_sent": "Şifre sıfırlama e-postası gönderildi. Lütfen gelen kutunuzu kontrol edin.",
+    "reset_password_button": "Şifreyi Sıfırla"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "Şifre sıfırlama e-postası gönderilirken hata oluştu. Lütfen tekrar deneyin."
+  },
+
+  "registerpage": {
+    "password_match_toast": "Şifreler uyuşmuyor!",
+    "password_length_toast": "Şifre en az 8 karakter uzunluğunda olmalıdır!",
+    "register_success_toast": "Kayıt başarılı! Hoş geldiniz!",
+    "register_error_toast": "Kayıt sırasında bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+    "all_fields_required": "Kayıt olmak için lütfen tüm alanları doldurun.",
+    "headline": "Kayıt",
+    "description": "Değerlendirme göndermek için bir profil oluşturun",
+    "emailPlaceholder": "E-posta adresi",
+    "firstNamePlaceholder": "Ad",
+    "lastNamePlaceholder": "Soyad",
+    "passwordPlaceholder": "Şifre",
+    "confirmPasswordPlaceholder": "Şifreyi onayla",
+    "submitButton": "Kaydol"
+  },
+  "FilterableSelect": {
+    "select": "Seç"
+  }
+}

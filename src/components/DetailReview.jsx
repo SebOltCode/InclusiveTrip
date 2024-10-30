@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import Carousel from "../utils/Carousel";
+import { useTranslation } from "react-i18next";
 
 const DetailReview = () => {
   const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
@@ -13,6 +14,7 @@ const DetailReview = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
   const [stars] = useState([1, 2, 3, 4, 5]);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const fetchBarrierRatings = async () => {
@@ -24,12 +26,12 @@ const DetailReview = () => {
         setBarrierRatings(response.data);
       } catch (error) {
         console.error("Error fetching Place ratings:", error);
-        toast.error("Fehler beim Laden der Bewertungen.");
+        toast.error(t("detailReview.error_loading_reviews"));
       }
     };
 
     fetchBarrierRatings();
-  }, [rating.id]);
+  }, [rating.id, API_URL, t]);
 
   const handleBackClick = () => {
     navigate(-1);
@@ -42,17 +44,21 @@ const DetailReview = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className="font-poppins font-extrabold text-lg md:text-3xl lg:text-4xl leading-tight text-black">
-                Bewertung von {place.name} vom{" "}
+                {t("detailReview.review_of")} {place.name}{" "}
+                {t("detailReview.on")}{" "}
                 {new Date(rating.createdAt).toLocaleDateString()}
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
-                So wurde {place.name} durch {rating.User.firstName} bewertet:
+                {t("detailReview.reviewed_by", {
+                  placeName: place.name,
+                  userName: rating.User.firstName,
+                })}
               </div>
             </div>
             <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images/Icon_Bewertung.png"
-                alt="Icon Karte"
+                alt={t("detailReview.icon_map")}
                 className="max-w-full max-h-[300px] object-cover rounded-lg"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -79,7 +85,8 @@ const DetailReview = () => {
               >
                 <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                 <span className="flex-1 text-lg">
-                  Für {barrierRating.Barrier.name} geeignet
+                  {t("detailReview.suitable_for")}{" "}
+                  {t(`barriers.barrier${barrierRating.Barrier.id}`)}
                 </span>
                 <div className="flex space-x-1 rating ml-auto">
                   {stars.map((star) => (
@@ -111,7 +118,7 @@ const DetailReview = () => {
         className="btn bg-yellow-400 border-black px-8 font-normal"
         onClick={handleBackClick}
       >
-        Zurück
+        {t("detailReview.back")}
       </button>
 
       <ToastContainer />

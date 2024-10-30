@@ -1,0 +1,310 @@
+{
+  "welcome": "Welcome to InclusiveTRIP",
+  "search": "Search",
+  "home": "Home",
+  "maplink": "Map",
+  "user": "User",
+  "logout": "Logout",
+  "login": "Login",
+
+  "why_we_developed": "Why we developed this app",
+
+  "ratings": "Ratings",
+  "users": "Users",
+  "barrier_filter": "Barrier filter",
+  "barrier_filter_description": "Find the ideal place for your trip by filtering according to your individual needs.",
+  "radius_search": "Radius search",
+  "radius_search_description": "Which city would you like to travel to?",
+  "location_filter": "Location filter",
+  "location_filter_description": "Find the ideal place for your trip by filtering according to your individual needs.",
+  "inclusive_trip_description": "InclusiveTRIP is a platform that enables people with different needs to find accessible places.",
+  "inclusive-trip-description_home_1": "InclusiveTRIP helps you evaluate public places like restaurants, cinemas, museums, and much more regarding their accessibility or other criteria and find suitable locations. Our app allows you to discover and rate places to help others with similar needs find the best spots for their next city trip.",
+  "inclusive-trip-description_home_2": "Whether you use a wheelchair, are deaf, visually impaired, traveling with a stroller, or have a pet with you – InclusiveTRIP is the tool to ensure your surroundings are accessible and inclusive. Your ratings and experiences help build a community that prioritizes accessibility. Discover, rate, and share your experiences with InclusiveTRIP!",
+  "introduce_blog_entries": "Find information here on current topics related to inclusion.",
+  "current_topics": "Current topics",
+
+  "about_us": "About us",
+  "about_us_1": "Welcome to our website! We are a small but passionate group of developers – Sebastian, Adnan, Ahmed, and Julia – who came together during the WBS Coding School bootcamp to develop an app that truly makes a difference.",
+  "our_vision": "Our Vision",
+  "about_us_2": "Our journey began with a simple but powerful thought: How can we make life easier for people with a barrier? For all of us, it was clear from the start that we wanted to create something that would have a positive impact on the daily lives of many people. We asked ourselves how we could find a way to make the world a little more accessible.",
+  "our_mission": "Our Mission",
+  "about_us_3": "Our mission is to help people with different barriers – whether it's a physical disability like visual impairment, deafness, or wheelchair use – navigate their surroundings and ensure that the places they visit meet their needs. Our app allows users to rate locations such as restaurants, cinemas, hospitals, parking spots, and more, creating a community that supports each other.",
+  "about_us_4": "Why we developed this app",
+  "about_us_5": "The idea for our app came from a deep desire to be part of a more inclusive society. Each of us has experienced people in our lives who face daily barriers that often remain invisible to others. These experiences motivated us to create something that promotes not only physical but also social accessibility.",
+  "about_us_6": "We wanted to create a platform that not only rates but also shows how easy it can be to overcome barriers when you have the right information. The app is our contribution to giving people with special needs more freedom and independence.",
+  "our_team": "Our Team",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "We, the team behind the app, are proud of what we have achieved in a short time. Each of us has our own motivation and story that led us to this project:",
+  "about_us_8": "Together, we have not only developed an app but also brought a vision to life that we want to share with the world. We hope our app becomes a tool that breaks down barriers and builds bridges – for a more inclusive society.",
+  "about_us_9": "Thank you for being part of this journey and for helping us make the world a little better.",
+
+  "impressum": {
+    "title": "Imprint",
+    "section1": {
+      "title": "Information according to § 5 TMG:",
+      "content": "Germany"
+    },
+    "section2": {
+      "title": "Represented by:",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "Responsible for content according to § 55 Abs. 2 RStV:",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "Disclaimer:",
+      "content1": {
+        "title": "Content Liability:",
+        "content": "As a service provider, we are responsible for our own content on these pages according to the general laws pursuant to § 7 Abs.1 TMG. According to §§ 8 to 10 TMG, we are not obliged as service providers to monitor transmitted or stored external information or to investigate circumstances that indicate illegal activity."
+      },
+      "content2": "Obligations to remove or block the use of information according to general laws remain unaffected by this. However, liability in this regard is only possible from the time of knowledge of a specific infringement. If we become aware of such infringements, we will remove this content immediately.",
+      "content3": {
+        "title": "Liability for Links:",
+        "content": "Our offer contains links to external websites of third parties, over whose contents we have no control. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking."
+      },
+      "content4": "However, a permanent content control of the linked pages is not reasonable without concrete indications of an infringement. If we become aware of any legal violations, we will remove such links immediately.",
+      "content5": {
+        "title": "Copyright:",
+        "content": "The content and works on these pages created by the site operators are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright law require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use."
+      },
+      "content6": "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. Third-party content is particularly marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. If we become aware of any legal violations, we will remove such content immediately.",
+      "content7": {
+        "title": "Dispute Resolution:",
+        "content": "The European Commission provides a platform for online dispute resolution. You can find our email address above in the imprint."
+      },
+      "content8": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
+    }
+  },
+
+  "footer": {
+    "copyright": "Copyright © {{year}} - All rights reserved",
+    "impressum": "Imprint",
+    "datenschutz": "Privacy Policy",
+    "ueberuns": "About us"
+  },
+
+  "createRating": {
+    "title": "Write a review",
+    "subtitle": "Rate {{place}} with your experiences.",
+    "barrierSuitable": "Suitable for {{barrierName}}",
+    "commentLabel": "Share your experiences",
+    "commentPlaceholder": "Experience report",
+    "whatToWrite": "What should I write?",
+    "modalTitle": "What would you like to rate?",
+    "modalSubtitle": "I want to rate accessibility for:",
+    "modalCancel": "Cancel",
+    "modalOk": "OK",
+    "addImagesTitle": "Add pictures to your review!",
+    "dropzoneText": "Drag images here or click to select images",
+    "submitButton": "Submit review",
+    "errorMessage": {
+      "emptyComment": "The experience report field cannot be empty.",
+      "maxFiles": "You can upload a maximum of 5 images",
+      "uploadError": "Error uploading files, please try again"
+    },
+    "successMessage": "Thank you, your review has been added!"
+  },
+
+  "barriers": {
+    "barrier1": "Wheelchair users",
+    "barrier2": "Children",
+    "barrier3": "Blind individuals",
+    "barrier4": "Deaf individuals",
+    "barrier5": "Non-native speakers",
+    "barrier6": "People with anxiety",
+    "barrier7": "People with cognitive impairments",
+    "barrier8": "People with claustrophobia",
+    "barrier9": "Pet owners"
+  },
+
+  "common": {
+    "bewerten": "rate"
+  },
+
+  "usersection": {
+    "profile_of": "Profile of",
+    "change_user_data": "Change your user data and edit your reviews.",
+    "your_ratings": "Your reviews",
+    "you_rated": "You rated",
+    "read_more": "read more"
+  },
+
+  "userProfileForm": {
+    "personal_data": "Personal data",
+    "first_name": "First name",
+    "last_name": "Last name",
+    "email": "Email",
+    "save_changes": "Save changes",
+    "update_success": "User data updated successfully."
+  },
+
+  "map": {
+    "where_to_travel": "Where do you want to travel?",
+    "how_search_works": "..how the search works",
+    "icon_map": "Icon map",
+    "how_search_works_title": "How the search works:",
+    "step1": "Select a city from the list or search directly for a specific address using the search field on the map.",
+    "step2": "Enter the type of location you want to visit.",
+    "step3": "Click on the icon on the map to view reviews for this location or to write a review.",
+    "close": "Close"
+  },
+
+  "categorySelector": {
+    "select_category": "Select a category:"
+  },
+
+  "citySelector": {
+    "select_city": "Select a city:"
+  },
+
+  "placeMarker": {
+    "ratings": "Ratings",
+    "create_rating": "Submit review"
+  },
+
+  "ratingspage": {
+    "no_reviews": "There are no reviews for this location yet. Write a review and share your experiences!",
+    "add_review": "Add review",
+    "back": "Back",
+    "reviews": "Reviews",
+    "average_rating_for": "Average rating for",
+    "review_by": "Review by",
+    "on": "on",
+    "read_more": "Read more"
+  },
+
+  "detailReview": {
+    "review_of": "Review of",
+    "on": "on",
+    "reviewed_by": "This is how {{placeName}} was rated by {{userName}}:",
+    "suitable_for": "Suitable for",
+    "icon_map": "Icon map",
+    "error_loading_reviews": "Error loading reviews.",
+    "back": "Back"
+  },
+
+  "reviewEdit": {
+    "had": "had",
+    "on": "on",
+    "rated": "rated",
+    "learn_more": "Learn more about this review.",
+    "suitable_for": "Suitable for",
+    "icon_map": "Icon map",
+    "error_loading_reviews": "Error loading reviews.",
+    "update_success": "Review updated successfully.",
+    "error_updating_review": "Error updating review.",
+    "delete_success": "Review deleted successfully.",
+    "error_deleting_review": "Error deleting review.",
+    "update": "Update",
+    "delete": "Delete",
+    "back": "Back",
+    "confirm_delete": "Really delete review?",
+    "cancel": "Cancel",
+    "comment_placeholder": "Enter description here"
+  },
+
+  "dataprotection": {
+    "title": "Data Protection",
+    "section1": {
+      "title": "1. Data protection at a glance",
+      "content": "We are pleased about your interest in our website. The protection of your personal data is particularly important to us. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration."
+    },
+    "section2": {
+      "title": "2. Responsible entity",
+      "content": "Responsible for data processing on this website is:"
+    },
+    "section3": {
+      "title": "3. Collection and storage of personal data as well as type and purpose of their use",
+      "subtitle1": "a) When visiting the website",
+      "content1": "When you access our website, information is automatically sent to the server of our website by the browser used on your device. This information is temporarily stored in a so-called log file. The following information is collected without your intervention and stored until automated deletion:",
+      "list1": [
+        "IP address of the requesting computer,",
+        "Date and time of access,",
+        "Name and URL of the retrieved file,",
+        "Website from which access is made (referrer URL),",
+        "Browser used and, if applicable, the operating system of your computer as well as the name of your access provider."
+      ],
+      "content2": "The aforementioned data is processed by us for the following purposes:",
+      "list2": [
+        "Ensuring a smooth connection to the website,",
+        "Ensuring comfortable use of our website,",
+        "Evaluation of system security and stability as well as",
+        "for further administrative purposes."
+      ],
+      "content3": "The legal basis for data processing is Art. 6 para. 1 p. 1 lit. f DSGVO. Our legitimate interest follows from the purposes for data collection listed above. In no case do we use the collected data for the purpose of drawing conclusions about your person.",
+      "subtitle2": "b) Contact",
+      "content4": "If you contact us by email or via a contact form, your information, including the contact details you provide, will be stored by us for the purpose of processing the request and for any follow-up questions. We will not share this data without your consent.",
+      "content5": "The processing of the data entered in the contact form is therefore based exclusively on your consent (Art. 6 para. 1 lit. a DSGVO). You can revoke this consent at any time. An informal message by email to us is sufficient. The legality of the data processing carried out until the revocation remains unaffected by the revocation."
+    },
+    "section4": {
+      "title": "4. Data transfer",
+      "content": "Your personal data will not be transferred to third parties unless you have expressly consented to it or there is a legal obligation to do so."
+    },
+    "section5": {
+      "title": "5. Rights of data subjects",
+      "content": "You have the right:",
+      "list": [
+        "to request information about your personal data processed by us in accordance with Art. 15 DSGVO,",
+        "to request the correction of incorrect or incomplete personal data stored by us in accordance with Art. 16 DSGVO,",
+        "to request the deletion of your personal data stored by us in accordance with Art. 17 DSGVO,",
+        "to request the restriction of processing of your personal data in accordance with Art. 18 DSGVO,",
+        "to receive your personal data that you have provided to us in a structured, common, and machine-readable format or to request the transfer to another responsible party in accordance with Art. 20 DSGVO,",
+        "to revoke your consent once given to us at any time in accordance with Art. 7 para. 3 DSGVO,",
+        "to complain to a supervisory authority in accordance with Art. 77 DSGVO."
+      ]
+    },
+    "section6": {
+      "title": "6. Right to object",
+      "content": "If your personal data is processed on the basis of legitimate interests in accordance with Art. 6 para. 1 p. 1 lit. f DSGVO, you have the right to object to the processing of your personal data in accordance with Art. 21 DSGVO."
+    },
+    "section7": {
+      "title": "7. Data security",
+      "content": "We use the SSL (Secure Socket Layer) procedure within the website visit in connection with the highest level of encryption supported by your browser."
+    },
+    "section8": {
+      "title": "8. Currency and changes to this privacy policy",
+      "content": "This privacy policy is currently valid and has the status [date]. Due to the further development of our website or due to changed legal or regulatory requirements, it may become necessary to change this privacy policy."
+    }
+  },
+
+  "loginpage": {
+    "title": "Login",
+    "subtitle": "Please log in to continue.",
+    "icon_alt": "Login Icon",
+    "email_placeholder": "Email address",
+    "password_placeholder": "Password",
+    "login_button": "Login",
+    "forgot_password": "Forgot password?",
+    "no_account": "No account yet?",
+    "all_fields_required": "All fields are required.",
+    "password_reset_email_sent": "An email for password reset has been sent. Please check your inbox.",
+    "reset_password_button": "Reset password"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "Error sending password reset email. Please try again."
+  },
+
+  "registerpage": {
+    "password_match_toast": "Passwords do not match!",
+    "password_length_toast": "Password must be at least 8 characters long!",
+    "register_success_toast": "Registration successful! Welcome!",
+    "register_error_toast": "An error occurred during registration. Please try again later.",
+    "all_fields_required": "Please fill out all fields to register.",
+    "headline": "Registration",
+    "description": "Create a profile to submit reviews",
+    "emailPlaceholder": "Email address",
+    "firstNamePlaceholder": "First name",
+    "lastNamePlaceholder": "Last name",
+    "passwordPlaceholder": "Password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "submitButton": "Register"
+  },
+  "FilterableSelect": {
+    "select": "Select"
+  }
+}

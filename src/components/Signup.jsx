@@ -3,8 +3,10 @@ import { AuthContext } from "./AuthContext";
 import { Navigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 export default function SignupForm() {
+  const { t } = useTranslation();
   const { signup, userInfo } = useContext(AuthContext);
   const [error, setError] = useState(false);
   const [signupData, setSignupData] = useState({
@@ -29,12 +31,12 @@ export default function SignupForm() {
     }
 
     if (signupData.password !== signupData.confirmPassword) {
-      toast.error("Passwörter stimmen nicht überein!");
+      toast.error(t("registerpage.password_match_toast"));
       return;
     }
 
     if (signupData.password.length < 8) {
-      toast.error("Passwort muss mindestens 8 Zeichen lang sein!");
+      toast.error(t("registerpage.password_length_toast"));
       return;
     }
 
@@ -42,9 +44,9 @@ export default function SignupForm() {
 
     try {
       await signup(dataToSubmit);
-      toast.success("Registrierung erfolgreich!");
+      toast.success(t("registerpage.register_success_toast"));
     } catch (error) {
-      toast.error("Registrierung fehlgeschlagen!");
+      toast.error(t("registerpage.register_error_toast"));
     }
   }
 
@@ -66,14 +68,12 @@ export default function SignupForm() {
               <div className="flex flex-col md:flex-row w-full p-8">
                 <div className="flex flex-col w-full md:w-2/3 text-left">
                   <h1 className="font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight text-black">
-                    Registrierung
+                    {t("registerpage.headline")}
                   </h1>
                   <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
-                    Lege dir ein Profil an, um <br />
-                    Bewertungen abgeben zu können
+                    {t("registerpage.description")}
                   </div>
                 </div>
-                {/* Bild Container */}
                 <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                   <img
                     src="/images/Icon_Signup.png"
@@ -106,7 +106,7 @@ export default function SignupForm() {
                     type="text"
                     name="email"
                     className="grow"
-                    placeholder="Email"
+                    placeholder={t("registerpage.emailPlaceholder")}
                   />
                 </label>
 
@@ -129,7 +129,7 @@ export default function SignupForm() {
                     type="text"
                     name="firstName"
                     className="grow"
-                    placeholder="Vorname"
+                    placeholder={t("registerpage.firstNamePlaceholder")}
                   />
                 </label>
 
@@ -148,7 +148,7 @@ export default function SignupForm() {
                     type="text"
                     name="lastName"
                     className="grow"
-                    placeholder="Nachname"
+                    placeholder={t("registerpage.lastNamePlaceholder")}
                   />
                 </label>
 
@@ -171,7 +171,7 @@ export default function SignupForm() {
                     type="password"
                     name="password"
                     className="grow"
-                    placeholder="Passwort"
+                    placeholder={t("registerpage.passwordPlaceholder")}
                   />
                 </label>
 
@@ -194,7 +194,7 @@ export default function SignupForm() {
                     type="password"
                     name="confirmPassword"
                     className="grow"
-                    placeholder="Passwort bestätigen"
+                    placeholder={t("registerpage.confirmPasswordPlaceholder")}
                   />
                 </label>
 
@@ -202,7 +202,7 @@ export default function SignupForm() {
                   type="submit"
                   className="btn bg-yellow-400 border-black px-8 font-normal"
                 >
-                  Registrieren
+                  {t("registerpage.submitButton")}
                 </button>
                 {error && (
                   <div role="alert" className="alert alert-warning text-base">
@@ -219,7 +219,7 @@ export default function SignupForm() {
                         d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                       />
                     </svg>
-                    <span>All fields are required</span>
+                    <span>{t("registerpage.all_fields_required")}</span>
                   </div>
                 )}
               </div>

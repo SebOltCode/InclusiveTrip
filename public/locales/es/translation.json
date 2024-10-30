@@ -1,0 +1,310 @@
+{
+  "welcome": "Bienvenido a InclusiveTRIP",
+  "search": "Buscar",
+  "home": "Inicio",
+  "maplink": "Mapa",
+  "user": "Usuario",
+  "logout": "Cerrar sesión",
+  "login": "Iniciar sesión",
+
+  "why_we_developed": "Por qué desarrollamos esta aplicación",
+
+  "ratings": "Calificaciones",
+  "users": "Usuarios",
+  "barrier_filter": "Filtro de barreras",
+  "barrier_filter_description": "Encuentra el lugar ideal para tu viaje filtrando de acuerdo a tus necesidades individuales.",
+  "radius_search": "Búsqueda por radio",
+  "radius_search_description": "¿A qué ciudad te gustaría viajar?",
+  "location_filter": "Filtro de ubicación",
+  "location_filter_description": "Encuentra el lugar ideal para tu viaje filtrando de acuerdo a tus necesidades individuales.",
+  "inclusive_trip_description": "InclusiveTRIP es una plataforma que permite a personas con diferentes necesidades encontrar lugares accesibles.",
+  "inclusive-trip-description_home_1": "InclusiveTRIP te ayuda a evaluar lugares públicos como restaurantes, cines, museos y mucho más en cuanto a su accesibilidad u otros criterios y a encontrar ubicaciones adecuadas. Nuestra aplicación te permite descubrir y calificar lugares para ayudar a otros con necesidades similares a encontrar los mejores lugares para su próximo viaje a la ciudad.",
+  "inclusive-trip-description_home_2": "Ya sea que uses una silla de ruedas, seas sordo, tengas una discapacidad visual, viajes con un cochecito o tengas una mascota, InclusiveTRIP es la herramienta para garantizar que tu entorno sea accesible e inclusivo. Tus calificaciones y experiencias ayudan a construir una comunidad que prioriza la accesibilidad. ¡Descubre, califica y comparte tus experiencias con InclusiveTRIP!",
+  "introduce_blog_entries": "Encuentra aquí información sobre temas actuales relacionados con la inclusión.",
+  "current_topics": "Temas actuales",
+
+  "about_us": "Sobre nosotros",
+  "about_us_1": "¡Bienvenido a nuestro sitio web! Somos un pequeño pero apasionado grupo de desarrolladores – Sebastian, Adnan, Ahmed y Julia – que se unieron durante el bootcamp de la WBS Coding School para desarrollar una aplicación que realmente marque la diferencia.",
+  "our_vision": "Nuestra Visión",
+  "about_us_2": "Nuestra jornada comenzó con un pensamiento simple pero poderoso: ¿Cómo podemos hacer la vida más fácil para las personas con barreras? Para todos nosotros, desde el principio estaba claro que queríamos crear algo que tuviera un impacto positivo en la vida diaria de muchas personas. Nos preguntamos cómo podríamos encontrar una forma de hacer el mundo un poco más accesible.",
+  "our_mission": "Nuestra Misión",
+  "about_us_3": "Nuestra misión es ayudar a personas con diferentes barreras, ya sea una discapacidad física como discapacidad visual, sordera o uso de silla de ruedas, a navegar por su entorno y garantizar que los lugares que visitan satisfagan sus necesidades. Nuestra aplicación permite a los usuarios calificar ubicaciones como restaurantes, cines, hospitales, aparcamientos y más, creando una comunidad que se apoya mutuamente.",
+  "about_us_4": "Por qué desarrollamos esta aplicación",
+  "about_us_5": "La idea de nuestra aplicación surgió de un profundo deseo de ser parte de una sociedad más inclusiva. Cada uno de nosotros ha conocido a personas en nuestras vidas que enfrentan barreras diarias que a menudo son invisibles para otros. Estas experiencias nos motivaron a crear algo que promueva no solo la accesibilidad física sino también la social.",
+  "about_us_6": "Queríamos crear una plataforma que no solo califique, sino que también muestre lo fácil que puede ser superar barreras cuando tienes la información correcta. La aplicación es nuestra contribución para dar a las personas con necesidades especiales más libertad e independencia.",
+  "our_team": "Nuestro Equipo",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "Nosotros, el equipo detrás de la aplicación, estamos orgullosos de lo que hemos logrado en un corto tiempo. Cada uno de nosotros tiene su propia motivación e historia que lo llevó a este proyecto:",
+  "about_us_8": "Juntos, no solo hemos desarrollado una aplicación, sino que también hemos dado vida a una visión que queremos compartir con el mundo. Esperamos que nuestra aplicación se convierta en una herramienta que derribe barreras y construya puentes, para una sociedad más inclusiva.",
+  "about_us_9": "Gracias por ser parte de este viaje y por ayudarnos a hacer el mundo un poco mejor.",
+
+  "impressum": {
+    "title": "Aviso Legal",
+    "section1": {
+      "title": "Información según § 5 TMG:",
+      "content": "Alemania"
+    },
+    "section2": {
+      "title": "Representado por:",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "Responsable del contenido según § 55 Abs. 2 RStV:",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "Descargo de responsabilidad:",
+      "content1": {
+        "title": "Responsabilidad del contenido:",
+        "content": "Como proveedores de servicios, somos responsables de nuestro propio contenido en estas páginas de acuerdo con las leyes generales según el § 7 Abs.1 TMG. Según los §§ 8 a 10 TMG, no estamos obligados como proveedores de servicios a monitorear información externa transmitida o almacenada ni a investigar circunstancias que indiquen actividad ilegal."
+      },
+      "content2": "Las obligaciones de eliminar o bloquear el uso de información según las leyes generales no se ven afectadas por esto. Sin embargo, la responsabilidad en este sentido solo es posible desde el momento en que se tiene conocimiento de una infracción específica. Si nos damos cuenta de tales infracciones, eliminaremos este contenido de inmediato.",
+      "content3": {
+        "title": "Responsabilidad por enlaces:",
+        "content": "Nuestra oferta contiene enlaces a sitios web externos de terceros, sobre cuyo contenido no tenemos control. Por lo tanto, no podemos asumir ninguna responsabilidad por este contenido externo. El respectivo proveedor u operador de las páginas es siempre responsable del contenido de las páginas enlazadas. Las páginas enlazadas se verificaron en busca de posibles infracciones legales en el momento del enlace. El contenido ilegal no era reconocible en el momento del enlace."
+      },
+      "content4": "Sin embargo, un control permanente del contenido de las páginas enlazadas no es razonable sin indicios concretos de una infracción. Si nos damos cuenta de cualquier violación legal, eliminaremos dichos enlaces de inmediato.",
+      "content5": {
+        "title": "Derechos de autor:",
+        "content": "El contenido y las obras en estas páginas creadas por los operadores del sitio están sujetos a la ley alemana de derechos de autor. La duplicación, procesamiento, distribución y cualquier tipo de explotación fuera de los límites de la ley de derechos de autor requieren el consentimiento por escrito del respectivo autor o creador. Las descargas y copias de este sitio solo están permitidas para uso privado y no comercial."
+      },
+      "content6": "En la medida en que el contenido de este sitio no fue creado por el operador, se respetan los derechos de autor de terceros. El contenido de terceros está particularmente marcado como tal. Si, no obstante, tiene conocimiento de una infracción de derechos de autor, infórmenos en consecuencia. Si nos damos cuenta de cualquier violación legal, eliminaremos dicho contenido de inmediato.",
+      "content7": {
+        "title": "Resolución de disputas:",
+        "content": "La Comisión Europea proporciona una plataforma para la resolución de disputas en línea. Puede encontrar nuestra dirección de correo electrónico arriba en el aviso legal."
+      },
+      "content8": "No estamos dispuestos ni obligados a participar en procedimientos de resolución de disputas ante una junta de arbitraje de consumidores."
+    }
+  },
+
+  "footer": {
+    "copyright": "Derechos de autor © {{year}} - Todos los derechos reservados",
+    "impressum": "Aviso Legal",
+    "datenschutz": "Política de Privacidad",
+    "ueberuns": "Sobre nosotros"
+  },
+
+  "createRating": {
+    "title": "Escribir una reseña",
+    "subtitle": "Califica {{place}} con tus experiencias.",
+    "barrierSuitable": "Adecuado para {{barrierName}}",
+    "commentLabel": "Comparte tus experiencias",
+    "commentPlaceholder": "Informe de experiencia",
+    "whatToWrite": "¿Qué debo escribir?",
+    "modalTitle": "¿Qué te gustaría calificar?",
+    "modalSubtitle": "Quiero calificar la accesibilidad para:",
+    "modalCancel": "Cancelar",
+    "modalOk": "OK",
+    "addImagesTitle": "¡Agrega imágenes a tu reseña!",
+    "dropzoneText": "Arrastra imágenes aquí o haz clic para seleccionar imágenes",
+    "submitButton": "Enviar reseña",
+    "errorMessage": {
+      "emptyComment": "El campo de informe de experiencia no puede estar vacío.",
+      "maxFiles": "Puedes subir un máximo de 5 imágenes",
+      "uploadError": "Error al cargar los archivos, por favor intenta de nuevo"
+    },
+    "successMessage": "¡Gracias, tu reseña ha sido agregada!"
+  },
+
+  "barriers": {
+    "barrier1": "Usuarios de silla de ruedas",
+    "barrier2": "Niños",
+    "barrier3": "Personas ciegas",
+    "barrier4": "Personas sordas",
+    "barrier5": "Personas que no son hablantes nativos",
+    "barrier6": "Personas con ansiedad",
+    "barrier7": "Personas con discapacidades cognitivas",
+    "barrier8": "Personas con claustrofobia",
+    "barrier9": "Propietarios de mascotas"
+  },
+
+  "common": {
+    "bewerten": "calificar"
+  },
+
+  "usersection": {
+    "profile_of": "Perfil de",
+    "change_user_data": "Cambia tus datos de usuario y edita tus reseñas.",
+    "your_ratings": "Tus reseñas",
+    "you_rated": "Calificaste",
+    "read_more": "leer más"
+  },
+
+  "userProfileForm": {
+    "personal_data": "Datos personales",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Correo electrónico",
+    "save_changes": "Guardar cambios",
+    "update_success": "Datos de usuario actualizados exitosamente."
+  },
+
+  "map": {
+    "where_to_travel": "¿A dónde quieres viajar?",
+    "how_search_works": "..cómo funciona la búsqueda",
+    "icon_map": "Mapa de iconos",
+    "how_search_works_title": "Cómo funciona la búsqueda:",
+    "step1": "Selecciona una ciudad de la lista o busca directamente una dirección específica utilizando el campo de búsqueda en el mapa.",
+    "step2": "Ingresa el tipo de lugar que deseas visitar.",
+    "step3": "Haz clic en el icono en el mapa para ver reseñas de este lugar o para escribir una reseña.",
+    "close": "Cerrar"
+  },
+
+  "categorySelector": {
+    "select_category": "Selecciona una categoría:"
+  },
+
+  "citySelector": {
+    "select_city": "Selecciona una ciudad:"
+  },
+
+  "placeMarker": {
+    "ratings": "Reseñas",
+    "create_rating": "Enviar reseña"
+  },
+
+  "ratingspage": {
+    "no_reviews": "Aún no hay reseñas para este lugar. ¡Escribe una reseña y comparte tus experiencias!",
+    "add_review": "Agregar reseña",
+    "back": "Atrás",
+    "reviews": "Reseñas",
+    "average_rating_for": "Calificación promedio para",
+    "review_by": "Reseña de",
+    "on": "en",
+    "read_more": "Leer más"
+  },
+
+  "detailReview": {
+    "review_of": "Reseña de",
+    "on": "en",
+    "reviewed_by": "Así calificó {{placeName}} {{userName}}:",
+    "suitable_for": "Adecuado para",
+    "icon_map": "Mapa de iconos",
+    "error_loading_reviews": "Error al cargar reseñas.",
+    "back": "Atrás"
+  },
+
+  "reviewEdit": {
+    "had": "tenía",
+    "on": "en",
+    "rated": "calificado",
+    "learn_more": "Más información sobre esta reseña.",
+    "suitable_for": "Adecuado para",
+    "icon_map": "Mapa de iconos",
+    "error_loading_reviews": "Error al cargar reseñas.",
+    "update_success": "Reseña actualizada con éxito.",
+    "error_updating_review": "Error al actualizar la reseña.",
+    "delete_success": "Reseña eliminada con éxito.",
+    "error_deleting_review": "Error al eliminar la reseña.",
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "back": "Atrás",
+    "confirm_delete": "¿Realmente eliminar reseña?",
+    "cancel": "Cancelar",
+    "comment_placeholder": "Ingresa la descripción aquí"
+  },
+
+  "dataprotection": {
+    "title": "Protección de datos",
+    "section1": {
+      "title": "1. Protección de datos en resumen",
+      "content": "Nos complace su interés en nuestro sitio web. La protección de sus datos personales es especialmente importante para nosotros. Tratamos sus datos personales de forma confidencial y de acuerdo con las normativas de protección de datos vigentes y esta declaración de protección de datos."
+    },
+    "section2": {
+      "title": "2. Entidad responsable",
+      "content": "Responsable del procesamiento de datos en este sitio web es:"
+    },
+    "section3": {
+      "title": "3. Recopilación y almacenamiento de datos personales y tipo y propósito de su uso",
+      "subtitle1": "a) Al visitar el sitio web",
+      "content1": "Cuando accede a nuestro sitio web, el navegador utilizado en su dispositivo envía automáticamente información al servidor de nuestro sitio web. Esta información se almacena temporalmente en un llamado archivo de registro. La siguiente información se recopila sin su intervención y se almacena hasta su eliminación automática:",
+      "list1": [
+        "Dirección IP del ordenador solicitante,",
+        "Fecha y hora de acceso,",
+        "Nombre y URL del archivo recuperado,",
+        "Sitio web desde el que se accede (URL de referencia),",
+        "Navegador utilizado y, si corresponde, el sistema operativo de su ordenador, así como el nombre de su proveedor de acceso."
+      ],
+      "content2": "Los datos mencionados son procesados por nosotros para los siguientes propósitos:",
+      "list2": [
+        "Garantizar una conexión fluida al sitio web,",
+        "Garantizar un uso cómodo de nuestro sitio web,",
+        "Evaluación de la seguridad y estabilidad del sistema, así como",
+        "para otros fines administrativos."
+      ],
+      "content3": "La base legal para el procesamiento de datos es el Art. 6 párr. 1 p. 1 lit. f DSGVO. Nuestro interés legítimo surge de los fines de recopilación de datos enumerados anteriormente. En ningún caso utilizamos los datos recopilados con el propósito de sacar conclusiones sobre su persona.",
+      "subtitle2": "b) Contacto",
+      "content4": "Si nos contacta por correo electrónico o mediante un formulario de contacto, su información, incluidos los datos de contacto que proporcione, se almacenará para el procesamiento de la solicitud y para cualquier pregunta de seguimiento. No compartiremos estos datos sin su consentimiento.",
+      "content5": "El procesamiento de los datos ingresados en el formulario de contacto se basa exclusivamente en su consentimiento (Art. 6 párr. 1 lit. a DSGVO). Puede revocar este consentimiento en cualquier momento. Un mensaje informal por correo electrónico es suficiente. La legalidad del procesamiento de datos realizado hasta la revocación no se ve afectada por la revocación."
+    },
+    "section4": {
+      "title": "4. Transferencia de datos",
+      "content": "Sus datos personales no serán transferidos a terceros, a menos que haya dado su consentimiento expreso o exista una obligación legal de hacerlo."
+    },
+    "section5": {
+      "title": "5. Derechos de los interesados",
+      "content": "Tiene derecho a:",
+      "list": [
+        "solicitar información sobre sus datos personales procesados por nosotros de acuerdo con el Art. 15 DSGVO,",
+        "solicitar la corrección de datos personales incorrectos o incompletos almacenados por nosotros de acuerdo con el Art. 16 DSGVO,",
+        "solicitar la eliminación de sus datos personales almacenados por nosotros de acuerdo con el Art. 17 DSGVO,",
+        "solicitar la restricción del procesamiento de sus datos personales de acuerdo con el Art. 18 DSGVO,",
+        "recibir sus datos personales que nos ha proporcionado en un formato estructurado, común y legible por máquina o solicitar la transferencia a otra parte responsable de acuerdo con el Art. 20 DSGVO,",
+        "revocar su consentimiento una vez dado en cualquier momento de acuerdo con el Art. 7 párr. 3 DSGVO,",
+        "presentar una queja ante una autoridad supervisora de acuerdo con el Art. 77 DSGVO."
+      ]
+    },
+    "section6": {
+      "title": "6. Derecho de oposición",
+      "content": "Si sus datos personales se procesan sobre la base de intereses legítimos de acuerdo con el Art. 6 párr. 1 p. 1 lit. f DSGVO, tiene derecho a oponerse al procesamiento de sus datos personales de acuerdo con el Art. 21 DSGVO."
+    },
+    "section7": {
+      "title": "7. Seguridad de los datos",
+      "content": "Utilizamos el procedimiento SSL (Secure Socket Layer) durante la visita al sitio web en conexión con el nivel más alto de cifrado compatible con su navegador."
+    },
+    "section8": {
+      "title": "8. Vigencia y cambios en esta política de privacidad",
+      "content": "Esta política de privacidad es válida actualmente y tiene el estado [fecha]. Debido al desarrollo de nuestro sitio web o debido a cambios en los requisitos legales o reglamentarios, puede ser necesario cambiar esta política de privacidad."
+    }
+  },
+
+  "loginpage": {
+    "title": "Iniciar sesión",
+    "subtitle": "Por favor, inicie sesión para continuar.",
+    "icon_alt": "Icono de inicio de sesión",
+    "email_placeholder": "Correo electrónico",
+    "password_placeholder": "Contraseña",
+    "login_button": "Iniciar sesión",
+    "forgot_password": "¿Olvidaste tu contraseña?",
+    "no_account": "¿Aún no tienes cuenta?",
+    "all_fields_required": "Todos los campos son obligatorios.",
+    "password_reset_email_sent": "Se ha enviado un correo electrónico para restablecer la contraseña. Por favor, revise su bandeja de entrada.",
+    "reset_password_button": "Restablecer contraseña"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "Error al enviar el correo de restablecimiento de contraseña. Por favor intenta de nuevo."
+  },
+
+  "registerpage": {
+    "password_match_toast": "¡Las contraseñas no coinciden!",
+    "password_length_toast": "¡La contraseña debe tener al menos 8 caracteres!",
+    "register_success_toast": "¡Registro exitoso! ¡Bienvenido!",
+    "register_error_toast": "Ocurrió un error durante el registro. Por favor, intenta de nuevo más tarde.",
+    "all_fields_required": "Por favor completa todos los campos para registrarte.",
+    "headline": "Registro",
+    "description": "Crea un perfil para enviar reseñas",
+    "emailPlaceholder": "Correo electrónico",
+    "firstNamePlaceholder": "Nombre",
+    "lastNamePlaceholder": "Apellido",
+    "passwordPlaceholder": "Contraseña",
+    "confirmPasswordPlaceholder": "Confirmar contraseña",
+    "submitButton": "Registrarse"
+  },
+  "FilterableSelect": {
+    "select": "Seleccionar"
+  }
+}

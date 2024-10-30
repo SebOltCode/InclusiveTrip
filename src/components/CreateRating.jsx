@@ -6,8 +6,10 @@ import { createReview, createBarrierReviews } from "../utils/reviewHandler";
 import { useDropzone } from "react-dropzone";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 function CreateRating() {
+  const { t } = useTranslation();
   const location = useLocation();
   const { place, category } = location.state || {};
   const [stars] = useState([1, 2, 3, 4, 5]);
@@ -63,23 +65,23 @@ function CreateRating() {
   const onDrop = useCallback(
     (acceptedFiles) => {
       if (acceptedFiles.length + files.length > 5) {
-        setMessage("Es können maximal 5 Bilder hochgeladen werden");
+        setMessage(t("createRating.errorMessage.maxFiles"));
         return;
       }
       setFiles((prevFiles) => [...prevFiles, ...acceptedFiles].slice(0, 5));
     },
-    [files]
+    [files, t]
   );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!comment) {
-      setMessage("Das Erfahrungsbericht-Feld darf nicht leer sein.");
+      setMessage(t("createRating.errorMessage.emptyComment"));
       return;
     }
 
     if (files.length > 5) {
-      setMessage("Maximal 5 Dateien können hochgeladen werden");
+      setMessage(t("createRating.errorMessage.maxFiles"));
       return;
     }
     const ratingData = {
@@ -112,13 +114,11 @@ function CreateRating() {
           },
         });
       } catch (err) {
-        setMessage(
-          "Fehler beim Hochladen der Dateien , bitte versuchen Sie es erneut"
-        );
+        setMessage(t("createRating.errorMessage.uploadError"));
         console.log(err);
       }
     }
-    toast.success("Vielen Dank, Ihre Bewertung wurde hinzugefügt!");
+    toast.success(t("createRating.successMessage"));
     setTimeout(() => {
       navigate(`/user`);
     }, 2000);
@@ -167,11 +167,13 @@ function CreateRating() {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className="font-poppins font-extrabold text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                Bewertung schreiben
+                {t("createRating.title")}
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
-                Bewerte {category?.name} <b>{place?.name}</b> mit deinen
-                Erfahrungen.
+                {t("createRating.subtitle", {
+                  category: category?.name,
+                  place: place?.name,
+                })}
               </div>
             </div>
             <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
@@ -197,7 +199,9 @@ function CreateRating() {
                 >
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                   <span className="flex-1 text-lg">
-                    Für {barrierReview.barrierName} geeignet
+                    {t("createRating.barrierSuitable", {
+                      barrierName: barrierReview.barrierName,
+                    })}
                   </span>
                   <div className="flex space-x-1 rating ml-auto">
                     {stars.map((star) => (
@@ -221,7 +225,7 @@ function CreateRating() {
 
         <div className="flex flex-col items-start justify-start w-full">
           <label htmlFor="comment" className="pb-4 font-normal text-[#1E1E1E]">
-            Berichte über deine Erfahrungen
+            {t("createRating.commentLabel")}
           </label>
           <textarea
             required
@@ -229,7 +233,7 @@ function CreateRating() {
             name="comment"
             id="comment"
             onChange={handleCommentChange}
-            placeholder="Erfahrungsbericht"
+            placeholder={t("createRating.commentPlaceholder")}
           />
         </div>
         <div>
@@ -239,7 +243,7 @@ function CreateRating() {
               className="w-full h-[22px] text-[16px] font-normal leading-[140%] text-[#1E1E1E] underline"
               onClick={openModal}
             >
-              Was soll ich schreiben?
+              {t("createRating.whatToWrite")}
             </a>
           </div>
 
@@ -247,10 +251,10 @@ function CreateRating() {
             <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
               <div className="bg-white p-6 rounded-lg shadow-lg w-3/4 md:w-1/2 relative">
                 <h2 className="text-xl font-bold mb-4">
-                  Was möchtest du bewerten?
+                  {t("createRating.modalTitle")}
                 </h2>
                 <h3 className="text-lg font-semibold mb-2">
-                  Ich möchte die Zugänglichkeit für:
+                  {t("createRating.modalSubtitle")}
                 </h3>
                 <div className="mb-4">
                   {barriers.map((barrier) => (
@@ -273,13 +277,13 @@ function CreateRating() {
                     className="btn bg-gray-300 px-4 py-2 rounded"
                     onClick={closeModal}
                   >
-                    Abbrechen
+                    {t("createRating.modalCancel")}
                   </button>
                   <button
                     className="btn bg-yellow-400 px-4 py-2 rounded"
                     onClick={closeModal}
                   >
-                    OK
+                    {t("createRating.modalOk")}
                   </button>
                 </div>
               </div>
@@ -289,7 +293,7 @@ function CreateRating() {
 
         <div className="flex flex-col items-center">
           <h3 className="text-3xl font-extrabold m-5">
-            Füge Bilder zu deiner Bewertung hinzu!
+            {t("createRating.addImagesTitle")}
           </h3>
           {message && <p className="m-3">{message}</p>}
           <div
@@ -297,7 +301,7 @@ function CreateRating() {
             className="border-dashed border-2 border-gray-400 p-6 w-full max-w-xs text-center"
           >
             <input {...getInputProps()} />
-            <p>Ziehe Bilder hierher oder klicke, um Bilder auszuwählen</p>
+            <p>{t("createRating.dropzoneText")}</p>
           </div>
           <div className="flex flex-wrap mt-4">
             {files.slice(0, 5).map((file, index) => (
@@ -317,7 +321,7 @@ function CreateRating() {
             className="mt-8 flex justify-center items-center px-4 py-3 w-[487px] h-[40px] bg-[#FFD700] border border-[#2C2C2C] rounded-lg"
             type="submit"
           >
-            Bewertung senden
+            {t("createRating.submitButton")}
           </button>
         </div>
       </form>

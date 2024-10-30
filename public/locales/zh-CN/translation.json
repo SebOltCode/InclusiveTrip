@@ -1,0 +1,307 @@
+{
+  "welcome": "欢迎来到 InclusiveTRIP",
+  "search": "搜索",
+  "home": "主页",
+  "maplink": "地图",
+  "user": "用户",
+  "logout": "登出",
+  "login": "登录",
+
+  "why_we_developed": "我们为什么开发这个应用",
+
+  "ratings": "评分",
+  "users": "用户",
+  "barrier_filter": "障碍过滤器",
+  "barrier_filter_description": "根据您的个人需求筛选，找到适合您旅行的理想地点。",
+  "radius_search": "半径搜索",
+  "radius_search_description": "您想去哪个城市旅行？",
+  "location_filter": "位置过滤",
+  "location_filter_description": "根据您的个人需求筛选，找到适合您旅行的理想地点。",
+  "inclusive_trip_description": "InclusiveTRIP 是一个平台，帮助不同需求的人找到可访问的场所。",
+  "inclusive-trip-description_home_1": "InclusiveTRIP 帮助您评估餐厅、电影院、博物馆等公共场所的可访问性或其他标准，并找到适合的地点。我们的应用让您可以发现和评价场所，帮助有类似需求的他人找到最佳旅行地点。",
+  "inclusive-trip-description_home_2": "无论您是使用轮椅、听力或视力受损、带婴儿车旅行还是携带宠物 — InclusiveTRIP 是确保您周围环境无障碍和包容的工具。您的评价和经验帮助建立一个优先考虑无障碍的社区。使用 InclusiveTRIP 发现、评价并分享您的经验！",
+  "introduce_blog_entries": "在此了解有关包容性相关的最新话题。",
+  "current_topics": "当前话题",
+
+  "about_us": "关于我们",
+  "about_us_1": "欢迎来到我们的网站！我们是一小群充满热情的开发人员——Sebastian、Adnan、Ahmed 和 Julia——在 WBS 编码学校的训练营中相遇，共同开发一个真正能带来改变的应用。",
+  "our_vision": "我们的愿景",
+  "about_us_2": "我们的旅程始于一个简单但强有力的想法：我们如何让有障碍的人生活更轻松？对我们所有人来说，从一开始就很明确，我们希望创造一些能对许多人的日常生活产生积极影响的东西。我们问自己，如何能让世界变得更加无障碍。",
+  "our_mission": "我们的使命",
+  "about_us_3": "我们的使命是帮助有不同障碍的人，例如视力或听力受损、使用轮椅等，导航他们的周围环境，并确保他们访问的地方满足其需求。我们的应用允许用户对餐馆、电影院、医院、停车位等场所进行评价，从而创建一个彼此支持的社区。",
+  "about_us_4": "我们为什么开发这个应用",
+  "about_us_5": "我们的应用理念源于成为一个更包容社会的一部分的深切渴望。我们每个人的生活中都有面临日常障碍的人，而这些障碍往往对其他人来说是看不见的。这样的经历激励我们创造一些不仅促进物理无障碍还促进社会无障碍的东西。",
+  "about_us_6": "我们希望创建一个平台，不仅仅是评价，还展示了拥有正确信息时如何轻松克服障碍。这个应用是我们为有特殊需求的人们提供更多自由和独立性的贡献。",
+  "our_team": "我们的团队",
+  "sebastian": "Sebastian",
+  "adnan": "Adnan",
+  "ahmed": "Ahmed",
+  "julia": "Julia",
+  "about_us_7": "作为这个应用背后的团队，我们为在短时间内取得的成就感到自豪。我们每个人都有自己的动机和故事，带领我们走向这个项目：",
+  "about_us_8": "我们不仅开发了一个应用，还将一个我们想与世界分享的愿景变为现实。我们希望我们的应用成为打破障碍和建立桥梁的工具——为一个更包容的社会。",
+  "about_us_9": "感谢您成为这段旅程的一部分，并帮助我们让世界变得更好。",
+
+  "impressum": {
+    "title": "出版资料",
+    "section1": {
+      "title": "根据 § 5 TMG 提供的信息：",
+      "content": "德国"
+    },
+    "section2": {
+      "title": "由以下人员代表：",
+      "content": "Sebastian Olthoff <a href=\"mailto:sebastian-olthoff@gmx.de\" className=\"text-blue-500 hover:underline\">sebastian-olthoff@gmx.de</a><br />Adnan Abdalrahmen <a href=\"mailto:adnan.24150@gmail.com\" className=\"text-blue-500 hover:underline\">adnan.24150@gmail.com</a><br />Ahmed Mohamad <a href=\"mailto:rashin2604@gmail.com\" className=\"text-blue-500 hover:underline\">rashin2604@gmail.com</a><br />Julia Löw <a href=\"mailto:julia.loew@gmx.net\" className=\"text-blue-500 hover:underline\">julia.loew@gmx.net</a>"
+    },
+    "section3": {
+      "title": "根据 § 55 Abs. 2 RStV 负责内容：",
+      "content": "Sebastian Olthoff<br />Adnan Abdalrahmen<br />Ahmed Mohamad<br />Julia Löw"
+    },
+    "section4": {
+      "title": "免责声明：",
+      "content1": {
+        "title": "内容责任：",
+        "content": "作为服务提供商，我们根据一般法律对这些页面上的自有内容负责，依据 § 7 Abs.1 TMG。然而，根据 §§ 8 至 10 TMG，我们作为服务提供商无义务监控传输或存储的外部信息，也不需调查表明非法活动的情况。"
+      },
+      "content2": "根据一般法律，移除或阻止使用信息的义务不受影响。然而，只有在了解到具体违法行为后才可能承担责任。如果我们得知这些违法行为，我们将立即移除相关内容。",
+      "content3": {
+        "title": "链接责任：",
+        "content": "我们的服务包含第三方的外部网站链接，我们无法控制其内容。因此，我们无法对这些外部内容承担任何责任。链接页面的内容始终由相应的提供商或运营商负责。链接页面在链接时已被检查是否存在潜在法律违规行为。在链接时未发现非法内容。"
+      },
+      "content4": "然而，除非有具体违法指示，否则对链接页面内容的永久控制是不合理的。如果我们发现任何法律违规行为，我们将立即删除这些链接。",
+      "content5": {
+        "title": "版权：",
+        "content": "由网站运营者创建的内容和作品受德国版权法保护。版权法限制外的复制、处理、分发和任何形式的使用需获得相应作者或创作者的书面同意。本网站的下载和复制仅供私人、非商业用途。"
+      },
+      "content6": "在本网站内容不是由运营商创建的情况下，尊重第三方的版权。第三方内容特别标明为此。如果您仍发现任何侵犯版权的行为，请告知我们。如果我们了解到任何法律违规行为，我们将立即删除这些内容。",
+      "content7": {
+        "title": "纠纷解决：",
+        "content": "欧盟委员会提供在线纠纷解决平台。您可以在上述出版资料中找到我们的电子邮件地址。"
+      },
+      "content8": "我们不愿也无义务参与消费者仲裁委员会的纠纷解决程序。"
+    }
+  },
+
+  "footer": {
+    "copyright": "版权 © {{year}} - 保留所有权利",
+    "impressum": "出版资料",
+    "datenschutz": "隐私政策",
+    "ueberuns": "关于我们"
+  },
+
+  "createRating": {
+    "title": "撰写评价",
+    "subtitle": "用您的体验对 {{place}} 进行评价。",
+    "barrierSuitable": "适合 {{barrierName}}",
+    "commentLabel": "分享您的体验",
+    "commentPlaceholder": "体验报告",
+    "whatToWrite": "我应该写什么？",
+    "modalTitle": "您想评价什么？",
+    "modalSubtitle": "我想评价以下方面的无障碍性：",
+    "modalCancel": "取消",
+    "modalOk": "确定",
+    "addImagesTitle": "为您的评价添加图片！",
+    "dropzoneText": "将图片拖到此处或点击以选择图片",
+    "submitButton": "提交评价",
+    "errorMessage": {
+      "emptyComment": "体验报告字段不能为空。",
+      "maxFiles": "您最多可以上传 5 张图片",
+      "uploadError": "上传文件时出错，请重试"
+    },
+    "successMessage": "感谢您的评价，已成功添加！"
+  },
+
+  "barriers": {
+    "barrier1": "轮椅使用者",
+    "barrier2": "儿童",
+    "barrier3": "盲人",
+    "barrier4": "聋人",
+    "barrier5": "非母语使用者",
+    "barrier6": "有焦虑症的人",
+    "barrier7": "有认知障碍的人",
+    "barrier8": "幽闭恐惧症患者",
+    "barrier9": "宠物主人"
+  },
+
+  "common": {
+    "bewerten": "评价"
+  },
+
+  "usersection": {
+    "profile_of": "的个人资料",
+    "change_user_data": "更改您的用户数据并编辑您的评论。",
+    "your_ratings": "您的评价",
+    "you_rated": "您评价了",
+    "read_more": "阅读更多"
+  },
+
+  "userProfileForm": {
+    "personal_data": "个人数据",
+    "first_name": "名字",
+    "last_name": "姓氏",
+    "email": "电子邮件",
+    "save_changes": "保存更改",
+    "update_success": "用户数据已成功更新。"
+  },
+
+  "map": {
+    "where_to_travel": "您想去哪里旅行？",
+    "how_search_works": "..搜索是如何工作的",
+    "icon_map": "图标地图",
+    "how_search_works_title": "搜索的工作原理：",
+    "step1": "从列表中选择一个城市或直接在地图上的搜索栏中搜索特定地址。",
+    "step2": "输入您想访问的地点类型。",
+    "step3": "点击地图上的图标查看该地点的评论或撰写评论。",
+    "close": "关闭"
+  },
+
+  "categorySelector": {
+    "select_category": "选择类别："
+  },
+
+  "citySelector": {
+    "select_city": "选择城市："
+  },
+
+  "placeMarker": {
+    "ratings": "评分",
+    "create_rating": "提交评论"
+  },
+
+  "ratingspage": {
+    "no_reviews": "该地点还没有评论。撰写评论并分享您的体验！",
+    "add_review": "添加评论",
+    "back": "返回",
+    "reviews": "评论",
+    "average_rating_for": "平均评分",
+    "review_by": "评论者",
+    "on": "于",
+    "read_more": "阅读更多"
+  },
+
+  "detailReview": {
+    "review_of": "的评论",
+    "on": "于",
+    "reviewed_by": "{{userName}} 对 {{placeName}} 的评价：",
+    "suitable_for": "适合",
+    "icon_map": "图标地图",
+    "error_loading_reviews": "加载评论时出错。",
+    "back": "返回"
+  },
+
+  "reviewEdit": {
+    "had": "有",
+    "on": "于",
+    "rated": "评价",
+    "learn_more": "了解有关此评论的更多信息。",
+    "suitable_for": "适合",
+    "icon_map": "图标地图",
+    "error_loading_reviews": "加载评论时出错。",
+    "update_success": "评论已成功更新。",
+    "error_updating_review": "更新评论时出错。",
+    "delete_success": "评论已成功删除。",
+    "error_deleting_review": "删除评论时出错。",
+    "update": "更新",
+    "delete": "删除",
+    "back": "返回",
+    "confirm_delete": "确定要删除评论吗？",
+    "cancel": "取消",
+    "comment_placeholder": "在此输入描述"
+  },
+
+  "dataprotection": {
+    "title": "数据保护",
+    "section1": {
+      "title": "1. 数据保护概览",
+      "content": "感谢您对我们网站的兴趣。我们特别重视保护您的个人数据。我们会根据法律数据保护法规以及本数据保护声明对您的个人数据进行保密处理。"
+    },
+    "section2": {
+      "title": "2. 负责实体",
+      "content": "本网站的数据处理负责人是："
+    },
+    "section3": {
+      "title": "3. 个人数据的收集和存储及其使用的类型和目的",
+      "subtitle1": "a) 访问网站时",
+      "content1": "当您访问我们的网站时，您设备上使用的浏览器会自动将信息发送到我们网站的服务器。此信息会暂时存储在所谓的日志文件中。以下信息会在您无操作的情况下收集并存储，直到自动删除为止：",
+      "list1": [
+        "请求计算机的IP地址，",
+        "访问的日期和时间，",
+        "所请求文件的名称和URL，",
+        "访问来源的网站（引用URL），",
+        "所使用的浏览器，适用情况下您的计算机的操作系统以及访问提供商的名称。"
+      ],
+      "content2": "我们处理上述数据的目的是：",
+      "list2": [
+        "确保网站连接的流畅，",
+        "确保我们网站的舒适使用，",
+        "评估系统安全性和稳定性以及",
+        "用于进一步的行政目的。"
+      ],
+      "content3": "数据处理的法律依据是 DSGVO 第6条第1款第1句f项。我们的合法利益来源于上述数据收集的目的。我们绝不会使用收集的数据来得出关于您的结论。"
+    },
+    "section4": {
+      "title": "4. 数据传输",
+      "content": "除非您明确同意或法律义务，否则您的个人数据不会被传输给第三方。"
+    },
+    "section5": {
+      "title": "5. 数据主体的权利",
+      "content": "您有权利：",
+      "list": [
+        "根据 DSGVO 第15条要求获取我们处理的您的个人数据的信息，",
+        "根据 DSGVO 第16条要求纠正我们存储的您的不正确或不完整的个人数据，",
+        "根据 DSGVO 第17条要求删除我们存储的您的个人数据，",
+        "根据 DSGVO 第18条要求限制您的个人数据的处理，",
+        "根据 DSGVO 第20条要求以结构化、通用和机器可读的格式接收您提供给我们的个人数据，或将其传输给另一个责任方，",
+        "根据 DSGVO 第7条第3款，随时撤销对我们的同意，",
+        "根据 DSGVO 第77条向监管机构投诉。"
+      ]
+    },
+    "section6": {
+      "title": "6. 异议权",
+      "content": "如果您的个人数据是根据 DSGVO 第6条第1款第1句f项的合法利益处理的，您有权根据 DSGVO 第21条反对处理您的个人数据。"
+    },
+    "section7": {
+      "title": "7. 数据安全",
+      "content": "我们在网站访问期间使用 SSL（安全套接层）程序，结合您的浏览器支持的最高加密级别。"
+    },
+    "section8": {
+      "title": "8. 本隐私政策的货币性和变更",
+      "content": "本隐私政策目前有效，并具有[日期]的状态。由于我们网站的进一步发展或因法律或监管要求的变化，可能需要更改此隐私政策。"
+    }
+  },
+
+  "loginpage": {
+    "title": "登录",
+    "subtitle": "请登录以继续。",
+    "icon_alt": "登录图标",
+    "email_placeholder": "电子邮件地址",
+    "password_placeholder": "密码",
+    "login_button": "登录",
+    "forgot_password": "忘记密码？",
+    "no_account": "还没有账户？",
+    "all_fields_required": "所有字段均为必填。",
+    "password_reset_email_sent": "已发送密码重置电子邮件。请检查您的收件箱。",
+    "reset_password_button": "重置密码"
+  },
+
+  "forgotPasswordHandler": {
+    "error_sending_email": "发送密码重置电子邮件时出错。请再试一次。"
+  },
+
+  "registerpage": {
+    "password_match_toast": "密码不匹配！",
+    "password_length_toast": "密码长度至少为8个字符！",
+    "register_success_toast": "注册成功！欢迎！",
+    "register_error_toast": "注册过程中出错。请稍后再试。",
+    "all_fields_required": "请填写所有字段以完成注册。",
+    "headline": "注册",
+    "description": "创建一个档案来提交评论",
+    "emailPlaceholder": "电子邮件地址",
+    "firstNamePlaceholder": "名字",
+    "lastNamePlaceholder": "姓氏",
+    "passwordPlaceholder": "密码",
+    "confirmPasswordPlaceholder": "确认密码",
+    "submitButton": "注册"
+  },
+  "FilterableSelect": {
+    "select": "选择"
+  }
+}

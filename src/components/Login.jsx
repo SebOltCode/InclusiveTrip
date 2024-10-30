@@ -4,6 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useTranslation } from "react-i18next";
 
 Modal.setAppElement("#root");
 
@@ -14,6 +15,7 @@ export default function Login() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [forgotPasswordEmail, setForgotPasswordEmail] = useState("");
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (userInfo) {
@@ -52,9 +54,7 @@ export default function Login() {
   }
 
   function handleForgotPasswordSubmit() {
-    toast.success(
-      "Eine E-Mail zur Passwort-Zurücksetzung wurde gesendet. Bitte überprüfen Sie Ihr Postfach."
-    );
+    toast.success(t("login.password_reset_email_sent"));
     closeModal();
   }
 
@@ -69,17 +69,16 @@ export default function Login() {
             <div className="flex flex-col md:flex-row w-full p-4 sm:p-8">
               <div className="flex flex-col w-full md:w-2/3 text-left">
                 <h1 className="font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                  Login
+                  {t("loginpage.title")}
                 </h1>
                 <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight">
-                  Logge dich ein, um Bewertungen abgeben zu können und dein
-                  Profil zu verwalten.
+                  {t("loginpage.subtitle")}
                 </div>
               </div>
               <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                 <img
                   src="/images//Icon_Login.png"
-                  alt="Icon Karte"
+                  alt={t("loginpage.icon_alt")}
                   className="object-cover rounded-lg"
                   style={{ width: "200px", height: "200px" }}
                 />
@@ -103,7 +102,7 @@ export default function Login() {
                 onChange={handleChange}
                 type="text"
                 className="grow"
-                placeholder="Email"
+                placeholder={t("loginpage.email_placeholder")}
                 value={loginData.email}
               />
             </label>
@@ -132,28 +131,28 @@ export default function Login() {
                 type="password"
                 className="grow"
                 value={loginData.password}
-                placeholder="Passwort"
+                placeholder={t("loginpage.password_placeholder")}
               />
             </label>
             <button
               onClick={handleLogin}
               className="btn bg-yellow-400 border-black px-24 font-normal"
             >
-              Login
+              {t("loginpage.login_button")}
             </button>
 
             <a
               onClick={openModal}
               className="w-40 h-6 text-base font-normal leading-6 underline text-black cursor-pointer"
             >
-              Passwort vergessen?
+              {t("loginpage.forgot_password")}
             </a>
 
             <a
               href="signup"
               className="w-40 h-6 text-base font-normal leading-6 underline text-black"
             >
-              Noch keinen Account?
+              {t("loginpage.no_account")}
             </a>
 
             {error && (
@@ -174,28 +173,30 @@ export default function Login() {
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                   />
                 </svg>
-                <span>Alle Felder erforderlich</span>
+                <span>{t("loginpage.all_fields_required")}</span>
               </div>
             )}
 
             <Modal
               isOpen={modalIsOpen}
               onRequestClose={closeModal}
-              contentLabel="Passwort vergessen"
+              contentLabel={t("loginpage.forgot_password")}
               className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg"
               overlayClassName="bg-[rgba(59,130,246,0.5)] fixed inset-0"
               shouldCloseOnOverlayClick={true}
               shouldCloseOnEsc={true}
               ariaHideApp={false}
             >
-              <h2 className="text-2xl mb-4">Passwort vergessen</h2>
+              <h2 className="text-2xl mb-4">
+                {t("loginpage.forgot_password")}
+              </h2>
               <label className="input input-bordered flex items-center gap-2 mb-4">
                 <input
                   name="forgotPasswordEmail"
                   onChange={handleForgotPasswordChange}
                   type="email"
                   className="grow"
-                  placeholder="Email"
+                  placeholder={t("loginpage.email_placeholder")}
                   value={forgotPasswordEmail}
                 />
               </label>
@@ -203,7 +204,7 @@ export default function Login() {
                 onClick={handleForgotPasswordSubmit}
                 className="btn bg-yellow-400 border-black px-8 font-normal"
               >
-                Passwort zurück setzen
+                {t("loginpage.reset_password_button")}
               </button>
             </Modal>
           </div>

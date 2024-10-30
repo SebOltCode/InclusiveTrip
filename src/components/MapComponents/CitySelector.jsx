@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import FilterableSelect from "./FilterableSelect";
+import { useTranslation } from "react-i18next";
 
 const CitySelector = ({ selectedCity, setSelectedCity }) => {
+  const { t } = useTranslation();
   const [cities, setCities] = useState([]);
 
   useEffect(() => {
@@ -38,7 +40,7 @@ const CitySelector = ({ selectedCity, setSelectedCity }) => {
   return (
     <>
       <h1 className="text-xl sm:text-2xl font-bold mb-4">
-        Wähle eine Stadt aus:
+        {t("citySelector.select_city")}
       </h1>
       <div className="mb-4">
         <FilterableSelect

@@ -7,6 +7,8 @@ import {
   Navigate,
   Outlet,
 } from "react-router-dom";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
 import Home from "./components/Home";
 import Ratings from "./components/Ratings";
 import CreateRating from "./components/CreateRating";
@@ -54,7 +56,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <RouterProvider router={router} />
+    </I18nextProvider>
+  );
 }
 
 export default App;
