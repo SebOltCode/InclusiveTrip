@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "एक श्रेणी चुनें:"
+    "select_category": "श्रेणी का चयन करें"
+  },
+  "categories": {
+    "category1": "रेस्तरां",
+    "category2": "क्लिनिक",
+    "category3": "अस्पताल",
+    "category4": "विद्यालय",
+    "category5": "संग्रहालय",
+    "category8": "सिनेमाघर",
+    "category9": "कैफ़े",
+    "category10": "पर्यटक स्थल"
   },
 
   "citySelector": {

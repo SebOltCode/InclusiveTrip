@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Select a category:"
+    "select_category": "Select Category"
+  },
+  "categories": {
+    "category1": "Restaurant",
+    "category2": "Clinic",
+    "category3": "Hospital",
+    "category4": "School",
+    "category5": "Museum",
+    "category8": "Cinemas",
+    "category9": "Cafes",
+    "category10": "Attractions"
   },
 
   "citySelector": {

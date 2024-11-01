@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Виберіть категорію:"
+    "select_category": "Вибрати категорію"
+  },
+  "categories": {
+    "category1": "Ресторан",
+    "category2": "Клініка",
+    "category3": "Лікарня",
+    "category4": "Школа",
+    "category5": "Музей",
+    "category8": "Кінотеатри",
+    "category9": "Кафе",
+    "category10": "Визначні місця"
   },
 
   "citySelector": {

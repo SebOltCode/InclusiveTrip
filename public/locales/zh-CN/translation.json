@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "选择类别："
+    "select_category": "选择类别"
+  },
+  "categories": {
+    "category1": "餐厅",
+    "category2": "诊所",
+    "category3": "医院",
+    "category4": "学校",
+    "category5": "博物馆",
+    "category8": "电影院",
+    "category9": "咖啡馆",
+    "category10": "景点"
   },
 
   "citySelector": {

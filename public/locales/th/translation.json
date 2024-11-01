@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "เลือกหมวดหมู่:"
+    "select_category": "เลือกหมวดหมู่"
+  },
+  "categories": {
+    "category1": "ร้านอาหาร",
+    "category2": "คลินิก",
+    "category3": "โรงพยาบาล",
+    "category4": "โรงเรียน",
+    "category5": "พิพิธภัณฑ์",
+    "category8": "โรงภาพยนตร์",
+    "category9": "ร้านกาแฟ",
+    "category10": "สถานที่ท่องเที่ยว"
   },
 
   "citySelector": {

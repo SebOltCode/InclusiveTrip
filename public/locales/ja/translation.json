@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "カテゴリを選択してください："
+    "select_category": "カテゴリを選択"
+  },
+  "categories": {
+    "category1": "レストラン",
+    "category2": "クリニック",
+    "category3": "病院",
+    "category4": "学校",
+    "category5": "博物館",
+    "category8": "映画館",
+    "category9": "カフェ",
+    "category10": "観光名所"
   },
 
   "citySelector": {

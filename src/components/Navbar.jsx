@@ -1,16 +1,46 @@
-import { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import { UserIcon } from "@heroicons/react/24/solid";
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
   const { userInfo, logout } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setIsDropdownOpen(false);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const languageMap = {
+    de: "Deutsch",
+    en: "English",
+    pt: "Português",
+    fr: "Français",
+    es: "Español",
+    ar: "العربية",
+    tr: "Türkçe",
+    uk: "Українська",
+    ru: "Русский",
+    it: "Italiano",
+    pl: "Polski",
+    sv: "Svenska",
+    no: "Norsk",
+    ja: "日本語",
+    "zh-CN": "简体中文",
+    th: "ไทย",
+    hi: "हिन्दी",
+    id: "Bahasa Indonesia",
+  };
+
+  const getLanguageLabel = (lng) => {
+    return languageMap[lng];
   };
 
   return (
@@ -57,29 +87,29 @@ export default function Navbar() {
               <UserIcon className="w-6 h-6 mr-1 lg:mr-2" />
             </NavLink>
           )}
-          <select
-            onChange={(e) => changeLanguage(e.target.value)}
-            className="ml-4"
-          >
-            <option value="de">Deutsch</option>
-            <option value="en">English</option>
-            <option value="pt">Português</option>
-            <option value="fr">Français</option>
-            <option value="es">Español</option>
-            <option value="ar">العربية</option>
-            <option value="tr">Türkçe</option>
-            <option value="uk">Українська</option>
-            <option value="ru">Русский</option>
-            <option value="it">Italiano</option>
-            <option value="pl">Polski</option>
-            <option value="sv">Svenska</option>
-            <option value="no">Norsk</option>
-            <option value="ja">日本語</option>
-            <option value="zh-CN">简体中文</option>
-            <option value="th">ไทย</option>
-            <option value="hi">हिन्दी</option>
-            <option value="id">Bahasa Indonesia</option>
-          </select>
+          <div className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="ml-4 bg-white border border-gray-300 rounded-lg px-4 py-2"
+            >
+              {i18n.language.toUpperCase()}
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+                <ul className="max-h-60 overflow-y-auto">
+                  {Object.keys(languageMap).map((lng) => (
+                    <li
+                      key={lng}
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      onClick={() => changeLanguage(lng)}
+                    >
+                      {getLanguageLabel(lng)}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
     </header>

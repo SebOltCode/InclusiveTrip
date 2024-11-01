@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Välj en kategori:"
+    "select_category": "Välj kategori"
+  },
+  "categories": {
+    "category1": "Restaurang",
+    "category2": "Klinik",
+    "category3": "Sjukhus",
+    "category4": "Skola",
+    "category5": "Museum",
+    "category8": "Biografer",
+    "category9": "Kaféer",
+    "category10": "Sevärdheter"
   },
 
   "citySelector": {
