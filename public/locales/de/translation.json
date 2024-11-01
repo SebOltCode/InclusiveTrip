@@ -147,9 +147,21 @@
     "step3": "Klicke auf das Icon in der Karte, um dir Bewertungen für diese Location anzusehen oder eine Bewertung zu schreiben.",
     "close": "Schließen"
   },
+
   "categorySelector": {
-    "select_category": "Wähle eine Kategorie aus:"
+    "select_category": "Kategorie auswählen"
   },
+  "categories": {
+    "category1": "Restaurant",
+    "category2": "Klinik",
+    "category3": "Krankenhaus",
+    "category4": "Schule",
+    "category5": "Museum",
+    "category8": "Kinos",
+    "category9": "Cafes",
+    "category10": "Sehenswürdigkeiten"
+  },
+
   "citySelector": {
     "select_city": "Wähle eine Stadt aus:"
   },

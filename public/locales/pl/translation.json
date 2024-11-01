@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Wybierz kategorię:"
+    "select_category": "Wybierz kategorię"
+  },
+  "categories": {
+    "category1": "Restauracja",
+    "category2": "Klinika",
+    "category3": "Szpital",
+    "category4": "Szkoła",
+    "category5": "Muzeum",
+    "category8": "Kina",
+    "category9": "Kawiarnie",
+    "category10": "Atrakcje turystyczne"
   },
 
   "citySelector": {

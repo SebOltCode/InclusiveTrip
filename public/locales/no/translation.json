@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Velg en kategori:"
+    "select_category": "Velg Kategori"
+  },
+  "categories": {
+    "category1": "Restaurant",
+    "category2": "Klinikk",
+    "category3": "Sykehus",
+    "category4": "Skole",
+    "category5": "Museum",
+    "category8": "Kinoer",
+    "category9": "Kafeer",
+    "category10": "Attraksjoner"
   },
 
   "citySelector": {

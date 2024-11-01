@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "اختر فئة:"
+    "select_category": "اختر الفئة"
+  },
+  "categories": {
+    "category1": "مطعم",
+    "category2": "عيادة",
+    "category3": "مستشفى",
+    "category4": "مدرسة",
+    "category5": "متحف",
+    "category8": "سينما",
+    "category9": "مقاهي",
+    "category10": "معالم سياحية"
   },
 
   "citySelector": {

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import FilteredSelect from "./FilteredSelect";
 import axios from "axios";
 import FilterableSelect from "./FilterableSelect";
 import { useTranslation } from "react-i18next";
@@ -21,7 +20,6 @@ const CategorySelector = ({ selectedCategory, setSelectedCategory }) => {
         }
       } catch (error) {
         console.log(error);
-      } finally {
       }
     };
 
@@ -32,6 +30,13 @@ const CategorySelector = ({ selectedCategory, setSelectedCategory }) => {
     setSelectedCategory(category);
   };
 
+  const getTranslatedCategories = () => {
+    return categories.map((category) => ({
+      ...category,
+      name: t(`categories.category${category.id}`),
+    }));
+  };
+
   return (
     <>
       <h1 className="text-xl sm:text-2xl font-bold mb-4">
@@ -39,7 +44,7 @@ const CategorySelector = ({ selectedCategory, setSelectedCategory }) => {
       </h1>
       <div className="mb-4">
         <FilterableSelect
-          items={categories}
+          items={getTranslatedCategories()}
           selectedValue={selectedCategory}
           onSelect={handleSelect}
         />

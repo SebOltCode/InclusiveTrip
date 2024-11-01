@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Pilih kategori:"
+    "select_category": "Pilih Kategori"
+  },
+  "categories": {
+    "category1": "Restoran",
+    "category2": "Klinik",
+    "category3": "Rumah Sakit",
+    "category4": "Sekolah",
+    "category5": "Museum",
+    "category8": "Bioskop",
+    "category9": "Kafe",
+    "category10": "Objek Wisata"
   },
 
   "citySelector": {

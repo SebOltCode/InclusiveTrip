@@ -154,7 +154,17 @@
   },
 
   "categorySelector": {
-    "select_category": "Bir kategori seçin:"
+    "select_category": "Kategori Seç"
+  },
+  "categories": {
+    "category1": "Restoran",
+    "category2": "Klinik",
+    "category3": "Hastane",
+    "category4": "Okul",
+    "category5": "Müze",
+    "category8": "Sinema",
+    "category9": "Kafeler",
+    "category10": "Turistik Yerler"
   },
 
   "citySelector": {
