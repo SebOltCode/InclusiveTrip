@@ -1,12 +1,25 @@
 :root {
   color-scheme: light only;
+  forced-color-adjust: none;
 }
 
-html,
+html {
+  color-scheme: light only;
+}
+
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: white !important;
+  color: black !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
 }
 
 .bg-\[rgba\(59\2c 130\2c 246\2c 0\.5\)\] {
