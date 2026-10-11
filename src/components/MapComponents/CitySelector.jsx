@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FilterableSelect from "./FilterableSelect";
 import { useTranslation } from "react-i18next";
 
@@ -39,9 +39,9 @@ const CitySelector = ({ selectedCity, setSelectedCity }) => {
 
   return (
     <>
-      <h1 className="text-xl sm:text-2xl font-bold mb-4">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">
         {t("citySelector.select_city")}
-      </h1>
+      </h2>
       <div className="mb-4">
         <FilterableSelect
           items={cities}

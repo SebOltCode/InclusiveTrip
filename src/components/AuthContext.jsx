@@ -1,114 +1,71 @@
-import { createContext, useState, useEffect } from "react";
-import axios from "axios";
-import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
+import { createContext, useState, useEffect, useCallback } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
+import api from "../utils/api";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
-
-  const loginUrl = `${API_URL}/auth/signin`;
-  const signupUrl = `${API_URL}/auth/register`;
-  const authMeUrl = `${API_URL}/auth/me`;
-
+  const { t } = useTranslation();
   const [userInfo, setUserInfo] = useState(null);
-  const [shouldFetch, setShouldFetch] = useState(false);
-  const navigate = useNavigate();
+  // true until the initial session check is done, so protected routes don't redirect too early
+  const [authLoading, setAuthLoading] = useState(true);
 
-  let token = Cookies.get("token");
-
-  const fetchUserInfo = async () => {
+  const refreshUserInfo = useCallback(async () => {
     try {
-      const response = await axios.get(authMeUrl, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        withCredentials: true,
-      });
+      const response = await api.get("/auth/me");
       setUserInfo(response.data);
-    } catch (error) {
-      console.error("Error fetching user data:", error);
-      Cookies.remove("token");
+      return response.data;
+    } catch {
       setUserInfo(null);
+      return null;
     }
-  };
+  }, []);
 
   useEffect(() => {
-    if (token && (shouldFetch || !userInfo)) {
-      fetchUserInfo();
-    }
-  }, [shouldFetch]);
+    refreshUserInfo().finally(() => setAuthLoading(false));
+  }, [refreshUserInfo]);
 
   async function login(loginData) {
     try {
-      const response = await axios.post(loginUrl, loginData, {
-        withCredentials: true,
-      });
-      console.log("Login successful:", response);
-      setShouldFetch((prev) => !prev);
-      await fetchUserInfo();
-      toast.success("Willkommen zurück!");
-      navigate("/map");
+      const response = await api.post("/auth/signin", loginData);
+      setUserInfo(response.data);
+      toast.success(t("auth.welcome_back"));
+      return true;
     } catch (err) {
-      if (err.response) {
-        const { status, data } = err.response;
-        toast.error(
-          "Upps, das hätte nicht passieren sollen. Bitte versuche es später nochmal."
-        );
-        console.error(
-          `Error ${status}: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
-        );
-        if (data.errors) {
-          const validationErrors = data.errors.map((error) => ({
-            field: error.field,
-            message: error.message,
-          }));
-          toast.error(
-            `Validation error: ${validationErrors.map((e) => e.message).join(", ")}`
-          );
-          console.error("Validation errors:", validationErrors);
-        } else {
-          toast.error(
-            "Upps, das hätte nicht passieren sollen. Bitte versuche es später nochmal."
-          );
-          console.error(
-            `Error message: ${data.message || "Unbekannter Fehler, bitte versuchen Sie es später erneut."}`
-          );
-        }
+      const status = err.response?.status;
+      if (status === 401) {
+        toast.error(t("auth.invalid_credentials"));
+      } else if (status === 403) {
+        toast.error(t("auth.account_blocked"));
       } else {
-        console.error("Login error:", err.message);
+        toast.error(t("auth.generic_error"));
       }
-
-      Cookies.remove("token");
+      console.error("Login error:", err);
       setUserInfo(null);
+      return false;
     }
   }
 
-  function logout() {
-    Cookies.remove("token");
+  async function logout() {
+    try {
+      await api.delete("/auth/signout");
+    } catch (err) {
+      console.error("Logout error:", err);
+    }
     setUserInfo(null);
-    setShouldFetch(false);
-    console.log("Logout successful, userInfo and token removed.");
-    navigate("/home");
-    toast.info("Auf Wiedersehen!");
+    toast.info(t("auth.goodbye"));
   }
 
-  function signup(userData) {
-    axios
-      .post(signupUrl, userData)
-      .then((res) => {
-        navigate("/login");
-      })
-      .catch((err) => {
-        console.log(err);
-        setUserInfo(null);
-      });
+  // Throws on failure, so the caller can show the matching message
+  async function signup(userData) {
+    await api.post("/auth/register", userData);
   }
 
   return (
-    <AuthContext.Provider value={{ userInfo, login, logout }}>
+    <AuthContext.Provider
+      value={{ userInfo, setUserInfo, authLoading, login, logout, signup, refreshUserInfo }}
+    >
       <ToastContainer />
       {children}
     </AuthContext.Provider>

@@ -27,7 +27,8 @@ Lassen Sie uns gemeinsam Städte zugänglicher und inklusiver gestalten – für
 - **Backend:** NodeJS, Express
 - **Datenbank:** PostgreSQL
 - **Versionierung:** Git, GitHub
-- **APIs:** Leaflet API
+- **Deployment:** Render
+- **APIs:** Leaflet, OpenStreetMap, Overpass API
 
 ## Features
 
@@ -69,8 +70,8 @@ Let’s work together to make cities more accessible and inclusive—for everyon
 - **Backend:** NodeJS, Express
 - **Database:** PostgreSQL
 - **Version Control:** Git, GitHub
-- **Deployment:** Docker, Heroku
-- **APIs:** Google Maps API
+- **Deployment:** Render
+- **APIs:** Leaflet, OpenStreetMap, Overpass API
 
 ## Features
 

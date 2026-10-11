@@ -6,9 +6,7 @@
   "user": "Användare",
   "logout": "Logga ut",
   "login": "Logga in",
-
   "why_we_developed": "Varför vi utvecklade denna app",
-
   "ratings": "Omdömen",
   "users": "Användare",
   "barrier_filter": "Barriärfilter",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Oavsett om du använder rullstol, är döv, har nedsatt syn, reser med barnvagn eller har ett husdjur med dig – InclusiveTRIP är verktyget för att säkerställa att din omgivning är tillgänglig och inkluderande. Dina omdömen och erfarenheter bidrar till att bygga ett samhälle som prioriterar tillgänglighet. Upptäck, bedöm och dela dina erfarenheter med InclusiveTRIP!",
   "introduce_blog_entries": "Hitta information här om aktuella ämnen kring inkludering.",
   "current_topics": "Aktuella ämnen",
-
   "about_us": "Om oss",
   "about_us_1": "Välkommen till vår webbplats! Vi är en liten, men passionerad grupp utvecklare – Sebastian, Adnan, Ahmed och Julia – som kom samman under WBS Coding School för att utveckla en app som verkligen gör skillnad.",
   "our_vision": "Vår vision",
@@ -40,7 +37,6 @@
   "about_us_7": "Vi, teamet bakom appen, är stolta över vad vi har åstadkommit på kort tid. Var och en av oss har vår egen motivation och historia som ledde oss till detta projekt:",
   "about_us_8": "Tillsammans har vi inte bara utvecklat en app, utan också väckt en vision till liv som vi vill dela med världen. Vi hoppas att vår app blir ett verktyg som bryter ner hinder och bygger broar – för ett mer inkluderande samhälle.",
   "about_us_9": "Tack för att du är en del av denna resa och hjälper oss att göra världen lite bättre.",
-
   "impressum": {
     "title": "Impressum",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Vi är varken villiga eller skyldiga att delta i tvistlösningsprocesser vid en konsumentens skiljedomstol."
     }
   },
-
   "footer": {
     "copyright": "Upphovsrätt © {{year}} - Alla rättigheter förbehållna",
     "impressum": "Impressum",
     "datenschutz": "Dataskydd",
     "ueberuns": "Om oss"
   },
-
   "createRating": {
     "title": "Skriv omdöme",
     "subtitle": "Bedöm {{place}} baserat på dina erfarenheter.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Tack, ditt omdöme har lagts till!"
   },
-
   "barriers": {
     "barrier1": "Rullstolsanvändare",
     "barrier2": "Barn",
@@ -120,11 +113,10 @@
     "barrier8": "Personer med klaustrofobi",
     "barrier9": "Husdjursägare"
   },
-
   "common": {
-    "bewerten": "betygsätta"
+    "bewerten": "betygsätta",
+    "loading": "Laddar..."
   },
-
   "usersection": {
     "profile_of": "Profil av",
     "change_user_data": "Ändra dina användardata och redigera dina omdömen.",
@@ -132,7 +124,6 @@
     "you_rated": "Du betygsatte",
     "read_more": "läs mer"
   },
-
   "userProfileForm": {
     "personal_data": "Personlig information",
     "first_name": "Förnamn",
@@ -141,7 +132,6 @@
     "save_changes": "Spara ändringar",
     "update_success": "Användardata uppdaterades framgångsrikt."
   },
-
   "map": {
     "where_to_travel": "Vart vill du resa?",
     "how_search_works": "..så fungerar sökningen",
@@ -152,7 +142,6 @@
     "step3": "Klicka på ikonen på kartan för att se omdömen för denna plats eller skriva ett omdöme.",
     "close": "Stäng"
   },
-
   "categorySelector": {
     "select_category": "Välj kategori"
   },
@@ -166,16 +155,14 @@
     "category9": "Kaféer",
     "category10": "Sevärdheter"
   },
-
   "citySelector": {
     "select_city": "Välj en stad:"
   },
-
   "placeMarker": {
     "ratings": "Omdömen",
-    "create_rating": "Skicka omdöme"
+    "create_rating": "Skicka omdöme",
+    "unnamed_place": "Namnlös plats"
   },
-
   "ratingspage": {
     "no_reviews": "Det finns inga omdömen för denna plats ännu. Skriv ett omdöme och dela dina erfarenheter!",
     "add_review": "Lägg till omdöme",
@@ -186,7 +173,6 @@
     "on": "den",
     "read_more": "Läs mer"
   },
-
   "detailReview": {
     "review_of": "Omdöme av",
     "on": "den",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Fel vid inläsning av omdömen.",
     "back": "Tillbaka"
   },
-
   "reviewEdit": {
     "had": "hade",
     "on": "den",
@@ -216,7 +201,6 @@
     "cancel": "Avbryt",
     "comment_placeholder": "Skriv beskrivningen här"
   },
-
   "dataprotection": {
     "title": "Dataskydd",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Denna integritetspolicy är för närvarande giltig och har status [datum]. På grund av vidareutveckling av vår webbplats eller på grund av ändrade lagkrav kan det bli nödvändigt att ändra denna integritetspolicy."
     }
   },
-
   "loginpage": {
     "title": "Logga in",
     "subtitle": "Vänligen logga in för att fortsätta.",
@@ -288,17 +271,9 @@
     "email_placeholder": "E-postadress",
     "password_placeholder": "Lösenord",
     "login_button": "Logga in",
-    "forgot_password": "Glömt lösenord?",
     "no_account": "Inget konto ännu?",
-    "all_fields_required": "Alla fält är obligatoriska.",
-    "password_reset_email_sent": "Ett e-postmeddelande för återställning av lösenord har skickats. Kontrollera din inkorg.",
-    "reset_password_button": "Återställ lösenord"
+    "all_fields_required": "Alla fält är obligatoriska."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Fel vid skickande av e-post för återställning av lösenord. Vänligen försök igen."
-  },
-
   "registerpage": {
     "password_match_toast": "Lösenorden matchar inte!",
     "password_length_toast": "Lösenordet måste vara minst 8 tecken långt!",
@@ -315,6 +290,32 @@
     "submitButton": "Registrera"
   },
   "FilterableSelect": {
-    "select": "Välj"
+    "select": "Välj",
+    "search": "Sök...",
+    "no_items": "Inga poster hittades"
+  },
+  "auth": {
+    "welcome_back": "Välkommen tillbaka!",
+    "invalid_credentials": "E-postadressen eller lösenordet är felaktigt.",
+    "account_blocked": "Det här kontot är spärrat.",
+    "generic_error": "Hoppsan, det borde inte ha hänt. Försök igen senare.",
+    "goodbye": "Hej då!",
+    "email_exists": "Det finns redan ett konto med den här e-postadressen."
+  },
+  "profilePhoto": {
+    "alt": "Profilbild",
+    "delete": "Ta bort profilbild",
+    "deleting": "Tar bort...",
+    "upload": "Ladda upp profilbild"
+  },
+  "rssfeed": {
+    "title": "Blogginlägg från vår partner barrierefrei-aufgerollt.at",
+    "error": "Fel vid inläsning av RSS-flödet",
+    "read_more": "..läs mer"
+  },
+  "notFound": {
+    "title": "Vi beklagar!",
+    "message": "Fel 404: Sidan kunde inte hittas",
+    "back": "Tillbaka"
   }
 }

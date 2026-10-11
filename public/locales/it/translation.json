@@ -6,9 +6,7 @@
   "user": "Utente",
   "logout": "Disconnetti",
   "login": "Accedi",
-
   "why_we_developed": "Perché abbiamo sviluppato questa app",
-
   "ratings": "Valutazioni",
   "users": "Utenti",
   "barrier_filter": "Filtro di accessibilità",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Che tu sia un utente in sedia a rotelle, non udente, ipovedente, in giro con un passeggino o con un animale domestico, InclusiveTRIP è lo strumento per assicurarsi che l'ambiente circostante sia accessibile e inclusivo. Le tue valutazioni ed esperienze aiutano a creare una comunità che dà priorità all'accessibilità. Scopri, valuta e condividi le tue esperienze con InclusiveTRIP!",
   "introduce_blog_entries": "Informati qui sugli argomenti attuali legati all'inclusione.",
   "current_topics": "Argomenti attuali",
-
   "about_us": "Chi siamo",
   "about_us_1": "Benvenuti sul nostro sito web! Siamo un piccolo gruppo di sviluppatori appassionati - Sebastian, Adnan, Ahmed e Julia - che si sono incontrati durante il bootcamp di WBS Coding School per sviluppare un'app che faccia veramente la differenza.",
   "our_vision": "La nostra visione",
@@ -40,7 +37,6 @@
   "about_us_7": "Noi, il team dietro l'app, siamo orgogliosi di ciò che siamo riusciti a raggiungere in breve tempo. Ognuno di noi ha la propria motivazione e storia che lo ha portato a questo progetto:",
   "about_us_8": "Insieme abbiamo non solo sviluppato un'app, ma abbiamo dato vita a una visione che vogliamo condividere con il mondo. Speriamo che la nostra app diventi uno strumento che abbatte le barriere e costruisce ponti per una convivenza più inclusiva.",
   "about_us_9": "Grazie per essere parte di questo viaggio e per volerci aiutare a rendere il mondo un po' migliore.",
-
   "impressum": {
     "title": "Colofone",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Non siamo disposti né obbligati a partecipare a procedure di risoluzione delle controversie davanti a un collegio arbitrale dei consumatori."
     }
   },
-
   "footer": {
     "copyright": "Copyright © {{year}} - Tutti i diritti riservati",
     "impressum": "Colofone",
     "datenschutz": "Informativa sulla privacy",
     "ueberuns": "Chi siamo"
   },
-
   "createRating": {
     "title": "Scrivi una recensione",
     "subtitle": "Valuta {{place}} in base alle tue esperienze.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Grazie, la tua recensione è stata aggiunta!"
   },
-
   "barriers": {
     "barrier1": "Utenti in sedia a rotelle",
     "barrier2": "Bambini",
@@ -120,11 +113,10 @@
     "barrier8": "Persone con claustrofobia",
     "barrier9": "Proprietari di cani"
   },
-
   "common": {
-    "bewerten": "valuta"
+    "bewerten": "valuta",
+    "loading": "Caricamento..."
   },
-
   "usersection": {
     "profile_of": "Profilo di",
     "change_user_data": "Modifica i tuoi dati utente e gestisci le recensioni che hai già inviato.",
@@ -132,7 +124,6 @@
     "you_rated": "Hai valutato",
     "read_more": "leggi di più"
   },
-
   "userProfileForm": {
     "personal_data": "Dati personali",
     "first_name": "Nome",
@@ -141,7 +132,6 @@
     "save_changes": "Salva modifiche",
     "update_success": "Dati utente aggiornati con successo."
   },
-
   "map": {
     "where_to_travel": "Dove vuoi viaggiare?",
     "how_search_works": "..come funziona la ricerca",
@@ -152,7 +142,6 @@
     "step3": "Clicca sull'icona nella mappa per visualizzare le recensioni di questo luogo o scrivere una recensione.",
     "close": "Chiudi"
   },
-
   "categorySelector": {
     "select_category": "Seleziona Categoria"
   },
@@ -166,16 +155,14 @@
     "category9": "Caffè",
     "category10": "Attrazioni"
   },
-
   "citySelector": {
     "select_city": "Seleziona una città:"
   },
-
   "placeMarker": {
     "ratings": "Valutazioni",
-    "create_rating": "Invia recensione"
+    "create_rating": "Invia recensione",
+    "unnamed_place": "Luogo senza nome"
   },
-
   "ratingspage": {
     "no_reviews": "Non ci sono ancora recensioni per questo luogo. Scrivi una recensione e condividi le tue esperienze!",
     "add_review": "Aggiungi recensione",
@@ -186,7 +173,6 @@
     "on": "il",
     "read_more": "Leggi di più"
   },
-
   "detailReview": {
     "review_of": "Recensione di",
     "on": "il",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Errore durante il caricamento delle recensioni.",
     "back": "Indietro"
   },
-
   "reviewEdit": {
     "had": "ha",
     "on": "il",
@@ -216,7 +201,6 @@
     "cancel": "Annulla",
     "comment_placeholder": "Inserisci qui la descrizione"
   },
-
   "dataprotection": {
     "title": "Protezione dei dati",
     "section1": {
@@ -245,7 +229,10 @@
         "Valutazione della sicurezza e stabilità del sistema e",
         "per ulteriori scopi amministrativi."
       ],
-      "content3": "La base legale per il trattamento dei dati è l'art. 6 comma 1 lett. f DSGVO. Il nostro legittimo interesse deriva dagli scopi per la raccolta dei dati elencati sopra. In nessun caso utilizziamo i dati raccolti per trarre conclusioni sulla tua persona."
+      "content3": "La base legale per il trattamento dei dati è l'art. 6 comma 1 lett. f DSGVO. Il nostro legittimo interesse deriva dagli scopi per la raccolta dei dati elencati sopra. In nessun caso utilizziamo i dati raccolti per trarre conclusioni sulla tua persona.",
+      "subtitle2": "b) Contatto",
+      "content4": "Se ci contatti via e-mail o tramite un modulo di contatto, i dati da te forniti, compresi i dati di contatto indicati, saranno da noi conservati allo scopo di elaborare la richiesta e per eventuali domande successive. Non trasmettiamo questi dati senza il tuo consenso.",
+      "content5": "Il trattamento dei dati inseriti nel modulo di contatto avviene quindi esclusivamente sulla base del tuo consenso (art. 6 comma 1 lett. a DSGVO). Puoi revocare questo consenso in qualsiasi momento. A tal fine è sufficiente una comunicazione informale via e-mail. La liceità dei trattamenti effettuati fino alla revoca rimane impregiudicata."
     },
     "section4": {
       "title": "4. Trasferimento dei dati",
@@ -277,7 +264,6 @@
       "content": "Questa informativa sulla privacy è attualmente valida e ha lo stato [data]. A causa dello sviluppo del nostro sito web o di modifiche ai requisiti legali o regolamentari, potrebbe essere necessario modificare questa informativa sulla privacy."
     }
   },
-
   "loginpage": {
     "title": "Accedi",
     "subtitle": "Per favore, accedi per continuare.",
@@ -285,17 +271,9 @@
     "email_placeholder": "Indirizzo email",
     "password_placeholder": "Password",
     "login_button": "Accedi",
-    "forgot_password": "Hai dimenticato la password?",
     "no_account": "Non hai ancora un account?",
-    "all_fields_required": "Tutti i campi sono obbligatori.",
-    "password_reset_email_sent": "È stata inviata un'email per il reset della password. Controlla la tua casella di posta.",
-    "reset_password_button": "Reimposta la password"
+    "all_fields_required": "Tutti i campi sono obbligatori."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Errore nell'invio dell'email per il reset della password. Riprova."
-  },
-
   "registerpage": {
     "password_match_toast": "Le password non corrispondono!",
     "password_length_toast": "La password deve essere lunga almeno 8 caratteri!",
@@ -312,6 +290,32 @@
     "submitButton": "Registrati"
   },
   "FilterableSelect": {
-    "select": "Seleziona"
+    "select": "Seleziona",
+    "search": "Cerca...",
+    "no_items": "Nessun elemento trovato"
+  },
+  "auth": {
+    "welcome_back": "Bentornato!",
+    "invalid_credentials": "Indirizzo e-mail o password errati.",
+    "account_blocked": "Questo account è bloccato.",
+    "generic_error": "Ops, questo non sarebbe dovuto succedere. Riprova più tardi.",
+    "goodbye": "Arrivederci!",
+    "email_exists": "Esiste già un account con questo indirizzo e-mail."
+  },
+  "profilePhoto": {
+    "alt": "Foto profilo",
+    "delete": "Elimina foto profilo",
+    "deleting": "Eliminazione...",
+    "upload": "Carica foto profilo"
+  },
+  "rssfeed": {
+    "title": "Articoli del blog del nostro partner barrierefrei-aufgerollt.at",
+    "error": "Errore durante il caricamento del feed RSS",
+    "read_more": "..leggi di più"
+  },
+  "notFound": {
+    "title": "Ci dispiace!",
+    "message": "Errore 404: pagina non trovata",
+    "back": "Indietro"
   }
 }

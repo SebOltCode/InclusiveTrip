@@ -6,9 +6,7 @@
   "user": "Kullanıcı",
   "logout": "Çıkış Yap",
   "login": "Giriş Yap",
-
   "why_we_developed": "Bu uygulamayı neden geliştirdik",
-
   "ratings": "Değerlendirmeler",
   "users": "Kullanıcılar",
   "barrier_filter": "Engel Filtresi",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Tekerlekli sandalye kullanıyor, işitme engelli, görme engelli, bebek arabasıyla seyahat ediyor veya evcil hayvanınızla seyahat ediyor olsanız da – InclusiveTRIP, çevrenizin erişilebilir ve kapsayıcı olduğundan emin olmanızı sağlar. Değerlendirmeleriniz ve deneyimleriniz, erişilebilirliği öncelik haline getiren bir topluluk oluşturmaya yardımcı olur. InclusiveTRIP ile keşfedin, değerlendirin ve deneyimlerinizi paylaşın!",
   "introduce_blog_entries": "Dahil olma konusundaki güncel konular hakkında buradan bilgi edinin.",
   "current_topics": "Güncel Konular",
-
   "about_us": "Hakkımızda",
   "about_us_1": "Web sitemize hoş geldiniz! Biz, WBS Coding School eğitim kampında bir araya gelen ve gerçekten bir fark yaratan bir uygulama geliştirmek için çalışan küçük ama tutkulu bir geliştirici grubuyuz: Sebastian, Adnan, Ahmed ve Julia.",
   "our_vision": "Vizyonumuz",
@@ -40,7 +37,6 @@
   "about_us_7": "Uygulamanın arkasındaki ekip olarak kısa sürede başardıklarımızdan gurur duyuyoruz. Hepimizin bu projeye yönlendiren kendi motivasyonu ve hikayesi var:",
   "about_us_8": "Birlikte sadece bir uygulama geliştirmekle kalmadık, dünyayla paylaşmak istediğimiz bir vizyonu da hayata geçirdik. Uygulamamızın engelleri aşan ve köprüler kuran bir araç haline gelmesini umuyoruz – daha kapsayıcı bir toplum için.",
   "about_us_9": "Bu yolculuğun bir parçası olduğunuz ve dünyayı biraz daha iyi bir yer haline getirmemize yardımcı olduğunuz için teşekkür ederiz.",
-
   "impressum": {
     "title": "Künye",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Bir tüketici tahkim kurulunda anlaşmazlık çözüm işlemlerine katılmaya ne istekliyiz ne de zorunluyuz."
     }
   },
-
   "footer": {
     "copyright": "Telif Hakkı © {{year}} - Tüm hakları saklıdır",
     "impressum": "Künye",
     "datenschutz": "Gizlilik Politikası",
     "ueberuns": "Hakkımızda"
   },
-
   "createRating": {
     "title": "Değerlendirme Yaz",
     "subtitle": "Deneyimlerinize göre {{place}} değerlendirin.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Teşekkürler, değerlendirmeniz eklendi!"
   },
-
   "barriers": {
     "barrier1": "Tekerlekli sandalye kullanıcıları",
     "barrier2": "Çocuklar",
@@ -120,11 +113,10 @@
     "barrier8": "Klostrofobisi olan kişiler",
     "barrier9": "Evcil hayvan sahipleri"
   },
-
   "common": {
-    "bewerten": "değerlendir"
+    "bewerten": "değerlendir",
+    "loading": "Yükleniyor..."
   },
-
   "usersection": {
     "profile_of": "Profil:",
     "change_user_data": "Kullanıcı verilerinizi değiştirin ve değerlendirmelerinizi düzenleyin.",
@@ -132,7 +124,6 @@
     "you_rated": "Değerlendirdiniz",
     "read_more": "devamını oku"
   },
-
   "userProfileForm": {
     "personal_data": "Kişisel veriler",
     "first_name": "İsim",
@@ -141,7 +132,6 @@
     "save_changes": "Değişiklikleri Kaydet",
     "update_success": "Kullanıcı verileri başarıyla güncellendi."
   },
-
   "map": {
     "where_to_travel": "Nereye seyahat etmek istersiniz?",
     "how_search_works": "..arama nasıl çalışır",
@@ -152,7 +142,6 @@
     "step3": "Bu konumla ilgili değerlendirmeleri görmek veya bir değerlendirme yazmak için haritadaki simgeye tıklayın.",
     "close": "Kapat"
   },
-
   "categorySelector": {
     "select_category": "Kategori Seç"
   },
@@ -166,16 +155,14 @@
     "category9": "Kafeler",
     "category10": "Turistik Yerler"
   },
-
   "citySelector": {
     "select_city": "Bir şehir seçin:"
   },
-
   "placeMarker": {
     "ratings": "Değerlendirmeler",
-    "create_rating": "Değerlendirme Gönder"
+    "create_rating": "Değerlendirme Gönder",
+    "unnamed_place": "İsimsiz yer"
   },
-
   "ratingspage": {
     "no_reviews": "Bu konum için henüz bir değerlendirme yok. Bir değerlendirme yazın ve deneyimlerinizi paylaşın!",
     "add_review": "Değerlendirme ekle",
@@ -186,7 +173,6 @@
     "on": "tarihinde",
     "read_more": "Devamını oku"
   },
-
   "detailReview": {
     "review_of": "Değerlendirme:",
     "on": "tarihinde",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Değerlendirmeler yüklenirken hata oluştu.",
     "back": "Geri"
   },
-
   "reviewEdit": {
     "had": "değerlendirdi",
     "on": "tarihinde",
@@ -216,7 +201,6 @@
     "cancel": "İptal",
     "comment_placeholder": "Açıklamayı buraya girin"
   },
-
   "dataprotection": {
     "title": "Veri Koruma",
     "section1": {
@@ -245,7 +229,10 @@
         "Sistem güvenliği ve istikrarının değerlendirilmesi ve",
         "daha fazla idari amaçlar için."
       ],
-      "content3": "Veri işleme için yasal dayanak, DSGVO'nun 6. Maddesi, 1. Fıkrası, 1. Cümlesi, f bendidir. Meşru menfaatimiz, yukarıda listelenen veri toplama amaçlarından kaynaklanmaktadır. Hiçbir durumda toplanan verileri, kişiliğiniz hakkında sonuç çıkarmak amacıyla kullanmayız."
+      "content3": "Veri işleme için yasal dayanak, DSGVO'nun 6. Maddesi, 1. Fıkrası, 1. Cümlesi, f bendidir. Meşru menfaatimiz, yukarıda listelenen veri toplama amaçlarından kaynaklanmaktadır. Hiçbir durumda toplanan verileri, kişiliğiniz hakkında sonuç çıkarmak amacıyla kullanmayız.",
+      "subtitle2": "b) İletişim",
+      "content4": "Bizimle e-posta veya bir iletişim formu aracılığıyla iletişime geçtiğinizde, verdiğiniz iletişim bilgileri dahil olmak üzere bilgileriniz, talebinizin işlenmesi ve olası ek sorular için tarafımızca saklanır. Bu verileri onayınız olmadan paylaşmayız.",
+      "content5": "İletişim formuna girilen verilerin işlenmesi bu nedenle yalnızca onayınıza dayanır (DSGVO md. 6 f. 1 bent a). Bu onayı istediğiniz zaman geri alabilirsiniz. Bunun için bize e-posta ile gönderilecek resmi olmayan bir bildirim yeterlidir. Geri alma işleminden önce gerçekleştirilen veri işleme faaliyetlerinin hukuka uygunluğu bundan etkilenmez."
     },
     "section4": {
       "title": "4. Veri aktarımı",
@@ -284,17 +271,9 @@
     "email_placeholder": "E-posta adresi",
     "password_placeholder": "Şifre",
     "login_button": "Giriş Yap",
-    "forgot_password": "Şifrenizi mi unuttunuz?",
     "no_account": "Henüz bir hesabınız yok mu?",
-    "all_fields_required": "Tüm alanların doldurulması zorunludur.",
-    "password_reset_email_sent": "Şifre sıfırlama e-postası gönderildi. Lütfen gelen kutunuzu kontrol edin.",
-    "reset_password_button": "Şifreyi Sıfırla"
+    "all_fields_required": "Tüm alanların doldurulması zorunludur."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Şifre sıfırlama e-postası gönderilirken hata oluştu. Lütfen tekrar deneyin."
-  },
-
   "registerpage": {
     "password_match_toast": "Şifreler uyuşmuyor!",
     "password_length_toast": "Şifre en az 8 karakter uzunluğunda olmalıdır!",
@@ -311,6 +290,32 @@
     "submitButton": "Kaydol"
   },
   "FilterableSelect": {
-    "select": "Seç"
+    "select": "Seç",
+    "search": "Ara...",
+    "no_items": "Sonuç bulunamadı"
+  },
+  "auth": {
+    "welcome_back": "Tekrar hoş geldin!",
+    "invalid_credentials": "E-posta adresi veya şifre hatalı.",
+    "account_blocked": "Bu hesap engellenmiş.",
+    "generic_error": "Hay aksi, bu olmamalıydı. Lütfen daha sonra tekrar deneyin.",
+    "goodbye": "Hoşça kal!",
+    "email_exists": "Bu e-posta adresiyle zaten bir hesap var."
+  },
+  "profilePhoto": {
+    "alt": "Profil fotoğrafı",
+    "delete": "Profil fotoğrafını sil",
+    "deleting": "Siliniyor...",
+    "upload": "Profil fotoğrafı yükle"
+  },
+  "rssfeed": {
+    "title": "Ortağımız barrierefrei-aufgerollt.at'in blog yazıları",
+    "error": "RSS beslemesi yüklenirken hata oluştu",
+    "read_more": "..devamını oku"
+  },
+  "notFound": {
+    "title": "Üzgünüz!",
+    "message": "Hata 404: Sayfa bulunamadı",
+    "back": "Geri"
   }
 }

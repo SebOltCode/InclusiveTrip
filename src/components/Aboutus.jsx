@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 const Aboutus = () => {
@@ -27,7 +26,7 @@ const Aboutus = () => {
       <div className="flex flex-wrap justify-center space-x-6">
         <div className="text-center mb-6">
           <img
-            src="/images//Photosebastian.jpeg"
+            src="/images/Photosebastian.jpeg"
             alt="Sebastian"
             className="w-32 h-32 rounded-full mb-4 object-cover"
           />
@@ -35,7 +34,7 @@ const Aboutus = () => {
         </div>
         <div className="text-center mb-6">
           <img
-            src="/images//Photoadnan.jpeg"
+            src="/images/Photoadnan.jpeg"
             alt="Adnan"
             className="w-32 h-32 rounded-full mb-4 object-cover"
           />
@@ -43,7 +42,7 @@ const Aboutus = () => {
         </div>
         <div className="text-center mb-6">
           <img
-            src="/images//Photoahmed.jpeg"
+            src="/images/Photoahmed.jpeg"
             alt="Ahmed"
             className="w-32 h-32 rounded-full mb-4 object-cover"
           />
@@ -51,7 +50,7 @@ const Aboutus = () => {
         </div>
         <div className="text-center mb-6">
           <img
-            src="/images//Photojulia.jpeg"
+            src="/images/Photojulia.jpeg"
             alt="Julia"
             className="w-32 h-32 rounded-full mb-4 object-cover"
           />

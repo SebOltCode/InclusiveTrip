@@ -6,9 +6,7 @@
   "user": "Usuario",
   "logout": "Cerrar sesión",
   "login": "Iniciar sesión",
-
   "why_we_developed": "Por qué desarrollamos esta aplicación",
-
   "ratings": "Calificaciones",
   "users": "Usuarios",
   "barrier_filter": "Filtro de barreras",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Ya sea que uses una silla de ruedas, seas sordo, tengas una discapacidad visual, viajes con un cochecito o tengas una mascota, InclusiveTRIP es la herramienta para garantizar que tu entorno sea accesible e inclusivo. Tus calificaciones y experiencias ayudan a construir una comunidad que prioriza la accesibilidad. ¡Descubre, califica y comparte tus experiencias con InclusiveTRIP!",
   "introduce_blog_entries": "Encuentra aquí información sobre temas actuales relacionados con la inclusión.",
   "current_topics": "Temas actuales",
-
   "about_us": "Sobre nosotros",
   "about_us_1": "¡Bienvenido a nuestro sitio web! Somos un pequeño pero apasionado grupo de desarrolladores – Sebastian, Adnan, Ahmed y Julia – que se unieron durante el bootcamp de la WBS Coding School para desarrollar una aplicación que realmente marque la diferencia.",
   "our_vision": "Nuestra Visión",
@@ -40,7 +37,6 @@
   "about_us_7": "Nosotros, el equipo detrás de la aplicación, estamos orgullosos de lo que hemos logrado en un corto tiempo. Cada uno de nosotros tiene su propia motivación e historia que lo llevó a este proyecto:",
   "about_us_8": "Juntos, no solo hemos desarrollado una aplicación, sino que también hemos dado vida a una visión que queremos compartir con el mundo. Esperamos que nuestra aplicación se convierta en una herramienta que derribe barreras y construya puentes, para una sociedad más inclusiva.",
   "about_us_9": "Gracias por ser parte de este viaje y por ayudarnos a hacer el mundo un poco mejor.",
-
   "impressum": {
     "title": "Aviso Legal",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "No estamos dispuestos ni obligados a participar en procedimientos de resolución de disputas ante una junta de arbitraje de consumidores."
     }
   },
-
   "footer": {
     "copyright": "Derechos de autor © {{year}} - Todos los derechos reservados",
     "impressum": "Aviso Legal",
     "datenschutz": "Política de Privacidad",
     "ueberuns": "Sobre nosotros"
   },
-
   "createRating": {
     "title": "Escribir una reseña",
     "subtitle": "Califica {{place}} con tus experiencias.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "¡Gracias, tu reseña ha sido agregada!"
   },
-
   "barriers": {
     "barrier1": "Usuarios de silla de ruedas",
     "barrier2": "Niños",
@@ -120,11 +113,10 @@
     "barrier8": "Personas con claustrofobia",
     "barrier9": "Propietarios de mascotas"
   },
-
   "common": {
-    "bewerten": "calificar"
+    "bewerten": "calificar",
+    "loading": "Cargando..."
   },
-
   "usersection": {
     "profile_of": "Perfil de",
     "change_user_data": "Cambia tus datos de usuario y edita tus reseñas.",
@@ -132,7 +124,6 @@
     "you_rated": "Calificaste",
     "read_more": "leer más"
   },
-
   "userProfileForm": {
     "personal_data": "Datos personales",
     "first_name": "Nombre",
@@ -141,7 +132,6 @@
     "save_changes": "Guardar cambios",
     "update_success": "Datos de usuario actualizados exitosamente."
   },
-
   "map": {
     "where_to_travel": "¿A dónde quieres viajar?",
     "how_search_works": "..cómo funciona la búsqueda",
@@ -152,7 +142,6 @@
     "step3": "Haz clic en el icono en el mapa para ver reseñas de este lugar o para escribir una reseña.",
     "close": "Cerrar"
   },
-
   "categorySelector": {
     "select_category": "Seleccionar Categoría"
   },
@@ -166,16 +155,14 @@
     "category9": "Cafés",
     "category10": "Atracciones"
   },
-
   "citySelector": {
     "select_city": "Selecciona una ciudad:"
   },
-
   "placeMarker": {
     "ratings": "Reseñas",
-    "create_rating": "Enviar reseña"
+    "create_rating": "Enviar reseña",
+    "unnamed_place": "Lugar sin nombre"
   },
-
   "ratingspage": {
     "no_reviews": "Aún no hay reseñas para este lugar. ¡Escribe una reseña y comparte tus experiencias!",
     "add_review": "Agregar reseña",
@@ -186,7 +173,6 @@
     "on": "en",
     "read_more": "Leer más"
   },
-
   "detailReview": {
     "review_of": "Reseña de",
     "on": "en",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Error al cargar reseñas.",
     "back": "Atrás"
   },
-
   "reviewEdit": {
     "had": "tenía",
     "on": "en",
@@ -216,7 +201,6 @@
     "cancel": "Cancelar",
     "comment_placeholder": "Ingresa la descripción aquí"
   },
-
   "dataprotection": {
     "title": "Protección de datos",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Esta política de privacidad es válida actualmente y tiene el estado [fecha]. Debido al desarrollo de nuestro sitio web o debido a cambios en los requisitos legales o reglamentarios, puede ser necesario cambiar esta política de privacidad."
     }
   },
-
   "loginpage": {
     "title": "Iniciar sesión",
     "subtitle": "Por favor, inicie sesión para continuar.",
@@ -288,17 +271,9 @@
     "email_placeholder": "Correo electrónico",
     "password_placeholder": "Contraseña",
     "login_button": "Iniciar sesión",
-    "forgot_password": "¿Olvidaste tu contraseña?",
     "no_account": "¿Aún no tienes cuenta?",
-    "all_fields_required": "Todos los campos son obligatorios.",
-    "password_reset_email_sent": "Se ha enviado un correo electrónico para restablecer la contraseña. Por favor, revise su bandeja de entrada.",
-    "reset_password_button": "Restablecer contraseña"
+    "all_fields_required": "Todos los campos son obligatorios."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Error al enviar el correo de restablecimiento de contraseña. Por favor intenta de nuevo."
-  },
-
   "registerpage": {
     "password_match_toast": "¡Las contraseñas no coinciden!",
     "password_length_toast": "¡La contraseña debe tener al menos 8 caracteres!",
@@ -315,6 +290,32 @@
     "submitButton": "Registrarse"
   },
   "FilterableSelect": {
-    "select": "Seleccionar"
+    "select": "Seleccionar",
+    "search": "Buscar...",
+    "no_items": "No se encontraron elementos"
+  },
+  "auth": {
+    "welcome_back": "¡Bienvenido de nuevo!",
+    "invalid_credentials": "La dirección de correo electrónico o la contraseña son incorrectas.",
+    "account_blocked": "Esta cuenta está bloqueada.",
+    "generic_error": "Vaya, esto no debería haber pasado. Por favor, inténtalo de nuevo más tarde.",
+    "goodbye": "¡Hasta pronto!",
+    "email_exists": "Ya existe una cuenta con esta dirección de correo electrónico."
+  },
+  "profilePhoto": {
+    "alt": "Foto de perfil",
+    "delete": "Eliminar foto de perfil",
+    "deleting": "Eliminando...",
+    "upload": "Subir foto de perfil"
+  },
+  "rssfeed": {
+    "title": "Entradas del blog de nuestro socio barrierefrei-aufgerollt.at",
+    "error": "Error al cargar el feed RSS",
+    "read_more": "..leer más"
+  },
+  "notFound": {
+    "title": "¡Lo sentimos!",
+    "message": "Error 404: Página no encontrada",
+    "back": "Volver"
   }
 }

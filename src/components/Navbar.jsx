@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthContext";
 import { UserIcon } from "@heroicons/react/24/solid";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,12 @@ export default function Navbar() {
   const { userInfo, logout } = useContext(AuthContext);
   const { t, i18n } = useTranslation();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate("/");
+  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -47,10 +53,10 @@ export default function Navbar() {
     <header className="h-auto bg-white z-10">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between h-full px-4 lg:px-8">
         <div className="flex items-center lg:order-1">
-          <NavLink to="/" href="index.html">
+          <NavLink to="/">
             <img
               className="lg:block w-3/5 sm:w-3/5 h-auto -top-4 sm:-top-8"
-              src="./images/Logo.png"
+              src="/images/Logo.png"
               alt="Logo"
             />
           </NavLink>
@@ -74,12 +80,13 @@ export default function Navbar() {
               <NavLink to="/user" className="text-black underline mt-2 lg:mt-0">
                 {t("user")}
               </NavLink>
-              <NavLink
-                onClick={logout}
+              <button
+                type="button"
+                onClick={handleLogout}
                 className="text-black underline mt-2 lg:mt-0"
               >
                 {t("logout")}
-              </NavLink>
+              </button>
             </>
           )}
           {!userInfo && (

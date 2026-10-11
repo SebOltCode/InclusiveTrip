@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import RssFeed from "./rssfeed";
-import axios from "axios";
 import Countratings from "./Countratings";
 import Countusers from "./Countusers";
 import CitySelector from "./MapComponents/CitySelector";
@@ -11,9 +9,7 @@ import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
-  const [posts, setPosts] = useState([]);
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
@@ -33,7 +29,7 @@ const Home = () => {
               {t("welcome")}
             </h1>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-left ml-8 mt-[-24]">
+          <div className="flex flex-col sm:flex-row items-center justify-left ml-8">
             <div className="hidden lg:flex flex-col items-center text-center p-4 w-1/4 sm:w-1/6 h-auto font-poppins font-medium text-[20px] sm:text-[32px] leading-[30px] sm:leading-[48px] text-[#1E1E1E]">
               <div className="text-[20px] sm:text-[32px] leading-[30px] sm:leading-[48px]">
                 <Countratings />
@@ -84,8 +80,8 @@ const Home = () => {
           <div className="flex flex-col items-center p-4 gap-3 w-full md:w-[400px] h-auto bg-white rounded-lg shadow-md">
             <img
               className="w-[66px] h-[66px]"
-              src="../images/Icon_Barrierefilter.png"
-              alt="Barrierefilter"
+              src="/images/Icon_Barrierefilter.png"
+              alt=""
             />
             <p className="font-poppins font-bold text-[18px] text-[#000000]">
               {t("barrier_filter")}
@@ -98,8 +94,8 @@ const Home = () => {
           <div className="flex flex-col items-center p-4 gap-3 w-full md:w-[400px] h-auto bg-white rounded-lg shadow-md">
             <img
               className="w-[66px] h-[66px]"
-              src="../images/Icon_Umkreissuche.png"
-              alt="Umkreissuche"
+              src="/images/Icon_Umkreissuche.png"
+              alt=""
             />
             <p className="font-poppins font-bold text-[18px] text-[#000000]">
               {t("radius_search")}
@@ -112,8 +108,8 @@ const Home = () => {
           <div className="flex flex-col items-center p-4 gap-3 w-full md:w-[400px] h-auto bg-white rounded-lg shadow-md">
             <img
               className="w-[66px] h-[66px]"
-              src="../images/Icon_Locationfilter.png"
-              alt="Locationfilter"
+              src="/images/Icon_Locationfilter.png"
+              alt=""
             />
             <p className="font-poppins font-bold text-[18px] text-[#000000]">
               {t("location_filter")}

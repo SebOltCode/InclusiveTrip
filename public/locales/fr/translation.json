@@ -6,9 +6,7 @@
   "user": "Utilisateur",
   "logout": "Se déconnecter",
   "login": "Se connecter",
-
   "why_we_developed": "Pourquoi nous avons développé cette application",
-
   "ratings": "Évaluations",
   "users": "Utilisateurs",
   "barrier_filter": "Filtre de barrières",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Que vous soyez en fauteuil roulant, malentendant, malvoyant, voyageant avec une poussette ou avec un animal de compagnie, InclusiveTRIP est l'outil qui garantit que votre environnement est accessible et inclusif. Vos évaluations et expériences contribuent à construire une communauté qui priorise l'accessibilité. Découvrez, évaluez et partagez vos expériences avec InclusiveTRIP !",
   "introduce_blog_entries": "Trouvez ici des informations sur les sujets actuels liés à l'inclusion.",
   "current_topics": "Sujets actuels",
-
   "about_us": "À propos de nous",
   "about_us_1": "Bienvenue sur notre site ! Nous sommes un petit groupe passionné de développeurs – Sebastian, Adnan, Ahmed et Julia – qui se sont réunis lors du bootcamp de la WBS Coding School pour développer une application qui fait vraiment la différence.",
   "our_vision": "Notre Vision",
@@ -40,7 +37,6 @@
   "about_us_7": "Nous, l'équipe derrière l'application, sommes fiers de ce que nous avons accompli en peu de temps. Chacun de nous a sa propre motivation et histoire qui l'ont conduit à ce projet :",
   "about_us_8": "Ensemble, nous avons non seulement développé une application, mais aussi donné vie à une vision que nous souhaitons partager avec le monde. Nous espérons que notre application deviendra un outil qui abat les barrières et construit des ponts – pour une société plus inclusive.",
   "about_us_9": "Merci de faire partie de ce voyage et de nous aider à rendre le monde un peu meilleur.",
-
   "impressum": {
     "title": "Mentions légales",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Nous ne sommes ni disposés ni obligés de participer à des procédures de règlement des litiges devant une commission d'arbitrage des consommateurs."
     }
   },
-
   "footer": {
     "copyright": "Droits d'auteur © {{year}} - Tous droits réservés",
     "impressum": "Mentions légales",
     "datenschutz": "Politique de confidentialité",
     "ueberuns": "À propos de nous"
   },
-
   "createRating": {
     "title": "Rédiger un avis",
     "subtitle": "Évaluez {{place}} avec vos expériences.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Merci, votre évaluation a été ajoutée !"
   },
-
   "barriers": {
     "barrier1": "Utilisateurs de fauteuil roulant",
     "barrier2": "Enfants",
@@ -120,11 +113,10 @@
     "barrier8": "Personnes souffrant de claustrophobie",
     "barrier9": "Propriétaires d'animaux"
   },
-
   "common": {
-    "bewerten": "évaluer"
+    "bewerten": "évaluer",
+    "loading": "Chargement..."
   },
-
   "usersection": {
     "profile_of": "Profil de",
     "change_user_data": "Modifiez vos données d'utilisateur et éditez vos évaluations.",
@@ -132,7 +124,6 @@
     "you_rated": "Vous avez évalué",
     "read_more": "en savoir plus"
   },
-
   "userProfileForm": {
     "personal_data": "Données personnelles",
     "first_name": "Prénom",
@@ -141,7 +132,6 @@
     "save_changes": "Enregistrer les modifications",
     "update_success": "Données utilisateur mises à jour avec succès."
   },
-
   "map": {
     "where_to_travel": "Où souhaitez-vous voyager ?",
     "how_search_works": "..comment fonctionne la recherche",
@@ -152,7 +142,6 @@
     "step3": "Cliquez sur l'icône sur la carte pour voir les avis pour cet endroit ou pour écrire un avis.",
     "close": "Fermer"
   },
-
   "categorySelector": {
     "select_category": "Choisir la catégorie"
   },
@@ -166,16 +155,14 @@
     "category9": "Cafés",
     "category10": "Attractions"
   },
-
   "citySelector": {
     "select_city": "Sélectionnez une ville :"
   },
-
   "placeMarker": {
     "ratings": "Évaluations",
-    "create_rating": "Envoyer l'évaluation"
+    "create_rating": "Envoyer l'évaluation",
+    "unnamed_place": "Lieu sans nom"
   },
-
   "ratingspage": {
     "no_reviews": "Il n'y a pas encore d'évaluations pour cet endroit. Rédigez un avis et partagez vos expériences !",
     "add_review": "Ajouter une évaluation",
@@ -186,7 +173,6 @@
     "on": "le",
     "read_more": "En savoir plus"
   },
-
   "detailReview": {
     "review_of": "Évaluation de",
     "on": "le",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Erreur lors du chargement des évaluations.",
     "back": "Retour"
   },
-
   "reviewEdit": {
     "had": "avait",
     "on": "le",
@@ -216,7 +201,6 @@
     "cancel": "Annuler",
     "comment_placeholder": "Entrez la description ici"
   },
-
   "dataprotection": {
     "title": "Protection des données",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Cette politique de confidentialité est actuellement valable et a le statut [date]. En raison du développement de notre site web ou en raison de changements dans les exigences légales ou réglementaires, il peut être nécessaire de modifier cette politique de confidentialité."
     }
   },
-
   "loginpage": {
     "title": "Connexion",
     "subtitle": "Veuillez vous connecter pour continuer.",
@@ -288,17 +271,9 @@
     "email_placeholder": "Adresse e-mail",
     "password_placeholder": "Mot de passe",
     "login_button": "Se connecter",
-    "forgot_password": "Mot de passe oublié ?",
     "no_account": "Pas encore de compte ?",
-    "all_fields_required": "Tous les champs sont obligatoires.",
-    "password_reset_email_sent": "Un e-mail de réinitialisation de mot de passe a été envoyé. Veuillez vérifier votre boîte de réception.",
-    "reset_password_button": "Réinitialiser le mot de passe"
+    "all_fields_required": "Tous les champs sont obligatoires."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Erreur lors de l'envoi de l'e-mail de réinitialisation du mot de passe. Veuillez réessayer."
-  },
-
   "registerpage": {
     "password_match_toast": "Les mots de passe ne correspondent pas !",
     "password_length_toast": "Le mot de passe doit contenir au moins 8 caractères !",
@@ -315,6 +290,32 @@
     "submitButton": "S'inscrire"
   },
   "FilterableSelect": {
-    "select": "Sélectionner"
+    "select": "Sélectionner",
+    "search": "Rechercher...",
+    "no_items": "Aucun élément trouvé"
+  },
+  "auth": {
+    "welcome_back": "Bon retour !",
+    "invalid_credentials": "Adresse e-mail ou mot de passe incorrect.",
+    "account_blocked": "Ce compte est bloqué.",
+    "generic_error": "Oups, cela n'aurait pas dû arriver. Veuillez réessayer plus tard.",
+    "goodbye": "Au revoir !",
+    "email_exists": "Un compte avec cette adresse e-mail existe déjà."
+  },
+  "profilePhoto": {
+    "alt": "Photo de profil",
+    "delete": "Supprimer la photo de profil",
+    "deleting": "Suppression...",
+    "upload": "Télécharger une photo de profil"
+  },
+  "rssfeed": {
+    "title": "Articles de blog de notre partenaire barrierefrei-aufgerollt.at",
+    "error": "Erreur lors du chargement du flux RSS",
+    "read_more": "..lire la suite"
+  },
+  "notFound": {
+    "title": "Nous sommes désolés !",
+    "message": "Erreur 404 : page introuvable",
+    "back": "Retour"
   }
 }

@@ -6,9 +6,7 @@
   "user": "用户",
   "logout": "登出",
   "login": "登录",
-
   "why_we_developed": "我们为什么开发这个应用",
-
   "ratings": "评分",
   "users": "用户",
   "barrier_filter": "障碍过滤器",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "无论您是使用轮椅、听力或视力受损、带婴儿车旅行还是携带宠物 — InclusiveTRIP 是确保您周围环境无障碍和包容的工具。您的评价和经验帮助建立一个优先考虑无障碍的社区。使用 InclusiveTRIP 发现、评价并分享您的经验！",
   "introduce_blog_entries": "在此了解有关包容性相关的最新话题。",
   "current_topics": "当前话题",
-
   "about_us": "关于我们",
   "about_us_1": "欢迎来到我们的网站！我们是一小群充满热情的开发人员——Sebastian、Adnan、Ahmed 和 Julia——在 WBS 编码学校的训练营中相遇，共同开发一个真正能带来改变的应用。",
   "our_vision": "我们的愿景",
@@ -40,7 +37,6 @@
   "about_us_7": "作为这个应用背后的团队，我们为在短时间内取得的成就感到自豪。我们每个人都有自己的动机和故事，带领我们走向这个项目：",
   "about_us_8": "我们不仅开发了一个应用，还将一个我们想与世界分享的愿景变为现实。我们希望我们的应用成为打破障碍和建立桥梁的工具——为一个更包容的社会。",
   "about_us_9": "感谢您成为这段旅程的一部分，并帮助我们让世界变得更好。",
-
   "impressum": {
     "title": "出版资料",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "我们不愿也无义务参与消费者仲裁委员会的纠纷解决程序。"
     }
   },
-
   "footer": {
     "copyright": "版权 © {{year}} - 保留所有权利",
     "impressum": "出版资料",
     "datenschutz": "隐私政策",
     "ueberuns": "关于我们"
   },
-
   "createRating": {
     "title": "撰写评价",
     "subtitle": "用您的体验对 {{place}} 进行评价。",
@@ -108,7 +102,6 @@
     },
     "successMessage": "感谢您的评价，已成功添加！"
   },
-
   "barriers": {
     "barrier1": "轮椅使用者",
     "barrier2": "儿童",
@@ -120,11 +113,10 @@
     "barrier8": "幽闭恐惧症患者",
     "barrier9": "宠物主人"
   },
-
   "common": {
-    "bewerten": "评价"
+    "bewerten": "评价",
+    "loading": "加载中..."
   },
-
   "usersection": {
     "profile_of": "的个人资料",
     "change_user_data": "更改您的用户数据并编辑您的评论。",
@@ -132,7 +124,6 @@
     "you_rated": "您评价了",
     "read_more": "阅读更多"
   },
-
   "userProfileForm": {
     "personal_data": "个人数据",
     "first_name": "名字",
@@ -141,7 +132,6 @@
     "save_changes": "保存更改",
     "update_success": "用户数据已成功更新。"
   },
-
   "map": {
     "where_to_travel": "您想去哪里旅行？",
     "how_search_works": "..搜索是如何工作的",
@@ -152,7 +142,6 @@
     "step3": "点击地图上的图标查看该地点的评论或撰写评论。",
     "close": "关闭"
   },
-
   "categorySelector": {
     "select_category": "选择类别"
   },
@@ -166,16 +155,14 @@
     "category9": "咖啡馆",
     "category10": "景点"
   },
-
   "citySelector": {
     "select_city": "选择城市："
   },
-
   "placeMarker": {
     "ratings": "评分",
-    "create_rating": "提交评论"
+    "create_rating": "提交评论",
+    "unnamed_place": "未命名地点"
   },
-
   "ratingspage": {
     "no_reviews": "该地点还没有评论。撰写评论并分享您的体验！",
     "add_review": "添加评论",
@@ -186,7 +173,6 @@
     "on": "于",
     "read_more": "阅读更多"
   },
-
   "detailReview": {
     "review_of": "的评论",
     "on": "于",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "加载评论时出错。",
     "back": "返回"
   },
-
   "reviewEdit": {
     "had": "有",
     "on": "于",
@@ -216,7 +201,6 @@
     "cancel": "取消",
     "comment_placeholder": "在此输入描述"
   },
-
   "dataprotection": {
     "title": "数据保护",
     "section1": {
@@ -245,7 +229,10 @@
         "评估系统安全性和稳定性以及",
         "用于进一步的行政目的。"
       ],
-      "content3": "数据处理的法律依据是 DSGVO 第6条第1款第1句f项。我们的合法利益来源于上述数据收集的目的。我们绝不会使用收集的数据来得出关于您的结论。"
+      "content3": "数据处理的法律依据是 DSGVO 第6条第1款第1句f项。我们的合法利益来源于上述数据收集的目的。我们绝不会使用收集的数据来得出关于您的结论。",
+      "subtitle2": "b) 联系我们",
+      "content4": "如果您通过电子邮件或联系表单与我们联系，我们将存储您提供的信息（包括您提供的联系方式），以便处理您的请求以及应对后续问题。未经您的同意，我们不会转交这些数据。",
+      "content5": "因此，对联系表单中输入数据的处理完全基于您的同意（DSGVO 第 6 条第 1 款第 a 项）。您可以随时撤回此同意，只需通过电子邮件向我们发送非正式通知即可。撤回前已进行的数据处理的合法性不受撤回影响。"
     },
     "section4": {
       "title": "4. 数据传输",
@@ -277,7 +264,6 @@
       "content": "本隐私政策目前有效，并具有[日期]的状态。由于我们网站的进一步发展或因法律或监管要求的变化，可能需要更改此隐私政策。"
     }
   },
-
   "loginpage": {
     "title": "登录",
     "subtitle": "请登录以继续。",
@@ -285,17 +271,9 @@
     "email_placeholder": "电子邮件地址",
     "password_placeholder": "密码",
     "login_button": "登录",
-    "forgot_password": "忘记密码？",
     "no_account": "还没有账户？",
-    "all_fields_required": "所有字段均为必填。",
-    "password_reset_email_sent": "已发送密码重置电子邮件。请检查您的收件箱。",
-    "reset_password_button": "重置密码"
+    "all_fields_required": "所有字段均为必填。"
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "发送密码重置电子邮件时出错。请再试一次。"
-  },
-
   "registerpage": {
     "password_match_toast": "密码不匹配！",
     "password_length_toast": "密码长度至少为8个字符！",
@@ -312,6 +290,32 @@
     "submitButton": "注册"
   },
   "FilterableSelect": {
-    "select": "选择"
+    "select": "选择",
+    "search": "搜索...",
+    "no_items": "未找到条目"
+  },
+  "auth": {
+    "welcome_back": "欢迎回来！",
+    "invalid_credentials": "电子邮件地址或密码错误。",
+    "account_blocked": "此账户已被封禁。",
+    "generic_error": "哎呀，出错了。请稍后再试。",
+    "goodbye": "再见！",
+    "email_exists": "该电子邮件地址已注册账户。"
+  },
+  "profilePhoto": {
+    "alt": "头像",
+    "delete": "删除头像",
+    "deleting": "正在删除...",
+    "upload": "上传头像"
+  },
+  "rssfeed": {
+    "title": "我们的合作伙伴 barrierefrei-aufgerollt.at 的博客文章",
+    "error": "加载 RSS 订阅源时出错",
+    "read_more": "..阅读更多"
+  },
+  "notFound": {
+    "title": "很抱歉！",
+    "message": "错误 404：页面未找到",
+    "back": "返回"
   }
 }

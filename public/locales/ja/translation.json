@@ -6,9 +6,7 @@
   "user": "ユーザー",
   "logout": "ログアウト",
   "login": "ログイン",
-
   "why_we_developed": "私たちがこのアプリを開発した理由",
-
   "ratings": "評価",
   "users": "ユーザー",
   "barrier_filter": "障害フィルター",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "車椅子を使用している方、聴覚障害のある方、視覚障害のある方、ベビーカーでの移動、ペットを連れている方など、InclusiveTRIPは周囲がアクセス可能で包括的であることを確認するためのツールです。あなたの評価と経験が、アクセス可能性を優先するコミュニティを構築するのに役立ちます。InclusiveTRIPで体験を発見し、評価し、共有してください！",
   "introduce_blog_entries": "インクルージョンに関する最新の話題についての情報はこちらからご覧ください。",
   "current_topics": "最新の話題",
-
   "about_us": "私たちについて",
   "about_us_1": "私たちのウェブサイトへようこそ！私たちは、WBS Coding Schoolのブートキャンプ中に集まった、熱意ある開発者の小さなグループです – Sebastian、Adnan、Ahmed、Julia –。私たちは、本当に違いを生むアプリを開発するために集まりました。",
   "our_vision": "私たちのビジョン",
@@ -40,7 +37,6 @@
   "about_us_7": "アプリの背後にいるチームである私たちは、短期間で達成したことを誇りに思っています。私たちは皆、このプロジェクトに導いたそれぞれの動機と物語を持っています：",
   "about_us_8": "一緒に、私たちはアプリを開発するだけでなく、世界と共有したいビジョンも生み出しました。私たちのアプリが、障害を取り除き、橋を築くためのツールになることを望んでいます。",
   "about_us_9": "この旅の一部であること、そして私たちが世界を少しでも良くするのを助けてくれることに感謝します。",
-
   "impressum": {
     "title": "インプリント",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "私たちは、消費者仲裁委員会での紛争解決手続きに参加する意図も義務もありません。"
     }
   },
-
   "footer": {
     "copyright": "著作権 © {{year}} - All rights reserved",
     "impressum": "インプリント",
     "datenschutz": "プライバシーポリシー",
     "ueberuns": "私たちについて"
   },
-
   "createRating": {
     "title": "レビューを書く",
     "subtitle": "{{place}}をあなたの経験で評価してください。",
@@ -108,7 +102,6 @@
     },
     "successMessage": "ありがとうございます。レビューが追加されました！"
   },
-
   "barriers": {
     "barrier1": "車椅子ユーザー",
     "barrier2": "子供",
@@ -120,11 +113,10 @@
     "barrier8": "閉所恐怖症のある人",
     "barrier9": "ペットの飼い主"
   },
-
   "common": {
-    "bewerten": "評価する"
+    "bewerten": "評価する",
+    "loading": "読み込み中..."
   },
-
   "usersection": {
     "profile_of": "プロフィール",
     "change_user_data": "ユーザーデータを変更し、レビューを編集します。",
@@ -132,7 +124,6 @@
     "you_rated": "あなたが評価した",
     "read_more": "もっと読む"
   },
-
   "userProfileForm": {
     "personal_data": "個人情報",
     "first_name": "名",
@@ -141,7 +132,6 @@
     "save_changes": "変更を保存",
     "update_success": "ユーザーデータが正常に更新されました。"
   },
-
   "map": {
     "where_to_travel": "どこに旅行したいですか？",
     "how_search_works": "..検索の仕組み",
@@ -152,7 +142,6 @@
     "step3": "地図上のアイコンをクリックして、その場所のレビューを表示したり、レビューを書いたりします。",
     "close": "閉じる"
   },
-
   "categorySelector": {
     "select_category": "カテゴリを選択"
   },
@@ -166,16 +155,14 @@
     "category9": "カフェ",
     "category10": "観光名所"
   },
-
   "citySelector": {
     "select_city": "都市を選択してください："
   },
-
   "placeMarker": {
     "ratings": "評価",
-    "create_rating": "レビューを送信"
+    "create_rating": "レビューを送信",
+    "unnamed_place": "名前のない場所"
   },
-
   "ratingspage": {
     "no_reviews": "この場所にはまだレビューがありません。レビューを書いて経験を共有しましょう！",
     "add_review": "レビューを追加",
@@ -186,7 +173,6 @@
     "on": "に",
     "read_more": "さらに読む"
   },
-
   "detailReview": {
     "review_of": "のレビュー",
     "on": "に",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "レビューの読み込みエラー。",
     "back": "戻る"
   },
-
   "reviewEdit": {
     "had": "を持っている",
     "on": "に",
@@ -216,7 +201,6 @@
     "cancel": "キャンセル",
     "comment_placeholder": "ここに説明を入力してください"
   },
-
   "dataprotection": {
     "title": "データ保護",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "このプライバシーポリシーは現在有効であり、[日付]の状態を持っています。当ウェブサイトのさらなる発展または法的および規制の要件の変更により、このプライバシーポリシーを変更する必要が生じる可能性があります。"
     }
   },
-
   "loginpage": {
     "title": "ログイン",
     "subtitle": "続行するにはログインしてください。",
@@ -288,17 +271,9 @@
     "email_placeholder": "メールアドレス",
     "password_placeholder": "パスワード",
     "login_button": "ログイン",
-    "forgot_password": "パスワードをお忘れですか？",
     "no_account": "まだアカウントをお持ちでないですか？",
-    "all_fields_required": "すべてのフィールドは必須です。",
-    "password_reset_email_sent": "パスワードリセットのためのメールが送信されました。メールボックスを確認してください。",
-    "reset_password_button": "パスワードをリセット"
+    "all_fields_required": "すべてのフィールドは必須です。"
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "パスワードリセットメールの送信エラー。もう一度お試しください。"
-  },
-
   "registerpage": {
     "password_match_toast": "パスワードが一致しません！",
     "password_length_toast": "パスワードは8文字以上である必要があります！",
@@ -315,6 +290,32 @@
     "submitButton": "登録"
   },
   "FilterableSelect": {
-    "select": "選択"
+    "select": "選択",
+    "search": "検索...",
+    "no_items": "項目が見つかりません"
+  },
+  "auth": {
+    "welcome_back": "おかえりなさい！",
+    "invalid_credentials": "メールアドレスまたはパスワードが正しくありません。",
+    "account_blocked": "このアカウントはブロックされています。",
+    "generic_error": "問題が発生しました。しばらくしてからもう一度お試しください。",
+    "goodbye": "さようなら！",
+    "email_exists": "このメールアドレスのアカウントは既に存在します。"
+  },
+  "profilePhoto": {
+    "alt": "プロフィール写真",
+    "delete": "プロフィール写真を削除",
+    "deleting": "削除中...",
+    "upload": "プロフィール写真をアップロード"
+  },
+  "rssfeed": {
+    "title": "パートナー barrierefrei-aufgerollt.at のブログ記事",
+    "error": "RSSフィードの読み込み中にエラーが発生しました",
+    "read_more": "..続きを読む"
+  },
+  "notFound": {
+    "title": "申し訳ありません！",
+    "message": "エラー404：ページが見つかりません",
+    "back": "戻る"
   }
 }

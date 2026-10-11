@@ -6,9 +6,7 @@
   "user": "Użytkownik",
   "logout": "Wyloguj się",
   "login": "Zaloguj się",
-
   "why_we_developed": "Dlaczego stworzyliśmy tę aplikację",
-
   "ratings": "Oceny",
   "users": "Użytkownicy",
   "barrier_filter": "Filtr barier",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Niezależnie od tego, czy poruszasz się na wózku inwalidzkim, jesteś osobą niesłyszącą, niedowidzącą, podróżującą z wózkiem dziecięcym lub towarzyszy ci zwierzę – InclusiveTRIP to narzędzie, które zapewnia, że otoczenie jest dostępne i inkluzywne. Twoje oceny i doświadczenia pomagają budować społeczność, która stawia na pierwszym miejscu dostępność. Odkrywaj, oceniaj i dziel się swoimi doświadczeniami z InclusiveTRIP!",
   "introduce_blog_entries": "Znajdź tutaj informacje na temat aktualnych zagadnień związanych z inkluzją.",
   "current_topics": "Aktualne tematy",
-
   "about_us": "O nas",
   "about_us_1": "Witamy na naszej stronie internetowej! Jesteśmy małą, ale pełną pasji grupą programistów – Sebastianem, Adnanem, Ahmedem i Julią – którzy połączyli się podczas bootcampu WBS Coding School, aby stworzyć aplikację, która naprawdę coś zmienia.",
   "our_vision": "Nasza Wizja",
@@ -40,7 +37,6 @@
   "about_us_7": "My, zespół stojący za aplikacją, jesteśmy dumni z tego, co osiągnęliśmy w krótkim czasie. Każdy z nas ma własną motywację i historię, która doprowadziła nas do tego projektu:",
   "about_us_8": "Razem stworzyliśmy nie tylko aplikację, ale także ożywiliśmy wizję, którą chcemy podzielić się ze światem. Mamy nadzieję, że nasza aplikacja stanie się narzędziem, które przełamuje bariery i buduje mosty – dla bardziej inkluzywnego społeczeństwa.",
   "about_us_9": "Dziękujemy za udział w tej podróży i za pomoc w uczynieniu świata nieco lepszym.",
-
   "impressum": {
     "title": "Impressum",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Nie jesteśmy ani skłonni, ani zobowiązani do uczestniczenia w postępowaniach rozstrzygania sporów przed konsumencką komisją arbitrażową."
     }
   },
-
   "footer": {
     "copyright": "Prawa autorskie © {{year}} - Wszelkie prawa zastrzeżone",
     "impressum": "Impressum",
     "datenschutz": "Polityka prywatności",
     "ueberuns": "O nas"
   },
-
   "createRating": {
     "title": "Napisz recenzję",
     "subtitle": "Oceń {{place}} na podstawie swoich doświadczeń.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Dziękujemy, Twoja recenzja została dodana!"
   },
-
   "barriers": {
     "barrier1": "Użytkownicy wózków inwalidzkich",
     "barrier2": "Dzieci",
@@ -120,11 +113,10 @@
     "barrier8": "Osoby z klaustrofobią",
     "barrier9": "Właściciele zwierząt"
   },
-
   "common": {
-    "bewerten": "oceń"
+    "bewerten": "oceń",
+    "loading": "Ładowanie..."
   },
-
   "usersection": {
     "profile_of": "Profil użytkownika",
     "change_user_data": "Zmień swoje dane użytkownika i edytuj swoje recenzje.",
@@ -132,7 +124,6 @@
     "you_rated": "Oceniono",
     "read_more": "czytaj więcej"
   },
-
   "userProfileForm": {
     "personal_data": "Dane osobowe",
     "first_name": "Imię",
@@ -141,7 +132,6 @@
     "save_changes": "Zapisz zmiany",
     "update_success": "Dane użytkownika zostały pomyślnie zaktualizowane."
   },
-
   "map": {
     "where_to_travel": "Dokąd chcesz podróżować?",
     "how_search_works": "..jak działa wyszukiwanie",
@@ -152,7 +142,6 @@
     "step3": "Kliknij ikonę na mapie, aby zobaczyć recenzje dla tej lokalizacji lub napisać recenzję.",
     "close": "Zamknij"
   },
-
   "categorySelector": {
     "select_category": "Wybierz kategorię"
   },
@@ -166,16 +155,14 @@
     "category9": "Kawiarnie",
     "category10": "Atrakcje turystyczne"
   },
-
   "citySelector": {
     "select_city": "Wybierz miasto:"
   },
-
   "placeMarker": {
     "ratings": "Oceny",
-    "create_rating": "Dodaj recenzję"
+    "create_rating": "Dodaj recenzję",
+    "unnamed_place": "Miejsce bez nazwy"
   },
-
   "ratingspage": {
     "no_reviews": "Brak recenzji dla tej lokalizacji. Napisz recenzję i podziel się swoimi doświadczeniami!",
     "add_review": "Dodaj recenzję",
@@ -186,7 +173,6 @@
     "on": "na",
     "read_more": "Czytaj więcej"
   },
-
   "detailReview": {
     "review_of": "Recenzja użytkownika",
     "on": "na",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Błąd podczas ładowania recenzji.",
     "back": "Powrót"
   },
-
   "reviewEdit": {
     "had": "miał",
     "on": "na",
@@ -216,7 +201,6 @@
     "cancel": "Anuluj",
     "comment_placeholder": "Wpisz opis tutaj"
   },
-
   "dataprotection": {
     "title": "Ochrona danych",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Niniejsza polityka prywatności jest obecnie ważna i ma status [data]. Z uwagi na dalszy rozwój naszej strony internetowej lub ze względu na zmiany w wymaganiach prawnych lub regulacyjnych może być konieczne dokonanie zmian w tej polityce prywatności."
     }
   },
-
   "loginpage": {
     "title": "Zaloguj się",
     "subtitle": "Proszę zalogować się, aby kontynuować.",
@@ -288,17 +271,9 @@
     "email_placeholder": "Adres e-mail",
     "password_placeholder": "Hasło",
     "login_button": "Zaloguj się",
-    "forgot_password": "Zapomniałeś hasła?",
     "no_account": "Nie masz jeszcze konta?",
-    "all_fields_required": "Wszystkie pola są wymagane.",
-    "password_reset_email_sent": "Wysłano wiadomość e-mail z linkiem do resetowania hasła. Sprawdź swoją skrzynkę odbiorczą.",
-    "reset_password_button": "Resetuj hasło"
+    "all_fields_required": "Wszystkie pola są wymagane."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Błąd przy wysyłaniu e-maila z linkiem do resetowania hasła. Spróbuj ponownie."
-  },
-
   "registerpage": {
     "password_match_toast": "Hasła nie pasują!",
     "password_length_toast": "Hasło musi mieć co najmniej 8 znaków!",
@@ -315,6 +290,32 @@
     "submitButton": "Zarejestruj się"
   },
   "FilterableSelect": {
-    "select": "Wybierz"
+    "select": "Wybierz",
+    "search": "Szukaj...",
+    "no_items": "Nie znaleziono elementów"
+  },
+  "auth": {
+    "welcome_back": "Witaj ponownie!",
+    "invalid_credentials": "Nieprawidłowy adres e-mail lub hasło.",
+    "account_blocked": "To konto jest zablokowane.",
+    "generic_error": "Ups, to nie powinno się zdarzyć. Spróbuj ponownie później.",
+    "goodbye": "Do zobaczenia!",
+    "email_exists": "Konto z tym adresem e-mail już istnieje."
+  },
+  "profilePhoto": {
+    "alt": "Zdjęcie profilowe",
+    "delete": "Usuń zdjęcie profilowe",
+    "deleting": "Usuwanie...",
+    "upload": "Prześlij zdjęcie profilowe"
+  },
+  "rssfeed": {
+    "title": "Wpisy na blogu naszego partnera barrierefrei-aufgerollt.at",
+    "error": "Błąd podczas ładowania kanału RSS",
+    "read_more": "..czytaj więcej"
+  },
+  "notFound": {
+    "title": "Przykro nam!",
+    "message": "Błąd 404: nie znaleziono strony",
+    "back": "Wstecz"
   }
 }

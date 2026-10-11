@@ -1,50 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import fetchPlaceRatings from "../utils/fetchPlaceRatings";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Carousel from "../utils/Carousel";
 import { useTranslation } from "react-i18next";
+import fetchPlaceRatings from "../utils/fetchPlaceRatings";
+import { createRatingUrl, usePlaceFromUrl } from "../utils/placeUrl";
+import Carousel from "../utils/Carousel";
+import Loading from "./Loading";
+import StarRating from "./StarRating";
 
 const Ratings = () => {
-  const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
-
-  const location = useLocation();
-  const { place, category } = location.state || {};
-  const [placeRatings, setPlaceRatings] = useState([]);
-  const [carouselImages, setCarouselImages] = useState([]);
-  const [averageRatings, setAverageRatings] = useState({});
-  const [barrierNames, setBarrierNames] = useState({});
-  const [overallAverageRating, setOverallAverageRating] = useState(0);
-  const [totalReviewsCount, setTotalReviewsCount] = useState(0);
+  const { place, categoryId } = usePlaceFromUrl();
+  const [data, setData] = useState(null);
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   useEffect(() => {
-    fetchPlaceRatings(
-      API_URL,
-      place.id,
-      setPlaceRatings,
-      setCarouselImages,
-      setBarrierNames,
-      setAverageRatings,
-      setTotalReviewsCount,
-      setOverallAverageRating
-    );
-  }, [place.id]);
+    let cancelled = false;
+    setData(null);
+    fetchPlaceRatings(place.id)
+      .then((result) => {
+        if (!cancelled) setData(result);
+      })
+      .catch((error) => {
+        console.error("Error fetching place ratings:", error);
+        toast.error(t("detailReview.error_loading_reviews"));
+        if (!cancelled) setData({ reviews: [], images: [], averageRatings: {}, overallAverageRating: 0, ratingsCount: 0 });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [place.id, t]);
 
-  const handleMoreDetails = (rating) => {
-    navigate(`/detailreview`, {
-      state: { place: place, category: category, rating: rating },
-    });
-  };
+  if (!data) return <Loading />;
 
-  const handleCreateRate = (place) => {
-    navigate(`/create`, { state: { place: place, category: category } });
-  };
-
-  const handleBackClick = () => {
-    navigate(-1);
-  };
+  const placeName = place.name || data.reviews[0]?.placeName || t("placeMarker.unnamed_place");
+  // Category of an existing review is the fallback if the URL doesn't contain one
+  const effectiveCategoryId = categoryId || data.reviews[0]?.placeCategoryId;
 
   return (
     <div className="p-4 md:p-8 w-full overflow-x-hidden">
@@ -53,29 +44,16 @@ const Ratings = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className=" text-center font-poppins font-extrabold text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight text-black">
-                {place.name}
+                {placeName}
               </h1>
             </div>
           </div>
         </div>
       </div>
 
-      {totalReviewsCount > 0 ? (
+      {data.ratingsCount > 0 ? (
         <div className="flex items-center justify-center my-4">
-          <div className="flex space-x-1 rating">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <input
-                key={star}
-                type="radio"
-                name="overall-rating"
-                id={`overall-${star}`}
-                value={star}
-                className="mask mask-star"
-                checked={star <= overallAverageRating}
-                readOnly
-              />
-            ))}
-          </div>
+          <StarRating name="overall-rating" value={data.overallAverageRating} className="" />
         </div>
       ) : (
         <div className="text-center my-4">
@@ -83,78 +61,70 @@ const Ratings = () => {
         </div>
       )}
 
-      {carouselImages.length > 0 && (
+      {data.images.length > 0 && (
         <div className="my-8">
-          <Carousel images={carouselImages} />
+          <Carousel images={data.images} />
         </div>
       )}
 
       <div className="p-4">
         <div className="flex flex-col md:flex-row justify-between">
+          {effectiveCategoryId && (
+            <button
+              type="button"
+              className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
+              onClick={() => navigate(createRatingUrl({ ...place, name: placeName }, effectiveCategoryId))}
+            >
+              {t("ratingspage.add_review")}
+            </button>
+          )}
           <button
             type="button"
             className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
-            onClick={() => handleCreateRate(place)}
-          >
-            {t("ratingspage.add_review")}
-          </button>
-          <button
-            type="button"
-            className="mt-8 btn bg-yellow-400 border-black px-8 font-normal"
-            onClick={handleBackClick}
+            onClick={() => navigate(-1)}
           >
             {t("ratingspage.back")}
           </button>
         </div>
 
-        <h1 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
+        <h2 className="font-poppins font-bold text-[18px] text-center pt-12 mt-12 text-[#000000]">
           {t("ratingspage.reviews")}
-        </h1>
+        </h2>
 
         <div className="flex items-center justify-center">
           <div className="p-6">
             <ul className="list-none space-y-4">
-              {Object.keys(averageRatings).map((barrierId) => (
+              {Object.keys(data.averageRatings).map((barrierId) => (
                 <li key={barrierId} className="flex items-center space-x-4">
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
                   <span className="flex-1 text-lg">
                     {t("ratingspage.average_rating_for")}{" "}
                     {t(`barriers.barrier${barrierId}`)}
                   </span>
-                  <div className="flex space-x-1 rating ml-auto">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <input
-                        key={star}
-                        type="radio"
-                        name={`barrier-${barrierId}`}
-                        id={`barrier-${barrierId}-${star}`}
-                        value={star}
-                        className="mask mask-star"
-                        checked={star <= (averageRatings[barrierId] || 0)}
-                        readOnly
-                      />
-                    ))}
-                  </div>
+                  <StarRating
+                    name={`barrier-${barrierId}`}
+                    value={data.averageRatings[barrierId]}
+                  />
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {placeRatings.map((rating, index) => (
+        {data.reviews.map((rating) => (
           <div
-            key={index}
+            key={rating.id}
             className="container mx-auto w-full bg-[#C1DCDC] rounded-[24px] mt-16 pr-8"
           >
             <div className="w-full text-left p-8">
               <div className="flex flex-col md:flex-row items-center justify-between">
-                <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
-                  {t("ratingspage.review_by")} {rating.User.firstName}
-                </h1>
-                <h1 className="font-poppins font-bold md:text-[18px] text-[#000000]">
+                <h3 className="font-poppins font-bold md:text-[18px] text-[#000000]">
+                  {t("ratingspage.review_by")} {rating.User?.firstName}
+                </h3>
+                <p className="font-poppins font-bold md:text-[18px] text-[#000000]">
                   {t("ratingspage.on")}{" "}
                   {new Date(rating.createdAt).toLocaleDateString()}
-                </h1>
+                </p>
               </div>
               <p className="mt-4 font-poppins font-medium text-sm md:text-[rgba(30,30,30,0.5)] text-left">
                 {rating.comment}
@@ -162,7 +132,7 @@ const Ratings = () => {
 
               <button
                 className="btn bg-[#FFD700] border-black w-36 p-2 h-12 min-h-2 m-2 justify-center float-right"
-                onClick={() => handleMoreDetails(rating)}
+                onClick={() => navigate(`/detailreview/${rating.id}`)}
               >
                 {t("ratingspage.read_more")}
               </button>

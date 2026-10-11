@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const FilterableSelect = ({ items, selectedValue, onSelect }) => {
@@ -19,8 +19,11 @@ const FilterableSelect = ({ items, selectedValue, onSelect }) => {
   return (
     <div className="relative inline-block w-64">
       <button
+        type="button"
         className="btn w-full px-4 py-2 bg-yellow-400  border-black rounded-lg shadow-sm focus:outline-none focus:ring-2"
         onClick={() => setIsOpen(!isOpen)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
       >
         {selectedValue ? selectedValue.name : t("FilterableSelect.select")}
       </button>
@@ -30,23 +33,27 @@ const FilterableSelect = ({ items, selectedValue, onSelect }) => {
           <input
             type="text"
             className="w-full px-4 py-2 border-b border-gray-300 rounded-t-lg focus:outline-none"
-            placeholder="Search..."
+            placeholder={t("FilterableSelect.search")}
+            aria-label={t("FilterableSelect.search")}
             value={search}
+            autoFocus
             onChange={(e) => setSearch(e.target.value)}
           />
-          <ul className="max-h-60 overflow-y-auto">
+          <ul className="max-h-60 overflow-y-auto" role="listbox">
             {filteredItems.length > 0 ? (
               filteredItems.map((item) => (
-                <li
-                  key={item.id}
-                  className="flex items-center px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect(item)}
-                >
-                  <span>{item.name}</span>
+                <li key={item.id} role="option" aria-selected={selectedValue?.id === item.id}>
+                  <button
+                    type="button"
+                    className="flex w-full items-center px-4 py-2 hover:bg-gray-100 text-left"
+                    onClick={() => handleSelect(item)}
+                  >
+                    {item.name}
+                  </button>
                 </li>
               ))
             ) : (
-              <li className="px-4 py-2 text-gray-500">No items found</li>
+              <li className="px-4 py-2 text-gray-500">{t("FilterableSelect.no_items")}</li>
             )}
           </ul>
         </div>

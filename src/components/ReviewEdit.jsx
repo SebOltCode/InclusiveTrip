@@ -1,80 +1,71 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useNavigate, useLocation } from "react-router-dom";
-import Cookies from "js-cookie";
-import { updateBarrierReview } from "../utils/reviewHandler";
-import Carousel from "../utils/Carousel";
+import { useState, useEffect, useContext } from "react";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
+import api from "../utils/api";
+import {
+  fetchBarrierRatings,
+  fetchReviewById,
+  updateBarrierReviews,
+} from "../utils/reviewHandler";
+import Carousel from "../utils/Carousel";
+import { AuthContext } from "./AuthContext";
+import Loading from "./Loading";
+import NotFound from "./NotFound";
+
+const STARS = [1, 2, 3, 4, 5];
 
 const ReviewEdit = () => {
-  const API_URL = import.meta.env.VITE_APP_INCLUSIVETRIPBE_URL;
-  const location = useLocation();
-  const { rating } = location.state || {};
+  const { reviewId } = useParams();
+  const { userInfo } = useContext(AuthContext);
+  const [rating, setRating] = useState(null);
   const [barrierRatings, setBarrierRatings] = useState([]);
-  const navigate = useNavigate();
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [stars] = useState([1, 2, 3, 4, 5]);
-  const [comment, setComment] = useState(rating.comment);
+  const [comment, setComment] = useState("");
+  const [notFound, setNotFound] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const navigate = useNavigate();
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchBarrierRatings = async () => {
-      try {
-        const response = await axios.get(
-          `${API_URL}/barriersReviews/review/${rating.id}`,
-          {}
-        );
-        setBarrierRatings(response.data);
-      } catch (error) {
-        console.error("Error fetching Place ratings:", error);
-        toast.error(t("reviewEdit.error_loading_reviews"));
-      }
+    let cancelled = false;
+    Promise.all([fetchReviewById(reviewId), fetchBarrierRatings(reviewId)])
+      .then(([review, barriers]) => {
+        if (cancelled) return;
+        setRating(review);
+        setComment(review.comment);
+        setBarrierRatings(barriers);
+      })
+      .catch((error) => {
+        console.error("Error fetching review:", error);
+        if (!cancelled) setNotFound(true);
+      });
+    return () => {
+      cancelled = true;
     };
+  }, [reviewId]);
 
-    fetchBarrierRatings();
-  }, [rating.id, API_URL, t]);
+  if (notFound) return <NotFound />;
+  if (!rating) return <Loading />;
+  // Only the author may edit; everybody else gets the read-only view
+  if (rating.userId !== userInfo?.id) {
+    return <Navigate to={`/detailreview/${reviewId}`} replace />;
+  }
 
-  const handleBarrierReviewChange = (e) => {
-    const rating = Number(e.target.value);
-    const barrierId = Number(e.target.getAttribute("data-barrier-id"));
+  const handleBarrierReviewChange = (barrierId, value) => {
     setBarrierRatings((prev) =>
-      prev.map((item) =>
-        item.barrierId === barrierId ? { ...item, reviews: rating } : item
-      )
+      prev.map((item) => (item.barrierId === barrierId ? { ...item, reviews: value } : item))
     );
   };
 
-  const openModal = (image) => {
-    setSelectedImage(image);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-
   const handleUpdate = async () => {
-    let token = Cookies.get("token");
-
     try {
-      await axios.put(
-        `${API_URL}/reviews/${rating.id}`,
-        {
-          comment: comment,
-          placeName: rating.placeName,
-          placeId: rating.placeId,
-          placeCategoryId: rating.placeCategoryId,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-          withCredentials: true,
-        }
-      );
-      await updateBarrierReview(barrierRatings, rating.id);
+      await api.put(`/reviews/${rating.id}`, {
+        comment: comment.trim(),
+        placeName: rating.placeName,
+        placeId: rating.placeId,
+        placeCategoryId: rating.placeCategoryId,
+      });
+      await updateBarrierReviews(barrierRatings, rating.id);
       toast.success(t("reviewEdit.update_success"));
     } catch (error) {
       console.error("Error updating review:", error);
@@ -82,39 +73,15 @@ const ReviewEdit = () => {
     }
   };
 
-  const handleCommentChange = (e) => {
-    const { value } = e.target;
-    setComment(value);
-  };
-
   const handleDelete = async () => {
-    let token = Cookies.get("token");
-
     try {
-      await axios.delete(`${API_URL}/reviews/${rating.id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        withCredentials: true,
-      });
+      await api.delete(`/reviews/${rating.id}`);
       toast.success(t("reviewEdit.delete_success"));
-      navigate(-1);
+      navigate("/user", { replace: true });
     } catch (error) {
       console.error("Error deleting review:", error);
       toast.error(t("reviewEdit.error_deleting_review"));
     }
-  };
-
-  const handleBackClick = () => {
-    navigate(-1);
-  };
-
-  const openDeleteModal = () => {
-    setShowDeleteModal(true);
-  };
-
-  const closeDeleteModal = () => {
-    setShowDeleteModal(false);
   };
 
   return (
@@ -124,9 +91,8 @@ const ReviewEdit = () => {
           <div className="flex flex-col md:flex-row w-full p-8">
             <div className="flex flex-col w-full md:w-2/3 text-left">
               <h1 className="font-poppins font-extrabold text-2xl md:text-4xl lg:text-5xl leading-tight text-black">
-                {rating.User.firstName} {t("reviewEdit.had")} {rating.placeName}{" "}
-                {t("reviewEdit.on")}{" "}
-                {new Date(rating.createdAt).toLocaleDateString()}{" "}
+                {rating.User?.firstName} {t("reviewEdit.had")} {rating.placeName}{" "}
+                {t("reviewEdit.on")} {new Date(rating.createdAt).toLocaleDateString()}{" "}
                 {t("reviewEdit.rated")}
               </h1>
               <div className="mt-4 text-[#1E1E1E] font-poppins font-medium text-lg md:text-2xl lg:text-3xl leading-[1.5]">
@@ -136,7 +102,7 @@ const ReviewEdit = () => {
             <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
               <img
                 src="/images/Icon_Bewertung.png"
-                alt={t("reviewEdit.icon_map")}
+                alt=""
                 className="max-w-full max-h-[300px] object-cover rounded-lg"
                 style={{ width: "200px", height: "200px" }}
               />
@@ -147,9 +113,7 @@ const ReviewEdit = () => {
 
       {rating.FileUploads.length > 0 && (
         <div className="my-8">
-          <Carousel
-            images={rating.FileUploads.map((image) => image.filePath)}
-          />
+          <Carousel images={rating.FileUploads.map((image) => image.filePath)} />
         </div>
       )}
 
@@ -158,27 +122,27 @@ const ReviewEdit = () => {
           <div className="p-6 w-full">
             <ul className="list-none space-y-4">
               {barrierRatings.map((barrierRating) => (
-                <li
-                  key={barrierRating.Barrier.id}
-                  className="flex items-center space-x-4"
-                >
+                <li key={barrierRating.id} className="flex items-center space-x-4">
                   <div className="w-4 h-4 bg-[#FFD700] rounded-full"></div>
-                  <span className="flex-1 text-lg">
+                  <span className="flex-1 text-lg" id={`barrier-label-${barrierRating.barrierId}`}>
                     {t("reviewEdit.suitable_for")}{" "}
-                    {t(`barriers.barrier${barrierRating.Barrier.id}`)}
+                    {t(`barriers.barrier${barrierRating.barrierId}`)}
                   </span>
-                  <div className="flex space-x-1 rating ml-auto">
-                    {stars.map((star) => (
+                  <div
+                    className="flex space-x-1 rating ml-auto"
+                    role="radiogroup"
+                    aria-labelledby={`barrier-label-${barrierRating.barrierId}`}
+                  >
+                    {STARS.map((star) => (
                       <input
                         key={star}
                         type="radio"
-                        name={`barrier-${barrierRating.Barrier.id}`}
-                        onChange={handleBarrierReviewChange}
-                        id={star}
-                        data-barrier-id={barrierRating.Barrier.id}
+                        name={`barrier-${barrierRating.barrierId}`}
+                        aria-label={`${star} / 5`}
+                        onChange={() => handleBarrierReviewChange(barrierRating.barrierId, star)}
                         value={star}
                         className="mask mask-star"
-                        defaultChecked={star == barrierRating.reviews}
+                        checked={star === Number(barrierRating.reviews)}
                       />
                     ))}
                   </div>
@@ -191,7 +155,9 @@ const ReviewEdit = () => {
         <div className="flex items-center justify-center mb-4 w-full">
           <textarea
             value={comment}
-            onChange={handleCommentChange}
+            onChange={(e) => setComment(e.target.value)}
+            maxLength={255}
+            aria-label={t("reviewEdit.comment_placeholder")}
             className="w-full p-4 border border-gray-300 rounded-lg"
             rows="4"
             placeholder={t("reviewEdit.comment_placeholder")}
@@ -203,20 +169,21 @@ const ReviewEdit = () => {
             type="button"
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
             onClick={handleUpdate}
+            disabled={!comment.trim()}
           >
             {t("reviewEdit.update")}
           </button>
           <button
             type="button"
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
-            onClick={openDeleteModal}
+            onClick={() => setShowDeleteModal(true)}
           >
             {t("reviewEdit.delete")}
           </button>
           <button
             type="button"
             className="btn bg-yellow-400 border-black w-3/4 md:w-auto px-8 font-normal"
-            onClick={handleBackClick}
+            onClick={() => navigate(-1)}
           >
             {t("reviewEdit.back")}
           </button>
@@ -226,20 +193,23 @@ const ReviewEdit = () => {
       {showDeleteModal && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-          onClick={closeDeleteModal}
+          onClick={() => setShowDeleteModal(false)}
         >
           <div
             className="bg-white p-6 rounded-lg"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="delete-modal-title"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-xl font-semibold mb-4">
+            <h2 id="delete-modal-title" className="text-xl font-semibold mb-4">
               {t("reviewEdit.confirm_delete")}
             </h2>
             <div className="flex justify-end space-x-4">
               <button
                 type="button"
                 className="btn bg-gray-300 px-4 py-2 rounded"
-                onClick={closeDeleteModal}
+                onClick={() => setShowDeleteModal(false)}
               >
                 {t("reviewEdit.cancel")}
               </button>
@@ -254,7 +224,6 @@ const ReviewEdit = () => {
           </div>
         </div>
       )}
-      <ToastContainer />
     </div>
   );
 };

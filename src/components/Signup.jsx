@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "./AuthContext";
-import { Navigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Navigate, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 
 export default function SignupForm() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { signup, userInfo } = useContext(AuthContext);
   const [error, setError] = useState(false);
   const [signupData, setSignupData] = useState({
@@ -40,25 +40,29 @@ export default function SignupForm() {
       return;
     }
 
+    // eslint-disable-next-line no-unused-vars
     const { confirmPassword, ...dataToSubmit } = signupData;
 
     try {
       await signup(dataToSubmit);
       toast.success(t("registerpage.register_success_toast"));
+      navigate("/login");
     } catch (error) {
-      toast.error(t("registerpage.register_error_toast"));
+      if (error.response?.status === 409) {
+        toast.error(t("auth.email_exists"));
+      } else {
+        toast.error(t("registerpage.register_error_toast"));
+      }
     }
   }
 
   function handleChange(e) {
-    e.preventDefault();
     setError(false);
     setSignupData({ ...signupData, [e.target.name]: e.target.value });
   }
 
   return (
     <>
-      <ToastContainer />
       {userInfo ? (
         <Navigate to="/" />
       ) : (
@@ -77,7 +81,7 @@ export default function SignupForm() {
                 <div className="hidden md:flex items-center justify-center w-full md:w-1/3 mt-4 md:mt-0">
                   <img
                     src="/images/Icon_Signup.png"
-                    alt="Icon Karte"
+                    alt=""
                     className="max-w-full max-h-[300px] object-cover rounded-lg"
                     style={{ width: "200px", height: "200px" }}
                   />
@@ -87,7 +91,7 @@ export default function SignupForm() {
           </div>
 
           <div className="text-lg md:text-xl">
-            <form action="submit" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
               <div className="flex flex-col py-12 gap-3 max-w-[20rem] m-auto">
                 <label className="input input-bordered flex items-center gap-2 w-full">
                   <svg
@@ -103,7 +107,7 @@ export default function SignupForm() {
                   <input
                     onChange={handleChange}
                     value={signupData.email}
-                    type="text"
+                    type="email"
                     name="email"
                     className="grow"
                     placeholder={t("registerpage.emailPlaceholder")}

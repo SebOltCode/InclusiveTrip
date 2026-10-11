@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
 import "leaflet-geosearch/dist/geosearch.css";
@@ -11,10 +11,15 @@ import CategorySelector from "./MapComponents/CategorySelector";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+// Bundled marker images; relative file names would break on nested routes
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: "marker-icon-2x.png",
-  iconUrl: "marker-icon.png",
-  shadowUrl: "marker-shadow.png",
+  iconRetinaUrl: markerIcon2x,
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
 });
 
 const SearchField = () => {
@@ -45,9 +50,7 @@ const SearchField = () => {
 
 const Map = () => {
   const { t } = useTranslation();
-  const [defaultCenter, setDefaultCenter] = useState([
-    52.51085635037089, 13.399439386103111,
-  ]);
+  const defaultCenter = [52.51085635037089, 13.399439386103111];
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const location = useLocation();

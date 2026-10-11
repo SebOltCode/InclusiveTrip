@@ -6,9 +6,7 @@
   "user": "User",
   "logout": "Logout",
   "login": "Login",
-
   "why_we_developed": "Why we developed this app",
-
   "ratings": "Ratings",
   "users": "Users",
   "barrier_filter": "Barrier filter",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Whether you use a wheelchair, are deaf, visually impaired, traveling with a stroller, or have a pet with you – InclusiveTRIP is the tool to ensure your surroundings are accessible and inclusive. Your ratings and experiences help build a community that prioritizes accessibility. Discover, rate, and share your experiences with InclusiveTRIP!",
   "introduce_blog_entries": "Find information here on current topics related to inclusion.",
   "current_topics": "Current topics",
-
   "about_us": "About us",
   "about_us_1": "Welcome to our website! We are a small but passionate group of developers – Sebastian, Adnan, Ahmed, and Julia – who came together during the WBS Coding School bootcamp to develop an app that truly makes a difference.",
   "our_vision": "Our Vision",
@@ -40,7 +37,6 @@
   "about_us_7": "We, the team behind the app, are proud of what we have achieved in a short time. Each of us has our own motivation and story that led us to this project:",
   "about_us_8": "Together, we have not only developed an app but also brought a vision to life that we want to share with the world. We hope our app becomes a tool that breaks down barriers and builds bridges – for a more inclusive society.",
   "about_us_9": "Thank you for being part of this journey and for helping us make the world a little better.",
-
   "impressum": {
     "title": "Imprint",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board."
     }
   },
-
   "footer": {
     "copyright": "Copyright © {{year}} - All rights reserved",
     "impressum": "Imprint",
     "datenschutz": "Privacy Policy",
     "ueberuns": "About us"
   },
-
   "createRating": {
     "title": "Write a review",
     "subtitle": "Rate {{place}} with your experiences.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Thank you, your review has been added!"
   },
-
   "barriers": {
     "barrier1": "Wheelchair users",
     "barrier2": "Children",
@@ -120,11 +113,10 @@
     "barrier8": "People with claustrophobia",
     "barrier9": "Pet owners"
   },
-
   "common": {
-    "bewerten": "rate"
+    "bewerten": "rate",
+    "loading": "Loading..."
   },
-
   "usersection": {
     "profile_of": "Profile of",
     "change_user_data": "Change your user data and edit your reviews.",
@@ -132,7 +124,6 @@
     "you_rated": "You rated",
     "read_more": "read more"
   },
-
   "userProfileForm": {
     "personal_data": "Personal data",
     "first_name": "First name",
@@ -141,7 +132,6 @@
     "save_changes": "Save changes",
     "update_success": "User data updated successfully."
   },
-
   "map": {
     "where_to_travel": "Where do you want to travel?",
     "how_search_works": "..how the search works",
@@ -152,7 +142,6 @@
     "step3": "Click on the icon on the map to view reviews for this location or to write a review.",
     "close": "Close"
   },
-
   "categorySelector": {
     "select_category": "Select Category"
   },
@@ -166,16 +155,14 @@
     "category9": "Cafes",
     "category10": "Attractions"
   },
-
   "citySelector": {
     "select_city": "Select a city:"
   },
-
   "placeMarker": {
     "ratings": "Ratings",
-    "create_rating": "Submit review"
+    "create_rating": "Submit review",
+    "unnamed_place": "Unnamed place"
   },
-
   "ratingspage": {
     "no_reviews": "There are no reviews for this location yet. Write a review and share your experiences!",
     "add_review": "Add review",
@@ -186,7 +173,6 @@
     "on": "on",
     "read_more": "Read more"
   },
-
   "detailReview": {
     "review_of": "Review of",
     "on": "on",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Error loading reviews.",
     "back": "Back"
   },
-
   "reviewEdit": {
     "had": "had",
     "on": "on",
@@ -216,7 +201,6 @@
     "cancel": "Cancel",
     "comment_placeholder": "Enter description here"
   },
-
   "dataprotection": {
     "title": "Data Protection",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "This privacy policy is currently valid and has the status [date]. Due to the further development of our website or due to changed legal or regulatory requirements, it may become necessary to change this privacy policy."
     }
   },
-
   "loginpage": {
     "title": "Login",
     "subtitle": "Please log in to continue.",
@@ -288,17 +271,9 @@
     "email_placeholder": "Email address",
     "password_placeholder": "Password",
     "login_button": "Login",
-    "forgot_password": "Forgot password?",
     "no_account": "No account yet?",
-    "all_fields_required": "All fields are required.",
-    "password_reset_email_sent": "An email for password reset has been sent. Please check your inbox.",
-    "reset_password_button": "Reset password"
+    "all_fields_required": "All fields are required."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Error sending password reset email. Please try again."
-  },
-
   "registerpage": {
     "password_match_toast": "Passwords do not match!",
     "password_length_toast": "Password must be at least 8 characters long!",
@@ -315,6 +290,32 @@
     "submitButton": "Register"
   },
   "FilterableSelect": {
-    "select": "Select"
+    "select": "Select",
+    "search": "Search...",
+    "no_items": "No items found"
+  },
+  "auth": {
+    "welcome_back": "Welcome back!",
+    "invalid_credentials": "Email address or password is incorrect.",
+    "account_blocked": "This account is blocked.",
+    "generic_error": "Oops, that shouldn't have happened. Please try again later.",
+    "goodbye": "Goodbye!",
+    "email_exists": "An account with this email address already exists."
+  },
+  "profilePhoto": {
+    "alt": "Profile photo",
+    "delete": "Delete profile photo",
+    "deleting": "Deleting...",
+    "upload": "Upload profile photo"
+  },
+  "rssfeed": {
+    "title": "Blog posts from our partner barrierefrei-aufgerollt.at",
+    "error": "Error loading the RSS feed",
+    "read_more": "..read more"
+  },
+  "notFound": {
+    "title": "We're sorry!",
+    "message": "Error 404: Page not found",
+    "back": "Back"
   }
 }

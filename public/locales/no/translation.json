@@ -6,9 +6,7 @@
   "user": "Bruker",
   "logout": "Logg ut",
   "login": "Logg inn",
-
   "why_we_developed": "Hvorfor vi utviklet denne appen",
-
   "ratings": "Vurderinger",
   "users": "Brukere",
   "barrier_filter": "Barrierefilter",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Enten du bruker rullestol, er døv, har nedsatt syn, reiser med barnevogn, eller har med deg et kjæledyr – InclusiveTRIP er verktøyet for å sikre at omgivelsene dine er tilgjengelige og inkluderende. Dine vurderinger og erfaringer bidrar til å bygge et fellesskap som prioriterer tilgjengelighet. Oppdag, vurder og del dine erfaringer med InclusiveTRIP!",
   "introduce_blog_entries": "Finn informasjon her om aktuelle emner knyttet til inkludering.",
   "current_topics": "Aktuelle emner",
-
   "about_us": "Om oss",
   "about_us_1": "Velkommen til nettstedet vårt! Vi er en liten, men lidenskapelig gruppe utviklere – Sebastian, Adnan, Ahmed og Julia – som kom sammen under WBS Coding School bootcamp for å utvikle en app som virkelig gjør en forskjell.",
   "our_vision": "Vår visjon",
@@ -40,7 +37,6 @@
   "about_us_7": "Vi, teamet bak appen, er stolte av det vi har oppnådd på kort tid. Hver av oss har vår egen motivasjon og historie som førte oss til dette prosjektet:",
   "about_us_8": "Sammen har vi ikke bare utviklet en app, men også brakt en visjon til liv som vi ønsker å dele med verden. Vi håper appen vår blir et verktøy som bryter ned barrierer og bygger broer – for et mer inkluderende samfunn.",
   "about_us_9": "Takk for at du er en del av denne reisen og hjelper oss med å gjøre verden litt bedre.",
-
   "impressum": {
     "title": "Impressum",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Vi er verken villige eller forpliktet til å delta i tvisteløsningsprosesser for en forbrukervoldgiftsnemnd."
     }
   },
-
   "footer": {
     "copyright": "Copyright © {{year}} - Alle rettigheter reservert",
     "impressum": "Impressum",
     "datenschutz": "Personvern",
     "ueberuns": "Om oss"
   },
-
   "createRating": {
     "title": "Skriv vurdering",
     "subtitle": "Vurder {{place}} basert på dine erfaringer.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Takk, vurderingen din er lagt til!"
   },
-
   "barriers": {
     "barrier1": "Rullestolbrukere",
     "barrier2": "Barn",
@@ -120,11 +113,10 @@
     "barrier8": "Personer med klaustrofobi",
     "barrier9": "Dyreeiere"
   },
-
   "common": {
-    "bewerten": "vurdere"
+    "bewerten": "vurdere",
+    "loading": "Laster..."
   },
-
   "usersection": {
     "profile_of": "Profil av",
     "change_user_data": "Endre brukerdataene dine og rediger dine vurderinger.",
@@ -132,7 +124,6 @@
     "you_rated": "Du vurderte",
     "read_more": "les mer"
   },
-
   "userProfileForm": {
     "personal_data": "Personlig informasjon",
     "first_name": "Fornavn",
@@ -141,7 +132,6 @@
     "save_changes": "Lagre endringer",
     "update_success": "Brukerdataene er oppdatert."
   },
-
   "map": {
     "where_to_travel": "Hvor vil du reise?",
     "how_search_works": "..slik fungerer søket",
@@ -152,7 +142,6 @@
     "step3": "Klikk på ikonet på kartet for å se vurderinger for dette stedet eller skrive en vurdering.",
     "close": "Lukk"
   },
-
   "categorySelector": {
     "select_category": "Velg Kategori"
   },
@@ -166,16 +155,14 @@
     "category9": "Kafeer",
     "category10": "Attraksjoner"
   },
-
   "citySelector": {
     "select_city": "Velg en by:"
   },
-
   "placeMarker": {
     "ratings": "Vurderinger",
-    "create_rating": "Send vurdering"
+    "create_rating": "Send vurdering",
+    "unnamed_place": "Sted uten navn"
   },
-
   "ratingspage": {
     "no_reviews": "Det er ennå ingen vurderinger for dette stedet. Skriv en vurdering og del dine erfaringer!",
     "add_review": "Legg til vurdering",
@@ -186,7 +173,6 @@
     "on": "den",
     "read_more": "Les mer"
   },
-
   "detailReview": {
     "review_of": "Vurdering av",
     "on": "den",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Feil ved lasting av vurderinger.",
     "back": "Tilbake"
   },
-
   "reviewEdit": {
     "had": "hadde",
     "on": "den",
@@ -216,7 +201,6 @@
     "cancel": "Avbryt",
     "comment_placeholder": "Skriv beskrivelsen her"
   },
-
   "dataprotection": {
     "title": "Databeskyttelse",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Denne personvernerklæringen er for tiden gyldig og har status [dato]. På grunn av videreutvikling av nettstedet vårt eller endrede lovbestemte krav, kan det bli nødvendig å endre denne personvernerklæringen."
     }
   },
-
   "loginpage": {
     "title": "Logg inn",
     "subtitle": "Vennligst logg inn for å fortsette.",
@@ -288,17 +271,9 @@
     "email_placeholder": "E-postadresse",
     "password_placeholder": "Passord",
     "login_button": "Logg inn",
-    "forgot_password": "Glemt passord?",
     "no_account": "Ingen konto ennå?",
-    "all_fields_required": "Alle felt er obligatoriske.",
-    "password_reset_email_sent": "En e-post for tilbakestilling av passord er sendt. Vennligst sjekk innboksen din.",
-    "reset_password_button": "Tilbakestill passord"
+    "all_fields_required": "Alle felt er obligatoriske."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Feil ved sending av e-post for tilbakestilling av passord. Vennligst prøv igjen."
-  },
-
   "registerpage": {
     "password_match_toast": "Passordene stemmer ikke overens!",
     "password_length_toast": "Passordet må være minst 8 tegn langt!",
@@ -315,6 +290,32 @@
     "submitButton": "Registrer"
   },
   "FilterableSelect": {
-    "select": "Velg"
+    "select": "Velg",
+    "search": "Søk...",
+    "no_items": "Ingen elementer funnet"
+  },
+  "auth": {
+    "welcome_back": "Velkommen tilbake!",
+    "invalid_credentials": "E-postadressen eller passordet er feil.",
+    "account_blocked": "Denne kontoen er sperret.",
+    "generic_error": "Oi, det skulle ikke ha skjedd. Prøv igjen senere.",
+    "goodbye": "Ha det!",
+    "email_exists": "Det finnes allerede en konto med denne e-postadressen."
+  },
+  "profilePhoto": {
+    "alt": "Profilbilde",
+    "delete": "Slett profilbilde",
+    "deleting": "Sletter...",
+    "upload": "Last opp profilbilde"
+  },
+  "rssfeed": {
+    "title": "Blogginnlegg fra vår partner barrierefrei-aufgerollt.at",
+    "error": "Feil ved lasting av RSS-feeden",
+    "read_more": "..les mer"
+  },
+  "notFound": {
+    "title": "Beklager!",
+    "message": "Feil 404: Siden ble ikke funnet",
+    "back": "Tilbake"
   }
 }

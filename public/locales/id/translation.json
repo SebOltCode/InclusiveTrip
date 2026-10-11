@@ -6,9 +6,7 @@
   "user": "Pengguna",
   "logout": "Keluar",
   "login": "Masuk",
-
   "why_we_developed": "Mengapa kami mengembangkan aplikasi ini",
-
   "ratings": "Peringkat",
   "users": "Pengguna",
   "barrier_filter": "Filter penghalang",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Baik Anda menggunakan kursi roda, tuli, mengalami gangguan penglihatan, bepergian dengan kereta dorong, atau membawa hewan peliharaan – InclusiveTRIP adalah alat untuk memastikan lingkungan Anda dapat diakses dan inklusif. Peringkat dan pengalaman Anda membantu membangun komunitas yang mengutamakan aksesibilitas. Temukan, beri peringkat, dan bagikan pengalaman Anda dengan InclusiveTRIP!",
   "introduce_blog_entries": "Temukan informasi di sini tentang topik saat ini terkait inklusi.",
   "current_topics": "Topik terkini",
-
   "about_us": "Tentang kami",
   "about_us_1": "Selamat datang di situs kami! Kami adalah sekelompok kecil pengembang yang bersemangat – Sebastian, Adnan, Ahmed, dan Julia – yang bergabung selama bootcamp WBS Coding School untuk mengembangkan aplikasi yang benar-benar berdampak.",
   "our_vision": "Visi kami",
@@ -40,7 +37,6 @@
   "about_us_7": "Kami, tim di balik aplikasi ini, bangga dengan apa yang telah kami capai dalam waktu singkat. Kami semua memiliki motivasi dan cerita pribadi yang membawa kami ke proyek ini:",
   "about_us_8": "Bersama-sama, kami tidak hanya mengembangkan aplikasi tetapi juga mewujudkan visi yang ingin kami bagikan dengan dunia. Kami berharap aplikasi kami menjadi alat yang memecah hambatan dan membangun jembatan – untuk masyarakat yang lebih inklusif.",
   "about_us_9": "Terima kasih telah menjadi bagian dari perjalanan ini dan membantu kami membuat dunia sedikit lebih baik.",
-
   "impressum": {
     "title": "Imprint",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Kami tidak bersedia atau diwajibkan untuk berpartisipasi dalam prosedur penyelesaian sengketa di depan dewan arbitrase konsumen."
     }
   },
-
   "footer": {
     "copyright": "Hak Cipta © {{year}} - Semua hak dilindungi",
     "impressum": "Cap",
     "datenschutz": "Kebijakan Privasi",
     "ueberuns": "Tentang kami"
   },
-
   "createRating": {
     "title": "Tulis ulasan",
     "subtitle": "Beri peringkat {{place}} dengan pengalaman Anda.",
@@ -108,7 +102,6 @@
     },
     "successMessage": "Terima kasih, ulasan Anda telah ditambahkan!"
   },
-
   "barriers": {
     "barrier1": "Pengguna kursi roda",
     "barrier2": "Anak-anak",
@@ -120,11 +113,10 @@
     "barrier8": "Orang dengan klaustrofobia",
     "barrier9": "Pemilik hewan peliharaan"
   },
-
   "common": {
-    "bewerten": "nilai"
+    "bewerten": "nilai",
+    "loading": "Memuat..."
   },
-
   "usersection": {
     "profile_of": "Profil dari",
     "change_user_data": "Ubah data pengguna Anda dan edit ulasan Anda.",
@@ -132,7 +124,6 @@
     "you_rated": "Anda menilai",
     "read_more": "baca lebih lanjut"
   },
-
   "userProfileForm": {
     "personal_data": "Data pribadi",
     "first_name": "Nama depan",
@@ -141,7 +132,6 @@
     "save_changes": "Simpan perubahan",
     "update_success": "Data pengguna berhasil diperbarui."
   },
-
   "map": {
     "where_to_travel": "Kemana Anda ingin bepergian?",
     "how_search_works": "..cara kerja pencarian",
@@ -152,7 +142,6 @@
     "step3": "Klik ikon di peta untuk melihat ulasan untuk lokasi ini atau untuk menulis ulasan.",
     "close": "Tutup"
   },
-
   "categorySelector": {
     "select_category": "Pilih Kategori"
   },
@@ -166,16 +155,14 @@
     "category9": "Kafe",
     "category10": "Objek Wisata"
   },
-
   "citySelector": {
     "select_city": "Pilih kota:"
   },
-
   "placeMarker": {
     "ratings": "Peringkat",
-    "create_rating": "Kirim ulasan"
+    "create_rating": "Kirim ulasan",
+    "unnamed_place": "Tempat tanpa nama"
   },
-
   "ratingspage": {
     "no_reviews": "Belum ada ulasan untuk lokasi ini. Tulis ulasan dan bagikan pengalaman Anda!",
     "add_review": "Tambahkan ulasan",
@@ -186,7 +173,6 @@
     "on": "pada",
     "read_more": "Baca selengkapnya"
   },
-
   "detailReview": {
     "review_of": "Ulasan dari",
     "on": "pada",
@@ -196,7 +182,6 @@
     "error_loading_reviews": "Kesalahan memuat ulasan.",
     "back": "Kembali"
   },
-
   "reviewEdit": {
     "had": "memiliki",
     "on": "pada",
@@ -216,7 +201,6 @@
     "cancel": "Batal",
     "comment_placeholder": "Masukkan deskripsi di sini"
   },
-
   "dataprotection": {
     "title": "Perlindungan Data",
     "section1": {
@@ -280,7 +264,6 @@
       "content": "Kebijakan privasi ini saat ini berlaku dan memiliki status [tanggal]. Karena pengembangan lebih lanjut dari situs web kami atau karena persyaratan hukum atau peraturan yang diubah, mungkin perlu mengubah kebijakan privasi ini."
     }
   },
-
   "loginpage": {
     "title": "Masuk",
     "subtitle": "Silakan masuk untuk melanjutkan.",
@@ -288,17 +271,9 @@
     "email_placeholder": "Alamat email",
     "password_placeholder": "Kata sandi",
     "login_button": "Masuk",
-    "forgot_password": "Lupa kata sandi?",
     "no_account": "Belum punya akun?",
-    "all_fields_required": "Semua kolom wajib diisi.",
-    "password_reset_email_sent": "Email untuk pengaturan ulang kata sandi telah dikirim. Silakan periksa kotak masuk Anda.",
-    "reset_password_button": "Atur ulang kata sandi"
+    "all_fields_required": "Semua kolom wajib diisi."
   },
-
-  "forgotPasswordHandler": {
-    "error_sending_email": "Kesalahan mengirim email pengaturan ulang kata sandi. Silakan coba lagi."
-  },
-
   "registerpage": {
     "password_match_toast": "Kata sandi tidak cocok!",
     "password_length_toast": "Kata sandi harus setidaknya 8 karakter!",
@@ -315,6 +290,32 @@
     "submitButton": "Daftar"
   },
   "FilterableSelect": {
-    "select": "Philih"
+    "select": "Philih",
+    "search": "Cari...",
+    "no_items": "Tidak ada item ditemukan"
+  },
+  "auth": {
+    "welcome_back": "Selamat datang kembali!",
+    "invalid_credentials": "Alamat email atau kata sandi salah.",
+    "account_blocked": "Akun ini diblokir.",
+    "generic_error": "Ups, seharusnya ini tidak terjadi. Silakan coba lagi nanti.",
+    "goodbye": "Sampai jumpa!",
+    "email_exists": "Akun dengan alamat email ini sudah ada."
+  },
+  "profilePhoto": {
+    "alt": "Foto profil",
+    "delete": "Hapus foto profil",
+    "deleting": "Menghapus...",
+    "upload": "Unggah foto profil"
+  },
+  "rssfeed": {
+    "title": "Postingan blog dari mitra kami barrierefrei-aufgerollt.at",
+    "error": "Gagal memuat feed RSS",
+    "read_more": "..baca selengkapnya"
+  },
+  "notFound": {
+    "title": "Mohon maaf!",
+    "message": "Kesalahan 404: Halaman tidak ditemukan",
+    "back": "Kembali"
   }
 }

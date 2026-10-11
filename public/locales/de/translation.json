@@ -6,9 +6,7 @@
   "user": "Benutzer",
   "logout": "Abmelden",
   "login": "Anmelden",
-
   "why_we_developed": "Warum wir diese App entwickelt haben",
-
   "ratings": "Bewertungen",
   "users": "Benutzer",
   "barrier_filter": "Barrierefilter",
@@ -22,7 +20,6 @@
   "inclusive-trip-description_home_2": "Egal, ob du Rollstuhlfahrer, gehörlos, sehbeeinträchtigt oder auch mit einem Kinderwagen unterwegs bist oder ein Haustier dabei hast – InclusiveTRIP ist das Werkzeuge, um sicherzustellen, dass deine Umgebung zugänglich und inklusiv ist. Deine Bewertungen und Erfahrungen tragen dazu bei, eine Gemeinschaft zu schaffen, die Barrierefreiheit zur Priorität macht. Entdecke, bewerte und teile deine Erfahrungen mit Orten mit InclusiveTRIP!",
   "introduce_blog_entries": "Informiere dich hier über aktuelle Themen rund um das Thema Inklusion.",
   "current_topics": "Aktuelle Themen",
-
   "about_us": "Über uns",
   "about_us_1": "Willkommen auf unserer Webseite! Wir sind eine kleine, aber leidenschaftliche Gruppe von Entwicklern – Sebastian, Adnan, Ahmed und Julia – die im Rahmen des Bootcamps der WBS Coding School zusammengefunden haben, um eine App zu entwickeln, die wirklich einen Unterschied macht.",
   "our_vision": "Unsere Vision",
@@ -40,7 +37,6 @@
   "about_us_7": "Wir, das Team hinter der App, sind stolz auf das, was wir in kurzer Zeit erreicht haben. Jeder von uns hat seine eigene Motivation und Geschichte, die ihn zu diesem Projekt geführt hat:",
   "about_us_8": "Zusammen haben wir nicht nur eine App entwickelt, sondern auch eine Vision zum Leben erweckt, die wir mit der Welt teilen möchten. Wir hoffen, dass unsere App zu einem Werkzeug wird, das Barrieren abbaut und Brücken baut – für ein inklusiveres Miteinander.",
   "about_us_9": "Vielen Dank, dass Sie Teil dieser Reise sind und mit uns die Welt ein wenig besser machen möchten.",
-
   "impressum": {
     "title": "Impressum",
     "section1": {
@@ -79,14 +75,12 @@
       "content8": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
     }
   },
-
   "footer": {
     "copyright": "Urheberrecht © {{year}} - Alle Rechte vorbehalten",
     "impressum": "Impressum",
     "datenschutz": "Datenschutz",
     "ueberuns": "Über uns"
   },
-
   "createRating": {
     "title": "Bewertung schreiben",
     "subtitle": "Bewerte {{place}} mit deinen Erfahrungen.",
@@ -114,13 +108,14 @@
     "barrier3": "blinde Personen",
     "barrier4": "gehörlose Personen",
     "barrier5": "Personen mit nicht-deutscher Muttersprache",
-    "barrier6": "Personen mit Angststörrungen",
+    "barrier6": "Personen mit Angststörungen",
     "barrier7": "Personen mit kognitiven Einschränkungen",
     "barrier8": "Personen mit Klaustrophobie",
     "barrier9": "Hundehalter"
   },
   "common": {
-    "bewerten": "bewerten"
+    "bewerten": "bewerten",
+    "loading": "Laden..."
   },
   "usersection": {
     "profile_of": "Profil von",
@@ -147,7 +142,6 @@
     "step3": "Klicke auf das Icon in der Karte, um dir Bewertungen für diese Location anzusehen oder eine Bewertung zu schreiben.",
     "close": "Schließen"
   },
-
   "categorySelector": {
     "select_category": "Kategorie auswählen"
   },
@@ -161,15 +155,14 @@
     "category9": "Cafes",
     "category10": "Sehenswürdigkeiten"
   },
-
   "citySelector": {
     "select_city": "Wähle eine Stadt aus:"
   },
   "placeMarker": {
     "ratings": "Bewertungen",
-    "create_rating": "Bewertung abgeben"
+    "create_rating": "Bewertung abgeben",
+    "unnamed_place": "Unbenannter Ort"
   },
-
   "ratingspage": {
     "no_reviews": "Es liegen noch keine Bewertungen für diesen Ort vor. Schreibe eine Bewertung und teile deine Erfahrungen!",
     "add_review": "Bewertung hinzufügen",
@@ -208,7 +201,6 @@
     "cancel": "Abbrechen",
     "comment_placeholder": "Beschreibung hier eingeben"
   },
-
   "dataprotection": {
     "title": "Datenschutz",
     "section1": {
@@ -279,16 +271,9 @@
     "email_placeholder": "E-Mail-Adresse",
     "password_placeholder": "Passwort",
     "login_button": "Anmelden",
-    "forgot_password": "Passwort vergessen?",
     "no_account": "Noch kein Konto?",
-    "all_fields_required": "Alle Felder sind erforderlich.",
-    "password_reset_email_sent": "Eine E-Mail zur Passwort-Zurücksetzung wurde gesendet. Bitte überprüfen Sie Ihr Postfach.",
-    "reset_password_button": "Passwort zurücksetzen"
+    "all_fields_required": "Alle Felder sind erforderlich."
   },
-  "forgotPasswordHandler": {
-    "error_sending_email": "Fehler beim Senden der E-Mail zur Passwort-Zurücksetzung. Bitte versuchen Sie es erneut."
-  },
-
   "registerpage": {
     "password_match_toast": "Passwörter stimmen nicht überein!",
     "password_length_toast": "Passwort muss mindestens 8 Zeichen lang sein!",
@@ -305,6 +290,32 @@
     "submitButton": "Registrieren"
   },
   "FilterableSelect": {
-    "select": "Auswählen"
+    "select": "Auswählen",
+    "search": "Suchen...",
+    "no_items": "Keine Einträge gefunden"
+  },
+  "auth": {
+    "welcome_back": "Willkommen zurück!",
+    "invalid_credentials": "E-Mail-Adresse oder Passwort ist falsch.",
+    "account_blocked": "Dieses Konto ist gesperrt.",
+    "generic_error": "Upps, das hätte nicht passieren sollen. Bitte versuche es später nochmal.",
+    "goodbye": "Auf Wiedersehen!",
+    "email_exists": "Mit dieser E-Mail-Adresse existiert bereits ein Konto."
+  },
+  "profilePhoto": {
+    "alt": "Profilfoto",
+    "delete": "Profilfoto löschen",
+    "deleting": "Löschen...",
+    "upload": "Profilfoto hochladen"
+  },
+  "rssfeed": {
+    "title": "Blog-Einträge unseres Partners barrierefrei-aufgerollt.at",
+    "error": "Fehler beim Laden des RSS-Feeds",
+    "read_more": "..mehr lesen"
+  },
+  "notFound": {
+    "title": "Tut uns leid!",
+    "message": "Fehler 404: Seite konnte nicht gefunden werden",
+    "back": "Zurück"
   }
 }
